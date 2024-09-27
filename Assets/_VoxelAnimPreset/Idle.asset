@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f78c6efa51b78674bac5fa1e7f03afe6, type: 3}
+  m_Name: Idle
+  m_EditorClassIdentifier: 
+  isHuman: 0
+  haveRootT: 0
+  rootT: {x: 0, y: 0, z: 0}
+  haveRootQ: 0
+  rootQ: {x: 0, y: 0, z: 0, w: 1}
+  musclePropertyNames: []
+  muscleValues: []
+  tdofIndices: 
+  tdofValues: []
+  ikIndices: 
+  ikValues: []
+  transformPaths:
+  - 
+  - Hips
+  - Hips/Chest
+  - Hips/Chest/Head
+  - Hips/Chest/LeftShoulder
+  - Hips/Chest/RightShoulder
+  - Hips/LeftUpperLeg
+  - Hips/RightUpperLeg
+  transformValues:
+  - position: {x: -6.913, y: -0.489, z: 9.387}
+    rotation: {x: -0, y: 0.70710576, z: -0, w: 0.70710784}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.01, y: 0.39, z: -0.07}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0, y: 0.26999998, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0, y: 0.06, z: 0}
+    rotation: {x: -0.25444487, y: 0.00000009930968, z: 0.00000072443703, w: 0.9670873}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.12, y: 0, z: 0}
+    rotation: {x: -0.31500167, y: 0.51364344, z: -0.30922043, w: 0.73574936}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.12, y: 0, z: 0}
+    rotation: {x: -0.31500167, y: -0.51364344, z: 0.30922043, w: 0.73574936}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: -0.08, y: -0.04, z: 0}
+    rotation: {x: -0.3223008, y: 0.00000010459968, z: -0.0000009190711, w: 0.94663733}
+    scale: {x: 1, y: 1, z: 1}
+  - position: {x: 0.08, y: -0.04, z: 0}
+    rotation: {x: -0.3223008, y: -0.00000010459968, z: 0.0000009190711, w: 0.94663733}
+    scale: {x: 1, y: 1, z: 1}
+  blendShapePaths: []
+  blendShapeValues: []

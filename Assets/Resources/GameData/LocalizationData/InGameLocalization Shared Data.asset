@@ -1,0 +1,221 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: InGameLocalization Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: InGameLocalization
+  m_TableCollectionNameGuidString: c4ecac835b43a454eac965b9c2c874e2
+  m_Entries:
+  - m_Id: 26112733184
+    m_Key: GameTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30864879616
+    m_Key: TouchStart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12838478327808
+    m_Key: GameMode_Infinity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14184761831424
+    m_Key: GameMode_OneTimeAttack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14246451654656
+    m_Key: GameMode_ThreeTimeAttack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18258739638272
+    m_Key: FeverTime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25854657736704
+    m_Key: Score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26936586842112
+    m_Key: BestScore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27245702852608
+    m_Key: GameResult
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27349683843072
+    m_Key: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28245448765440
+    m_Key: ReturnToLobby
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29175594397696
+    m_Key: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30174170099712
+    m_Key: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30309218299904
+    m_Key: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30907850338304
+    m_Key: GraphicsQuality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31247060480000
+    m_Key: FrameLimit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31676355883008
+    m_Key: CameraProjection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32028966825984
+    m_Key: ToggleMusic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32073845878784
+    m_Key: ToggleSFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33440190738432
+    m_Key: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33555727036416
+    m_Key: RestorePurchase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33653886332928
+    m_Key: Privacy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36503169314816
+    m_Key: Contact
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37891278417920
+    m_Key: Discord
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39188257878016
+    m_Key: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39203009245184
+    m_Key: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39296760328192
+    m_Key: BuyConfirmContext
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40015227826176
+    m_Key: Buy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40340936503296
+    m_Key: Apply
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40584667508736
+    m_Key: GraphicsQuality_High
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40602312945664
+    m_Key: GraphicsQuality_Medium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40687163715584
+    m_Key: GraphicsQuality_Low
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1182512331141120
+    m_Key: Leaderboard_Infinity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1183083586957312
+    m_Key: Leaderboard_OneTimeAttack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1183087605100544
+    m_Key: Leaderboard_ThreeTimeAttack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1183443676344320
+    m_Key: Loading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1183973047840768
+    m_Key: Leaderboard_LoadFailMessage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1188151635783680
+    m_Key: Leaderboard_FirstGuideContext
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1188529697763328
+    m_Key: Enter_Nickname
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1402294838013952
+    m_Key: Leaderboard_EmptyDataMessage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1458612705734656
+    m_Key: Confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1458651175890944
+    m_Key: Close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1458680011730944
+    m_Key: DailyChallenge_Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1458736173461504
+    m_Key: DailyChallenge_Infinity_100
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1459906497523712
+    m_Key: DailyChallenge_OneMin_100
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1460003671158784
+    m_Key: DailyChallenge_ThreeMin_100
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1460514315087872
+    m_Key: None
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1478070962794496
+    m_Key: Applied
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 6424839247635153158
+  references:
+    version: 2
+    RefIds:
+    - rid: 6424839247635153158
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1726141481970

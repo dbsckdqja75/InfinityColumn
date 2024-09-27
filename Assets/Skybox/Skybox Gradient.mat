@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Skybox Gradient
+  m_Shader: {fileID: 4800000, guid: 720c5da2cdb0c7a4985afe657a035acb, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _Screenspace: 0
+    - _mult: 1
+    - _mult1: 1
+    - _mult2: 1
+    - _mult3: 1
+    - _pwer: 1
+    - _pwer1: 1.5
+    - _pwer2: 1
+    - _pwer3: 0.9
+    m_Colors:
+    - _Bottom: {r: 0.6795755, g: 0.81036, b: 0.95313233, a: 1}
+    - _Center: {r: 0.00063849427, g: 0.4663474, b: 0.9985793, a: 1}
+    - _Top: {r: 0.15670308, g: 0.38745314, b: 0.6492884, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

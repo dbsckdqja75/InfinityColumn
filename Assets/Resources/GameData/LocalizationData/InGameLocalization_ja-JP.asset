@@ -1,0 +1,218 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: InGameLocalization_ja-JP
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: ja-JP
+  m_SharedData: {fileID: 11400000, guid: c4ecac835b43a454eac965b9c2c874e2, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 26112733184
+    m_Localized: "\u7121\u9650\u306E\u67F1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30864879616
+    m_Localized: "\u30BF\u30C3\u30C1\u3057\u3066\u958B\u59CB"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12838478327808
+    m_Localized: "\u7121\u9650\u30E2\u30FC\u30C9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14246451654656
+    m_Localized: "3\u5206\u30E2\u30FC\u30C9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14184761831424
+    m_Localized: "1\u5206\u30E2\u30FC\u30C9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18258739638272
+    m_Localized: '!!! Fever Time !!!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25854657736704
+    m_Localized: "\u70B9\u6570"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26936586842112
+    m_Localized: "\u6700\u9AD8\u8A18\u9332"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27245702852608
+    m_Localized: "\u30B2\u30FC\u30E0\u306E\u7D50\u679C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27349683843072
+    m_Localized: "\u518D\u8D77\u52D5"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28245448765440
+    m_Localized: "\u5E30\u308B"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29175594397696
+    m_Localized: "\u4E00\u6642\u505C\u6B62"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30174170099712
+    m_Localized: "\u7D9A\u884C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30309218299904
+    m_Localized: "\u3084\u3081\u308B\u3053\u3068\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30907850338304
+    m_Localized: "\u30B0\u30E9\u30D5\u30A3\u30C3\u30AF\u30B9\u54C1\u8CEA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31247060480000
+    m_Localized: "\u30D5\u30EC\u30FC\u30E0\u5236\u9650"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31676355883008
+    m_Localized: "\u30AB\u30E1\u30E9\u8996\u70B9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32028966825984
+    m_Localized: BGM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32073845878784
+    m_Localized: SE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33440190738432
+    m_Localized: "\u65E5\u672C\u8A9E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33555727036416
+    m_Localized: "\u8CFC\u5165\u306E\u5FA9\u5143"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33653886332928
+    m_Localized: "\u30D7\u30E9\u30A4\u30D0\u30B7\u30FC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36503169314816
+    m_Localized: "\u554F\u3044\u5408\u308F\u305B"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37891278417920
+    m_Localized: Discord
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39188257878016
+    m_Localized: "\u306F\u3044"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39203009245184
+    m_Localized: "\u3044\u3044\u3048"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39296760328192
+    m_Localized: "\u672C\u5F53\u306B\u8CFC\u5165\u3057\u307E\u3059\u304B\uFF1F\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40015227826176
+    m_Localized: "\u8CFC\u8CB7"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40340936503296
+    m_Localized: "\u9069\u7528"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40584667508736
+    m_Localized: "\u4E0A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40602312945664
+    m_Localized: "\u4E2D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40687163715584
+    m_Localized: "\u4E0B"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1182512331141120
+    m_Localized: "\u7121\u9650\u30E2\u30FC\u30C9\u30E9\u30F3\u30AD\u30F3\u30B0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1183083586957312
+    m_Localized: "1\u5206\u30E2\u30FC\u30C9\u306E\u30E9\u30F3\u30AD\u30F3\u30B0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1183087605100544
+    m_Localized: "3\u5206\u30E2\u30FC\u30C9\u306E\u30E9\u30F3\u30AD\u30F3\u30B0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1183443676344320
+    m_Localized: "\u30ED\u30FC\u30C7\u30A3\u30F3\u30B0\u4E2D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1183973047840768
+    m_Localized: "\u30E9\u30F3\u30AD\u30F3\u30B0\u60C5\u5831\u306E\u53D6\u5F97\u306B\u5931\u6557\u3057\u307E\u3057\u305F\u3002\r\n\r\n\u5F8C\u3067\u3082\u3046\u4E00\u5EA6\u304A\u8A66\u3057\u304F\u3060\u3055\u3044\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1188151635783680
+    m_Localized: "\u30E9\u30F3\u30AD\u30F3\u30B0\u53CD\u6620\u306E\u305F\u3081\u30CB\u30C3\u30AF\u30CD\u30FC\u30E0\u3092\u8A2D\u5B9A\u3057\u3066\u304F\u3060\u3055\u3044\uFF01"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1188529697763328
+    m_Localized: "\u30CB\u30C3\u30AF\u30CD\u30FC\u30E0\u5165\u529B\xB7\xB7\xB7"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1402294838013952
+    m_Localized: "\u307E\u3060\u53CD\u6620\u3055\u308C\u305F\u30C7\u30FC\u30BF\u304C\u3042\u308A\u307E\u305B\u3093\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1458736173461504
+    m_Localized: "\u7121\u9650\u30E2\u30FC\u30C9\r\n\u6700\u9AD8\u8A18\u9332\u66F4\u65B0\n\n\u9054\u6210\u76EE\u6A19\n[
+      {0}\u70B9 ]"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1459906497523712
+    m_Localized: "1\u5206\u30E2\u30FC\u30C9\r\n\u6700\u9AD8\u8A18\u9332\u66F4\u65B0\n\n\u9054\u6210\u76EE\u6A19\n[
+      {0}\u70B9 ]"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1460003671158784
+    m_Localized: "3\u5206\u30E2\u30FC\u30C9\r\n\u6700\u9AD8\u8A18\u9332\u66F4\u65B0\n\n\u9054\u6210\u76EE\u6A19\n[
+      {0}\u70B9 ]"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1458680011730944
+    m_Localized: "\u65E5\u66FF\u308F\u308A\u30C1\u30E3\u30EC\u30F3\u30B8"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1458651175890944
+    m_Localized: "\u9589\u3058\u308B"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1458612705734656
+    m_Localized: "\u78BA\u8A8D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1460514315087872
+    m_Localized: "\u306A\u3057"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1478070962794496
+    m_Localized: "\u9069\u7528\u3055\u308C\u305F"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
