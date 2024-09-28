@@ -6,6 +6,8 @@
 Assets/VeryAnimation*
 Assets/Voxel Arsenal*
 Assets/VoxelImporter*
+Logs/*
+UserSettings/*
 
 # Visual Studio cache directory
 .vs/
@@ -26,6 +28,7 @@ ExportedObj/
 *.pdb
 *.opendb
 *.VC.db
+*.DS_Store
 
 # Unity3D generated meta files
 *.pidb.meta
