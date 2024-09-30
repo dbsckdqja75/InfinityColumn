@@ -53,8 +53,8 @@ public class PlayerCharacter : MonoBehaviour
             animator.ResetTrigger("Event");
             animator.ResetTrigger("Move");
 
-            animator.SetInteger("MoveDirection", -1);
             animator.SetBool("isFall", false);
+            animator.SetInteger("MoveDirection", -1);
             animator.SetTrigger("Move");
         }
     }
@@ -78,8 +78,9 @@ public class PlayerCharacter : MonoBehaviour
             animator.ResetTrigger("Event");
             animator.ResetTrigger("Move");
 
-            animator.SetInteger("MoveDirection", -1);
             animator.SetBool("isFall", true);
+            animator.SetInteger("MoveDirection", -1);
+            animator.SetTrigger("Move");
         }
     }
 
