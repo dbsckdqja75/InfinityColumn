@@ -50,6 +50,7 @@ public class PlayerCharacter : MonoBehaviour
     {
         if(animator)
         {
+            animator.ResetTrigger("Event");
             animator.ResetTrigger("Move");
 
             animator.SetInteger("MoveDirection", -1);
@@ -62,6 +63,7 @@ public class PlayerCharacter : MonoBehaviour
     {
         if(animator)
         {
+            animator.ResetTrigger("Event");
             animator.ResetTrigger("Move");
 
             animator.SetInteger("MoveDirection", isLeft ? 0 : 1);
@@ -73,6 +75,7 @@ public class PlayerCharacter : MonoBehaviour
     {
         if(animator)
         {
+            animator.ResetTrigger("Event");
             animator.ResetTrigger("Move");
 
             animator.SetInteger("MoveDirection", -1);

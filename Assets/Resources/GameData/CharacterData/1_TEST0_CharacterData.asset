@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 1_TEST0_CharacterData
   m_EditorClassIdentifier: 
   id: 1
-  displayName: "\uD14C\uC2A4\uD2B8 \uCE90\uB9AD\uD130 1"
+  displayName: "\uB7EC\uB108\uBD07"
   price: 1
-  prefab: {fileID: 3038646068313142656, guid: 244b6502f3d8cc3489ff4cd13a09cf8a, type: 3}
+  previewScale: 1
+  prefab: {fileID: 7373869055244383864, guid: db4af0623594f9246bb2e97131ea5f5f, type: 3}
