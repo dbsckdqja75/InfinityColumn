@@ -50,7 +50,7 @@ public static class TransformExtensions
             trf.rotation = newRot;
         }
 
-        public static void SetScale(this Transform trf, int newScaleXYZ)
+        public static void SetScale(this Transform trf, float newScaleXYZ)
         {
             Vector3 newScale = new Vector3(newScaleXYZ, newScaleXYZ, newScaleXYZ);
             trf.localScale = newScale;

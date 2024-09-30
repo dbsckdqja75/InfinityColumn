@@ -24,7 +24,7 @@ public class CharacterPreview : MonoBehaviour
     [SerializeField] GameObject previewList;
     [SerializeField] Transform[] pivot;
 
-    GameObject[] previewCharacter = new GameObject[3];
+    PlayerCharacter[] previewCharacter = new PlayerCharacter[3];
 
     Vector2 beginPosition;
     Vector2 currentPosition;
@@ -162,21 +162,25 @@ public class CharacterPreview : MonoBehaviour
     {
         centerIdx = (int)characterManager.GetCurrentCharacterID();
         
-        foreach(GameObject character in previewCharacter)
+        foreach(PlayerCharacter character in previewCharacter)
         {
-            Destroy(character);
+            Destroy(character?.gameObject);
         }
 
         int nextIdx = (int)Mathf.Repeat(centerIdx+1, characterCount);
         int previousIdx = (int)Mathf.Repeat(centerIdx-1, characterCount);
 
-        previewCharacter[0] = Instantiate(characterManager.GetPrefab((CharacterID)previousIdx), pivot[0]);
-        previewCharacter[1] = Instantiate(characterManager.GetPrefab((CharacterID)centerIdx), pivot[1]);
-        previewCharacter[2] = Instantiate(characterManager.GetPrefab((CharacterID)nextIdx), pivot[2]);
+        CharacterData previousData = characterManager.GetCharacterData((CharacterID)previousIdx);
+        CharacterData centerData = characterManager.GetCharacterData((CharacterID)centerIdx);
+        CharacterData nextData = characterManager.GetCharacterData((CharacterID)nextIdx);
 
-        previewCharacter[0].transform.SetScale(1);
-        previewCharacter[1].transform.SetScale(1);
-        previewCharacter[2].transform.SetScale(1);
+        previewCharacter[0] = Instantiate(previousData.GetPrefab(), pivot[0]).GetComponent<PlayerCharacter>();
+        previewCharacter[1] = Instantiate(centerData.GetPrefab(), pivot[1]).GetComponent<PlayerCharacter>();
+        previewCharacter[2] = Instantiate(nextData.GetPrefab(), pivot[2]).GetComponent<PlayerCharacter>();
+
+        previewCharacter[0].transform.SetScale(previousData.GetPreviewScale());
+        previewCharacter[1].transform.SetScale(centerData.GetPreviewScale());
+        previewCharacter[2].transform.SetScale(nextData.GetPreviewScale());
 
         UpdateUI();
     }
@@ -192,9 +196,9 @@ public class CharacterPreview : MonoBehaviour
 
     void ResetCharacterPivot()
     {
-        previewCharacter[0] = pivot[0].transform.GetChild(0).gameObject;
-        previewCharacter[1] = pivot[1].transform.GetChild(0).gameObject;
-        previewCharacter[2] = pivot[2].transform.GetChild(0).gameObject;
+        previewCharacter[0] = pivot[0].transform.GetChild(0).GetComponent<PlayerCharacter>();
+        previewCharacter[1] = pivot[1].transform.GetChild(0).GetComponent<PlayerCharacter>();
+        previewCharacter[2] = pivot[2].transform.GetChild(0).GetComponent<PlayerCharacter>();
     }
 
     public void NextCharacter()
@@ -204,9 +208,12 @@ public class CharacterPreview : MonoBehaviour
         centerIdx = (int)Mathf.Repeat(centerIdx+1, characterCount);
         int nextIdx = (int)Mathf.Repeat(centerIdx+1, characterCount);
 
-        Destroy(previewCharacter[2]);
+        Destroy(previewCharacter[2].gameObject);
 
-        previewCharacter[2] = Instantiate(characterManager.GetPrefab((CharacterID)nextIdx), pivot[2]);
+        CharacterData data = characterManager.GetCharacterData((CharacterID)nextIdx);
+
+        previewCharacter[2] = Instantiate(data.GetPrefab(), pivot[2]).GetComponent<PlayerCharacter>();
+        previewCharacter[2].transform.SetScale(data.GetPreviewScale());
 
         SoundManager.Instance.PlaySound("Hit2");
 
@@ -220,9 +227,12 @@ public class CharacterPreview : MonoBehaviour
         centerIdx = (int)Mathf.Repeat(centerIdx-1, characterCount);
         int previousIdx = (int)Mathf.Repeat(centerIdx-1, characterCount);
 
-        Destroy(previewCharacter[0]);
+        Destroy(previewCharacter[0].gameObject);
 
-        previewCharacter[0] = Instantiate(characterManager.GetPrefab((CharacterID)previousIdx), pivot[0]);
+        CharacterData data = characterManager.GetCharacterData((CharacterID)previousIdx);
+
+        previewCharacter[0] = Instantiate(data.GetPrefab(), pivot[0]).GetComponent<PlayerCharacter>();
+        previewCharacter[0].transform.SetScale(data.GetPreviewScale());
 
         SoundManager.Instance.PlaySound("Hit2");
 
@@ -232,6 +242,7 @@ public class CharacterPreview : MonoBehaviour
     public void ApplyCharacter()
     {
         characterManager.ApplyCharacter((CharacterID)centerIdx);
+        previewCharacter[1].IdleMotion(1);
 
         UpdateUI();
     }
@@ -247,9 +258,11 @@ public class CharacterPreview : MonoBehaviour
     void OnBuyCharacter()
     {
         CharacterData data = characterManager.GetCharacterData((CharacterID)centerIdx);
+
         if(CurrencyManager.Instance.Purchase(CurrencyType.VOXEL_POINT, data.GetPrice()))
         {
             characterManager.RewardCharacter(data.GetID());
+            previewCharacter[1].IdleMotion(1);
         }
 
         UpdateUI();

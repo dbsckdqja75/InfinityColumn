@@ -20,7 +20,7 @@ public class PlayerCharacter : MonoBehaviour
     {
         if(idleEventCount > 0)
         {
-            RandomIdleMotion().Start(this);
+            RandomMotionLoop().Start(this);
         }
     }
 
@@ -92,19 +92,31 @@ public class PlayerCharacter : MonoBehaviour
         }
     }
 
-    IEnumerator RandomIdleMotion()
+    public void IdleMotion(int motionIdx)
+    {
+        if(animator.GetInteger("MoveDirection") < 0 && !animator.GetBool("isFall"))
+        {
+            animator.ResetTrigger("Event");
+
+            animator.SetInteger("EventIdx", motionIdx);
+            animator.SetTrigger("Event");
+        }
+    }
+
+    public void RandomIdleMotion()
+    {
+        int eventMotionIdx = Random.Range(0, idleEventCount+1);
+        IdleMotion(eventMotionIdx);
+    }
+
+    IEnumerator RandomMotionLoop()
     {
         while(true)
         {
             float eventTime = Random.Range(10f, 60f);
             yield return new WaitForSeconds(eventTime);
 
-            if(animator.GetInteger("MoveDirection") < 0 && !animator.GetBool("isFall"))
-            {
-                int eventIdx = Random.Range(0, idleEventCount+1);
-                animator.SetInteger("EventIdx", eventIdx);
-                animator.SetTrigger("Event");
-            }
+            RandomIdleMotion();
             
             yield return new WaitForEndOfFrame();
         }

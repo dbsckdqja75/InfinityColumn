@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 3
   displayName: "\uD1A0\uB07C\uBD07"
   price: 2
-  previewScale: 1
+  previewScale: 0.9
   prefab: {fileID: 6897575500541658178, guid: bebdf3b48f2bc564ab92784f5516093c, type: 3}

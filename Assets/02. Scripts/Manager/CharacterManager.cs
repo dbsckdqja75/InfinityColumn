@@ -133,11 +133,6 @@ public class CharacterManager : MonoBehaviour
         return characterList[id];
     }
 
-    public GameObject GetPrefab(CharacterID id)
-    {
-        return characterList[id].GetPrefab();
-    }
-
     public bool GetCharacterUnlockState(CharacterID id)
     {
         return playerData.Contains(id);
