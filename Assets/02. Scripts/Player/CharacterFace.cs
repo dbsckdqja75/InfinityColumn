@@ -16,12 +16,21 @@ public class CharacterFace : MonoBehaviour
         animator = this.GetComponent<Animator>();
     }
 
+    void OnEnable()
+    {
+        if(headTrf)
+        {
+            transform.SetParent(headTrf);
+        }
+    }
+
     void Update()
     {
         if(headTrf)
         {
-            transform.position = headTrf.position;
-            transform.rotation = headTrf.rotation;
+            transform.localPosition = Vector3.zero;
+            transform.localRotation = Quaternion.identity;
+            transform.localScale = Vector3.one;
         }
     }
 
