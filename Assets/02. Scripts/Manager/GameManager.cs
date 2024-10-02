@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
 
     [Space(10)]
     [SerializeField] CameraView cameraView;
-    [SerializeField] PlayerController pController;
+    [SerializeField] PlayerController playerController;
     [SerializeField] SpawnManager spawnManager;
     [SerializeField] SkyBoxManager skyBoxManager;
     [SerializeField] CanvasManager canvasManager;
@@ -101,12 +101,12 @@ public class GameManager : MonoBehaviour
     {
         cameraView.Init();
         spawnManager.Init();
-        pController.Init();
+        playerController.Init();
 
         ReturnLobby();
 
-        pController.SetMoveLock(true);
-        pController.AddMoveEvent(() => { OnPlayerMove(); });
+        playerController.SetMoveLock(true);
+        playerController.AddMoveEvent(() => { OnPlayerMove(); });
 
         LoadGameData();
     }
@@ -216,7 +216,7 @@ public class GameManager : MonoBehaviour
 
     void UpdateFall()
     {
-        float t = (pController.GetPlayerHeight() / lastPlayerHeight);
+        float t = (playerController.GetPlayerHeight() / lastPlayerHeight);
         int fallScore = (int)Mathf.Lerp(0, score, t);
         skyBoxManager.UpdateHeight(fallScore);
     }
@@ -271,7 +271,7 @@ public class GameManager : MonoBehaviour
 
         cameraView.SetCameraPreset("Playing");
 
-        pController.SetMoveLock(false);
+        playerController.SetMoveLock(false);
 
         canvasManager.SetPanel("Playing");
     }
@@ -282,9 +282,9 @@ public class GameManager : MonoBehaviour
 
         cameraView.SetCameraPreset("GameOver");
 
-        lastPlayerHeight = pController.GetPlayerHeight();
-        pController.SetMoveLock(true);
-        pController.Fall();
+        lastPlayerHeight = playerController.GetPlayerHeight();
+        playerController.SetMoveLock(true);
+        playerController.Fall();
 
         OnReward(score);
         UpdateResultScore();
@@ -331,7 +331,7 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.PAUSE;
 
-        pController.SetMoveLock(true);
+        playerController.SetMoveLock(true);
 
         canvasManager.SetPanel("Pause");
     }
@@ -340,7 +340,7 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.PLAYING;
 
-        pController.SetMoveLock(false);
+        playerController.SetMoveLock(false);
 
         canvasManager.SetPanel("Playing");
     }
@@ -378,7 +378,7 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.EXTRA_MENU;
 
-        pController.SetMoveLock(true);
+        playerController.SetMoveLock(true);
 
         dailyChallengeManager.UpdateUI();
 
@@ -397,7 +397,7 @@ public class GameManager : MonoBehaviour
         // TODO : 추후에 플랫폼별로 호출 처리
         gameState = GameState.EXTRA_MENU;
 
-        pController.SetMoveLock(true);
+        playerController.SetMoveLock(true);
 
         leaderboardManager.OnLeaderboard();
 
@@ -418,7 +418,7 @@ public class GameManager : MonoBehaviour
         warning_Effect.SetActive(false);
         startTouchGuideObj.SetActive(true);
 
-        pController.ResetPosition();
+        playerController.ResetPosition();
 
         spawnManager.ResetPool();
         spawnManager.UpdateColumnMode(false);
@@ -506,7 +506,7 @@ public class GameManager : MonoBehaviour
     void CheckBranch()
     {
         Column column = spawnManager.GetNextColumn();
-        if(column.IsHaveBranch(pController.GetDirectionType()))
+        if(column.IsHaveBranch(playerController.GetDirectionType()))
         {
             if(isFeverTime)
             {

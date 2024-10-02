@@ -5,11 +5,10 @@ public class PlayerController : MonoBehaviour
 {
     bool moveLock = false;
 
-    Vector3 startPos;
+    [SerializeField] Vector3 startPos;
 
-    float movePosX;
-    
-    [SerializeField] float moveDisY;
+    [SerializeField] float movePosX;
+    [SerializeField] float movePosY;
 
     // TODO : 임시
     [SerializeField] PlayerCharacter playerCharacter;
@@ -32,10 +31,6 @@ public class PlayerController : MonoBehaviour
     public void Init()
     {
         rb = this.GetComponent<Rigidbody>();
-
-        startPos = transform.position;
-
-        movePosX = Mathf.Abs(transform.position.x);
 
         iController.AddTouchEvent(OnTouch);
     }
@@ -65,7 +60,7 @@ public class PlayerController : MonoBehaviour
             return;
 
         Vector2 nowPos = transform.position;
-        Vector3 movePos = new Vector3(0, nowPos.y + moveDisY, 0);
+        Vector3 movePos = new Vector3(0, nowPos.y + movePosY, 0);
         movePos.x = (isLeft ? -movePosX : movePosX);
 
         if(nowPos.y >= GameManager.HEIGHT_LIMIT)
@@ -95,15 +90,16 @@ public class PlayerController : MonoBehaviour
     {
         rb.isKinematic = true;
 
+        startPos.x = (RandomExtensions.RandomBool() ? movePosX : -movePosX);
+
         transform.position = startPos;
         transform.rotation = Quaternion.identity;
-
-        movePosX = Mathf.Abs(transform.position.x);
 
         if(playerCharacter)
         {
             playerCharacter.ResetPosition();
             playerCharacter.ResetMotion();
+            playerCharacter.HeadTrackEnable();
         }
     }
 
@@ -119,6 +115,7 @@ public class PlayerController : MonoBehaviour
         if(playerCharacter)
         {
             playerCharacter.FallMotion();
+            playerCharacter.HeadTrackDisable();
         }
 
         SoundManager.Instance.PlaySound("BuzzError1");

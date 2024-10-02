@@ -8,6 +8,7 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] int idleEventCount;
 
     [SerializeField] CharacterFace characterFace;
+    [SerializeField] HeadTracker headTracker;
 
     Animator animator;
 
@@ -26,7 +27,7 @@ public class PlayerCharacter : MonoBehaviour
 
     void OnDisable() 
     {
-        this.StopAllCoroutines();    
+        RandomMotionLoop().Stop(this);
     }
 
     public void UpdatePosition(bool isLeft)
@@ -40,7 +41,7 @@ public class PlayerCharacter : MonoBehaviour
     public void ResetPosition()
     {
         Vector3 movePos = offsetPosition;
-        movePos.x = -offsetPosition.x;
+        movePos.x = (transform.parent.position.x > 0 ? offsetPosition.x : -offsetPosition.x);
 
         transform.localPosition = movePos;
         transform.localRotation = Quaternion.Euler(offsetRotation);
@@ -92,21 +93,48 @@ public class PlayerCharacter : MonoBehaviour
         }
     }
 
-    public void IdleMotion(int motionIdx)
+    public void SetHeadTrackTarget(Transform targetTrf)
+    {
+        if(headTracker)
+        {
+            headTracker.SetTarget(targetTrf);
+        }
+    }
+
+    public void HeadTrackEnable()
+    {
+        if(headTracker)
+        {
+            headTracker.SetActive(true);
+        }
+    }
+
+    public void HeadTrackDisable()
+    {
+        if(headTracker)
+        {
+            headTracker.SetActive(false);
+        }
+    }
+
+    public void EventMotion(int motionIdx)
     {
         if(animator.GetInteger("MoveDirection") < 0 && !animator.GetBool("isFall"))
         {
             animator.ResetTrigger("Event");
 
-            animator.SetInteger("EventIdx", motionIdx);
-            animator.SetTrigger("Event");
+            if(motionIdx > 0)
+            {
+                animator.SetInteger("EventIdx", motionIdx);
+                animator.SetTrigger("Event");
+            }
         }
     }
 
-    public void RandomIdleMotion()
+    public void RandomEventMotion()
     {
         int eventMotionIdx = Random.Range(0, idleEventCount+1);
-        IdleMotion(eventMotionIdx);
+        EventMotion(eventMotionIdx);
     }
 
     IEnumerator RandomMotionLoop()
@@ -116,7 +144,7 @@ public class PlayerCharacter : MonoBehaviour
             float eventTime = Random.Range(10f, 60f);
             yield return new WaitForSeconds(eventTime);
 
-            RandomIdleMotion();
+            RandomEventMotion();
             
             yield return new WaitForEndOfFrame();
         }

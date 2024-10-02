@@ -91,6 +91,8 @@ public class CharacterManager : MonoBehaviour
         GameObject prefab = characterList[currentCharacterID].GetPrefab();
         PlayerCharacter playerCharacter = Instantiate(prefab, playerController.transform.position, Quaternion.identity, playerController.transform).GetComponent<PlayerCharacter>();
         playerCharacter.ResetPosition();
+        playerCharacter.SetHeadTrackTarget(Camera.main.transform);
+        playerCharacter.HeadTrackEnable();
 
         playerController.SetPlayerCharacter(playerCharacter);
     }

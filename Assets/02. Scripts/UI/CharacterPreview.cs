@@ -46,6 +46,10 @@ public class CharacterPreview : MonoBehaviour
             {
                 previewCamera.gameObject.SetActive(true);
                 previewList.SetActive(true);
+
+                ResetCharacterHeadTrack(0);
+                ResetCharacterHeadTrack(1);
+                ResetCharacterHeadTrack(2);
             }
         }
     }
@@ -161,26 +165,12 @@ public class CharacterPreview : MonoBehaviour
     void ResetPreview()
     {
         centerIdx = (int)characterManager.GetCurrentCharacterID();
-        
-        foreach(PlayerCharacter character in previewCharacter)
-        {
-            Destroy(character?.gameObject);
-        }
-
         int nextIdx = (int)Mathf.Repeat(centerIdx+1, characterCount);
         int previousIdx = (int)Mathf.Repeat(centerIdx-1, characterCount);
 
-        CharacterData previousData = characterManager.GetCharacterData((CharacterID)previousIdx);
-        CharacterData centerData = characterManager.GetCharacterData((CharacterID)centerIdx);
-        CharacterData nextData = characterManager.GetCharacterData((CharacterID)nextIdx);
-
-        previewCharacter[0] = Instantiate(previousData.GetPrefab(), pivot[0]).GetComponent<PlayerCharacter>();
-        previewCharacter[1] = Instantiate(centerData.GetPrefab(), pivot[1]).GetComponent<PlayerCharacter>();
-        previewCharacter[2] = Instantiate(nextData.GetPrefab(), pivot[2]).GetComponent<PlayerCharacter>();
-
-        previewCharacter[0].transform.SetScale(previousData.GetPreviewScale());
-        previewCharacter[1].transform.SetScale(centerData.GetPreviewScale());
-        previewCharacter[2].transform.SetScale(nextData.GetPreviewScale());
+        SpawnCharacter(0, previousIdx);
+        SpawnCharacter(1, centerIdx);
+        SpawnCharacter(2, nextIdx);
 
         UpdateUI();
     }
@@ -201,6 +191,24 @@ public class CharacterPreview : MonoBehaviour
         previewCharacter[2] = pivot[2].transform.GetChild(0).GetComponent<PlayerCharacter>();
     }
 
+    public void SpawnCharacter(int pivotIdx, int characterIdx)
+    {
+        Destroy(previewCharacter[pivotIdx]?.gameObject);
+
+        CharacterData data = characterManager.GetCharacterData((CharacterID)characterIdx);
+
+        previewCharacter[pivotIdx] = Instantiate(data.GetPrefab(), pivot[pivotIdx]).GetComponent<PlayerCharacter>();
+        previewCharacter[pivotIdx].transform.SetScale(data.GetPreviewScale());
+
+        SoundManager.Instance.PlaySound("Hit2");
+    }
+
+    public void ResetCharacterHeadTrack(int pivotIdx)
+    {
+        previewCharacter[pivotIdx].SetHeadTrackTarget(previewCamera.transform);
+        previewCharacter[pivotIdx].HeadTrackEnable();
+    }
+
     public void NextCharacter()
     {
         SetCharacterPivot(2,0,1);
@@ -208,14 +216,8 @@ public class CharacterPreview : MonoBehaviour
         centerIdx = (int)Mathf.Repeat(centerIdx+1, characterCount);
         int nextIdx = (int)Mathf.Repeat(centerIdx+1, characterCount);
 
-        Destroy(previewCharacter[2].gameObject);
-
-        CharacterData data = characterManager.GetCharacterData((CharacterID)nextIdx);
-
-        previewCharacter[2] = Instantiate(data.GetPrefab(), pivot[2]).GetComponent<PlayerCharacter>();
-        previewCharacter[2].transform.SetScale(data.GetPreviewScale());
-
-        SoundManager.Instance.PlaySound("Hit2");
+        SpawnCharacter(2, nextIdx);
+        ResetCharacterHeadTrack(2);
 
         UpdateUI();
     }
@@ -227,14 +229,8 @@ public class CharacterPreview : MonoBehaviour
         centerIdx = (int)Mathf.Repeat(centerIdx-1, characterCount);
         int previousIdx = (int)Mathf.Repeat(centerIdx-1, characterCount);
 
-        Destroy(previewCharacter[0].gameObject);
-
-        CharacterData data = characterManager.GetCharacterData((CharacterID)previousIdx);
-
-        previewCharacter[0] = Instantiate(data.GetPrefab(), pivot[0]).GetComponent<PlayerCharacter>();
-        previewCharacter[0].transform.SetScale(data.GetPreviewScale());
-
-        SoundManager.Instance.PlaySound("Hit2");
+        SpawnCharacter(0, previousIdx);
+        ResetCharacterHeadTrack(0);
 
         UpdateUI();
     }
@@ -242,7 +238,7 @@ public class CharacterPreview : MonoBehaviour
     public void ApplyCharacter()
     {
         characterManager.ApplyCharacter((CharacterID)centerIdx);
-        previewCharacter[1].IdleMotion(1);
+        previewCharacter[1].EventMotion(1);
 
         UpdateUI();
     }
@@ -262,7 +258,6 @@ public class CharacterPreview : MonoBehaviour
         if(CurrencyManager.Instance.Purchase(CurrencyType.VOXEL_POINT, data.GetPrice()))
         {
             characterManager.RewardCharacter(data.GetID());
-            previewCharacter[1].IdleMotion(1);
         }
 
         UpdateUI();
