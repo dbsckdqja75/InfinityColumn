@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2222413232888829629}
   - component: {fileID: 4179814751200292251}
   m_Layer: 7
-  m_Name: Column_Brick
+  m_Name: Column_Brick_Yellow
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 393428e233dc4ce4b8841471ac81df37, type: 2}
+  - {fileID: 2100000, guid: 2a5196f122c06df44816556ed2f83fe8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b93947fd2250104ca6fe5b386d87ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectPrefab: {fileID: 3639129327712708581, guid: e4a69c50161611a4f84c77926884aabb,
+  effectPrefab: {fileID: 3639129327712708581, guid: d6dc52813ea141d43ab07b0b24fc5cd8,
     type: 3}
   branchs:
   - {fileID: 7259727361673123480}
@@ -254,7 +254,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d7acd11dbb481b14eaf217dc76355b1b, type: 2}
+  - {fileID: 2100000, guid: a3c0b4d8bcf482944ad71bf0822cf2dc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -445,7 +445,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d7acd11dbb481b14eaf217dc76355b1b, type: 2}
+  - {fileID: 2100000, guid: a3c0b4d8bcf482944ad71bf0822cf2dc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

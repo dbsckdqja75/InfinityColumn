@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Column : MonoBehaviour
 {
-
-    [SerializeField] GameObject effectPrefab;
     [SerializeField] GameObject[] branchs;
 
     public GameObject currentBranch { get; private set; }

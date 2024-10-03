@@ -7,8 +7,10 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] Vector3 spawnGap;
     [SerializeField] Transform columnSpawnParent;
     [SerializeField] Transform effectSpawnParent;
-    [SerializeField] GameObject columnPrefab;
-    [SerializeField] GameObject columnEffectPrefab;
+
+    [SerializeField] List<ColumnData> columnData;
+
+    ColumnData currentColumnData;
 
     bool isStackMode = false;
 
@@ -22,12 +24,20 @@ public class SpawnManager : MonoBehaviour
 
     public void Init()
     {
+        InitColumnData();
         InitColumnPool();
         InitEffectPool();
     }
 
+    void InitColumnData()
+    {
+        currentColumnData = columnData[Random.Range(0, columnData.Count)];
+    }
+
     void InitColumnPool()
     {
+        GameObject columnPrefab = currentColumnData.GetColumnPrefab();
+
         columnList.Clear();
 
         centerIndex = 0;
@@ -47,11 +57,13 @@ public class SpawnManager : MonoBehaviour
 
     void InitEffectPool()
     {
+        GameObject effectPrefab = currentColumnData.GetEffectPrefab();
+
         branchEffectList.Clear();
 
         for(int i = 0; i < maxColumnCount; i++)
         {
-            ColumnEffect columnEffect = Instantiate(columnEffectPrefab, effectSpawnParent.position, Quaternion.identity, effectSpawnParent).GetComponent<ColumnEffect>();
+            ColumnEffect columnEffect = Instantiate(effectPrefab, effectSpawnParent.position, Quaternion.identity, effectSpawnParent).GetComponent<ColumnEffect>();
             branchEffectList.Enqueue(columnEffect);
             columnEffect.Release();
         }
@@ -69,6 +81,7 @@ public class SpawnManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
+        InitColumnData();
         InitColumnPool();
         InitEffectPool();
     }

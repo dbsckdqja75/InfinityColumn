@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a28d05d9c77057428145ad90df39737, type: 3}
+  m_Name: Brick_Classic_Yellow_ColumnData
+  m_EditorClassIdentifier: 
+  columnPrefab: {fileID: 4660640781114967355, guid: 15040ca95b3a19545a2b79495ce0cef9,
+    type: 3}
+  effectPrefab: {fileID: 3639129327712708581, guid: 62bd707caf9c3e74a84790b20a5a3feb,
+    type: 3}
