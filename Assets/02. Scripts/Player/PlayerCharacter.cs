@@ -93,6 +93,22 @@ public class PlayerCharacter : MonoBehaviour
         }
     }
 
+    public void FeverEyeMotion()
+    {
+        if(characterFace)
+        {
+            characterFace.ChangeFeverEyes();
+        }
+    }
+
+    public void ResetEyeMotion()
+    {
+        if(characterFace)
+        {
+            characterFace.ResetEyes();
+        }
+    }
+
     public void SetHeadTrackTarget(Transform targetTrf)
     {
         if(headTracker)

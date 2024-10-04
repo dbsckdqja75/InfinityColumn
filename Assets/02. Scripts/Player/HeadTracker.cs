@@ -45,7 +45,6 @@ public class HeadTracker : MonoBehaviour
     {
         if(aimConstraint)
         {
-            aimConstraint.weight = 0;
             aimConstraint.constraintActive = true;
 
             while(aimConstraint.weight < 1)
@@ -64,8 +63,6 @@ public class HeadTracker : MonoBehaviour
     {
         if(aimConstraint)
         {
-            aimConstraint.weight = 1;
-
             while(aimConstraint.weight > 0)
             {
                 aimConstraint.weight -= (fadeSpeed * 2) * Time.deltaTime;

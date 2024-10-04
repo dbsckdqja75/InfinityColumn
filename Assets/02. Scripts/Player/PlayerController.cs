@@ -121,6 +121,18 @@ public class PlayerController : MonoBehaviour
         SoundManager.Instance.PlaySound("BuzzError1");
     }
 
+    public void Fever(bool isFever)
+    {
+        if(isFever)
+        {
+            playerCharacter?.FeverEyeMotion();
+        }
+        else
+        {
+            playerCharacter?.ResetEyeMotion();
+        }
+    }
+
     public int GetDirectionType()
     {
         return (transform.position.x < 0) ? 0 : 1;

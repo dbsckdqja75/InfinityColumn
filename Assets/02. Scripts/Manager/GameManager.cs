@@ -434,6 +434,8 @@ public class GameManager : MonoBehaviour
         feverCharge = 0;
         feverFillAmount = 0f;
 
+        playerController.Fever(false);
+
         fever_Effect.SetActive(false);
         feverFillColor.ResetColor();
 
@@ -448,6 +450,8 @@ public class GameManager : MonoBehaviour
     void OnFeverTime()
     {
         isFeverTime = true;
+
+        playerController.Fever(true);
 
         fever_Effect.SetActive(true);
         feverFillColor.SetColorPreset(0);

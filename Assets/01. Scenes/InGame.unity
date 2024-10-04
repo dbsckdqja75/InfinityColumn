@@ -3292,6 +3292,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headTrf: {fileID: 1013145598}
+  feverEyeColor: {r: 0, g: 0, b: 0, a: 0}
+  feverEyeMaterial: {fileID: 0}
+  eyes: []
 --- !u!95 &64933932
 Animator:
   serializedVersion: 7
@@ -5337,6 +5340,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headTrf: {fileID: 279966217}
+  feverEyeColor: {r: 0, g: 0, b: 0, a: 0}
+  feverEyeMaterial: {fileID: 0}
+  eyes: []
 --- !u!95 &104146871
 Animator:
   serializedVersion: 7
@@ -19044,6 +19050,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headTrf: {fileID: 1553311784}
+  feverEyeColor: {r: 0, g: 0, b: 0, a: 0}
+  feverEyeMaterial: {fileID: 0}
+  eyes: []
 --- !u!95 &351992797
 Animator:
   serializedVersion: 7
@@ -34132,6 +34141,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headTrf: {fileID: 1394172160}
+  feverEyeColor: {r: 0, g: 0, b: 0, a: 0}
+  feverEyeMaterial: {fileID: 0}
+  eyes: []
 --- !u!95 &757344829
 Animator:
   serializedVersion: 7
@@ -34483,6 +34495,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headTrf: {fileID: 1961678066}
+  feverEyeColor: {r: 0, g: 0, b: 0, a: 0}
+  feverEyeMaterial: {fileID: 0}
+  eyes: []
 --- !u!95 &780700772
 Animator:
   serializedVersion: 7
@@ -39509,6 +39524,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headTrf: {fileID: 320584268}
+  feverEyeColor: {r: 0, g: 0, b: 0, a: 0}
+  feverEyeMaterial: {fileID: 0}
+  eyes: []
 --- !u!95 &813724314
 Animator:
   serializedVersion: 7
@@ -41994,6 +42012,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headTrf: {fileID: 985990094}
+  feverEyeColor: {r: 0, g: 0, b: 0, a: 0}
+  feverEyeMaterial: {fileID: 0}
+  eyes: []
 --- !u!95 &911578245
 Animator:
   serializedVersion: 7
@@ -66107,6 +66128,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headTrf: {fileID: 1575170855}
+  feverEyeColor: {r: 0, g: 0, b: 0, a: 0}
+  feverEyeMaterial: {fileID: 0}
+  eyes: []
 --- !u!95 &1206078240
 Animator:
   serializedVersion: 7
@@ -79334,6 +79358,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headTrf: {fileID: 946194022}
+  feverEyeColor: {r: 0, g: 0, b: 0, a: 0}
+  feverEyeMaterial: {fileID: 0}
+  eyes: []
 --- !u!95 &1447296485
 Animator:
   serializedVersion: 7
@@ -80838,6 +80865,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headTrf: {fileID: 1109210866}
+  feverEyeColor: {r: 0, g: 0, b: 0, a: 0}
+  feverEyeMaterial: {fileID: 0}
+  eyes: []
 --- !u!95 &1481701137
 Animator:
   serializedVersion: 7
@@ -101403,6 +101433,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headTrf: {fileID: 572083684}
+  feverEyeColor: {r: 0, g: 0, b: 0, a: 0}
+  feverEyeMaterial: {fileID: 0}
+  eyes: []
 --- !u!95 &1816057657
 Animator:
   serializedVersion: 7
@@ -113870,6 +113903,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headTrf: {fileID: 1526457129}
+  feverEyeColor: {r: 0, g: 0, b: 0, a: 0}
+  feverEyeMaterial: {fileID: 0}
+  eyes: []
 --- !u!95 &2073059964
 Animator:
   serializedVersion: 7

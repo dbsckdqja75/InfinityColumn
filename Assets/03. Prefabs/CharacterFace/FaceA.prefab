@@ -311,6 +311,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headTrf: {fileID: 0}
+  feverEyeColor: {r: 1, g: 0.78431374, b: 0, a: 1}
+  feverEyeMaterial: {fileID: 2100000, guid: 6f7faf621068e6b4089d33253d64158e, type: 2}
+  eyes:
+  - {fileID: 7645465415232970854}
+  - {fileID: 654585374200791839}
 --- !u!95 &8146584706376254367
 Animator:
   serializedVersion: 7

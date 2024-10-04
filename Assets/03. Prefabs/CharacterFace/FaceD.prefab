@@ -391,12 +391,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6714675793342468929}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 899342c6eef5acb479c65ed6500a4989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   headTrf: {fileID: 0}
+  feverEyeColor: {r: 1, g: 0.78431374, b: 0, a: 1}
+  feverEyeMaterial: {fileID: 2100000, guid: 6f7faf621068e6b4089d33253d64158e, type: 2}
+  eyes:
+  - {fileID: 1716054209936303466}
+  - {fileID: 1541021759105127494}
 --- !u!95 &1835093142042994885
 Animator:
   serializedVersion: 7
