@@ -23,6 +23,14 @@ public class CharacterFace : MonoBehaviour
     {
         animator = this.GetComponent<Animator>();
 
+        #if UNITY_EDITOR
+        if(!Application.isPlaying)
+        {
+            // NOTE : ExecuteInEditMode 로 Material 이 Instance 로 변경되는 것을 방지
+            return;
+        }
+        #endif
+
         if(eyes.Length > 0)
         {
             originalEyeColor = eyes[0].color;

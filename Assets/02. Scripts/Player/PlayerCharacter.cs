@@ -49,6 +49,8 @@ public class PlayerCharacter : MonoBehaviour
 
     public void ResetMotion()
     {
+        FaceMotion(0);
+        
         if(animator)
         {
             animator.ResetTrigger("Event");
@@ -74,6 +76,8 @@ public class PlayerCharacter : MonoBehaviour
 
     public void FallMotion()
     {
+        FaceMotion(3);
+
         if(animator)
         {
             animator.ResetTrigger("Event");
