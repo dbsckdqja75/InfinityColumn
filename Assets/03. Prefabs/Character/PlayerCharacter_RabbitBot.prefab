@@ -741,7 +741,7 @@ GameObject:
   - component: {fileID: 8325098644388120050}
   - component: {fileID: 142406673919879784}
   m_Layer: 6
-  m_Name: PlayerCharacter RabbitBot
+  m_Name: PlayerCharacter_RabbitBot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

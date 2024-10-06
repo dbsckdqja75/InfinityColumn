@@ -4274,7 +4274,7 @@ GameObject:
   - component: {fileID: 5730414291116517188}
   - component: {fileID: 737714836828917222}
   m_Layer: 6
-  m_Name: PlayerCharacter_GameBot
+  m_Name: PlayerCharacter_TrainingBot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

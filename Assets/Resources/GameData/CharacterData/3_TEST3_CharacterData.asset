@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 3_TEST3_CharacterData
   m_EditorClassIdentifier: 
   id: 4
-  displayName: "\uBBF8\uAD6C\uD604 \uBAA8\uC2DC\uAE7D\uC774"
+  characterLocaleKey: CharacterName_None
   price: 0
   previewScale: 0.9
   prefab: {fileID: 7373869055244383864, guid: db4af0623594f9246bb2e97131ea5f5f, type: 3}

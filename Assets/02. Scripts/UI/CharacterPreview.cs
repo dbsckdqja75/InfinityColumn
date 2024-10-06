@@ -150,7 +150,7 @@ public class CharacterPreview : MonoBehaviour
         bool isUnlock = (price <= 0 || characterManager.GetCharacterUnlockState((CharacterID)centerIdx)); 
         bool isApplied = characterManager.GetCurrentCharacterID().IsEquals((CharacterID)centerIdx);
 
-        nameText.text = data.GetName();
+        nameText.text = LocalizationManager.Instance.GetString(data.GetNameLocaleKey());
 
         applyButton.interactable = !isApplied;
         applyButton.gameObject.SetActive(isUnlock);

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 2_TEST1_CharacterData
   m_EditorClassIdentifier: 
   id: 2
-  displayName: "\uBBFC\uD2B8\uBD07"
+  characterLocaleKey: CharacterName_MintBot
   price: 5
   previewScale: 0.9
   prefab: {fileID: 7373869055244383864, guid: ada45ff3a41ce1549bcfbd3ce0dc21f8, type: 3}

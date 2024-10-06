@@ -247,6 +247,26 @@ MonoBehaviour:
     m_Localized: Applied
     m_Metadata:
       m_Items: []
+  - m_Id: 8686934896455680
+    m_Localized: Traning Bot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8686959223418880
+    m_Localized: Runner Bot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8689038042116096
+    m_Localized: NULL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8688994874339328
+    m_Localized: Mint Bot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8689016047185920
+    m_Localized: Rabbit Bot
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

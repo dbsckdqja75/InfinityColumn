@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1_TEST0_CharacterData
   m_EditorClassIdentifier: 
   id: 1
-  displayName: "\uB7EC\uB108\uBD07"
+  characterLocaleKey: CharacterName_RunnerBot
   price: 1
   previewScale: 0.9
   prefab: {fileID: 7373869055244383864, guid: db4af0623594f9246bb2e97131ea5f5f, type: 3}

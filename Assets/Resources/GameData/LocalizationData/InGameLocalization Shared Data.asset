@@ -207,6 +207,26 @@ MonoBehaviour:
     m_Key: Applied
     m_Metadata:
       m_Items: []
+  - m_Id: 8686934896455680
+    m_Key: CharacterName_TraningBot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8686959223418880
+    m_Key: CharacterName_RunnerBot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8688994874339328
+    m_Key: CharacterName_MintBot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8689016047185920
+    m_Key: CharacterName_RabbitBot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8689038042116096
+    m_Key: CharacterName_None
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.Localization;
 
 [CreateAssetMenu(fileName = "CharacterData", menuName = "ScriptableObject/CharacterData")]
 public class CharacterData : ScriptableObject
 {
     [SerializeField] CharacterID id;
-    [SerializeField] string displayName;
+    [SerializeField] string characterLocaleKey;
     [SerializeField] int price;
     [SerializeField] float previewScale = 1;
     [SerializeField] GameObject prefab;
@@ -14,9 +15,9 @@ public class CharacterData : ScriptableObject
         return id;
     }
 
-    public string GetName()
+    public string GetNameLocaleKey()
     {
-        return displayName;
+        return characterLocaleKey;
     }
 
     public int GetPrice()
