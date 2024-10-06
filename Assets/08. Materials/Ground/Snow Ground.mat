@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ground 1
+  m_Name: Snow Ground
   m_Shader: {fileID: -6465566751694194690, guid: 1e00389669c1e2648b13cb1da2c9d865,
     type: 3}
   m_Parent: {fileID: 0}
@@ -152,7 +152,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_1313CB5F: {r: 0.39872602, g: 0.7924528, b: 0.13082945, a: 1}
+    - Color_1313CB5F: {r: 1, g: 1, b: 1, a: 1}
     - Color_1dfb0a33e5314a98a054db225a533281: {r: 1, g: 1, b: 1, a: 0.050980393}
     - Color_2d523c9e87ea411c87ba7d7b977b62e7: {r: 0.016807375, g: 0.016807375, b: 0.02415763,
         a: 0}
