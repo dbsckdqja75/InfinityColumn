@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2782522293344224830}
   - component: {fileID: 133804573964173449}
   - component: {fileID: 1832066123556320508}
-  - component: {fileID: 497342972437693786}
   m_Layer: 7
   m_Name: Branch_Brick_Orange_Effect
   m_TagString: Untagged
@@ -153,89 +152,6 @@ MonoBehaviour:
   explosionRadius: 1.2
   releaseTime: 1
   effectOffset: {x: 0, y: -1, z: 0}
---- !u!114 &497342972437693786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3639129327712708581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22b26957667d5104ab632a10dc9da700, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  advancedMode: 1
-  voxelFilePath: E:/Projects/2024/InfinityColumns/Assets/06. Voxel/Column/Branch_Brick.vox
-  voxelFileGUID: 
-  voxelFileObject: {fileID: -6945583668824161492, guid: 7dbb36446a172024dba95d939c2db1b3,
-    type: 3}
-  voxelFileSubIndex: -1
-  fileType: 0
-  fileRefreshLastTimeTicks: 638635923538444949
-  dataVersion: 115
-  legacyVoxImport: 1
-  legacyAssetNaming: 0
-  importMode: 1
-  importFlags: 0
-  importScale: {x: 0.025, y: 0.025, z: 0.025}
-  importOffset: {x: 0, y: -20, z: 0}
-  localOffset: {x: -20, y: -0, z: -5}
-  enableFaceFlags: 255
-  disableData:
-    disableList: []
-    faceList: 
-  combineFaces: 1
-  ignoreCavity: 0
-  shareSameFace: 1
-  removeUnusedPalettes: 1
-  shareSameMaterial: 1
-  voxelStructure: {fileID: 0}
-  generateLightmapUVs: 0
-  generateLightmapUVsAngleError: 8
-  generateLightmapUVsAreaError: 15
-  generateLightmapUVsHardAngle: 88
-  generateLightmapUVsPackMargin: 4
-  generateTangents: 0
-  generateVertexColors: 0
-  generateVertexColorMax: {r: 1, g: 1, b: 1, a: 1}
-  generateVertexColorMin: {r: 0.64, g: 0.64, b: 0.64, a: 1}
-  meshFaceVertexOffset: 0
-  generateMipMaps: 0
-  updateMeshRendererMaterials: 0
-  updateMaterialTexture: 0
-  loadFromVoxelFile: 0
-  materialData:
-  - materialList: []
-    name: 
-    transparent: 0
-    material:
-      renderingMode: 0
-      metallic: 0
-      smoothness: 0
-      alpha: 0
-      emission: {r: 0, g: 0, b: 0, a: 0}
-      emissionPower: 0
-  materialIndexes: 00000000
-  edit_autoRefresh: 0
-  edit_importFoldout: 1
-  edit_objectFoldout: 1
-  edit_generateLightmapUVsAdvancedFoldout: 0
-  edit_helpEnable: 0
-  edit_configureMode: 0
-  edit_configureMaterialIndex: 0
-  edit_configureMaterialMainMode: 0
-  edit_configureMaterialSubMode: 0
-  edit_configureDisableMainMode: 0
-  edit_configureDisableSubMode: 0
-  edit_ConfigurePreviewMode: 0
-  edit_snapToHalfVoxel: 1
-  edit_enableMesh: []
-  mesh: {fileID: -590299256403545354, guid: 2173ef493da970447b3061c7c1bcc0d0, type: 3}
-  material: {fileID: 0}
-  materials:
-  - {fileID: 2100000, guid: 7d69225a535d9f94fb44b5bb81b3e91d, type: 2}
-  atlasTexture: {fileID: 2800000, guid: 6638cdf01067ff94b8fa0c9d00ee84fe, type: 3}
 --- !u!21 &-7730835946273618886
 Material:
   serializedVersion: 8

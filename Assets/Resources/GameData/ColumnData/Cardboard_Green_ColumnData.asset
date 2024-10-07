@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a28d05d9c77057428145ad90df39737, type: 3}
+  m_Name: Cardboard_Green_ColumnData
+  m_EditorClassIdentifier: 
+  columnPrefab: {fileID: 8749623543447263972, guid: 7c429a5a879ca5f499f6561fd646722a,
+    type: 3}
+  effectPrefab: {fileID: 3639129327712708581, guid: fd4c913d048907944a533dd5130e5a20,
+    type: 3}
