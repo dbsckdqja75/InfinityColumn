@@ -267,6 +267,10 @@ MonoBehaviour:
     m_Localized: Rabbit Bot
     m_Metadata:
       m_Items: []
+  - m_Id: 9118158374875136
+    m_Localized: Unknown Knight
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

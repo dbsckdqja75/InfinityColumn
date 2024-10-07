@@ -227,6 +227,10 @@ MonoBehaviour:
     m_Key: CharacterName_None
     m_Metadata:
       m_Items: []
+  - m_Id: 9118158374875136
+    m_Key: CharacterName_Knight
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

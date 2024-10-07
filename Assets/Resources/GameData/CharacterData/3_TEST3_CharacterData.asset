@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 3_TEST3_CharacterData
   m_EditorClassIdentifier: 
   id: 4
-  characterLocaleKey: CharacterName_None
+  characterLocaleKey: CharacterName_Knight
   price: 0
   previewScale: 0.9
-  prefab: {fileID: 7373869055244383864, guid: db4af0623594f9246bb2e97131ea5f5f, type: 3}
+  prefab: {fileID: 4551761117380815924, guid: a36ce59538e58a64cb5dfde9ceb3a87b, type: 3}
