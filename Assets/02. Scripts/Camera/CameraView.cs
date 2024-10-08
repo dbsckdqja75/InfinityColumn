@@ -19,12 +19,13 @@ public class CameraView : MonoBehaviour
     [SerializeField] Transform targetTrf;
     [SerializeField] float followSpeed = 10f;
     [SerializeField] float orthographicClipFar = 80;
+    [SerializeField] float orthographicOffsetZ = -70;
     [SerializeField] float perspectiveClipFar = 300;
 
     [SerializeField] List<CameraViewData> cameraViewData = new List<CameraViewData>();
 
     Camera mainCamera;
-    Vector3 targetPos, resultPos, effectPos;
+    Vector3 targetPos, resultPos, extraPos;
 
     void FixedUpdate()
     {
@@ -97,7 +98,9 @@ public class CameraView : MonoBehaviour
             }
         }
 
-        resultPos.Set(targetPos + offsetPos + effectPos);
+        extraPos.z = isPerspectiveView ? 0 : orthographicOffsetZ;
+
+        resultPos.Set(targetPos + offsetPos + extraPos);
 
         if (isLerp)
         {

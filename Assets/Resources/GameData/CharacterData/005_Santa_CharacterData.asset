@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ff9cb818c05de048812011ec2dc77f8, type: 3}
-  m_Name: 0_BASIC_CharacterData
+  m_Name: 005_Santa_CharacterData
   m_EditorClassIdentifier: 
-  id: 0
-  characterLocaleKey: CharacterName_TraningBot
+  id: 5
+  characterLocaleKey: CharacterName_None
   price: 0
-  previewScale: 0.9
-  prefab: {fileID: 7571523762458078038, guid: 52d8f73175497424e9bf0974f23fe532, type: 3}
+  previewScale: 0.75
+  prefab: {fileID: 7696604531206290053, guid: 70a8ec9a6a5fe6c47863a4d402cd9884, type: 3}

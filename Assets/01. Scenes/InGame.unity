@@ -18809,6 +18809,7 @@ MonoBehaviour:
   targetTrf: {fileID: 1592018357}
   followSpeed: 12.5
   orthographicClipFar: 80
+  orthographicOffsetZ: -70
   perspectiveClipFar: 300
   cameraViewData:
   - id: Lobby
@@ -30516,6 +30517,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f5b05b4ee5c295044b9cd2fabe3a1410, type: 2}
   - {fileID: 11400000, guid: 9222031531e037441933f5ed2e96d93e, type: 2}
   - {fileID: 11400000, guid: 1114dc215346d9644bace206c1c6ac91, type: 2}
+  - {fileID: 11400000, guid: 77926a6235059f14abffce21a645506c, type: 2}
   playerData: 
 --- !u!4 &1571317376
 Transform:

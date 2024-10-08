@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ff9cb818c05de048812011ec2dc77f8, type: 3}
-  m_Name: 1_TEST0_CharacterData
+  m_Name: 002_MintBot_CharacterData
   m_EditorClassIdentifier: 
-  id: 1
-  characterLocaleKey: CharacterName_RunnerBot
-  price: 1
+  id: 2
+  characterLocaleKey: CharacterName_MintBot
+  price: 5
   previewScale: 0.9
-  prefab: {fileID: 7373869055244383864, guid: db4af0623594f9246bb2e97131ea5f5f, type: 3}
+  prefab: {fileID: 7373869055244383864, guid: ada45ff3a41ce1549bcfbd3ce0dc21f8, type: 3}

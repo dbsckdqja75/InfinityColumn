@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ff9cb818c05de048812011ec2dc77f8, type: 3}
-  m_Name: 3_TEST3_CharacterData
+  m_Name: 000_TrainingBot_CharacterData
   m_EditorClassIdentifier: 
-  id: 4
-  characterLocaleKey: CharacterName_Knight
+  id: 0
+  characterLocaleKey: CharacterName_TraningBot
   price: 0
   previewScale: 0.9
-  prefab: {fileID: 4551761117380815924, guid: a36ce59538e58a64cb5dfde9ceb3a87b, type: 3}
+  prefab: {fileID: 7571523762458078038, guid: 52d8f73175497424e9bf0974f23fe532, type: 3}

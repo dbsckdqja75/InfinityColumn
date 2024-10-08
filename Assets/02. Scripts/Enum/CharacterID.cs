@@ -5,4 +5,5 @@ public enum CharacterID
     TEST_1 = 2,
     TEST_2 = 3,
     TEST_3 = 4,
+    TEST_4 = 5,
 }

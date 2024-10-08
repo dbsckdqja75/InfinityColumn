@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ff9cb818c05de048812011ec2dc77f8, type: 3}
-  m_Name: 3_TEST2_CharacterData
+  m_Name: 003_RabbitBot_CharacterData
   m_EditorClassIdentifier: 
   id: 3
   characterLocaleKey: CharacterName_RabbitBot
