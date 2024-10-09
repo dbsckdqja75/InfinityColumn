@@ -21,17 +21,17 @@ public class ColumnEffect : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    public void Play(Column targetColumn, float forceMultiple)
+    public void Spawn(Column targetColumn, float forceMultiple)
     {
         this.StopAllCoroutines();
 
         rb.velocity = Vector3.zero;
         transform.position = targetColumn.currentBranch.transform.position;
-        transform.rotation = Quaternion.identity;
+        transform.rotation = targetColumn.currentBranch.transform.rotation;
 
         targetColumn.ReleaseBranch();
 
-        PlayEffect(targetColumn.transform.position, forceMultiple).Start(this);
+        ExplosionEffect(targetColumn.transform.position, forceMultiple).Start(this);
     }
 
     public void Release()
@@ -39,7 +39,7 @@ public class ColumnEffect : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    IEnumerator PlayEffect(Vector3 explosionPos, float forceMultiple)
+    IEnumerator ExplosionEffect(Vector3 explosionPos, float forceMultiple)
     {
         rb.AddExplosionForce(explosionForce * forceMultiple, (explosionPos + effectOffset), explosionRadius);
 

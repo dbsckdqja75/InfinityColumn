@@ -148,8 +148,8 @@ public class SpawnManager : MonoBehaviour
     {
         ColumnEffect effect = branchEffectList.Dequeue();
         effect.gameObject.SetActive(true);
-
-        effect.Play(targetColumn, forceMultiple);
+        effect.Spawn(targetColumn, forceMultiple);
+        
         branchEffectList.Enqueue(effect);
     }
 
