@@ -56,7 +56,7 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "InfinityColumns.sln",
+    "dotnet.defaultSolution": "InfinityColumn.sln",
     "todo-tree.tree.scanMode": "workspace",
     "todo-tree.tree.disableCompactFolders": true
 }

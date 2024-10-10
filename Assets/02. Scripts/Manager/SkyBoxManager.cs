@@ -1,6 +1,17 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
+[Serializable]
+public struct ColorSet
+{
+    public int targetHeight;
+    
+    public Color top;
+    public Color center;
+    public Color bottom;
+}
 
 public class SkyBoxManager : MonoBehaviour
 {
@@ -10,12 +21,21 @@ public class SkyBoxManager : MonoBehaviour
     [SerializeField] float starsFadeMaxHeight = 60000;
 
     [SerializeField] float starsMaxIntensity = 1f;
+
+    [SerializeField] Light directionalLight;
+
+    [SerializeField] Cloud cloud;
     
     [SerializeField] List<ColorSet> colorList;
+    [SerializeField] List<SkyColorData> colorDataList;
 
     Material skyboxMaterial;
+
+    Color originalSkyLightColor;
     
     ColorSet curColorSet;
+
+    const float thermosphereHeight = 30000;
     
     float curStarsIntensity = 0;
 
@@ -23,16 +43,6 @@ public class SkyBoxManager : MonoBehaviour
     float prevHeight = 0;
     
     int curIndex = 0;
-
-    [Serializable]
-    public struct ColorSet
-    {
-        public int targetHeight;
-        
-        public Color top;
-        public Color center;
-        public Color bottom;
-    }
 
     void Start()
     {
@@ -42,6 +52,7 @@ public class SkyBoxManager : MonoBehaviour
     void Update()
     {
         UpdateSkyBox();
+        UpdateSkyLight();
         UpdateStars();
     }
 
@@ -50,6 +61,8 @@ public class SkyBoxManager : MonoBehaviour
         skyboxMaterial = RenderSettings.skybox;
 
         curColorSet = colorList[curIndex];
+        originalSkyLightColor = directionalLight.color;
+
         UpdateColor();
 
         curIndex++;
@@ -63,6 +76,25 @@ public class SkyBoxManager : MonoBehaviour
     public void ResetHeight()
     {
         curHeight = 0;
+    }
+
+    public void ResetColor()
+    {
+        SkyColorData colorData = colorDataList[Random.Range(0, colorDataList.Count)];
+
+        if(colorData.GetShowsSkyCloud())
+        {
+            cloud.RandomizeCloud();
+        }
+        else
+        {
+            cloud.HideCloud();
+        }
+
+        originalSkyLightColor = colorData.GetSkyLightColor();
+        directionalLight.color = originalSkyLightColor;
+        directionalLight.intensity = colorData.GetSkyLightIntensity();
+        colorList = colorData.GetSkyColorSetList();
     }
 
     void UpdateSkyBox()
@@ -93,6 +125,13 @@ public class SkyBoxManager : MonoBehaviour
 
             curIndex = Mathf.Clamp(++curIndex, 0, colorList.Count-1);
         }
+    }
+
+    void UpdateSkyLight()
+    {
+        float t = (curHeight / thermosphereHeight);
+
+        // directionalLight.color = Color.Lerp(originalSkyLightColor, Color.white, t);
     }
 
     void UpdateStars()

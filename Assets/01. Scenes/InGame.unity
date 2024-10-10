@@ -30297,6 +30297,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d53ac59a754431c41b7638b3f9f24a05, type: 2}
   - {fileID: 11400000, guid: e71e9a2cd076ddc4ab06323aa35f4f66, type: 2}
   - {fileID: 11400000, guid: b62f8a2a2ecd0b049acb6115b79570b1, type: 2}
+  - {fileID: 11400000, guid: b5abe557ee616d646a5b5230d4540c9f, type: 2}
 --- !u!4 &1562980879
 Transform:
   m_ObjectHideFlags: 0
@@ -31876,6 +31877,8 @@ MonoBehaviour:
   starsFadeMinHeight: 30000
   starsFadeMaxHeight: 80000
   starsMaxIntensity: 1
+  directionalLight: {fileID: 203844588}
+  cloud: {fileID: 997856597}
   colorList:
   - targetHeight: 0
     top: {r: 0.15686275, g: 0.3882353, b: 0.6509804, a: 1}
@@ -31905,6 +31908,15 @@ MonoBehaviour:
     top: {r: 0, g: 0, b: 0, a: 1}
     center: {r: 0, g: 0, b: 0, a: 1}
     bottom: {r: 0, g: 0, b: 0, a: 1}
+  colorDataList:
+  - {fileID: 11400000, guid: eb352ab6847af6342ac2bf93eb23cc9d, type: 2}
+  - {fileID: 11400000, guid: 521ec5bd3333e9640887e8b16545ad09, type: 2}
+  - {fileID: 11400000, guid: 17fb07950a03bfa4291d69b51b60a987, type: 2}
+  - {fileID: 11400000, guid: 36496f25545f2644d96468ac9a2487ef, type: 2}
+  - {fileID: 11400000, guid: c6960cae3f971d745bb300f342da4932, type: 2}
+  - {fileID: 11400000, guid: 167f2b61799d3c4478ae5464eda5b396, type: 2}
+  - {fileID: 11400000, guid: 029f997861e47b84cb3434b60feed22e, type: 2}
+  - {fileID: 11400000, guid: 0b13dd96953a46948a84be8d8c7b11bb, type: 2}
 --- !u!4 &1642766754
 Transform:
   m_ObjectHideFlags: 0
@@ -31936,6 +31948,8 @@ MonoBehaviour:
   starsFadeMinHeight: 100
   starsFadeMaxHeight: 300
   starsMaxIntensity: 1
+  directionalLight: {fileID: 0}
+  cloud: {fileID: 0}
   colorList:
   - targetHeight: 0
     top: {r: 0.18039216, g: 0.3254902, b: 0.427451, a: 1}
@@ -31953,6 +31967,7 @@ MonoBehaviour:
     top: {r: 0, g: 0, b: 0, a: 1}
     center: {r: 0, g: 0, b: 0, a: 1}
     bottom: {r: 0, g: 0, b: 0, a: 1}
+  colorDataList: []
 --- !u!1 &1646971900
 GameObject:
   m_ObjectHideFlags: 0

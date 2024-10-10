@@ -423,6 +423,7 @@ public class GameManager : MonoBehaviour
         spawnManager.ResetPool();
         spawnManager.UpdateColumnMode(false);
 
+        skyBoxManager.ResetColor();
         skyBoxManager.ResetHeight();
     }
 

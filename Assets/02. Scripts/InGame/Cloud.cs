@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Cloud : MonoBehaviour
 {
-
     [SerializeField] GameObject[] cloudPresets;
 
     void Awake() 
@@ -10,13 +9,18 @@ public class Cloud : MonoBehaviour
         RandomizeCloud();
     }
 
-    public void RandomizeCloud()
+    public void HideCloud()
     {
-        int presetIdx = Random.Range(0, cloudPresets.Length);
         foreach(GameObject cloud in cloudPresets)
         {
             cloud.SetActive(false);
         }
+    }
+
+    public void RandomizeCloud()
+    {
+        int presetIdx = Random.Range(0, cloudPresets.Length);
+        HideCloud();
 
         cloudPresets[presetIdx].SetActive(true);
     }
