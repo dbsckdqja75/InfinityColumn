@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     // TODO : 임시
     [SerializeField] PlayerCharacter playerCharacter;
     [SerializeField] InputController iController; // TODO : 변수명 변경
+    [SerializeField] FakeShadow shadow;
 
     [Header("GameOver Effect")]
     [SerializeField] Vector3 explosionOffset = new Vector3(0.5f, 0.25f, 0);
@@ -84,6 +85,8 @@ public class PlayerController : MonoBehaviour
     public void SetPlayerCharacter(PlayerCharacter _playerCharacter)
     {
         playerCharacter = _playerCharacter;
+
+        shadow.SetTarget(playerCharacter.transform);
     }
 
     public void ResetPosition()
