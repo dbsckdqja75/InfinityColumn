@@ -7,9 +7,10 @@ public class SkyColorData : ScriptableObject
     [SerializeField] bool showsCloud;
     [SerializeField] Color lightColor;
     [SerializeField] float lightIntensity = 1f;
+    [SerializeField] float spotLightIntensity = 12f;
     [SerializeField] List<ColorSet> colorList;
 
-    public bool GetShowsSkyCloud()
+    public bool ShowsSkyCloud()
     {
         return showsCloud;
     }
@@ -22,6 +23,11 @@ public class SkyColorData : ScriptableObject
     public float GetSkyLightIntensity()
     {
         return lightIntensity;
+    }
+
+    public float GetSpotLightIntensity()
+    {
+        return spotLightIntensity;
     }
 
     public List<ColorSet> GetSkyColorSetList()

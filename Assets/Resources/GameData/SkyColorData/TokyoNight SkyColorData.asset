@@ -15,6 +15,7 @@ MonoBehaviour:
   showsCloud: 0
   lightColor: {r: 0.043137256, g: 0, b: 1, a: 1}
   lightIntensity: 1.2
+  spotLightIntensity: 14
   colorList:
   - targetHeight: 0
     top: {r: 0, g: 0, b: 0.5019608, a: 1}

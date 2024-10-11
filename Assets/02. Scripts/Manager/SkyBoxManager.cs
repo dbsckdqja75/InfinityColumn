@@ -22,7 +22,7 @@ public class SkyBoxManager : MonoBehaviour
 
     [SerializeField] float starsMaxIntensity = 1f;
 
-    [SerializeField] Light directionalLight;
+    [SerializeField] Light directionalLight, spotLight;
 
     [SerializeField] Cloud cloud;
     
@@ -37,6 +37,8 @@ public class SkyBoxManager : MonoBehaviour
 
     const float thermosphereHeight = 30000;
     
+    float curSkyLightIntensity = 1f;
+    float curSpotLightIntensity = 12f;
     float curStarsIntensity = 0;
 
     float curHeight = 0;
@@ -62,10 +64,24 @@ public class SkyBoxManager : MonoBehaviour
 
         curColorSet = colorList[curIndex];
         originalSkyLightColor = directionalLight.color;
+        curSkyLightIntensity = directionalLight.intensity;
+        curSpotLightIntensity = spotLight.intensity;
 
         UpdateColor();
 
         curIndex++;
+    }
+
+    void SetCloudVisible(bool isOn)
+    {
+        if(isOn)
+        {
+            cloud.RandomizeCloud();
+        }
+        else
+        {
+            cloud.HideCloud();
+        }
     }
 
     public void UpdateHeight(float height)
@@ -80,21 +96,21 @@ public class SkyBoxManager : MonoBehaviour
 
     public void ResetColor()
     {
-        SkyColorData colorData = colorDataList[Random.Range(0, colorDataList.Count)];
+        SkyColorData data = colorDataList[Random.Range(0, colorDataList.Count)];
 
-        if(colorData.GetShowsSkyCloud())
-        {
-            cloud.RandomizeCloud();
-        }
-        else
-        {
-            cloud.HideCloud();
-        }
+        originalSkyLightColor = data.GetSkyLightColor();
+        curSkyLightIntensity = data.GetSkyLightIntensity();
+        curSpotLightIntensity = data.GetSpotLightIntensity();
 
-        originalSkyLightColor = colorData.GetSkyLightColor();
         directionalLight.color = originalSkyLightColor;
-        directionalLight.intensity = colorData.GetSkyLightIntensity();
-        colorList = colorData.GetSkyColorSetList();
+        directionalLight.intensity = curSkyLightIntensity;
+
+        spotLight.intensity = curSpotLightIntensity;
+        spotLight.enabled = (curSpotLightIntensity > 1);
+
+        colorList = data.GetSkyColorSetList();
+
+        SetCloudVisible(data.ShowsSkyCloud());
     }
 
     void UpdateSkyBox()
@@ -131,7 +147,13 @@ public class SkyBoxManager : MonoBehaviour
     {
         float t = (curHeight / thermosphereHeight);
 
-        // directionalLight.color = Color.Lerp(originalSkyLightColor, Color.white, t);
+        directionalLight.color = Color.Lerp(originalSkyLightColor, Color.white, t);
+        directionalLight.intensity = Mathf.Lerp(curSkyLightIntensity, 1, t);
+
+        if(curSpotLightIntensity > 1)
+        {
+            spotLight.intensity = Mathf.Lerp(curSpotLightIntensity, 1, t);
+        }
     }
 
     void UpdateStars()
