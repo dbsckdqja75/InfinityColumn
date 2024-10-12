@@ -185,8 +185,23 @@ public class CharacterPreview : MonoBehaviour
 
         previewCharacter[pivotIdx] = Instantiate(data.GetPrefab(), pivot[pivotIdx]).GetComponent<PlayerCharacter>();
         previewCharacter[pivotIdx].transform.SetScale(data.GetPreviewScale());
+        
+        SetCharacterLayer(previewCharacter[pivotIdx].gameObject);
 
         SoundManager.Instance.PlaySound("Hit2");
+    }
+
+    void SetCharacterLayer(GameObject targetObj)
+    {
+        targetObj.gameObject.layer = LayerMask.NameToLayer("PreviewCharacter");
+        foreach(Transform child in targetObj.transform)
+        {
+            child.gameObject.layer = LayerMask.NameToLayer("PreviewCharacter");
+            if(child.childCount > 0)
+            {
+                SetCharacterLayer(child.gameObject);
+            }
+        }
     }
 
     public void ResetCharacterHeadTrack(int pivotIdx)
