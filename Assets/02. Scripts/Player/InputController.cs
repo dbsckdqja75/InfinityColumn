@@ -2,52 +2,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class InputController : MonoBehaviour
 {
-
     bool isPointerObject;
 
     [HideInInspector] public UnityEvent<Vector3> onTouchEvent = new UnityEvent<Vector3>();
 
-    void Update()
+    Vector2 inputPosition;
+
+    public void UpdateInputPosition(InputAction.CallbackContext context)
     {
-    #if !UNITY_EDITOR && !UNITY_STANDALONE
-        UpdateTouch();
-    #else
-        UpdateInput();
-    #endif
+        inputPosition = context.ReadValue<Vector2>();
     }
 
-    // NOTE : 테스트용
-    void UpdateInput()
+    public void OnTouch(InputAction.CallbackContext context)
     {
-        if (Input.GetMouseButtonDown(0))
+        if(context.ReadValueAsButton())
         {
-            OnTouchEvent(Input.mousePosition);
+            OnTouchEvent(inputPosition);
         }
     }
-
-    // NOTE : 모바일 기기 터치 구현부
-    #if !UNITY_EDITOR && !UNITY_STANDALONE
-    void UpdateTouch()
-    {
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-            switch (touch.phase)
-            {
-                case TouchPhase.Began:
-                    // TODO : 실제 안드로이드 빌드해서 테스트 확인 필요 (touch.position 동작 여부 확인)
-                    OnTouchEvent(Input.mousePosition);
-                    // OnTouchEvent(touch.position);
-                    break;
-                default:
-                    break;
-            }
-        }
-    }
-    #endif
 
     void OnTouchEvent(Vector3 iPosition)
     {
@@ -62,15 +38,16 @@ public class InputController : MonoBehaviour
         onTouchEvent.AddListener(action);
     }
 
+    public Vector2 GetPointerPosition()
+    {
+        return inputPosition;
+    }
+
     int GetPointerRayCount()
     {
         PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
 
-    #if !UNITY_EDITOR && !UNITY_STANDALONE
-        eventDataCurrentPosition.position = new Vector2(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y);
-    #else
-        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-    #endif
+        eventDataCurrentPosition.position = new Vector2(inputPosition.x, inputPosition.y);
 
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);

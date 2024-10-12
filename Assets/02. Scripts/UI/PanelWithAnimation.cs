@@ -19,34 +19,46 @@ public class PanelWithAnimation : Panel
 
     void OnEnable() 
     {
-        Open();    
+        Open();
     }
 
     void OnDisable() 
     {
+        motion = null;
+
         endEvent?.Invoke();
     }
 
     public override void Open()
     {
-        MotionClear();
-
-        motion = PlayMotion("FadeIn").Start(this);
+        if(gameObject.activeSelf)
+        {
+            if(!IsMotionPlaying())
+            {
+                motion = PlayMotion("FadeIn").Start(this);
+            }
+        }
     }
 
     public override void Close()
     {
-        MotionClear();
-
-        motion = PlayMotion("FadeOut", () => { base.Close(); }).Start(this);
+        if(gameObject.activeSelf)
+        {
+            if(!IsMotionPlaying())
+            {
+                motion = PlayMotion("FadeOut", () => { base.Close(); }).Start(this);
+            }
+            else
+            {
+                motion = null;
+                base.Close();
+            }
+        }
     }
 
-    void MotionClear()
+    bool IsMotionPlaying()
     {
-        if(motion != null)
-        {
-            motion.Stop(this);
-        }
+        return (motion != null);
     }
 
     IEnumerator PlayMotion(string trigger, Action endCallback = null)
@@ -60,6 +72,8 @@ public class PanelWithAnimation : Panel
 
         endEvent?.Invoke();
         endCallback?.Invoke();
+
+        motion = null;
 
         yield break;
     }

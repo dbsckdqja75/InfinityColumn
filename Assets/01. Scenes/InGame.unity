@@ -1817,7 +1817,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1192330417}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: CloseLeaderboard
+        m_MethodName: CloseExtraMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2672,9 +2672,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425103333}
-        m_TargetAssemblyTypeName: PanelWithAnimation, Assembly-CSharp
-        m_MethodName: Close
+      - m_Target: {fileID: 1192330417}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: CloseExtraMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4037,74 +4037,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 12, y: 0, z: 0}
---- !u!1 &207186228
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 207186231}
-  - component: {fileID: 207186230}
-  - component: {fileID: 207186229}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &207186229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207186228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &207186230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207186228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &207186231
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207186228}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &209394532
 GameObject:
   m_ObjectHideFlags: 0
@@ -10321,171 +10253,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595524354}
   m_CullTransparentMesh: 1
---- !u!43 &596623202
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Event_BendingMachine
-  serializedVersion: 11
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 36
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 24
-    localAABB:
-      m_Center: {x: 0.024999976, y: 0, z: 0.10000001}
-      m_Extent: {x: 1.275, y: 1.6, z: 0.5}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_BonesAABB: []
-  m_VariableBoneCountWeights:
-    m_Data: 
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 000001000200000002000300040005000600040006000700080009000a0008000a000b000e000d000c000f000e000c00120011001000130012001000160015001400170016001400
-  m_VertexData:
-    serializedVersion: 3
-    m_VertexCount: 24
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 768
-    _typelessdata: 0000a0bfcdcccc3f9a99193f00000000000000000000803f0000003c0000023f0000a0bfcdccccbf9a99193f00000000000000000000803f0000003c0000003c6666a63fcdccccbf9a99193f00000000000000000000803f0000d03e0000003c6666a63fcdcccc3f9a99193f00000000000000000000803f0000d03e0000023f0000a0bfcdcccc3fcdccccbe000000000000803f000000000000003c0000063f0000a0bfcdcccc3f9a99193f000000000000803f000000000000003c00002e3f6666a63fcdcccc3f9a99193f000000000000803f000000000000d03e00002e3f6666a63fcdcccc3fcdccccbe000000000000803f000000000000d03e0000063f6666a63fcdccccbfcdccccbe0000803f00000000000000000000d83e0000063f6666a63fcdcccc3fcdccccbe0000803f000000000000000000006c3f0000063f6666a63fcdcccc3f9a99193f0000803f000000000000000000006c3f00002e3f6666a63fcdccccbf9a99193f0000803f00000000000000000000d83e00002e3f0000a0bfcdccccbf9a99193f000080bf00000000000000000000d83e00005a3f0000a0bfcdccccbfcdccccbe000080bf00000000000000000000d83e0000323f0000a0bfcdcccc3fcdccccbe000080bf000000000000000000006c3f0000323f0000a0bfcdcccc3f9a99193f000080bf000000000000000000006c3f00005a3f6666a63fcdccccbfcdccccbe00000000000080bf000000000000d03e0000063f0000a0bfcdccccbfcdccccbe00000000000080bf000000000000003c0000063f0000a0bfcdccccbf9a99193f00000000000080bf000000000000003c00002e3f6666a63fcdccccbf9a99193f00000000000080bf000000000000d03e00002e3f0000a0bfcdccccbfcdccccbe0000000000000000000080bf0000d83e0000003c6666a63fcdccccbfcdccccbe0000000000000000000080bf0000523f0000003c6666a63fcdcccc3fcdccccbe0000000000000000000080bf0000523f0000023f0000a0bfcdcccc3fcdccccbe0000000000000000000080bf0000d83e0000023f
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 0.024999976, y: 0, z: 0.10000001}
-    m_Extent: {x: 1.275, y: 1.6, z: 0.5}
-  m_MeshUsageFlags: 0
-  m_CookingOptions: 30
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  'm_MeshMetrics[0]': 1
-  'm_MeshMetrics[1]': 1
-  m_MeshOptimizationFlags: 1
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &601938490
 GameObject:
   m_ObjectHideFlags: 0
@@ -12142,6 +11909,7 @@ MonoBehaviour:
   priceBox: {fileID: 463267985}
   priceText: {fileID: 1777920097}
   lerpSpeed: 15
+  inputController: {fileID: 0}
   characterManager: {fileID: 1571317375}
   previewCamera: {fileID: 1306094978}
   previewList: {fileID: 94644162}
@@ -12149,129 +11917,6 @@ MonoBehaviour:
   - {fileID: 920174957}
   - {fileID: 538980799}
   - {fileID: 942872991}
---- !u!21 &667257700
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Event_BendingMachine_0
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-  - _SPECULAR_SETUP
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
-  disabledShaderPasses:
-  - MOTIONVECTORS
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BaseMap:
-        m_Texture: {fileID: 1914687216}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 1914687216}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SpecGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _AddPrecomputedVelocity: 0
-    - _AlphaClip: 0
-    - _AlphaToMask: 0
-    - _Blend: 0
-    - _BlendModePreserveSpecular: 1
-    - _BumpScale: 1
-    - _ClearCoatMask: 0
-    - _ClearCoatSmoothness: 0
-    - _Cull: 2
-    - _Cutoff: 0.5
-    - _DetailAlbedoMapScale: 1
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _DstBlendAlpha: 0
-    - _EnvironmentReflections: 1
-    - _GlossMapScale: 0
-    - _Glossiness: 0
-    - _GlossyReflections: 0
-    - _Metallic: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.005
-    - _QueueOffset: 0
-    - _ReceiveShadows: 1
-    - _Smoothness: 0.3
-    - _SmoothnessTextureChannel: 1
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _SrcBlendAlpha: 1
-    - _Surface: 0
-    - _WorkflowMode: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1 &674819366
 GameObject:
   m_ObjectHideFlags: 0
@@ -22698,80 +22343,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126213781}
   m_CullTransparentMesh: 1
---- !u!1001 &1138578138
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1395105494136480213, guid: 4630dc8ff57e6f84e9576e3cb1e966df,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.6514509
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395105494136480213, guid: 4630dc8ff57e6f84e9576e3cb1e966df,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395105494136480213, guid: 4630dc8ff57e6f84e9576e3cb1e966df,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.8288164
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395105494136480213, guid: 4630dc8ff57e6f84e9576e3cb1e966df,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395105494136480213, guid: 4630dc8ff57e6f84e9576e3cb1e966df,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395105494136480213, guid: 4630dc8ff57e6f84e9576e3cb1e966df,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395105494136480213, guid: 4630dc8ff57e6f84e9576e3cb1e966df,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395105494136480213, guid: 4630dc8ff57e6f84e9576e3cb1e966df,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395105494136480213, guid: 4630dc8ff57e6f84e9576e3cb1e966df,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395105494136480213, guid: 4630dc8ff57e6f84e9576e3cb1e966df,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3596304954940429148, guid: 4630dc8ff57e6f84e9576e3cb1e966df,
-        type: 3}
-      propertyPath: m_Name
-      value: Event_Chicken
-      objectReference: {fileID: 0}
-    - target: {fileID: 3596304954940429148, guid: 4630dc8ff57e6f84e9576e3cb1e966df,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: -2436815983159846964, guid: 4630dc8ff57e6f84e9576e3cb1e966df,
-    type: 3}
 --- !u!1 &1142825519
 GameObject:
   m_ObjectHideFlags: 0
@@ -23407,16 +22978,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2112517990}
-        m_TargetAssemblyTypeName: CanvasManager, Assembly-CSharp
-        m_MethodName: SetPanel
-        m_Mode: 5
+      - m_Target: {fileID: 1192330417}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OpenCharacterSelect
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CharacterSelect
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1173647803
@@ -23676,6 +23247,7 @@ MonoBehaviour:
   fever_Effect: {fileID: 94174891}
   cameraView: {fileID: 961739754}
   playerController: {fileID: 1592018358}
+  playerInput: {fileID: 1592018360}
   spawnManager: {fileID: 1562980878}
   skyBoxManager: {fileID: 1642766753}
   canvasManager: {fileID: 2112517990}
@@ -24682,16 +24254,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2112517990}
-        m_TargetAssemblyTypeName: CanvasManager, Assembly-CSharp
-        m_MethodName: SetPanel
-        m_Mode: 5
+      - m_Target: {fileID: 1192330417}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OpenSetting
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Setting
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1230701037
@@ -31485,6 +31057,7 @@ GameObject:
   - component: {fileID: 1592018357}
   - component: {fileID: 1592018358}
   - component: {fileID: 1592018359}
+  - component: {fileID: 1592018360}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -31558,6 +31131,261 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1592018360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592018353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: fbcd33d4811e11a4a9b6976e01241eb3,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 1657458838}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1592018358}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: LeftMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_ActionId: cef83ce2-6283-40a5-a89c-c3f123a4d98a
+    m_ActionName: 'PlayerActions/LeftMove[/Keyboard/leftArrow,/Keyboard/a,/XInputControllerWindows/dpad/left,/XInputControllerWindows/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1592018358}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: RightMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c4cda890-ea48-49c0-9582-cfc7410e93be
+    m_ActionName: 'PlayerActions/RightMove[/Keyboard/rightArrow,/Keyboard/d,/XInputControllerWindows/dpad/right,/XInputControllerWindows/buttonEast]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 37638130-2b1d-4dd7-888f-0c3c55095ab6
+    m_ActionName: 'UI/Navigate[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/rightStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/rightStick/right,/XInputControllerWindows/dpad,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6913cf4e-d569-482c-9cf2-446f7e2a3534
+    m_ActionName: 'UI/Submit[/Keyboard/enter,/XInputControllerWindows/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 80b98e8b-1530-4b22-9858-7f5080f73afd
+    m_ActionName: 'UI/Cancel[/Keyboard/escape,/XInputControllerWindows/buttonEast]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 835927050}
+        m_TargetAssemblyTypeName: InputController, Assembly-CSharp
+        m_MethodName: UpdateInputPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e8ca79ae-0f9c-40ee-9071-738b9f265bde
+    m_ActionName: 'UI/Point[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 835927050}
+        m_TargetAssemblyTypeName: InputController, Assembly-CSharp
+        m_MethodName: OnTouch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8e7df37e-edec-4321-a6a0-c78270dcc697
+    m_ActionName: 'UI/Click[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a933c00d-7947-4628-8171-8a0ec8e79bdb
+    m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: dcc2f791-e3e4-4a0b-8858-b9921013994c
+    m_ActionName: 'UI/MiddleClick[/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f1c3c7c0-72d0-4ba7-be5a-bf07f976fd3f
+    m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d43190a6-68f0-46ad-88ad-d34b2a9fa336
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 83f7eb71-ac3a-4ae8-889b-1c9ab913ffce
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1192330417}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnSpace
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 79132f88-cf7e-403d-b9e6-6e4e7caef63f
+    m_ActionName: 'LobbyActions/Space[/Keyboard/space,/XInputControllerWindows/select]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1192330417}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnLobbyEsc
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f558a550-5022-4e6a-b162-03c72a3aa8d2
+    m_ActionName: 'LobbyActions/Esc[/Keyboard/escape,/XInputControllerWindows/start]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1192330417}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OpenLeaderboard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 31218656-a5e9-45d9-bd60-1b7fdccd887e
+    m_ActionName: 'LobbyActions/OpenLeaderboard[/Keyboard/rightArrow,/XInputControllerWindows/buttonEast]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1192330417}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OpenCharacterSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b280cf50-5ffe-410e-8589-5925fb3734a8
+    m_ActionName: 'LobbyActions/OpenCharacterSelect[/Keyboard/leftArrow,/XInputControllerWindows/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1192330417}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnPlayingEsc
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 09571ed8-2ec3-4e6e-ba25-91b6618b95e6
+    m_ActionName: 'PlayerActions/Esc[/Keyboard/escape,/XInputControllerWindows/start]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1192330417}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnResultSpace
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8e7cae12-5b06-4dfb-897f-b5f96cf7e1c8
+    m_ActionName: 'ResultActions/Space[/Keyboard/space,/XInputControllerWindows/select]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1192330417}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnResultEsc
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: df8fccf8-7178-4674-919d-7b38bf94f986
+    m_ActionName: 'ResultActions/Esc[/Keyboard/escape,/XInputControllerWindows/start]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1192330417}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnPlayingSpace
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b6fd688c-0ee9-4eb5-bfd7-99dc60cf8dc0
+    m_ActionName: 'PlayerActions/Space[/Keyboard/space,/XInputControllerWindows/select,/XInputControllerWindows/leftTrigger,/XInputControllerWindows/leftShoulder,/XInputControllerWindows/rightTrigger,/XInputControllerWindows/rightShoulder]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: PC
+  m_DefaultActionMap: LobbyActions
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 961739752}
 --- !u!1 &1592664063
 GameObject:
   m_ObjectHideFlags: 0
@@ -32977,6 +32805,95 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundType: 0
+--- !u!1 &1657458837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1657458840}
+  - component: {fileID: 1657458839}
+  - component: {fileID: 1657458838}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1657458838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657458837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: fbcd33d4811e11a4a9b6976e01241eb3,
+    type: 3}
+  m_PointAction: {fileID: 1054132383583890850, guid: fbcd33d4811e11a4a9b6976e01241eb3,
+    type: 3}
+  m_MoveAction: {fileID: -6059444553954080522, guid: fbcd33d4811e11a4a9b6976e01241eb3,
+    type: 3}
+  m_SubmitAction: {fileID: 2064916234097673511, guid: fbcd33d4811e11a4a9b6976e01241eb3,
+    type: 3}
+  m_CancelAction: {fileID: -1967631576421560919, guid: fbcd33d4811e11a4a9b6976e01241eb3,
+    type: 3}
+  m_LeftClickAction: {fileID: 8056856818456041789, guid: fbcd33d4811e11a4a9b6976e01241eb3,
+    type: 3}
+  m_MiddleClickAction: {fileID: 3279352641294131588, guid: fbcd33d4811e11a4a9b6976e01241eb3,
+    type: 3}
+  m_RightClickAction: {fileID: 3837173908680883260, guid: fbcd33d4811e11a4a9b6976e01241eb3,
+    type: 3}
+  m_ScrollWheelAction: {fileID: 4502412055082496612, guid: fbcd33d4811e11a4a9b6976e01241eb3,
+    type: 3}
+  m_TrackedDevicePositionAction: {fileID: 4754684134866288074, guid: fbcd33d4811e11a4a9b6976e01241eb3,
+    type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 5526073400564888013, guid: fbcd33d4811e11a4a9b6976e01241eb3,
+    type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+--- !u!114 &1657458839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657458837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1657458840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657458837}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1664654813
 GameObject:
   m_ObjectHideFlags: 0
@@ -34961,6 +34878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1761285420}
   - component: {fileID: 1761285419}
+  - component: {fileID: 1761285421}
   m_Layer: 0
   m_Name: Ground Sprite
   m_TagString: Untagged
@@ -35038,6 +34956,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1761285421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761285418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 763493f9f78ae3e498e6249c1d74178d,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1762523345
 GameObject:
   m_ObjectHideFlags: 0
@@ -36027,7 +35976,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1794133449
 Transform:
   m_ObjectHideFlags: 0
@@ -38370,52 +38319,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914024027}
   m_Mesh: {fileID: 356540935}
---- !u!28 &1914687216
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Event_BendingMachine
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 3
-  m_Width: 128
-  m_Height: 128
-  m_CompleteImageSize: 65536
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 1
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 65536
-  _typelessdata: 339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff006633ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff006633ff006633ff006633ff006633ff006633ff006633ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff006633ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff006633ff006633ff006633ff006633ff006633ff006633ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff006633ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff006633ff006633ff006633ff006633ff006633ff006633ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff006633ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff006633ff006633ff006633ff006633ff006633ff006633ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff006633ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff006633ff006633ff006633ff006633ff006633ff006633ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339966ffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaffaaaaaaff669999ffaaaaaaff006633ff006633ff006633ff006633ff006633ff006633ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff669966ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff669999ff777777ff888888ff669999ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff669966ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff669999ff888888ff888888ff669999ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff669966ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff669999ff669999ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff669966ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff669966ff66cc99ff66cc99ff66cc99ff339999ffbbbbbbff339999ffbbbbbbff339999ff339999ff339999ff339999ff339999ffbbbbbbff339999ffbbbbbbff339999ff339999ff339999ff339999ff339999ffbbbbbbff339999ffbbbbbbff339999ff339999ff339999ff339999ff339999ffbbbbbbff339999ffbbbbbbff339999ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff669966ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbffcc6666ffbbbbbbff66cc99ff66cc99ff66cc99ff999999ff99ccccffbbbbbbff66ccccffbbbbbbff99ccccff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbff669999ffbbbbbbff66cc99ff66cc99ff66cc99ff66cc99ff669999ffbbbbbbff336666ffbbbbbbff66cc99ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff669966ff66cc99ff66cc99ff66cc99ff66cc99ffcc6666ffcc6666ffddddddff66cc99ff66cc99ff66cc99ff999999ff99ccccff99ccccff99ccccff6699ccff99ccccff66cc99ff66cc99ff66cc99ff66cc99ff99ccccff99ccccff339999ff66cc99ff66cc99ff66cc99ff66cc99ff669999ff339966ff339966ff339966ff66cc99ff66cc99ff339966ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff003333ff669966ff66cc99ff66cc99ff66cc99ff66cc99ffddddddffddddddffddddddff66cc99ff66cc99ff66cc99ff999999ff99ccccff99ccccff99ccccff99ccccff99ccccff66cc99ff66cc99ff66cc99ff66cc99ff339999ff339999ff339999ff66cc99ff66cc99ff66cc99ff66cc99ff669999ff339966ff339966ff339966ff66cc99ff66cc99ff339966ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff669966ff66cc99ff66cc99ff66cc99ff66cc99ffcc6666ffcc6666ffddddddff66cc99ff66cc99ff66cc99ff66cc99ff669999ff99ccccff99ccccff99ccccff669999ff66cc99ff66cc99ff66cc99ff66cc99ff99ccccff99ccccff339999ff66cc99ff66cc99ff66cc99ff66cc99ff669999ff339966ff339966ff339966ff66cc99ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff669966ff66cc99ff66cc99ff66cc99ff66cc99ffeeeeeeffeeeeeeffcc6666ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff99ccccff99ccccff99ccccff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff339999ff339999ff99ccccff66cc99ff66cc99ff66cc99ff66cc99ff669999ff339966ff339966ff339966ff66cc99ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff669966ff66cc99ff66cc99ff66cc99ff66cc99ff999999ff999999ff999999ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff999999ff999999ff999999ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff999999ff999999ff999999ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff999999ff999999ff999999ff66cc99ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff669966ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff669966ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff669966ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff669966ff66cc99ff66cc99ff66cc99ff339999ffbbbbbbff339999ffbbbbbbff339999ff339999ff339999ff339999ff339999ffbbbbbbff339999ffbbbbbbff339999ff339999ff339999ff339999ff339999ffbbbbbbff339999ffbbbbbbff339999ff339999ff339999ff339999ff339999ffbbbbbbff339999ffbbbbbbff339999ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff669966ff66cc99ff66cc99ff66cc99ffeeeeeeffbbbbbbff66ccccffbbbbbbff66ccccff66cc99ff66cc99ff66cc99ffddddddffbbbbbbff9999ccffbbbbbbff9999ccff66cc99ff66cc99ff66cc99ffddddddffbbbbbbffcc6666ffbbbbbbffcc6666ff66cc99ff66cc99ff66cc99ffddddddffbbbbbbff339966ffbbbbbbff669966ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff669966ff66cc99ff66cc99ff66cc99ffeeeeeeff66ccccffddddddff66ccccffeeeeeeff66cc99ff66cc99ff66cc99ffeeeeeeff9999ccffddddddff9999ccffeeeeeeff66cc99ff66cc99ff66cc99ffeeeeeeffcc6666ffddddddffcc6666ffeeeeeeff66cc99ff66cc99ff669999ffddddddff669966ffddddddff669966ffeeeeeeff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff669966ff66cc99ff66cc99ff66cc99ffeeeeeeff66ccccff66ccccffeeeeeeff66ccccff66cc99ff66cc99ff66cc99ffeeeeeeff9999ccff9999ccffeeeeeeff9999ccff66cc99ff66cc99ff66cc99ffeeeeeeffcc6666ffcc6666ffeeeeeeffcc6666ff66cc99ff66cc99ff669999ffeeeeeeff669966ff669966ffeeeeeeff669966ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff669966ff66cc99ff66cc99ff66cc99ff66ccccff66ccccffeeeeeeff66ccccff66ccccff66cc99ff66cc99ff66cc99ff9999ccff9999ccffeeeeeeff9999ccff9999ccff66cc99ff66cc99ff66cc99ffcc6666ffcc6666ffeeeeeeffcc6666ffcc6666ff66cc99ff66cc99ff669999ff669966ff669966ffeeeeeeff669966ff669966ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff336633ff669966ff66cc99ff66cc99ff66cc99ffbbbbbbffaaaaaaffbbbbbbffaaaaaaffbbbbbbff66cc99ff66cc99ff66cc99ffbbbbbbffaaaaaaffbbbbbbffaaaaaaffbbbbbbff66cc99ff66cc99ff66cc99ffbbbbbbffaaaaaaffbbbbbbffaaaaaaffbbbbbbff66cc99ff66cc99ff66cc99ffbbbbbbffaaaaaaffbbbbbbffaaaaaaffbbbbbbff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff336633ff222222ff669966ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff336633ff222222ff669966ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff336633ff222222ff669966ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff336633ff003300ff669966ff66cc99ff66cc99ff66cc99ff339999ffbbbbbbff339999ffbbbbbbff339999ff339999ff339999ff339999ff339999ffbbbbbbff339999ffbbbbbbff339999ff339999ff339999ff339999ff339999ffbbbbbbff339999ffbbbbbbff339999ff339999ff339999ff339999ff339999ffbbbbbbff339999ffbbbbbbff339999ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff336633ff669966ff66cc99ff66cc99ff999999ff9999ccffbbbbbbff9999ccffbbbbbbff9999ccff66cc99ff66cc99ff999999ff99ccccffbbbbbbff99ccccffbbbbbbff99ccccff66cc99ff66cc99ff999999ffcccc66ffbbbbbbffcccc66ffbbbbbbffcccc66ff66cc99ff66cc99ff999999ff339966ffbbbbbbff339966ffbbbbbbff669999ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff777777ff555555ff669966ff66cc99ff66cc99ff999999ff9999ccff9999ccff9999ccffddddddff9999ccff66cc99ff66cc99ff999999ff99ccccff99ccccff99ccccffddddddff99ccccff66cc99ff66cc99ff999999ffcccc66ffcccc66ffcccc66ffddddddffcccc66ff66cc99ff669999ff999999ff669999ff669999ff669999ffddddddff669999ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff555555ff777777ff669966ff66cc99ff66cc99ff999999ff9999ccffddddddff9999ccff9999ccffddddddff66cc99ff66cc99ff999999ff99ccccffddddddff99ccccff99ccccffddddddff66cc99ff66cc99ff999999ffcccc66ffddddddffcccc66ffcccc66ffddddddff66cc99ff66cc99ff999999ff669999ffddddddff669999ff669999ffddddddff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff003333ff003333ff003333ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff669966ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff003333ff003333ff003333ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff669966ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff003333ff003333ff003333ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff669966ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff669966ff66cc99ff66cc99ff66cc99ff339999ffbbbbbbff339999ffbbbbbbff339999ff339999ff339999ff339999ff339999ffbbbbbbff339999ffbbbbbbff339999ff339999ff339999ff339999ff339999ffbbbbbbff339999ffbbbbbbff339999ff339999ff339999ff339999ff339999ffbbbbbbff339999ffbbbbbbff339999ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff777777ff777777ff777777ff777777ff777777ff777777ff555555ff777777ff669966ff66cc99ff66cc99ff66cc99ffaaaaaaffbbbbbbff999999ffbbbbbbffaaaaaaff66cc99ff66cc99ff66cc99ffaaaaaaffbbbbbbff999999ffbbbbbbffaaaaaaff66cc99ff66cc99ff66cc99ffaaaaaaffbbbbbbff999999ffbbbbbbffaaaaaaff66cc99ff66cc99ff66cc99ff999999ffbbbbbbff999999ffbbbbbbffaaaaaaff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff777777ffaaaaaaff777777ffaaaaaaff777777ff555555ff333333ff555555ff669966ff66cc99ff66cc99ff66cc99ffcc9999ffbbbbbbff996699ff996699ffccccccff66cc99ff66cc99ff66cc99ff339999ff99ccccff339999ff339999ff99ccccff66cc99ff66cc99ff66cc99ff339966ff99cc99ff339966ff339966ff99cc99ff66cc99ff66cc99ff669999ffcccc66ffcc6666ffcccc66ffcccc66ffcc6666ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff777777ffaaaaaaff666666ffaaaaaaff777777ff555555ff333333ff555555ff669966ff66cc99ff66cc99ff66cc99ffccccccffcc9999ffccccccffccccccffcc9999ff66cc99ff66cc99ff66cc99ff99ccccff6699ccff99ccccff99ccccff6699ccff66cc99ff66cc99ff66cc99ff99cc99ff669966ff99cc99ff99cc99ff669966ff66cc99ff66cc99ff669999ffcc6666ffcccc66ffcc6666ffcc6666ffcccc66ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff777777ff777777ff777777ff777777ff777777ff777777ff777777ff666666ff666666ff777777ff777777ff555555ff777777ff669966ff66cc99ff66cc99ff66cc99ffcc9999ffcc9999ffccccccffcc9999ffccccccff66cc99ff66cc99ff66cc99ff6699ccff6699ccff99ccccff6699ccff99ccccff66cc99ff66cc99ff66cc99ff669966ff669966ff99cc99ff669966ff99cc99ff66cc99ff66cc99ff669999ffcccc66ffcccc66ffcc6666ffcccc66ffcc6666ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff777777ff222222ff222222ff222222ff222222ff222222ff777777ff777777ff777777ff777777ff777777ff777777ff777777ff669966ff66cc99ff66cc99ff66cc99ffccccccffccccccffccccccffcc9999ffccccccff66cc99ff66cc99ff66cc99ff99ccccff99ccccff99ccccff6699ccff99ccccff66cc99ff66cc99ff66cc99ff99cc99ff99cc99ff99cc99ff669966ff99cc99ff66cc99ff66cc99ff669999ffcc6666ffcc6666ffcc6666ffcccc66ffcc6666ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff777777ff222222ffff9966ffff9966ff555555ff222222ff777777ff777777ff222222ff222222ff222222ff222222ff777777ff669966ff66cc99ff66cc99ff66cc99ffccccccffccccccffccccccffccccccffccccccff66cc99ff66cc99ff66cc99ff99ccccff99ccccff99ccccff99ccccff99ccccff66cc99ff66cc99ff66cc99ff99cc99ff99cc99ff99cc99ff99cc99ff99cc99ff66cc99ff66cc99ff669999ffcc6666ffcc6666ffcc6666ffcc6666ffcc6666ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff777777ff222222ff555555ffff9966ffff9966ff222222ff777777ff222222ff669933ff333333ff333333ff669933ff222222ff669966ff66cc99ff66cc99ff66cc99ffbbbbbbff999999ffbbbbbbff999999ffbbbbbbff66cc99ff66cc99ff66cc99ffbbbbbbff999999ffbbbbbbff999999ffbbbbbbff66cc99ff66cc99ff66cc99ffbbbbbbff999999ffbbbbbbff999999ffbbbbbbff66cc99ff66cc99ff669999ffbbbbbbff999999ffbbbbbbff999999ffbbbbbbff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff777777ff222222ff222222ff222222ff222222ff222222ff777777ff777777ff222222ff222222ff222222ff222222ff777777ff669966ff66cc99ff66cc99ff66cc99ff339999ffbbbbbbff339966ffbbbbbbff339999ff339999ff339999ff339999ff339999ffbbbbbbff339966ffbbbbbbff339999ff339999ff339999ff339999ff339999ffbbbbbbff339966ffbbbbbbff339999ff339999ff339999ff339999ff339999ffbbbbbbff339966ffbbbbbbff339999ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff777777ff777777ff777777ff777777ff777777ff777777ff777777ff777777ff777777ff777777ff777777ff777777ff777777ff669966ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbffccccccffbbbbbbff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbffccccccffbbbbbbff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbffccccccffbbbbbbff66cc99ff66cc99ff66cc99ff66cc99ffddddddffbbbbbbffcc9999ffbbbbbbffbbbbbbff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff777777ff777777ff777777ffddddddff777777ff777777ff222222ff222222ff222222ff222222ff222222ff222222ff777777ff669966ff66cc99ff66cc99ff66cc99ff66cc99ffddddddffccccccffccccccff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffddddddff66ccccff66ccccff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffddddddffcccc99ffcccc99ff66cc99ff66cc99ff66cc99ff669999ffbbbbbbffddddddffddddddffbbbbbbffeeeeeeff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff777777ffbbbbbbffddddddffbbbbbbff777777ff222222ff555555ffffcc33ff555555ffffcc33ffffcc33ff555555ff222222ff669966ff66cc99ff66cc99ff66cc99ff66cc99ffccccccffddddddffccccccff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66ccccffddddddff66ccccff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffcccc99ffddddddffcccc99ff66cc99ff66cc99ff66cc99ff669999ffeeeeeeffbbbbbbffbbbbbbffeeeeeeffbbbbbbff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff777777ffddddddffbbbbbbffddddddff777777ff222222ff555555ff555555ffffcc33ff555555ff555555ffffcc33ff222222ff669966ff66cc99ff66cc99ff66cc99ff66cc99ffddddddffccccccffccccccff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffddddddff66ccccff66ccccff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffddddddffcccc99ffcccc99ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbffbbbbbbffeeeeeeffbbbbbbffbbbbbbff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff777777ffbbbbbbffddddddffbbbbbbff777777ff222222ff555555ffffcc33ff555555ff555555ffffcc33ff555555ff222222ff669966ff66cc99ff66cc99ff66cc99ff66cc99ffccccccffddddddffccccccff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66ccccffddddddff66ccccff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffcccc99ffddddddffcccc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff777777ff777777ff777777ff777777ff777777ff777777ff222222ff222222ff222222ff222222ff222222ff222222ff777777ff669966ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff669966ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffbbbbbbff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339966ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ff66cc99ffaaaaaaff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff336633ffffffffffffffffff339933ff339933ffffffffff339933ff339933ff339933ffffffffff339933ff339933ff339933ffffffffff339933ffffffffffffffffff339933ffffffffffffffffff339933ff339933ffffffffff339933ff339933ffffffffff339933ff339933ffffffffff339933ff339933ff339933ffffffffff339933ff339933ff336633ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff336633ffffffffffffffffff339933ffffffffff339933ffffffffff339933ffffffffff339933ffffffffff339933ff339933ffffffffff339933ff339933ffffffffff339933ff339933ff339933ffffffffff339933ff339933ffffffffff339933ff339933ff339933ffffffffff339933ffffffffff339933ff339933ffffffffffffffffff339933ff336633ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff336633ffffffffffffffffff339933ffffffffff339933ffffffffff339933ffffffffff339933ffffffffff339933ffffffffffffffffff339933ff339933ffffffffff339933ffffffffffffffffffffffffff339933ff339933ff339933ffffffffff339933ff339933ffffffffff339933ffffffffff339933ff339933ffffffffffffffffff339933ff336633ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff336633ffffffffff339933ff339933ffffffffff339933ffffffffff339933ffffffffff339933ffffffffff339933ff339933ffffffffff339933ff339933ffffffffff339933ff339933ff339933ffffffffff339933ff339933ff339933ffffffffff339933ff339933ffffffffff339933ffffffffff339933ffffffffff339933ff339933ffffffffff336633ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff336633ffffffffff339933ff339933ff339933ffffffffff339933ff339933ff339933ffffffffff339933ff339933ffffffffff339933ff339933ff339933ffffffffff339933ffffffffffffffffff339933ff339933ffffffffff339933ff339933ffffffffff339933ff339933ffffffffff339933ff339933ffffffffff339933ff339933ffffffffff336633ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff336633ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff336633ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff336633ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff006633ff006633ff006633ff006633ff006633ff006633ff006633ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff339933ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &1926408231
 GameObject:
   m_ObjectHideFlags: 0
@@ -39875,9 +39778,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 662206167}
-        m_TargetAssemblyTypeName: PanelWithAnimation, Assembly-CSharp
-        m_MethodName: Close
+      - m_Target: {fileID: 1192330417}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: CloseExtraMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -40765,175 +40668,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063469821}
   m_CullTransparentMesh: 1
---- !u!1 &2070432852
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2070432856}
-  - component: {fileID: 2070432855}
-  - component: {fileID: 2070432854}
-  - component: {fileID: 2070432853}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &2070432853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070432852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22b26957667d5104ab632a10dc9da700, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  advancedMode: 1
-  voxelFilePath: E:/Projects/2024/InfinityColumn/Assets/06. Voxel/Event_BendingMachine.vox
-  voxelFileGUID: 
-  voxelFileObject: {fileID: -4171962342906792655, guid: 164d4f2b0ab342741b9b28ad9a9f965d,
-    type: 3}
-  voxelFileSubIndex: -1
-  fileType: 0
-  fileRefreshLastTimeTicks: 638643047689562685
-  dataVersion: 115
-  legacyVoxImport: 0
-  legacyAssetNaming: 0
-  importMode: 1
-  importFlags: 0
-  importScale: {x: 0.05, y: 0.05, z: 0.05}
-  importOffset: {x: 0, y: 0, z: -45}
-  localOffset: {x: -25, y: -32, z: -0}
-  enableFaceFlags: 255
-  disableData:
-    disableList: []
-    faceList: 
-  combineFaces: 1
-  ignoreCavity: 0
-  shareSameFace: 1
-  removeUnusedPalettes: 1
-  shareSameMaterial: 1
-  voxelStructure: {fileID: 0}
-  generateLightmapUVs: 0
-  generateLightmapUVsAngleError: 8
-  generateLightmapUVsAreaError: 15
-  generateLightmapUVsHardAngle: 88
-  generateLightmapUVsPackMargin: 4
-  generateTangents: 0
-  generateVertexColors: 0
-  generateVertexColorMax: {r: 1, g: 1, b: 1, a: 1}
-  generateVertexColorMin: {r: 0.64, g: 0.64, b: 0.64, a: 1}
-  meshFaceVertexOffset: 0
-  generateMipMaps: 0
-  updateMeshRendererMaterials: 1
-  updateMaterialTexture: 1
-  loadFromVoxelFile: 0
-  materialData:
-  - materialList: []
-    name: 
-    transparent: 0
-    material:
-      renderingMode: 0
-      metallic: 0
-      smoothness: 0
-      alpha: 0
-      emission: {r: 0, g: 0, b: 0, a: 0}
-      emissionPower: 0
-  materialIndexes: 00000000
-  edit_autoRefresh: 1
-  edit_importFoldout: 1
-  edit_objectFoldout: 1
-  edit_generateLightmapUVsAdvancedFoldout: 0
-  edit_helpEnable: 0
-  edit_configureMode: 0
-  edit_configureMaterialIndex: 0
-  edit_configureMaterialMainMode: 0
-  edit_configureMaterialSubMode: 0
-  edit_configureDisableMainMode: 0
-  edit_configureDisableSubMode: 0
-  edit_ConfigurePreviewMode: 0
-  edit_snapToHalfVoxel: 1
-  edit_enableMesh: []
-  mesh: {fileID: 596623202}
-  material: {fileID: 0}
-  materials:
-  - {fileID: 667257700}
-  atlasTexture: {fileID: 1914687216}
---- !u!23 &2070432854
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070432852}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 667257700}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2070432855
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070432852}
-  m_Mesh: {fileID: 596623202}
---- !u!4 &2070432856
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070432852}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1, y: 1.31, z: 4.33}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2072639354
 GameObject:
   m_ObjectHideFlags: 0
@@ -46566,10 +46300,8 @@ SceneRoots:
   - {fileID: 1503336337}
   - {fileID: 1144578689}
   - {fileID: 472097113}
-  - {fileID: 1026134173}
   - {fileID: 1592018357}
+  - {fileID: 1026134173}
   - {fileID: 94644163}
   - {fileID: 2112517989}
-  - {fileID: 207186231}
-  - {fileID: 2070432856}
-  - {fileID: 1138578138}
+  - {fileID: 1657458840}

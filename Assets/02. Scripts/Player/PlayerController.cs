@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,11 +25,6 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector] public UnityEvent onMoveEvent;
 
-    void Update()
-    {
-        UpdateInput();
-    }
-
     public void Init()
     {
         rb = this.GetComponent<Rigidbody>();
@@ -36,23 +32,26 @@ public class PlayerController : MonoBehaviour
         iController.AddTouchEvent(OnTouch);
     }
 
-    void UpdateInput()
-    {
-        if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            Move(true);
-        }
-
-        if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            Move(false);
-        }
-    }
-
     void OnTouch(Vector3 iPosition)
     {
         float halfScreenWidth = (Screen.width / 2f);
         Move(iPosition.x < halfScreenWidth);
+    }
+
+    public void LeftMove(InputAction.CallbackContext context)
+    {
+        if(context.phase.IsEquals(InputActionPhase.Performed))
+        {
+            Move(true);
+        }
+    }
+
+    public void RightMove(InputAction.CallbackContext context)
+    {
+        if(context.phase.IsEquals(InputActionPhase.Performed))
+        {
+            Move(false);
+        }
     }
 
     void Move(bool isLeft)

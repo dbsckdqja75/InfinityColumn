@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -69,6 +70,7 @@ public class GameManager : MonoBehaviour
     [Space(10)]
     [SerializeField] CameraView cameraView;
     [SerializeField] PlayerController playerController;
+    [SerializeField] PlayerInput playerInput;
     [SerializeField] SpawnManager spawnManager;
     [SerializeField] SkyBoxManager skyBoxManager;
     [SerializeField] CanvasManager canvasManager;
@@ -82,19 +84,17 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if(gameState.IsEquals(GameState.PLAYING))
+        if(IsGameState(GameState.PLAYING))
         {
             UpdateUI();
             UpdateFeverTime();
             UpdateHealthTime();
         }
 
-        if(gameState.IsEquals(GameState.GAME_OVER))
+        if(IsGameState(GameState.GAME_OVER))
         {
             UpdateFall();
         }
-
-        UpdateInput();
     }
 
     void Init()
@@ -109,33 +109,6 @@ public class GameManager : MonoBehaviour
         playerController.AddMoveEvent(() => { OnPlayerMove(); });
 
         LoadGameData();
-    }
-
-    void UpdateInput()
-    {
-        if(gameState.IsEquals(GameState.LOBBY))
-        {
-            if(Input.GetKeyDown(KeyCode.Space))
-            {
-                GameStart();
-            }
-        }
-
-        if(gameState.IsEquals(GameState.PLAYING))
-        {
-            if(Input.GetKeyDown(KeyCode.Escape))
-            {
-                GamePause();
-            }
-        }
-
-        if(gameState.IsEquals(GameState.PAUSE))
-        {
-            if(Input.GetKeyDown(KeyCode.Escape))
-            {
-                GameResume();
-            }
-        }
     }
 
     void UpdateUI()
@@ -267,15 +240,103 @@ public class GameManager : MonoBehaviour
         ReturnLobby();
     }
 
+    public void OnSpace(InputAction.CallbackContext context)
+    {
+        if(context.phase.IsEquals(InputActionPhase.Performed))
+        {
+            if(IsGameState(GameState.LOBBY))
+            {
+                GameStart();
+            }
+        }
+    }
+
+    public void OnLobbyEsc(InputAction.CallbackContext context)
+    {
+        if(context.phase.IsEquals(InputActionPhase.Performed))
+        {
+            if(IsGameState(GameState.LOBBY))
+            {
+                OpenSetting();
+                return;
+            }
+
+            if(IsGameState(GameState.EXTRA_MENU))
+            {
+                CloseExtraMenu();
+                return;
+            }
+        }
+    }
+
+    public void OnPlayingSpace(InputAction.CallbackContext context)
+    {
+        if(context.phase.IsEquals(InputActionPhase.Performed))
+        {
+            if(IsGameState(GameState.PAUSE))
+            {
+                ReturnLobby();
+                return;
+            }
+        }
+    }
+
+    public void OnPlayingEsc(InputAction.CallbackContext context)
+    {
+        if(context.phase.IsEquals(InputActionPhase.Performed))
+        {
+            if(IsGameState(GameState.PLAYING))
+            {
+                GamePause();
+                return;
+            }
+
+            if(IsGameState(GameState.PAUSE))
+            {
+                GameResume();
+                return;
+            }
+        }
+    }
+
+    public void OnResultSpace(InputAction.CallbackContext context)
+    {
+        if(context.phase.IsEquals(InputActionPhase.Performed))
+        {
+            if(rewardBoxObj.activeSelf)
+            {
+                GameRestart();
+                return;
+            }
+        }
+    }
+
+    public void OnResultEsc(InputAction.CallbackContext context)
+    {
+        if(context.phase.IsEquals(InputActionPhase.Performed))
+        {
+            if(rewardBoxObj.activeSelf)
+            {
+                ReturnLobby();
+                return;
+            }
+        }
+    }
+
     public void GameStart()
     {
-        gameState = GameState.PLAYING;
+        if(IsGameState(GameState.LOBBY))
+        {
+            gameState = GameState.PLAYING;
 
-        cameraView.SetCameraPreset("Playing");
+            playerInput.SwitchCurrentActionMap("PlayerActions");
 
-        playerController.SetMoveLock(false);
+            cameraView.SetCameraPreset("Playing");
 
-        canvasManager.SetPanel("Playing");
+            playerController.SetMoveLock(false);
+
+            canvasManager.SetPanel("Playing");
+        }
     }
 
     void GameOver()
@@ -292,6 +353,8 @@ public class GameManager : MonoBehaviour
         UpdateResultScore();
 
         dailyChallengeManager.UpdateChallenge(gameType, bestScore);
+
+        playerInput.SwitchCurrentActionMap("ResultActions");
 
         SoundManager.Instance.StopMusic();
 
@@ -331,20 +394,26 @@ public class GameManager : MonoBehaviour
 
     public void GamePause()
     {
-        gameState = GameState.PAUSE;
+        if(IsGameState(GameState.PLAYING))
+        {
+            gameState = GameState.PAUSE;
 
-        playerController.SetMoveLock(true);
+            playerController.SetMoveLock(true);
 
-        canvasManager.SetPanel("Pause");
+            canvasManager.SetPanel("Pause");
+        }
     }
 
     public void GameResume()
     {
-        gameState = GameState.PLAYING;
+        if(IsGameState(GameState.PAUSE))
+        {
+            gameState = GameState.PLAYING;
 
-        playerController.SetMoveLock(false);
+            playerController.SetMoveLock(false);
 
-        canvasManager.SetPanel("Playing");
+            canvasManager.SetPanel("Playing");
+        }
     }
 
     public void ReturnLobby()
@@ -352,17 +421,19 @@ public class GameManager : MonoBehaviour
         GameReset();
 
         cameraView.SetCameraPreset("Lobby");
-        if(!gameState.IsEquals(GameState.PLAYING))
+        if(!IsGameState(GameState.PLAYING))
         {
             cameraView.RepositionView();
         }
 
-        if(!gameState.IsEquals(GameState.LOBBY))
+        if(!IsGameState(GameState.LOBBY))
         {
             SoundManager.Instance.PlayMusic("Infinity Music");
         }
 
         gameState = GameState.LOBBY;
+
+        playerInput.SwitchCurrentActionMap("LobbyActions");
 
         ResetUI();
 
@@ -378,32 +449,60 @@ public class GameManager : MonoBehaviour
 
     public void OpenChallegne()
     {
-        gameState = GameState.EXTRA_MENU;
+        if(IsGameState(GameState.LOBBY))
+        {
+            gameState = GameState.EXTRA_MENU;
 
-        playerController.SetMoveLock(true);
+            dailyChallengeManager.UpdateUI();
 
-        dailyChallengeManager.UpdateUI();
-
-        canvasManager.SetPanel("Challenge");
+            canvasManager.SetPanel("Challenge");
+        }
     }
 
-    public void CloseLeaderboard()
+    public void CloseExtraMenu()
     {
-        gameState = GameState.LOBBY;
+        if(!canvasManager.ClosePanel())
+        {
+            canvasManager.SetPanel("Lobby");
+        }
 
-        canvasManager.SetPanel("Lobby");
+        gameState = GameState.LOBBY;
+    }
+
+    public void OpenSetting()
+    {
+        if(IsGameState(GameState.LOBBY))
+        {
+            gameState = GameState.EXTRA_MENU;
+
+            canvasManager.SetPanel("Setting");
+        }
     }
 
     public void OpenLeaderboard()
     {
-        // TODO : 추후에 플랫폼별로 호출 처리
-        gameState = GameState.EXTRA_MENU;
+        if(IsGameState(GameState.LOBBY))
+        {
+            // TODO : 추후에 플랫폼별로 호출 처리
+            gameState = GameState.EXTRA_MENU;
 
-        playerController.SetMoveLock(true);
+            playerController.SetMoveLock(true);
 
-        leaderboardManager.OnLeaderboard();
+            leaderboardManager.OnLeaderboard();
 
-        canvasManager.SetPanel("Leaderboard");
+            canvasManager.SetPanel("Leaderboard");
+        }
+    }
+
+    public void OpenCharacterSelect()
+    {
+        if(IsGameState(GameState.LOBBY))
+        {
+            // TODO : 추후에 플랫폼별로 호출 처리
+            gameState = GameState.EXTRA_MENU;
+
+            canvasManager.SetPanel("CharacterSelect");
+        }
     }
 
     void GameReset()
@@ -442,7 +541,7 @@ public class GameManager : MonoBehaviour
         fever_Effect.SetActive(false);
         feverFillColor.ResetColor();
 
-        if(gameState.IsEquals(GameState.PLAYING))
+        if(IsGameState(GameState.PLAYING))
         {
             SoundManager.Instance.PlayMusic("Infinity Music", false);
 
@@ -503,7 +602,7 @@ public class GameManager : MonoBehaviour
         // NOTE : 무한 모드에서만 체력 회복
         if(gameType.IsEquals(GameType.INFINITY))
         {
-            health = Mathf.Clamp(health + 5, 0, currentGame.GetMaxHealth());
+            health = Mathf.Clamp(health + 4, 0, currentGame.GetMaxHealth());
 
             // NOTE : 최대 점수 목표값 500,000점 (healthTime Min 12.5f / Max 30)
             ((InfinityLogic)currentGame).AddTimePerDamage();
@@ -555,7 +654,7 @@ public class GameManager : MonoBehaviour
 
     public void OnPlayerMove()
     {
-        if(!gameState.IsEquals(GameState.PLAYING))
+        if(!IsGameState(GameState.PLAYING))
             return;
 
         HideTouchGuide();
@@ -564,7 +663,7 @@ public class GameManager : MonoBehaviour
 
         spawnManager.NextColumn();
 
-        if(gameState.IsEquals(GameState.PLAYING))
+        if(IsGameState(GameState.PLAYING))
         {
             RewardHealth();
             RewardScore();
@@ -579,5 +678,10 @@ public class GameManager : MonoBehaviour
                 cameraView.SetFakeView();
             }
         }
+    }
+
+    bool IsGameState(GameState targetState)
+    {
+        return gameState.IsEquals(targetState);
     }
 }

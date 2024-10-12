@@ -20,6 +20,8 @@ public class CanvasManager : MonoBehaviour
         public List<PanelOption> options = new List<PanelOption>();
     }
 
+    Panel currentPanel;
+
     public List<Panel> panelList = new List<Panel>();
     public List<PanelSet> panelSetList = new List<PanelSet>();
 
@@ -56,9 +58,29 @@ public class CanvasManager : MonoBehaviour
             {
                 if (!panelSet.options[i].isIgnore)
                 {
-                    panelList[i].SetPanel(panelSet.options[i].isActive);
+                    bool isActive = panelSet.options[i].isActive;
+                    panelList[i].SetPanel(isActive);
+                    
+                    if(isActive)
+                    {
+                        currentPanel = panelList[i];
+                    }
                 }
             }
         }
+    }
+
+    public bool ClosePanel()
+    {
+        if(currentPanel)
+        {
+            if(currentPanel is PanelWithAnimation)
+            {
+                currentPanel.Close();
+
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -1,11 +1,11 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using TMPro;
 
 public class CharacterPreview : MonoBehaviour
 {
-
     bool isDragging = false;
 
     [SerializeField] TMP_Text nameText;
@@ -17,6 +17,7 @@ public class CharacterPreview : MonoBehaviour
 
     [SerializeField] float lerpSpeed = 15;
 
+    [SerializeField] InputController inputController;
     [SerializeField] CharacterManager characterManager;
 
     [Space(10)]
@@ -26,8 +27,7 @@ public class CharacterPreview : MonoBehaviour
 
     PlayerCharacter[] previewCharacter = new PlayerCharacter[3];
 
-    Vector2 beginPosition;
-    Vector2 currentPosition;
+    Vector2 beginPosition, currentPosition;
     Vector2 dir;
 
     int characterCount = 0;
@@ -72,27 +72,13 @@ public class CharacterPreview : MonoBehaviour
         }
         else
         {
-            UpdateInput();
             UpdatePreview();
-        }
-    }
-
-    void UpdateInput()
-    {
-        if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            PreviousCharacter();
-        }
-
-        if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            NextCharacter();
         }
     }
 
     void UpdateDrag()
     {
-        currentPosition = Input.mousePosition;
+        currentPosition = inputController.GetPointerPosition();
         currentPosition.y = 0;
         beginPosition.y = 0;
 
@@ -265,7 +251,7 @@ public class CharacterPreview : MonoBehaviour
 
     public void BeginDrag()
     {
-        beginPosition = Input.mousePosition;
+        beginPosition = inputController.GetPointerPosition();
 
         ResetCharacterPivot();
 
