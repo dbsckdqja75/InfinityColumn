@@ -237,6 +237,10 @@ MonoBehaviour:
     m_Localized: "\u540D\u7121\u3057\u306E\u8A18\u4E8B"
     m_Metadata:
       m_Items: []
+  - m_Id: 11186522492547072
+    m_Localized: Keep hitting back to back!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -231,6 +231,10 @@ MonoBehaviour:
     m_Key: CharacterName_Knight
     m_Metadata:
       m_Items: []
+  - m_Id: 11186522492547072
+    m_Key: FeverTime_Guide
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

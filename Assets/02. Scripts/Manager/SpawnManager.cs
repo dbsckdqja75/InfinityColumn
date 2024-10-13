@@ -153,6 +153,18 @@ public class SpawnManager : MonoBehaviour
         branchEffectList.Enqueue(effect);
     }
 
+    public void FeverClearColumn(int shotCount, float forceMultiple = 1f)
+    {
+        int startIdx = (centerIndex+1);
+        for(int i = startIdx; i < (startIdx+shotCount); i++)
+        {
+            if(columnList[i].IsHaveBranch(0) || columnList[i].IsHaveBranch(1))
+            {
+                SpawnEffect(columnList[i], forceMultiple);
+            }
+        }
+    }
+
     public Column GetNextColumn()
     {
         return columnList[centerIndex+1];

@@ -558,6 +558,8 @@ public class GameManager : MonoBehaviour
         fever_Effect.SetActive(true);
         feverFillColor.SetColorPreset(0);
 
+        spawnManager.FeverClearColumn(10, 3f);
+
         cameraView.SetCameraPreset("FeverTime");
 
         SoundManager.Instance.PlayMusic("Infinity Fever Music", false);

@@ -271,6 +271,10 @@ MonoBehaviour:
     m_Localized: Unknown Knight
     m_Metadata:
       m_Items: []
+  - m_Id: 11186522492547072
+    m_Localized: "\u9023\u7D9A\u9023\u6253!!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
