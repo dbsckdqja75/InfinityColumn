@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     int feverCharge { get { return AntiCheatManager.SecureInt(_feverCharge); } set { _feverCharge = AntiCheatManager.SecureInt(value); } }
     float feverFillAmount = 0f;
 
+    int scoreHash;
     int _score, _bestScore;
     int score { get { return AntiCheatManager.SecureInt(_score); } set { _score = AntiCheatManager.SecureInt(value); } }
     int bestScore { get { return AntiCheatManager.SecureInt(_bestScore); } set { _bestScore = AntiCheatManager.SecureInt(value); } }
@@ -349,10 +350,13 @@ public class GameManager : MonoBehaviour
         playerController.SetMoveLock(true);
         playerController.Fall();
 
-        OnReward(score);
-        UpdateResultScore();
-
-        dailyChallengeManager.UpdateChallenge(gameType, bestScore);
+        if(ValidateScore())
+        {
+            OnReward(score);
+            UpdateResultScore();
+        
+            dailyChallengeManager.UpdateChallenge(gameType, bestScore);
+        }
 
         playerInput.SwitchCurrentActionMap("ResultActions");
 
@@ -509,6 +513,8 @@ public class GameManager : MonoBehaviour
     {
         score = 0;
 
+        scoreHash = (score-1).ToString().GetHashCode();
+
         currentGame.OnGameReset();
 
         health = currentGame.GetMaxHealth();
@@ -591,12 +597,36 @@ public class GameManager : MonoBehaviour
 
     void RewardScore()
     {
-        score += 1;
+        if(ValidateScore())
+        {
+            score += 1;
+
+            scoreHash = (score-1).ToString().GetHashCode();
+        }
+        else
+        {
+            score = 0;
+
+            scoreHash = (score-1).ToString().GetHashCode();
+
+            GameOver();
+        }
 
         scoreText.text = score.ToString();
 
         scoreAnim.Stop();
         scoreAnim.Play();
+    }
+
+    bool ValidateScore()
+    {
+        int compareScore = (score - 1).ToString().GetHashCode();
+        if(compareScore == scoreHash)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     void RewardHealth()
