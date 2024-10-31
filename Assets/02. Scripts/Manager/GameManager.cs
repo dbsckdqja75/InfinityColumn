@@ -17,14 +17,11 @@ public class GameManager : MonoBehaviour
 
     bool isFeverTime = false;
     float fever = 0f;
-    int _feverCharge = 0;
-    int feverCharge { get { return AntiCheatManager.SecureInt(_feverCharge); } set { _feverCharge = AntiCheatManager.SecureInt(value); } }
+    SecureValue<int> feverCharge = new SecureValue<int>(0);
     float feverFillAmount = 0f;
 
-    int scoreHash;
-    int _score, _bestScore;
-    int score { get { return AntiCheatManager.SecureInt(_score); } set { _score = AntiCheatManager.SecureInt(value); } }
-    int bestScore { get { return AntiCheatManager.SecureInt(_bestScore); } set { _bestScore = AntiCheatManager.SecureInt(value); } }
+    SecureValue<int> score = new SecureValue<int>(0);
+    SecureValue<int> bestScore = new SecureValue<int>(0);
 
     float lastPlayerHeight;
 
@@ -159,7 +156,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if(score > 0)
+        if(score.GetValue() > 0)
         {
             health -= (currentGame.GetTimePerDamage() * Time.deltaTime);
             health = Mathf.Clamp(health, 0, currentGame.GetMaxHealth());
@@ -170,14 +167,14 @@ public class GameManager : MonoBehaviour
 
     void UpdateBestScore()
     {
-        bestScore = PlayerPrefsManager.LoadData(currentGame.GetBestScoreDataKey(), 0);
+        bestScore.SetValue(PlayerPrefsManager.LoadData(currentGame.GetBestScoreDataKey(), 0));
     }
 
     void UpdateResultScore()
     {
-        resultScoreText.text = String.Format("{0:N0}", score.ToString());
+        resultScoreText.text = String.Format("{0:N0}", score.GetValue().ToString());
 
-        if(bestScore < score)
+        if(bestScore.GetValue() < score.GetValue())
         {
             // TODO : 갱신 표시 효과 추가 (신기록 달성)
             bestScore = score;
@@ -185,14 +182,14 @@ public class GameManager : MonoBehaviour
             SaveGameData();
         }
 
-        resultBestScoreText.text = String.Format("{0:N0}", bestScore.ToString());
+        resultBestScoreText.text = String.Format("{0:N0}", bestScore.GetValue().ToString());
     }
 
     void UpdateFall()
     {
         float t = (playerController.GetPlayerHeight() / lastPlayerHeight);
 
-        int fallScore = (int)Mathf.Lerp(0, score, t);
+        int fallScore = (int)Mathf.Lerp(0, score.GetValue(), t);
         
         skyBoxManager.UpdateHeight(fallScore);
     }
@@ -205,7 +202,7 @@ public class GameManager : MonoBehaviour
         hpFillImage.fillAmount = hpFillAmount;
         feverFillImage.fillAmount = feverFillAmount;
 
-        scoreText.text = score.ToString();
+        scoreText.text = score.GetValue().ToString();
 
         rewardBoxObj.SetActive(false);
         rewardVpObj.SetActive(false);
@@ -350,13 +347,10 @@ public class GameManager : MonoBehaviour
         playerController.SetMoveLock(true);
         playerController.Fall();
 
-        if(ValidateScore())
-        {
-            OnReward(score);
-            UpdateResultScore();
-        
-            dailyChallengeManager.UpdateChallenge(gameType, bestScore);
-        }
+        OnReward(score.GetValue());
+        UpdateResultScore();
+    
+        dailyChallengeManager.UpdateChallenge(gameType, bestScore.GetValue());
 
         playerInput.SwitchCurrentActionMap("ResultActions");
 
@@ -380,7 +374,7 @@ public class GameManager : MonoBehaviour
 
     void LoadGameData()
     {
-        bestScore = PlayerPrefsManager.LoadData(currentGame.GetBestScoreDataKey(), 0);
+        bestScore.SetValue(PlayerPrefsManager.LoadData(currentGame.GetBestScoreDataKey(), 0));
     }
 
     void SaveGameData()
@@ -511,9 +505,7 @@ public class GameManager : MonoBehaviour
 
     void GameReset()
     {
-        score = 0;
-
-        scoreHash = (score-1).ToString().GetHashCode();
+        score.SetValue(0);
 
         currentGame.OnGameReset();
 
@@ -539,7 +531,7 @@ public class GameManager : MonoBehaviour
         isFeverTime = false;
 
         fever = 0;
-        feverCharge = 0;
+        feverCharge.SetValue(0);
         feverFillAmount = 0f;
 
         playerController.Fever(false);
@@ -579,12 +571,12 @@ public class GameManager : MonoBehaviour
             // NOTE : 피버 타임 중에는 충전되지 않음
             if(!isFeverTime)
             {
-                feverCharge += 1;
+                feverCharge.SetValue(feverCharge.GetValue() + 1);
 
-                if(feverCharge >= 2)
+                if(feverCharge.GetValue() >= 2)
                 {
                     fever = Mathf.Clamp(fever + 1, 0, maxFever);
-                    feverCharge = 0;
+                    feverCharge.SetValue(0);
 
                     if(fever >= maxFever)
                     {
@@ -597,36 +589,11 @@ public class GameManager : MonoBehaviour
 
     void RewardScore()
     {
-        if(ValidateScore())
-        {
-            score += 1;
-
-            scoreHash = (score-1).ToString().GetHashCode();
-        }
-        else
-        {
-            score = 0;
-
-            scoreHash = (score-1).ToString().GetHashCode();
-
-            GameOver();
-        }
-
-        scoreText.text = score.ToString();
+        score.SetValue(score.GetValue() + 1);
+        scoreText.text = score.GetValue().ToString();
 
         scoreAnim.Stop();
         scoreAnim.Play();
-    }
-
-    bool ValidateScore()
-    {
-        int compareScore = (score - 1).ToString().GetHashCode();
-        if(compareScore == scoreHash)
-        {
-            return true;
-        }
-
-        return false;
     }
 
     void RewardHealth()
@@ -701,11 +668,11 @@ public class GameManager : MonoBehaviour
             RewardScore();
             ChargeFever();
             
-            spawnManager.UpdateColumnMode(score >= HEIGHT_LIMIT);
+            spawnManager.UpdateColumnMode(score.GetValue() >= HEIGHT_LIMIT);
 
-            skyBoxManager.UpdateHeight(score);
+            skyBoxManager.UpdateHeight(score.GetValue());
 
-            if(score > HEIGHT_LIMIT)
+            if(score.GetValue() > HEIGHT_LIMIT)
             {
                 cameraView.SetFakeView();
             }

@@ -17,9 +17,8 @@ public class DailyChallengeManager : MonoBehaviour
     bool isClear;
     ChallengeType currentChallenge = ChallengeType.NONE;
 
-    int _goal, _reward;
-    int goal { get { return AntiCheatManager.SecureInt(_goal); } set { _goal = AntiCheatManager.SecureInt(value); } }
-    int reward { get { return AntiCheatManager.SecureInt(_reward); } set { _reward = AntiCheatManager.SecureInt(value); } }
+    SecureValue<int> goal = new SecureValue<int>(0);
+    SecureValue<int> reward = new SecureValue<int>(0);
 
     void Awake() 
     {
@@ -65,15 +64,15 @@ public class DailyChallengeManager : MonoBehaviour
         challengeAnim.playAutomatically = !isClear;
 
         challengeText.SetLocaleString(GetChallengeContext());
-        challengeText.SetStringFormatValue(goal.ToString());
+        challengeText.SetStringFormatValue(goal.GetValue().ToString());
     }
 
     void ActiveChallenge()
     {
         isClear = PlayerPrefsManager.LoadData("DailyChallengeClear", false);
         currentChallenge = (ChallengeType)((int)PlayerPrefsManager.LoadData("DailyChallengeType", 0));
-        goal = PlayerPrefsManager.LoadData("DailyChallengeGoal", 0);
-        reward = PlayerPrefsManager.LoadData("DailyChallengeReward", 0);
+        goal.SetValue(PlayerPrefsManager.LoadData("DailyChallengeGoal", 0));
+        reward.SetValue(PlayerPrefsManager.LoadData("DailyChallengeReward", 0));
 
         challengeAnim.playAutomatically = !isClear;
 
@@ -89,19 +88,19 @@ public class DailyChallengeManager : MonoBehaviour
             switch(currentChallenge)
             {
                 case ChallengeType.NEW_RECORD_INFINITY_100:
-                    if(gameType.IsEquals(GameType.INFINITY) && record >= goal)
+                    if(gameType.IsEquals(GameType.INFINITY) && record >= goal.GetValue())
                     {
                         ClearChallenge();
                     }
                     break;
                 case ChallengeType.NEW_RECORD_ONE_MIN_100:
-                    if(gameType.IsEquals(GameType.ONE_TIME_ATTACK) && record >= goal)
+                    if(gameType.IsEquals(GameType.ONE_TIME_ATTACK) && record >= goal.GetValue())
                     {
                         ClearChallenge();
                     }
                     break;
                 case ChallengeType.NEW_RECORD_THREE_MIN_100:
-                    if(gameType.IsEquals(GameType.THREE_TIME_ATTACK) && record >= goal)
+                    if(gameType.IsEquals(GameType.THREE_TIME_ATTACK) && record >= goal.GetValue())
                     {
                         ClearChallenge();
                     }
@@ -121,7 +120,7 @@ public class DailyChallengeManager : MonoBehaviour
         {
             isClear = true;
 
-            CurrencyManager.Instance.RewardCurrency(CurrencyType.VOXEL_POINT, reward);
+            CurrencyManager.Instance.RewardCurrency(CurrencyType.VOXEL_POINT, reward.GetValue());
 
             PlayerPrefsManager.SaveData("DailyChallengeClear", true);
 
@@ -135,16 +134,16 @@ public class DailyChallengeManager : MonoBehaviour
         switch(newChallenge)
         {
             case ChallengeType.NEW_RECORD_INFINITY_100:
-                goal = PlayerPrefsManager.LoadData("BestScore", 0) + 100;
-                reward = 100;
+                goal.SetValue(PlayerPrefsManager.LoadData("BestScore", 0) + 100);
+                reward.SetValue(100);
                 break;
             case ChallengeType.NEW_RECORD_ONE_MIN_100:
-                goal = PlayerPrefsManager.LoadData("OneTimeBestScore", 0) + 100;
-                reward = 100;
+                goal.SetValue(PlayerPrefsManager.LoadData("OneTimeBestScore", 0) + 100);
+                reward.SetValue(100);
                 break;
             case ChallengeType.NEW_RECORD_THREE_MIN_100:
-                goal = PlayerPrefsManager.LoadData("ThreeTimeBestScore", 0) + 100;
-                reward = 100;
+                goal.SetValue(PlayerPrefsManager.LoadData("ThreeTimeBestScore", 0) + 100);
+                reward.SetValue(100);
                 break;
             default:
                 return;
