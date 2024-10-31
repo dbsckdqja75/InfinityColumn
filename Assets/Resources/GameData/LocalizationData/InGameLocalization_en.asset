@@ -39,7 +39,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18258739638272
-    m_Localized: '!!! Fever Time !!!'
+    m_Localized: '!!! FEVER TIME !!!'
     m_Metadata:
       m_Items: []
   - m_Id: 25854657736704
@@ -272,7 +272,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 11186522492547072
-    m_Localized: "\u9023\u7D9A\u9023\u6253!!"
+    m_Localized: Keep hitting back to back!
     m_Metadata:
       m_Items: []
   references:
