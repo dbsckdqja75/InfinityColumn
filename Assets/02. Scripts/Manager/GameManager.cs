@@ -177,7 +177,7 @@ public class GameManager : MonoBehaviour
         if(bestScore.GetValue() < score.GetValue())
         {
             // TODO : 갱신 표시 효과 추가 (신기록 달성)
-            bestScore = score;
+            bestScore.SetValue(score.GetValue());
 
             SaveGameData();
         }
@@ -379,7 +379,7 @@ public class GameManager : MonoBehaviour
 
     void SaveGameData()
     {
-        PlayerPrefsManager.SaveData(currentGame.GetBestScoreDataKey(), bestScore);
+        PlayerPrefsManager.SaveData(currentGame.GetBestScoreDataKey(), bestScore.GetValue());
         
         leaderboardManager.UpdateRecord(gameType);
     }
