@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
@@ -158,7 +159,7 @@ public class SpawnManager : MonoBehaviour
         int startIdx = (centerIndex+1);
         for(int i = startIdx; i < (startIdx+shotCount); i++)
         {
-            if(columnList[i].IsHaveBranch(0) || columnList[i].IsHaveBranch(1))
+            if(columnList[i].HasBranch(0) || columnList[i].HasBranch(1))
             {
                 SpawnEffect(columnList[i], forceMultiple);
             }
@@ -168,5 +169,38 @@ public class SpawnManager : MonoBehaviour
     public Column GetNextColumn()
     {
         return columnList[centerIndex+1];
+    }
+
+    public Column GetLastColumn()
+    {
+        return columnList.Last();
+    }
+
+    public Column[] GetLastColumn(int columnCount)
+    {
+        List<Column> targetColumnList = new List<Column>();
+
+        int startIdx = (columnList.Count-1);
+        for(int i = startIdx; i > (startIdx - columnCount); i--)
+        {
+            targetColumnList.Add(columnList[i]);
+        }
+
+        return targetColumnList.ToArray();
+    }
+
+    public GameObject GetLastColumnBranch()
+    {
+        GameObject branch = null;
+        for(int i = (columnList.Count-1); i > 0; i--)
+        {
+            branch = columnList[i].GetCurrentBranch();
+            if(branch)
+            {
+                break;
+            }
+        }
+
+        return branch;
     }
 }

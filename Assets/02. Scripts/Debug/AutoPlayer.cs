@@ -45,11 +45,11 @@ public class AutoPlayer : MonoBehaviour
             
             if(feverEffectObj.activeSelf) // FeverTime
             {
-                if(nextColumn.IsHaveBranch(0)) // Right
+                if(nextColumn.HasBranch(0)) // Right
                 {
                     pController.DebugMove(true);
                 }
-                else if(nextColumn.IsHaveBranch(1)) // Left
+                else if(nextColumn.HasBranch(1)) // Left
                 {
                     pController.DebugMove(false);
                 }
@@ -60,11 +60,11 @@ public class AutoPlayer : MonoBehaviour
             }
             else // Normal
             {
-                if(nextColumn.IsHaveBranch(0)) // Left
+                if(nextColumn.HasBranch(0)) // Left
                 {
                     pController.DebugMove(false);
                 }
-                else if(nextColumn.IsHaveBranch(1)) // Right
+                else if(nextColumn.HasBranch(1)) // Right
                 {
                     pController.DebugMove(true);
                 }

@@ -78,7 +78,7 @@ public class DailyChallengeManager : MonoBehaviour
 
         challengeButtonObj.SetActive(true);
 
-        Debug.LogFormat("[DailyChallenge] Type : {0} / Goal : {1} / Reward : {2} / isClear : {3}", currentChallenge.ToString(), goal, reward, isClear);
+        Debug.LogFormat("[DailyChallenge] Type : {0} / Goal : {1} / Reward : {2} / isClear : {3}", currentChallenge.ToString(), goal.GetValue(), reward.GetValue(), isClear);
     }
 
     public void UpdateChallenge(GameType gameType, int record)
@@ -151,8 +151,8 @@ public class DailyChallengeManager : MonoBehaviour
 
         PlayerPrefsManager.SaveData("DailyChallengeClear", false);
         PlayerPrefsManager.SaveData("DailyChallengeType", ((int)newChallenge));
-        PlayerPrefsManager.SaveData("DailyChallengeGoal", goal);
-        PlayerPrefsManager.SaveData("DailyChallengeReward", reward);
+        PlayerPrefsManager.SaveData("DailyChallengeGoal", goal.GetValue());
+        PlayerPrefsManager.SaveData("DailyChallengeReward", reward.GetValue());
     }
 
     string GetChallengeContext()

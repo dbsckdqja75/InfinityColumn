@@ -6,9 +6,9 @@ public class Column : MonoBehaviour
 
     public GameObject currentBranch { get; private set; }
 
-    public void Init(int type = -1)
+    public void Init(int direction = -1)
     {
-        type = Mathf.Clamp(type, -1, branchs.Length-1);
+        direction = Mathf.Clamp(direction, -1, branchs.Length-1);
 
         ReleaseBranch();
 
@@ -17,19 +17,32 @@ public class Column : MonoBehaviour
             branch.SetActive(false);
         }
 
-        if(type != -1)
+        if(direction != -1)
         {
-            branchs[type].SetActive(true);
-            currentBranch = branchs[type];
+            branchs[direction].SetActive(true);
+            currentBranch = branchs[direction];
         }
     }
 
     // NOTE : 해당 방향의 가지 존재 여부 체크
-    public bool IsHaveBranch(int type = -1)
+    public bool HasBranch(int direction = -1)
     {
-        type = Mathf.Clamp(type, -1, branchs.Length-1);
+        direction = Mathf.Clamp(direction, -1, branchs.Length-1);
 
-        return (type != -1) ? branchs[type].activeSelf : false;
+        return (direction != -1) ? branchs[direction].activeSelf : false;
+    }
+
+    public GameObject GetCurrentBranch()
+    {
+        foreach(GameObject branch in branchs)
+        {
+            if(branch.activeSelf)
+            {
+                return branch;
+            }
+        }
+
+        return null;
     }
 
     public void ReleaseBranch()

@@ -5829,6 +5829,56 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!1 &331279805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 331279806}
+  - component: {fileID: 331279807}
+  m_Layer: 0
+  m_Name: DisturbManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &331279806
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331279805}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1172002769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &331279807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331279805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 177e26e43cea44544b9b4677f69b4be6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDebug: 0
+  minRandScore: 100
+  maxRandScore: 300
+  playerTrf: {fileID: 1592018357}
+  spawnManager: {fileID: 1562980878}
+  disturbData: {fileID: 11400000, guid: b3987038660c4594aa8f24f6cd6a8b15, type: 2}
 --- !u!1 &331642947
 GameObject:
   m_ObjectHideFlags: 0
@@ -22893,6 +22943,7 @@ Transform:
   - {fileID: 36890017}
   - {fileID: 1678921592}
   - {fileID: 1642766754}
+  - {fileID: 331279806}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1173647800
@@ -23251,6 +23302,7 @@ MonoBehaviour:
   playerInput: {fileID: 1592018360}
   spawnManager: {fileID: 1562980878}
   skyBoxManager: {fileID: 1642766753}
+  disturbManager: {fileID: 331279807}
   canvasManager: {fileID: 2112517990}
   dailyChallengeManager: {fileID: 36890016}
   leaderboardManager: {fileID: 1513803120}

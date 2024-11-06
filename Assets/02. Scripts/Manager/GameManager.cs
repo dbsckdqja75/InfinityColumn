@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] PlayerInput playerInput;
     [SerializeField] SpawnManager spawnManager;
     [SerializeField] SkyBoxManager skyBoxManager;
+    [SerializeField] DisturbManager disturbManager;
     [SerializeField] CanvasManager canvasManager;
     [SerializeField] DailyChallengeManager dailyChallengeManager;
     [SerializeField] LeaderboardManager leaderboardManager;
@@ -524,6 +525,8 @@ public class GameManager : MonoBehaviour
 
         skyBoxManager.ResetColor();
         skyBoxManager.ResetHeight();
+
+        disturbManager.ResetTrigger();
     }
 
     void ResetFeverTime()
@@ -611,7 +614,7 @@ public class GameManager : MonoBehaviour
     void CheckBranch()
     {
         Column column = spawnManager.GetNextColumn();
-        if(column.IsHaveBranch(playerController.GetDirectionType()))
+        if(column.HasBranch(playerController.GetDirectionType()))
         {
             if(isFeverTime)
             {
@@ -667,6 +670,11 @@ public class GameManager : MonoBehaviour
             RewardHealth();
             RewardScore();
             ChargeFever();
+
+            if(gameType.IsEquals(GameType.INFINITY))
+            {
+                disturbManager.UpdateTrigger(score.GetValue());
+            }
             
             spawnManager.UpdateColumnMode(score.GetValue() >= HEIGHT_LIMIT);
 
