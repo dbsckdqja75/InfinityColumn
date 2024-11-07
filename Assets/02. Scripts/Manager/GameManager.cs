@@ -671,7 +671,7 @@ public class GameManager : MonoBehaviour
             RewardScore();
             ChargeFever();
 
-            if(gameType.IsEquals(GameType.INFINITY))
+            if(!isFeverTime && gameType.IsEquals(GameType.INFINITY))
             {
                 disturbManager.UpdateTrigger(score.GetValue());
             }

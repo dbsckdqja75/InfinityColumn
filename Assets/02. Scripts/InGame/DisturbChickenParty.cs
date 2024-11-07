@@ -7,7 +7,7 @@ public class DisturbChickenParty : DisturbObject, IDisturbMultiple, IDisturbColu
 
     [SerializeField] List<GameObject> chickenPrefab = new List<GameObject>();
 
-    List<DisturbChicken> disturbChickenList = new List<DisturbChicken>();
+    List<DisturbChicken> chickenList = new List<DisturbChicken>();
 
     public void SetTargetColumn(Column[] columns)
     {
@@ -15,7 +15,7 @@ public class DisturbChickenParty : DisturbObject, IDisturbMultiple, IDisturbColu
 
         foreach(Column column in columns)
         {
-            if(disturbChickenList.Count < chickenCount)
+            if(chickenList.Count < chickenCount)
             {
                 GameObject branch = column.GetCurrentBranch();
                 if(branch)
@@ -25,7 +25,7 @@ public class DisturbChickenParty : DisturbObject, IDisturbMultiple, IDisturbColu
                     DisturbChicken chicken = Instantiate(prefab, Vector3.zero, Quaternion.identity).GetComponent<DisturbChicken>();
                     chicken.SetTargetBranch(branch);
                     
-                    disturbChickenList.Add(chicken);
+                    chickenList.Add(chicken);
                 }
             }
         }
@@ -33,7 +33,7 @@ public class DisturbChickenParty : DisturbObject, IDisturbMultiple, IDisturbColu
 
     public override bool OnTrigger()
     {
-        foreach(DisturbChicken chicken in disturbChickenList)
+        foreach(DisturbChicken chicken in chickenList)
         {
             chicken.OnTrigger();
         }

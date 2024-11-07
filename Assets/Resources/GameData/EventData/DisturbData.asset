@@ -53,3 +53,19 @@ MonoBehaviour:
     endScore: 3000
     prefab: {fileID: 5418949546716828333, guid: e878cc2b4e0c3db479380216fe9d0f59,
       type: 3}
+  - startScore: 100
+    endScore: 500
+    prefab: {fileID: 7763392112259956260, guid: 94aba0b663e19d44f98bef520309e771,
+      type: 3}
+  - startScore: 500
+    endScore: 1000
+    prefab: {fileID: 7763392112259956260, guid: c135398ca898b5145a68054ee8144435,
+      type: 3}
+  - startScore: 1000
+    endScore: 1500
+    prefab: {fileID: 7763392112259956260, guid: ef77c63c80236894d965c92fd50a96c7,
+      type: 3}
+  - startScore: 1500
+    endScore: 3000
+    prefab: {fileID: 7763392112259956260, guid: 3f37175faabb8304aab6986d5f5f53a1,
+      type: 3}

@@ -10,8 +10,6 @@ public class DisturbData : ScriptableObject
     {
         List<DisturbConfig> filteredData = dataList.FindAll(x => (x.startScore <= targetScore) && (x.endScore >= targetScore));
 
-        Debug.LogFormat("[Disturb Event] Filtered Config Count {0}", filteredData.Count);
-
         if(filteredData.Count > 0)
         {
             return filteredData[Random.Range(0, filteredData.Count)].prefab;
