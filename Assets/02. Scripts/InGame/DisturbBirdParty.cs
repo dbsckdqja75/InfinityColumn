@@ -5,7 +5,7 @@ using UnityEngine;
 public class DisturbBirdParty : DisturbObject
 {
     [SerializeField] bool canCrossPoint;
-    [SerializeField] float flyDistance = 5f;
+    [SerializeField] float flyDistance = 8f;
     [SerializeField] float maxDelayTime = 1f;
 
     [Space(10)]
@@ -68,7 +68,7 @@ public class DisturbBirdParty : DisturbObject
 
         foreach(DisturbBird bird in birdList)
         {
-            if(bird != null)
+            while(bird != null)
             {
                 yield return new WaitForEndOfFrame();
             }

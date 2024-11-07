@@ -184,6 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSlope: -40
   maxSlope: 50
+  maxSpeed: 1.5
 --- !u!21 &-2667964178372974231
 Material:
   serializedVersion: 8

@@ -6,7 +6,8 @@ public class DisturbBird : DisturbObject, IDisturbFlyable
     [SerializeField] float minSlope, maxSlope;
 
     [Space(10)]
-    [SerializeField] float maxSpeed = 2f;
+    [SerializeField] float minSpeed = 1f;
+    [SerializeField] float maxSpeed = 1.5f;
 
     Vector3 startPos, endPos, currentPos;
 
@@ -37,7 +38,7 @@ public class DisturbBird : DisturbObject, IDisturbFlyable
         float angleZ = Random.Range(minSlope, maxSlope);
         transform.Rotate(Vector3.forward, angleZ);
 
-        float speed = Random.Range(1f, maxSpeed);
+        float speed = Random.Range(minSpeed, maxSpeed);
         yield return CoroutineExtensions.ProcessAction(speed, (t) => {
             currentPos = Vector3.Lerp(startPos, endPos, t);
 

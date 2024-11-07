@@ -184,6 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSlope: -40
   maxSlope: 50
+  maxSpeed: 1.5
 --- !u!28 &-8009099428647884882
 Texture2D:
   m_ObjectHideFlags: 0
