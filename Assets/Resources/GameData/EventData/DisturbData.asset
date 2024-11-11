@@ -74,6 +74,6 @@ MonoBehaviour:
     prefab: {fileID: 7763392112259956260, guid: b9d8d14264c81f44d94a48fb9a08896e,
       type: 3}
   - startScore: 3000
-    endScore: 5000
+    endScore: 10000
     prefab: {fileID: 2156000990581846445, guid: c251ea303d326594da66d45f11f9ce69,
       type: 3}
