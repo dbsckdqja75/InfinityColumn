@@ -355,6 +355,8 @@ public class GameManager : MonoBehaviour
 
         playerInput.SwitchCurrentActionMap("ResultActions");
 
+        disturbManager.ResetTrigger();
+
         SoundManager.Instance.StopMusic();
 
         canvasManager.SetPanel("GameOver");

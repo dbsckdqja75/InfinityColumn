@@ -74,6 +74,13 @@ MonoBehaviour:
     prefab: {fileID: 7763392112259956260, guid: b9d8d14264c81f44d94a48fb9a08896e,
       type: 3}
   - startScore: 3000
-    endScore: 10000
+    endScore: 12000
     prefab: {fileID: 2156000990581846445, guid: c251ea303d326594da66d45f11f9ce69,
+      type: 3}
+  - startScore: 3000
+    endScore: 12000
+    prefab: {fileID: 735218465518474288, guid: 60541af3b7f98ab43820bd62cb85a23e, type: 3}
+  - startScore: 3000
+    endScore: 12000
+    prefab: {fileID: 1451304405441889475, guid: 8e06481a1cd71b544bbb02e5d8449a9e,
       type: 3}
