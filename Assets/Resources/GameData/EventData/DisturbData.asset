@@ -84,3 +84,7 @@ MonoBehaviour:
     endScore: 12000
     prefab: {fileID: 1451304405441889475, guid: 8e06481a1cd71b544bbb02e5d8449a9e,
       type: 3}
+  - startScore: 3000
+    endScore: 12000
+    prefab: {fileID: 4452009412100054569, guid: 7e8af3251ccac134d9b5c5e6f055ef11,
+      type: 3}
