@@ -608,7 +608,14 @@ public class GameManager : MonoBehaviour
     void RewardScore()
     {
         #if UNITY_EDITOR
-        score.SetValue(score.GetValue() + debug_rewardScore);
+        if(score.GetValue() > 1000)
+        {
+            score.SetValue(score.GetValue() + debug_rewardScore);
+        }
+        else
+        {
+            score.SetValue(score.GetValue() + 1);
+        }
         #else
         score.SetValue(score.GetValue() + 1);
         #endif

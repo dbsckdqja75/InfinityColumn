@@ -11,8 +11,11 @@ public class DisturbChicken : DisturbObject, IDisturbBranch
 
     public void SetTargetBranch(GameObject branch)
     {
-        transform.SetParent(branch.transform);
-        transform.position = branch.transform.position;
+        if(branch)
+        {
+            transform.SetParent(branch.transform);
+            transform.position = branch.transform.position;
+        }
     }
 
     public override bool OnTrigger()
@@ -27,10 +30,12 @@ public class DisturbChicken : DisturbObject, IDisturbBranch
 
             transform.localPosition = movePos;
             transform.rotation = Quaternion.Euler(0, angleY, 0);
-
-            return true;
         }
-        
-        return false;
+        else
+        {
+            this.gameObject.SetActive(false);
+        }
+
+        return true;
     }
 }
