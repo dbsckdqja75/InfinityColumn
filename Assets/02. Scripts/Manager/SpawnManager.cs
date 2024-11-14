@@ -13,6 +13,10 @@ public class SpawnManager : MonoBehaviour
 
     ColumnData currentColumnData;
 
+    #if UNITY_EDITOR
+    bool debug_branchClear = false;
+    #endif
+
     bool isStackMode = false;
 
     int centerIndex = 0;
@@ -120,6 +124,13 @@ public class SpawnManager : MonoBehaviour
         firstColumn.transform.SetAsLastSibling();
         firstColumn.Init(Random.Range(-1, 2));
 
+        #if UNITY_EDITOR
+        if(debug_branchClear)
+        {
+            firstColumn.ReleaseBranch();
+        }
+        #endif
+
         columnList.Remove(firstColumn);
         columnList.Add(firstColumn);
 
@@ -140,6 +151,13 @@ public class SpawnManager : MonoBehaviour
         firstColumn.transform.position = lastPos;
         firstColumn.transform.SetAsLastSibling();
         firstColumn.Init(Random.Range(-1, 2));
+
+        #if UNITY_EDITOR
+        if(debug_branchClear)
+        {
+            firstColumn.ReleaseBranch();
+        }
+        #endif
 
         columnList.Remove(firstColumn);
         columnList.Add(firstColumn);
@@ -203,4 +221,11 @@ public class SpawnManager : MonoBehaviour
 
         return branch;
     }
+
+    #if UNITY_EDITOR
+    public void DebugSetBranchClear(bool isOn)
+    {
+        debug_branchClear = isOn;
+    }
+    #endif
 }

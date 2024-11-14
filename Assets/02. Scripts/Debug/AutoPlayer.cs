@@ -34,6 +34,11 @@ public class AutoPlayer : MonoBehaviour
         }
     }
 
+    public void SetAutoPlay(bool isOn)
+    {
+        autoPlay = isOn;
+    }
+
     IEnumerator AutoPlay()
     {
         while(autoPlay)

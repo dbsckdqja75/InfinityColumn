@@ -90,4 +90,30 @@ public class DisturbManager : MonoBehaviour
 
         return Random.Range(minRandScore, maxRandScore + 1);
     }
+
+    #if UNITY_EDITOR
+    public void DebugForceTrigger()
+    {
+        ResetTrigger();
+        
+        int debugScore = targetScore;
+        UpdateTrigger(debugScore);
+        targetScore = debugScore;
+    }
+
+    public DisturbData DebugGetDisturbData()
+    {
+        return disturbData;
+    }
+
+    public void DebugSetDisturbData(DisturbData data)
+    {
+        disturbData = data;
+    }
+
+    public void DebugSetToggle(bool isOn)
+    {
+        isDebug = isOn;
+    }
+    #endif
 }

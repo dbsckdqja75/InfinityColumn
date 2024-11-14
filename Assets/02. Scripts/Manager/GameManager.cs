@@ -25,6 +25,12 @@ public class GameManager : MonoBehaviour
 
     float lastPlayerHeight;
 
+    #if UNITY_EDITOR
+    bool debug_infinityHealth = false;
+
+    int debug_rewardScore = 1;
+    #endif
+
     [Header("InGame Config")]
     [SerializeField] int maxFever = 100;
     [SerializeField] float feverTime = 20f;
@@ -88,6 +94,13 @@ public class GameManager : MonoBehaviour
             UpdateUI();
             UpdateFeverTime();
             UpdateHealthTime();
+
+            #if UNITY_EDITOR
+            if(debug_infinityHealth)
+            {
+                health = 100f;
+            }
+            #endif
         }
 
         if(IsGameState(GameState.GAME_OVER))
@@ -594,7 +607,11 @@ public class GameManager : MonoBehaviour
 
     void RewardScore()
     {
+        #if UNITY_EDITOR
+        score.SetValue(score.GetValue() + debug_rewardScore);
+        #else
         score.SetValue(score.GetValue() + 1);
+        #endif
         scoreText.text = score.GetValue().ToString();
 
         scoreAnim.Stop();
@@ -693,4 +710,27 @@ public class GameManager : MonoBehaviour
     {
         return gameState.IsEquals(targetState);
     }
+
+    #if UNITY_EDITOR
+    public void DebugForceFeverTime()
+    {
+        if(IsGameState(GameState.PLAYING))
+        {
+            fever = maxFever;
+            feverCharge.SetValue(0);
+
+            OnFeverTime();
+        }
+    }
+    
+    public void DebugSetInfinityHealth(bool isOn)
+    {
+        debug_infinityHealth = isOn;
+    }
+
+    public void DebugSetRewardScore(int reward)
+    {
+        debug_rewardScore = reward;
+    }
+    #endif
 }
