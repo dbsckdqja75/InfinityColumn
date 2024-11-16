@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] PlayerController playerController;
     [SerializeField] PlayerInput playerInput;
     [SerializeField] SpawnManager spawnManager;
+    [SerializeField] BackgroundManager backgroundManager;
     [SerializeField] SkyBoxManager skyBoxManager;
     [SerializeField] DisturbManager disturbManager;
     [SerializeField] CanvasManager canvasManager;
@@ -534,6 +535,8 @@ public class GameManager : MonoBehaviour
         startTouchGuideObj.SetActive(true);
 
         playerController.ResetPosition();
+
+        backgroundManager.ResetBackground();
 
         spawnManager.ResetPool();
         spawnManager.UpdateColumnMode(false);

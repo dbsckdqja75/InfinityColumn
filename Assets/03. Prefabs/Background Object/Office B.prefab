@@ -1,0 +1,503 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4280204922259308319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1732331832985893665}
+  - component: {fileID: 4281719392495297903}
+  - component: {fileID: 5944815557585892226}
+  - component: {fileID: 5465870567998887515}
+  m_Layer: 0
+  m_Name: Office B
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1732331832985893665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4280204922259308319}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4281719392495297903
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4280204922259308319}
+  m_Mesh: {fileID: -6590038490155213638}
+--- !u!23 &5944815557585892226
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4280204922259308319}
+  m_Enabled: 1
+  m_CastShadows: 2
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -6686327271786247157}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5465870567998887515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4280204922259308319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b26957667d5104ab632a10dc9da700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancedMode: 1
+  voxelFilePath: E:/Projects/2024/InfinityColumn/Assets/06. Voxel/Background Object/Object_Office_B.vox
+  voxelFileGUID: 
+  voxelFileObject: {fileID: 2083333593273470907, guid: 40a5ebd4b437c93498ec574b30a68a3f,
+    type: 3}
+  voxelFileSubIndex: -1
+  fileType: 0
+  fileRefreshLastTimeTicks: 638673889009833667
+  dataVersion: 115
+  legacyVoxImport: 0
+  legacyAssetNaming: 0
+  importMode: 1
+  importFlags: 4
+  importScale: {x: 0.3, y: 0.3, z: 0.3}
+  importOffset: {x: 0, y: 0, z: 0}
+  localOffset: {x: -23, y: -0, z: -8}
+  enableFaceFlags: 255
+  disableData:
+    disableList: []
+    faceList: 
+  combineFaces: 1
+  ignoreCavity: 0
+  shareSameFace: 1
+  removeUnusedPalettes: 1
+  shareSameMaterial: 1
+  voxelStructure: {fileID: 0}
+  generateLightmapUVs: 0
+  generateLightmapUVsAngleError: 8
+  generateLightmapUVsAreaError: 15
+  generateLightmapUVsHardAngle: 88
+  generateLightmapUVsPackMargin: 4
+  generateTangents: 0
+  generateVertexColors: 0
+  generateVertexColorMax: {r: 1, g: 1, b: 1, a: 1}
+  generateVertexColorMin: {r: 0.64, g: 0.64, b: 0.64, a: 1}
+  meshFaceVertexOffset: 0
+  generateMipMaps: 0
+  updateMeshRendererMaterials: 1
+  updateMaterialTexture: 1
+  loadFromVoxelFile: 0
+  materialData:
+  - materialList: []
+    name: 
+    transparent: 0
+    material:
+      renderingMode: 0
+      metallic: 0
+      smoothness: 0
+      alpha: 0
+      emission: {r: 0, g: 0, b: 0, a: 0}
+      emissionPower: 0
+  materialIndexes: 00000000
+  edit_autoRefresh: 1
+  edit_importFoldout: 1
+  edit_objectFoldout: 1
+  edit_generateLightmapUVsAdvancedFoldout: 0
+  edit_helpEnable: 0
+  edit_configureMode: 0
+  edit_configureMaterialIndex: 0
+  edit_configureMaterialMainMode: 0
+  edit_configureMaterialSubMode: 0
+  edit_configureDisableMainMode: 0
+  edit_configureDisableSubMode: 0
+  edit_ConfigurePreviewMode: 0
+  edit_snapToHalfVoxel: 1
+  edit_enableMesh: []
+  mesh: {fileID: -6590038490155213638}
+  material: {fileID: 0}
+  materials:
+  - {fileID: -6686327271786247157}
+  atlasTexture: {fileID: 4442364585939876577}
+--- !u!21 &-6686327271786247157
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Object_Office_B_0
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    RenderType: Opaque
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 4442364585939876577}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 4442364585939876577}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AddPrecomputedVelocity: 0
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _Blend: 0
+    - _BlendModePreserveSpecular: 1
+    - _BumpScale: 1
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DetailAlbedoMapScale: 1
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _DstBlendAlpha: 0
+    - _EnvironmentReflections: 1
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _Metallic: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.005
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _Smoothness: 0.2
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _SrcBlendAlpha: 1
+    - _Surface: 0
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!43 &-6590038490155213638
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Object_Office_B
+  serializedVersion: 11
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 108
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 72
+    localAABB:
+      m_Center: {x: -1.7999997, y: 7.2000003, z: 0.29999995}
+      m_Extent: {x: 5.1000004, y: 7.2000003, z: 2.7}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 000001000200000002000300040005000600040006000700080009000a0008000a000b000c000d000e000c000e000f00100011001200100012001300140015001600140016001700180019001a0018001a001b001c001d001e001c001e001f00200021002200200022002300240025002600240026002700280029002a0028002a002b002c002d002e002c002e002f003200310030003300320030003600350034003700360034003a00390038003b003a0038003e003d003c003f003e003c00420041004000430042004000460045004400470046004400
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 72
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 2304
+    _typelessdata: cdccdcc0343353410000404000000000000000000000803f0000003c0000343fcdccdcc0000000000000404000000000000000000000803f0000003c0000803c36335340000000000000404000000000000000000000803f00008c3e0000803c36335340343353410000404000000000000000000000803f00008c3e0000343f000090c034335341676606c000000000000000000000803f0000bc3e0000283f000090c067664e41676606c000000000000000000000803f0000bc3e0000243f0200404067664e41676606c000000000000000000000803f0000103f0000243f0200404034335341676606c000000000000000000000803f0000103f0000283fcdccdcc0676666410000404000000000000000000000803f0000bc3e0000403fcdccdcc0343353410000404000000000000000000000803f0000bc3e0000303f000090c0343353410000404000000000000000000000803f0000dc3e0000303f000090c0676666410000404000000000000000000000803f0000dc3e0000403f000090c067664e41676606c0000000000000803f000000000000003c00003c3f000090c067664e41cdcc2c40000000000000803f000000000000003c00007c3f0200404067664e41cdcc2c40000000000000803f000000000000503e00007c3f0200404067664e41676606c0000000000000803f000000000000503e00003c3f00004040343353419a9919c0000000000000803f000000000000763f0000803c000040403433534100004040000000000000803f000000000000763f0000983e333353403433534100004040000000000000803f000000000000783f0000983e33335340343353419a9919c0000000000000803f000000000000783f0000803c000090c0343353419a9919c0000000000000803f000000000000bc3e0000243f000090c034335341676606c0000000000000803f000000000000bc3e0000283f0200404034335341676606c0000000000000803f000000000000103f0000283f02004040343353419a9919c0000000000000803f000000000000103f0000243f000090c034335341cdcc2c40000000000000803f000000000000bc3e0000243f000090c03433534100004040000000000000803f000000000000bc3e0000283f020040403433534100004040000000000000803f000000000000103f0000283f0200404034335341cdcc2c40000000000000803f000000000000103f0000243fcdccdcc0676666419a9919c0000000000000803f000000000000943e0000243fcdccdcc06766664100004040000000000000803f000000000000943e00006c3f000090c06766664100004040000000000000803f000000000000b43e00006c3f000090c0676666419a9919c0000000000000803f000000000000b43e0000243f33335340000000009a9919c00000803f00000000000000000000943e0000a83e33335340343353419a9919c00000803f00000000000000000000223f0000a83e3333534034335341000040400000803f00000000000000000000223f00001c3f3333534000000000000040400000803f00000000000000000000943e00001c3f000090c067664e41676606c00000803f00000000000000000000603e00003c3f000090c067666641676606c00000803f00000000000000000000843e00003c3f000090c067666641cdcc2c400000803f00000000000000000000843e00007c3f000090c067664e41cdcc2c400000803f00000000000000000000603e00007c3f000090c0343353419a9919c00000803f00000000000000000000943e0000743f000090c0676666419a9919c00000803f00000000000000000000a43e0000743f000090c067666641676606c00000803f00000000000000000000a43e0000783f000090c034335341676606c00000803f00000000000000000000943e0000783f000090c034335341cdcc2c400000803f00000000000000000000943e0000743f000090c067666641cdcc2c400000803f00000000000000000000a43e0000743f000090c067666641000040400000803f00000000000000000000a43e0000783f000090c034335341000040400000803f00000000000000000000943e0000783fcdccdcc00000000000004040000080bf00000000000000000000943e0000983ecdccdcc0000000009a9919c0000080bf00000000000000000000943e0000803ccdccdcc0676666419a9919c0000080bf000000000000000000002a3f0000803ccdccdcc06766664100004040000080bf000000000000000000002a3f0000983e0000404067664e41cdcc2c40000080bf000000000000000000007c3f0000883e0000404067664e41676606c0000080bf000000000000000000007c3f0000803c0000404034335341676606c0000080bf000000000000000000007e3f0000803c0000404034335341cdcc2c40000080bf000000000000000000007e3f0000883e36335340000000009a9919c000000000000080bf000000000000723f0000803ccdccdcc0000000009a9919c000000000000080bf0000000000002e3f0000803ccdccdcc0000000000000404000000000000080bf0000000000002e3f0000983e36335340000000000000404000000000000080bf000000000000723f0000983ecdccdcc0000000009a9919c00000000000000000000080bf0000003c0000803c36335340000000009a9919c00000000000000000000080bf00008c3e0000803c36335340343353419a9919c00000000000000000000080bf00008c3e0000343fcdccdcc0343353419a9919c00000000000000000000080bf0000003c0000343f000090c067664e41cdcc2c400000000000000000000080bf0000bc3e0000243f0200404067664e41cdcc2c400000000000000000000080bf0000103f0000243f0200404034335341cdcc2c400000000000000000000080bf0000103f0000283f000090c034335341cdcc2c400000000000000000000080bf0000bc3e0000283fcdccdcc0343353419a9919c00000000000000000000080bf0000bc3e0000303f000090c0343353419a9919c00000000000000000000080bf0000dc3e0000303f000090c0676666419a9919c00000000000000000000080bf0000dc3e0000403fcdccdcc0676666419a9919c00000000000000000000080bf0000bc3e0000403f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: -1.7999997, y: 7.2000003, z: 0.29999995}
+    m_Extent: {x: 5.1000004, y: 7.2000003, z: 2.7}
+  m_MeshUsageFlags: 0
+  m_CookingOptions: 30
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  'm_MeshMetrics[0]': 1
+  'm_MeshMetrics[1]': 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
+--- !u!28 &4442364585939876577
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Object_Office_B
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 3
+  m_Width: 128
+  m_Height: 64
+  m_CompleteImageSize: 32768
+  m_MipsStripped: 0
+  m_TextureFormat: 4
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 1
+  m_MipmapLimitGroupName: 
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  m_PlatformBlob: 
+  image data: 32768
+  _typelessdata: bdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baff888888ff888888ff888888ff888888ff888888ffbdc0baff888888ff888888ff888888ff888888ff888888ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baff888888ff888888ff888888ff888888ff888888ffbdc0baff888888ff888888ff888888ff888888ff888888ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffdee0dbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0baff888888ff888888ff888888ff888888ff888888ffbdc0baff888888ff888888ff888888ff888888ff888888ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbff555555ff555555ff555555ff555555fffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbff888888ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff888888ffbdc0baffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbff888888ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff888888ffbdc0baffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0baff888888ff888888ff888888ff888888ff888888ffbdc0baff888888ff888888ff888888ff888888ff888888ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbff555555ff555555fffffffbff888888ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff888888ffbdc0baffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbff555555ff555555fffffffbff888888ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff888888ffbdc0baffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0bafffffffbfffffffbff555555ff555555fffffffbffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbff888888ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff888888ffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baff555555ff555555ff555555ff555555ff555555ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbff888888ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff888888ffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baff888888ff888888ff888888ff888888ff888888ffbdc0baff888888ff888888ff888888ff888888ff888888ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbff888888ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff888888ffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baff888888ff888888ff888888ff888888ff888888ffbdc0baff888888ff888888ff888888ff888888ff888888ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbff555555ff555555fffffffbff888888ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff888888ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff888888ff888888ff888888ff888888ff888888ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbff555555ff555555fffffffbff888888ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff888888ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffa3a4a1ff888888ff888888ff888888ff888888ffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbff888888ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff555555ff555555ff555555ff555555ff555555ff555555ff888888ff888888ffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffa3a4a1ff888888ff888888ff888888ffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffa3a4a1ff888888ff888888ffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0bafffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0bafffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0bafffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0bafffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0bafffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0bafffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000fffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffdee0dbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffd3d5d0ffdee0dbffdee0dbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffdee0dbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0bafffffffbfffffffbfffffffbfffffffbfffffffbffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffbdc0baffdee0dbff
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
