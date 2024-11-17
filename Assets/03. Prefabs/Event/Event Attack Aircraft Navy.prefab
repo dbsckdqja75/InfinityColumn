@@ -188,8 +188,8 @@ MonoBehaviour:
   angleZ: 0
   minSpeed: 1
   maxSpeed: 1.5
-  startOffset: {x: 0, y: -12, z: 4}
-  endOffset: {x: 0, y: 12, z: 4}
+  startOffset: {x: 0, y: -10, z: 4}
+  endOffset: {x: 0, y: 10, z: 4}
 --- !u!1 &6993944111122751989
 GameObject:
   m_ObjectHideFlags: 0

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canCrossPoint: 1
-  flyDistance: 8
+  flyDistance: 12
   maxDelayTime: 1
   points:
   - {x: 0, y: -0.82, z: 2.45}
