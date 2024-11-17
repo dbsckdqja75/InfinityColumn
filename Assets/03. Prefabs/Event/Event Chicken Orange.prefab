@@ -183,6 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432d4e4c872bf724bb0841d29a37edf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effectPrefab: {fileID: 1195590025248188, guid: 7be84c5a6d280e747aed0cc219bf89a6,
+    type: 3}
   offset: {x: 0.4, y: 0.13, z: 0}
 --- !u!111 &8938613501236452955
 Animation:

@@ -2,11 +2,19 @@ using UnityEngine;
 
 public class DisturbChicken : DisturbObject, IDisturbBranch
 {
+    [SerializeField] GameObject effectPrefab;
     [SerializeField] Vector3 offset;
 
     void OnDisable() 
     {
-        Deactivate();    
+        if(transform.parent == null)
+        {
+            Instantiate(effectPrefab, transform.position, Quaternion.identity);
+            
+            SoundManager.Instance.PlaySound("Chicken", transform.position);
+        }
+
+        Deactivate();
     }
 
     public void SetTargetBranch(GameObject branch)

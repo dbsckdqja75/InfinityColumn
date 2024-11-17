@@ -9,6 +9,7 @@ public class SoundManager : MonoSingleton<SoundManager>
 
     [SerializeField] MusicSource mainMusicSource, subMusicSource;
     [SerializeField] AudioSource effectAudioSource;
+    [SerializeField] AudioSource effect3dAudioSource;
 
     [SerializeField] List<AudioClip> musicClipList;
     [SerializeField] List<AudioClip> soundClipList;
@@ -85,6 +86,17 @@ public class SoundManager : MonoSingleton<SoundManager>
         Debug.LogWarningFormat("[Sound] 해당되는 이름의 오디오 파일이 목록에 없습니다! ({0})", soundName);
     }
 
+    public void PlaySound(string soundName, Vector3 playPoint)
+    {
+        if(audioClipList.ContainsKey(soundName))
+        {
+            PlaySound(audioClipList[soundName], playPoint);
+            return;
+        }
+
+        Debug.LogWarningFormat("[Sound] 해당되는 이름의 오디오 파일이 목록에 없습니다! ({0})", soundName);
+    }
+
     void PlayMusic(AudioClip clip, bool playFade = true)
     {
         if(playFade)
@@ -121,6 +133,14 @@ public class SoundManager : MonoSingleton<SoundManager>
                 effectAudioSource.clip = clip;
                 effectAudioSource.Play();
             }
+        }
+    }
+
+    void PlaySound(AudioClip clip, Vector3 playPoint)
+    {
+        if(!isSfxMute)
+        {
+            AudioSource.PlayClipAtPoint(clip, playPoint, 1);
         }
     }
 

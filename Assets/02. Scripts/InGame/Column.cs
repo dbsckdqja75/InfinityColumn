@@ -45,9 +45,20 @@ public class Column : MonoBehaviour
         return null;
     }
 
-    public void ReleaseBranch()
+    public void ReleaseBranch(bool clearChild = false)
     {
-        currentBranch?.SetActive(false);
+        if(currentBranch != null)
+        {
+            if(clearChild && currentBranch.transform.childCount > 0)
+            {
+                GameObject obj = currentBranch.transform.GetChild(0).gameObject;
+                obj.transform.SetParent(null , true);
+                obj.SetActive(false);
+            }
+
+            currentBranch?.SetActive(false);
+        }
+
         currentBranch = null;
     }
 }

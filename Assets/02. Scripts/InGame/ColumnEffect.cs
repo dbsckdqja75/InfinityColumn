@@ -29,7 +29,7 @@ public class ColumnEffect : MonoBehaviour
         transform.position = targetColumn.currentBranch.transform.position;
         transform.rotation = targetColumn.currentBranch.transform.rotation;
 
-        targetColumn.ReleaseBranch();
+        targetColumn.ReleaseBranch(true);
 
         ExplosionEffect(targetColumn.transform.position, forceMultiple).Start(this);
     }
