@@ -9,7 +9,7 @@
                     "name": "LeftMove",
                     "type": "Button",
                     "id": "cef83ce2-6283-40a5-a89c-c3f123a4d98a",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -251,7 +251,7 @@
                     "name": "Space",
                     "type": "Button",
                     "id": "79132f88-cf7e-403d-b9e6-6e4e7caef63f",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false

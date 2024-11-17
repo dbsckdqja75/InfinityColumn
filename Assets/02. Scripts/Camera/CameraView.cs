@@ -32,46 +32,6 @@ public class CameraView : MonoBehaviour
         UpdateView();
     }
 
-    #if UNITY_STANDALONE
-    int targetWidth = 1080, targetHeight = 1920;
-    int screenWidth, screenHeight;
-
-    void Awake()
-    {
-        screenWidth = Screen.resolutions[Screen.resolutions.Length-1].width;
-        screenHeight = Screen.resolutions[Screen.resolutions.Length-1].height;
-    }
-
-    void Update()
-    {
-        // if(Input.GetKeyDown(KeyCode.Alpha1))
-        // {
-        //     float aspectRatio = ((float)screenHeight / (float)targetHeight);
-        //     float extraRatio = 0.925f;
-
-        //     int changeWidth = (int)((targetWidth * aspectRatio) * extraRatio);
-        //     int changeHeight = (int)(screenHeight * extraRatio);
-
-        //     Screen.SetResolution(changeWidth, changeHeight, false);
-        // }
-
-        // if(Input.GetKeyDown(KeyCode.Alpha2))
-        // {
-        //     Screen.SetResolution(900, 1600, false);
-        // }
-
-        // if(Input.GetKeyDown(KeyCode.Alpha3))
-        // {
-        //     Screen.SetResolution(720, 1280, false);
-        // }
-
-        // if(Input.GetKeyDown(KeyCode.Alpha4))
-        // {
-        //     Screen.SetResolution(540, 960, false);
-        // }
-    }
-    #endif
-
     public void Init()
    {
         mainCamera = Camera.main;

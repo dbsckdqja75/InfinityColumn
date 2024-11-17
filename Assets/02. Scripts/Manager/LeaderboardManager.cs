@@ -42,6 +42,9 @@ public class LeaderboardManager : MonoBehaviour
     [SerializeField] GameObject loadingObj;
     [SerializeField] GameObject firstGuideObj;
 
+    const string serverAddress = "";
+    const string connectKey = "build2002";
+
     GameType currentGameType;
 
     LeaderboardScoreData leaderboardData;
@@ -76,13 +79,13 @@ public class LeaderboardManager : MonoBehaviour
         switch(currentGameType)
         {
             case GameType.ONE_TIME_ATTACK:
-            GetLeaderboardRequest("http://bu1ld.asuscomm.com:8002/OneMinBestScoreTop10").Start(this);
+            GetLeaderboardRequest(serverAddress + "OneMinBestScoreTop10").Start(this);
             break;
             case GameType.THREE_TIME_ATTACK:
-            GetLeaderboardRequest("http://bu1ld.asuscomm.com:8002/ThreeMinBestScoreTop10").Start(this);
+            GetLeaderboardRequest(serverAddress + "ThreeMinBestScoreTop10").Start(this);
             break;
             default:
-            GetLeaderboardRequest("http://bu1ld.asuscomm.com:8002/InfinityBestScoreTop10").Start(this);
+            GetLeaderboardRequest(serverAddress + "InfinityBestScoreTop10").Start(this);
             break;
         }
 
@@ -227,13 +230,13 @@ public class LeaderboardManager : MonoBehaviour
         switch(currentGameType)
         {
             case GameType.ONE_TIME_ATTACK:
-            GetPlayerRankRequest("http://bu1ld.asuscomm.com:8002/OneMinBestScoreRankWithScore").Start(this);
+            GetPlayerRankRequest(serverAddress + "OneMinBestScoreRankWithScore").Start(this);
             break;
             case GameType.THREE_TIME_ATTACK:
-            GetPlayerRankRequest("http://bu1ld.asuscomm.com:8002/ThreeMinBestScoreRankWithScore").Start(this);
+            GetPlayerRankRequest(serverAddress + "ThreeMinBestScoreRankWithScore").Start(this);
             break;
             default:
-            GetPlayerRankRequest("http://bu1ld.asuscomm.com:8002/InfinityBestScoreRankWithScore").Start(this);
+            GetPlayerRankRequest(serverAddress + "InfinityBestScoreRankWithScore").Start(this);
             break;
         }
     }
@@ -245,14 +248,13 @@ public class LeaderboardManager : MonoBehaviour
             switch(targetGameType)
             {
                 case GameType.ONE_TIME_ATTACK:
-                UpdateRecord("OneTimeBestScore", "http://bu1ld.asuscomm.com:8002/UpdateOneMinBestScore").Start(this);
-                Debug.Log("T");
+                UpdateRecord("OneTimeBestScore", "UpdateOneMinBestScore").Start(this);
                 break;
                 case GameType.THREE_TIME_ATTACK:
-                UpdateRecord("ThreeTimeBestScore", "http://bu1ld.asuscomm.com:8002/UpdateThreeMinBestScore").Start(this);
+                UpdateRecord("ThreeTimeBestScore", "UpdateThreeMinBestScore").Start(this);
                 break;
                 default:
-                UpdateRecord("BestScore", "http://bu1ld.asuscomm.com:8002/UpdateInfinityBestScore").Start(this);
+                UpdateRecord("BestScore", "UpdateInfinityBestScore").Start(this);
                 break;
             }
         }
@@ -260,9 +262,9 @@ public class LeaderboardManager : MonoBehaviour
 
     IEnumerator AllUpdateRecord()
     {
-        yield return StartCoroutine(UpdateRecord("BestScore", "http://bu1ld.asuscomm.com:8002/UpdateInfinityBestScore"));
-        yield return StartCoroutine(UpdateRecord("OneTimeBestScore", "http://bu1ld.asuscomm.com:8002/UpdateOneMinBestScore"));
-        yield return StartCoroutine(UpdateRecord("ThreeTimeBestScore", "http://bu1ld.asuscomm.com:8002/UpdateThreeMinBestScore"));
+        yield return StartCoroutine(UpdateRecord("BestScore", "UpdateInfinityBestScore"));
+        yield return StartCoroutine(UpdateRecord("OneTimeBestScore", "UpdateOneMinBestScore"));
+        yield return StartCoroutine(UpdateRecord("ThreeTimeBestScore", "UpdateThreeMinBestScore"));
         yield break;
     }
 
@@ -270,7 +272,7 @@ public class LeaderboardManager : MonoBehaviour
     {
         int bestScore = PlayerPrefsManager.LoadData(dataKey, 0);
         BestScoreData data = new BestScoreData(localPlayerName, bestScore);
-        yield return StartCoroutine(UpdateLeaderboardRequest(url, data));
+        yield return StartCoroutine(UpdateLeaderboardRequest(serverAddress + url, data));
         yield break;
     }
 
@@ -344,8 +346,9 @@ public class LeaderboardManager : MonoBehaviour
     {
         #if !UNITY_EDITOR
         WWWForm form = new WWWForm();
-        form.AddField("playerName", data.playerName);
-        form.AddField("bestScore", data.bestScore);
+        form.AddField("playerName", EncryptAES.Encrypt256(data.playerName));
+        form.AddField("bestScore", EncryptAES.Encrypt256(data.bestScore.ToString()));
+        form.AddField("salt", connectKey);
 
         using (UnityWebRequest request = UnityWebRequest.Post(url, form))
         {
