@@ -14,6 +14,9 @@ public class DisturbAircraft : DisturbObject
     [SerializeField] Vector3 startOffset;
     [SerializeField] Vector3 endOffset;
 
+    [Space(10)]
+    [SerializeField] string soundClip;
+
     public override bool OnTrigger()
     {
         transform.SetParent(Camera.main.transform);
@@ -39,9 +42,15 @@ public class DisturbAircraft : DisturbObject
         transform.LookAt(lookAtPoint);
         transform.Rotate(Vector3.forward, onFlipPosition ? angleZ : -angleZ);
 
+        AudioSource audioSource = this.GetComponent<AudioSource>();
+        audioSource.clip = SoundManager.Instance.GetSoundClip(soundClip);
+        audioSource.Play();
+
         float speed = Random.Range(minSpeed, maxSpeed);
         yield return CoroutineExtensions.ProcessAction(speed, (t) => {
             currentPos = Vector3.Lerp(startPos, endPos, t);
+
+            audioSource.volume = (1 - (t * 0.8f));
 
             transform.localPosition = currentPos;
         });
