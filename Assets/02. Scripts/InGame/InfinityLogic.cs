@@ -26,7 +26,7 @@ public class InfinityLogic : GameLogic
 
     public void AddTimePerDamage()
     {
-        damage = Mathf.Clamp(damage + 0.000035f, minDamage, maxDamage);
+        damage = Mathf.Clamp(damage + 0.00006f, minDamage, maxDamage);
     }
 
     public float GetConfigDamage()

@@ -635,7 +635,7 @@ public class GameManager : MonoBehaviour
         {
             health = Mathf.Clamp(health + 4, 0, currentGame.GetMaxHealth());
 
-            // NOTE : 최대 점수 목표값 500,000점 (healthTime Min 12.5f / Max 30)
+            // NOTE : 최대 점수 목표값 300,000점 (healthTime Min 12.5f / Max 30)
             ((InfinityLogic)currentGame).AddTimePerDamage();
         }
     }
