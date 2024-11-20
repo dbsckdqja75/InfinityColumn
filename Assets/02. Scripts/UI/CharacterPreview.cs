@@ -17,6 +17,10 @@ public class CharacterPreview : MonoBehaviour
 
     [SerializeField] float lerpSpeed = 15;
 
+    [Space(10)]
+    [SerializeField] GameObject fakeShadowPrefab;
+
+    [Space(10)]
     [SerializeField] InputController inputController;
     [SerializeField] CharacterManager characterManager;
 
@@ -185,7 +189,10 @@ public class CharacterPreview : MonoBehaviour
 
         previewCharacter[pivotIdx] = Instantiate(data.GetPrefab(), pivot[pivotIdx]).GetComponent<PlayerCharacter>();
         previewCharacter[pivotIdx].transform.SetScale(data.GetPreviewScale());
-        
+
+        FakeShadow shadow = Instantiate(fakeShadowPrefab, transform.position, fakeShadowPrefab.transform.rotation, previewCharacter[pivotIdx].transform).GetComponent<FakeShadow>();
+        shadow.SetTarget(previewCharacter[pivotIdx].transform);
+
         SetCharacterLayer(previewCharacter[pivotIdx].gameObject);
 
         SoundManager.Instance.PlaySound("Hit2");

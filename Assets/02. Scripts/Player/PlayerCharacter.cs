@@ -5,6 +5,7 @@ public class PlayerCharacter : MonoBehaviour
 {
     [SerializeField] Vector3 offsetPosition, offsetRotation;
 
+    [Space(10)]
     [SerializeField] int idleEventCount;
 
     [SerializeField] CharacterFace characterFace;

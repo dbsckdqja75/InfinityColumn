@@ -11,15 +11,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float movePosX;
     [SerializeField] float movePosY;
 
-    // TODO : 임시
-    [SerializeField] PlayerCharacter playerCharacter;
-    [SerializeField] InputController iController; // TODO : 변수명 변경
-    [SerializeField] FakeShadow shadow;
+    [SerializeField] InputController inputController;
+    [SerializeField] FakeShadow fakeShadow;
 
     [Header("GameOver Effect")]
     [SerializeField] Vector3 explosionOffset = new Vector3(0.5f, 0.25f, 0);
     [SerializeField] float explosionRadius = 0.5f;
     [SerializeField] float explosionPower = 200;
+
+    PlayerCharacter playerCharacter;
 
     Rigidbody rb;
 
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody>();
 
-        iController.AddTouchEvent(OnTouch);
+        inputController.AddTouchEvent(OnTouch);
     }
 
     void OnTouch(Vector3 iPosition)
@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
     {
         playerCharacter = _playerCharacter;
 
-        shadow.SetTarget(playerCharacter.transform);
+        fakeShadow.SetTarget(playerCharacter.transform);
     }
 
     public void ResetPosition()

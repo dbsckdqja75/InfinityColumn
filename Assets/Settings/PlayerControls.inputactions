@@ -12,13 +12,40 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "MousePoint",
+                    "type": "PassThrough",
+                    "id": "78fb73d7-18cd-4935-9251-ab3ec18fdf82",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "MouseClick",
+                    "type": "PassThrough",
+                    "id": "70fd222f-5d38-4d73-aaee-3d5fcf10e1e2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "TouchClick",
+                    "type": "PassThrough",
+                    "id": "a85d6064-ebd0-4d25-a91e-82e1614d4464",
+                    "expectedControlType": "Touch",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "RightMove",
                     "type": "Button",
                     "id": "c4cda890-ea48-49c0-9582-cfc7410e93be",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -27,7 +54,7 @@
                     "name": "Space",
                     "type": "Button",
                     "id": "b6fd688c-0ee9-4eb5-bfd7-99dc60cf8dc0",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -36,7 +63,7 @@
                     "name": "Esc",
                     "type": "Button",
                     "id": "09571ed8-2ec3-4e6e-ba25-91b6618b95e6",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -71,7 +98,7 @@
                     "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "LeftMove",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -82,7 +109,7 @@
                     "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "LeftMove",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -93,7 +120,7 @@
                     "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "LeftMove",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -104,7 +131,7 @@
                     "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";PC",
                     "action": "LeftMove",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -115,7 +142,7 @@
                     "path": "<Gamepad>/rightStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";PC",
                     "action": "LeftMove",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -148,7 +175,7 @@
                     "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": ";PC",
                     "action": "RightMove",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -159,7 +186,7 @@
                     "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "RightMove",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -170,7 +197,7 @@
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "RightMove",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -181,7 +208,7 @@
                     "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";PC",
                     "action": "RightMove",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -192,7 +219,7 @@
                     "path": "<Gamepad>/rightStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";PC",
                     "action": "RightMove",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -214,7 +241,7 @@
                     "path": "<Gamepad>/{Menu}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Esc",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -236,8 +263,52 @@
                     "path": "<Gamepad>/select",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Space",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1f0a6d3d-43ca-407d-931e-5657e4636615",
+                    "path": "<Touchscreen>/primaryTouch",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Mobile",
+                    "action": "TouchClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "196fb7ee-fcf2-4f2e-bb56-cd8bdbbc52c7",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";PC",
+                    "action": "MouseClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b3243372-ba57-42a7-b9d7-6edc59ae0b33",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "MousePoint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "51cbcc54-c7e9-4ea0-b4a1-19022057662e",
+                    "path": "<Pen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "MousePoint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -269,7 +340,7 @@
                     "name": "OpenLeaderboard",
                     "type": "Button",
                     "id": "31218656-a5e9-45d9-bd60-1b7fdccd887e",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -278,7 +349,7 @@
                     "name": "OpenCharacterSelect",
                     "type": "Button",
                     "id": "b280cf50-5ffe-410e-8589-5925fb3734a8",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -302,7 +373,7 @@
                     "path": "<Gamepad>/select",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Space",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -313,7 +384,7 @@
                     "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Space",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -324,7 +395,7 @@
                     "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Space",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -335,7 +406,7 @@
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Space",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -346,7 +417,7 @@
                     "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Space",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -368,7 +439,7 @@
                     "path": "<Gamepad>/{Menu}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Esc",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -390,7 +461,7 @@
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "OpenLeaderboard",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -412,7 +483,7 @@
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "OpenCharacterSelect",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -427,7 +498,7 @@
                     "name": "Space",
                     "type": "Button",
                     "id": "8e7cae12-5b06-4dfb-897f-b5f96cf7e1c8",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -460,7 +531,7 @@
                     "path": "<Gamepad>/{Menu}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Esc",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -482,7 +553,7 @@
                     "path": "<Gamepad>/select",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Space",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -493,7 +564,7 @@
                     "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Space",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -504,7 +575,7 @@
                     "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Space",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -515,7 +586,7 @@
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Space",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -526,7 +597,7 @@
                     "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Space",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -550,7 +621,7 @@
                     "name": "Submit",
                     "type": "Button",
                     "id": "6913cf4e-d569-482c-9cf2-446f7e2a3534",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -559,7 +630,7 @@
                     "name": "Cancel",
                     "type": "Button",
                     "id": "80b98e8b-1530-4b22-9858-7f5080f73afd",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -1079,11 +1150,6 @@
                 {
                     "devicePath": "<Touchscreen>",
                     "isOptional": false,
-                    "isOR": false
-                },
-                {
-                    "devicePath": "<Gamepad>",
-                    "isOptional": true,
                     "isOR": false
                 }
             ]

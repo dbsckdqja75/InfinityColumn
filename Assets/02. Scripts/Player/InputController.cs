@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
+using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
 public class InputController : MonoBehaviour
 {
@@ -12,12 +14,23 @@ public class InputController : MonoBehaviour
 
     Vector2 inputPosition;
 
-    public void UpdateInputPosition(InputAction.CallbackContext context)
+    public void UpdateMousePosition(InputAction.CallbackContext context)
     {
         inputPosition = context.ReadValue<Vector2>();
     }
 
     public void OnTouch(InputAction.CallbackContext context)
+    {
+        TouchState touchState = context.ReadValue<TouchState>();
+        if(touchState.phase == TouchPhase.Began)
+        {
+            inputPosition = Touchscreen.current.primaryTouch.position.ReadValue();
+
+            OnTouchEvent(inputPosition);
+        }
+    }
+
+    public void OnClick(InputAction.CallbackContext context)
     {
         if(context.ReadValueAsButton())
         {

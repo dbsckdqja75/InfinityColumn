@@ -12863,6 +12863,8 @@ MonoBehaviour:
   priceBox: {fileID: 463267985}
   priceText: {fileID: 1777920097}
   lerpSpeed: 15
+  fakeShadowPrefab: {fileID: 7478145917800867584, guid: 4e34af86851195c4fba814fecdd7c243,
+    type: 3}
   inputController: {fileID: 835927050}
   characterManager: {fileID: 1571317375}
   previewCamera: {fileID: 1306094978}
@@ -21891,105 +21893,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024655477}
   m_Mesh: {fileID: 1417844117}
---- !u!1 &1026134170
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1026134173}
-  - component: {fileID: 1026134172}
-  - component: {fileID: 1026134171}
-  - component: {fileID: 1026134174}
-  m_Layer: 0
-  m_Name: Player Shadow
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &1026134171
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026134170}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: c80aa5518870a5a47b04f7f0e385204a, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1026134172
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026134170}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1026134173
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026134170}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1, y: -0.49, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &1026134174
+--- !u!114 &1026134174 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1280292730977570903, guid: a9faabeaf7dd20847bf05979458597d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 5300185607440406254}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026134170}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07cde5f9447034447a679b0f50c8bcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  height: -0.49
 --- !u!1 &1028108794
 GameObject:
   m_ObjectHideFlags: 0
@@ -33297,9 +33212,8 @@ MonoBehaviour:
   startPos: {x: 0.8, y: 0, z: 0}
   movePosX: 0.8
   movePosY: 1
-  playerCharacter: {fileID: 0}
-  iController: {fileID: 835927050}
-  shadow: {fileID: 1026134174}
+  inputController: {fileID: 835927050}
+  fakeShadow: {fileID: 1026134174}
   explosionOffset: {x: 0.5, y: 0.25, z: 0}
   explosionRadius: 0.5
   explosionPower: 200
@@ -33404,35 +33318,11 @@ MonoBehaviour:
     m_ActionId: 80b98e8b-1530-4b22-9858-7f5080f73afd
     m_ActionName: 'UI/Cancel[/Keyboard/escape,/XInputControllerWindows/buttonEast]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 835927050}
-        m_TargetAssemblyTypeName: InputController, Assembly-CSharp
-        m_MethodName: UpdateInputPosition
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: e8ca79ae-0f9c-40ee-9071-738b9f265bde
     m_ActionName: 'UI/Point[/Mouse/position]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 835927050}
-        m_TargetAssemblyTypeName: InputController, Assembly-CSharp
-        m_MethodName: OnTouch
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 8e7df37e-edec-4321-a6a0-c78270dcc697
     m_ActionName: 'UI/Click[/Mouse/leftButton]'
   - m_PersistentCalls:
@@ -33583,6 +33473,59 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: b6fd688c-0ee9-4eb5-bfd7-99dc60cf8dc0
     m_ActionName: 'PlayerActions/Space[/Keyboard/space,/XInputControllerWindows/select,/XInputControllerWindows/leftTrigger,/XInputControllerWindows/leftShoulder,/XInputControllerWindows/rightTrigger,/XInputControllerWindows/rightShoulder]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 835927050}
+        m_TargetAssemblyTypeName: InputController, Assembly-CSharp
+        m_MethodName: OnTouch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a85d6064-ebd0-4d25-a91e-82e1614d4464
+    m_ActionName: 'PlayerActions/TouchClick[/Mouse/leftButton,/Device Simulator Touchscreen/touch0/press,/Device
+      Simulator Touchscreen/touch1/press,/Device Simulator Touchscreen/touch2/press,/Device
+      Simulator Touchscreen/touch3/press,/Device Simulator Touchscreen/touch4/press,/Device
+      Simulator Touchscreen/touch5/press,/Device Simulator Touchscreen/touch6/press,/Device
+      Simulator Touchscreen/touch7/press,/Device Simulator Touchscreen/touch8/press,/Device
+      Simulator Touchscreen/touch9/press]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 835927050}
+        m_TargetAssemblyTypeName: InputController, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 70fd222f-5d38-4d73-aaee-3d5fcf10e1e2
+    m_ActionName: PlayerActions/MouseClick
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 835927050}
+        m_TargetAssemblyTypeName: InputController, Assembly-CSharp
+        m_MethodName: UpdateMousePosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 78fb73d7-18cd-4935-9251-ab3ec18fdf82
+    m_ActionName: 'PlayerActions/MousePoint[/Mouse/position]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: PC
   m_DefaultActionMap: LobbyActions
@@ -48482,6 +48425,74 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &5300185607440406254
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6407753938288750420, guid: a9faabeaf7dd20847bf05979458597d7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407753938288750420, guid: a9faabeaf7dd20847bf05979458597d7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407753938288750420, guid: a9faabeaf7dd20847bf05979458597d7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407753938288750420, guid: a9faabeaf7dd20847bf05979458597d7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407753938288750420, guid: a9faabeaf7dd20847bf05979458597d7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407753938288750420, guid: a9faabeaf7dd20847bf05979458597d7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407753938288750420, guid: a9faabeaf7dd20847bf05979458597d7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407753938288750420, guid: a9faabeaf7dd20847bf05979458597d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407753938288750420, guid: a9faabeaf7dd20847bf05979458597d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407753938288750420, guid: a9faabeaf7dd20847bf05979458597d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478145917800867584, guid: a9faabeaf7dd20847bf05979458597d7,
+        type: 3}
+      propertyPath: m_Name
+      value: Player Shadow
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a9faabeaf7dd20847bf05979458597d7, type: 3}
 --- !u!1 &5406558081355361144
 GameObject:
   m_ObjectHideFlags: 0
@@ -49581,7 +49592,7 @@ SceneRoots:
   - {fileID: 1144578689}
   - {fileID: 472097113}
   - {fileID: 1592018357}
-  - {fileID: 1026134173}
+  - {fileID: 5300185607440406254}
   - {fileID: 94644163}
   - {fileID: 2112517989}
   - {fileID: 1037631527}
