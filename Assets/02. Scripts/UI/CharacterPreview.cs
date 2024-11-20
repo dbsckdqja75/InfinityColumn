@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem;
 using TMPro;
 
 public class CharacterPreview : MonoBehaviour
