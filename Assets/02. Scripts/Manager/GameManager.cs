@@ -482,6 +482,8 @@ public class GameManager : MonoBehaviour
         }
 
         gameState = GameState.LOBBY;
+
+        SoundManager.Instance.PlayMusic("Infinity Music");
     }
 
     public void OpenSetting()
@@ -515,6 +517,8 @@ public class GameManager : MonoBehaviour
         {
             // TODO : 추후에 플랫폼별로 호출 처리
             gameState = GameState.EXTRA_MENU;
+
+            SoundManager.Instance.PlayMusic("Infinity Character");
 
             canvasManager.SetPanel("CharacterSelect");
         }

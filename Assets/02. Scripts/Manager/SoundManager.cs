@@ -102,13 +102,20 @@ public class SoundManager : MonoSingleton<SoundManager>
         {
             if(mainMusicSource.IsPlaying())
             {
-                mainMusicSource.Stop();
-                subMusicSource.Play(clip);
+                if(!mainMusicSource.IsCurrentClip(clip.name))
+                {
+                    mainMusicSource.Stop();
+                    subMusicSource.Play(clip);
+                }
+                
             }
             else
             {
-                subMusicSource.Stop();
-                mainMusicSource.Play(clip);
+                if(!subMusicSource.IsCurrentClip(clip.name))
+                {
+                    subMusicSource.Stop();
+                    mainMusicSource.Play(clip);
+                }
             }
         }
         else

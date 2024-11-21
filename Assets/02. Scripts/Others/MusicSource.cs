@@ -108,6 +108,11 @@ public class MusicSource : MonoBehaviour
         return isPlaying;
     }
 
+    public bool IsCurrentClip(string clipName)
+    {
+        return (audioSource.clip?.name == clipName);
+    }
+
     IEnumerator FadeInMusic(AudioClip musicClip)
     {
         PlayForce(musicClip);

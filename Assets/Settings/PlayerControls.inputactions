@@ -328,6 +328,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "MousePoint",
+                    "type": "PassThrough",
+                    "id": "2430303a-434e-4353-86b9-18fbbc0ab6d2",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "Esc",
                     "type": "Button",
                     "id": "f558a550-5022-4e6a-b162-03c72a3aa8d2",
@@ -419,6 +428,28 @@
                     "processors": "",
                     "groups": "PC",
                     "action": "Space",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3178902c-5ca2-4336-8b38-2b21a562c236",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "MousePoint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "82ff195f-4714-4c69-9bfb-7a0086f75a3b",
+                    "path": "<Pen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "MousePoint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
