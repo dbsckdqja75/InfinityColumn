@@ -414,6 +414,8 @@ public class GameManager : MonoBehaviour
             gameState = GameState.PAUSE;
 
             playerController.SetMoveLock(true);
+        
+            SoundManager.Instance.PlayMusic("Infinity Pause");
 
             canvasManager.SetPanel("Pause");
         }
@@ -426,6 +428,8 @@ public class GameManager : MonoBehaviour
             gameState = GameState.PLAYING;
 
             playerController.SetMoveLock(false);
+
+            SoundManager.Instance.PlayMusic("Infinity Music");
 
             canvasManager.SetPanel("Playing");
         }

@@ -16366,6 +16366,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 96f354b71e2a14e48955637cdfa10233, type: 3}
   - {fileID: 8300000, guid: 92a39395cbe62d74bb033695f61133c9, type: 3}
   - {fileID: 8300000, guid: a8c581d384579c5408cee865ae313367, type: 3}
+  - {fileID: 8300000, guid: 8640bc668c501401192f42152ea03ee1, type: 3}
   soundClipList:
   - {fileID: 8300000, guid: d59509c8d6b7c0d4bad24d7e537db164, type: 3}
   - {fileID: 8300000, guid: 415a49a567b49e54e868dc236e7c37f8, type: 3}
@@ -39921,7 +39922,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
+  m_fontSize: 54.95
   m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 1
