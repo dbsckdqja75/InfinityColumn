@@ -52,7 +52,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Pivot.x
-    path: Left
+    path: Left Arrow
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -82,7 +82,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Pivot.y
-    path: Left
+    path: Left Arrow
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -121,7 +121,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Pivot.x
-    path: Right
+    path: Right Arrow
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -151,7 +151,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Pivot.y
-    path: Right
+    path: Right Arrow
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -220,7 +220,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Pivot.x
-    path: Left
+    path: Left Arrow
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -250,7 +250,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Pivot.y
-    path: Left
+    path: Left Arrow
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -289,7 +289,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Pivot.x
-    path: Right
+    path: Right Arrow
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -319,7 +319,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Pivot.y
-    path: Right
+    path: Right Arrow
     classID: 224
     script: {fileID: 0}
     flags: 0

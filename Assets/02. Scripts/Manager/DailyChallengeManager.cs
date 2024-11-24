@@ -57,7 +57,7 @@ public class DailyChallengeManager : MonoBehaviour
         {
             clearObj.SetActive(true);
 
-            rewardText.text = string.Format("+VP {0}", reward);
+            rewardText.text = string.Format("+VP {0}", reward.GetValue());
             rewardObj.SetActive(true);
         }
 
@@ -124,7 +124,7 @@ public class DailyChallengeManager : MonoBehaviour
 
             PlayerPrefsManager.SaveData("DailyChallengeClear", true);
 
-            Debug.LogFormat("[DailyChallenge] Challenge Clear Reward : {0}", reward);
+            Debug.LogFormat("[DailyChallenge] Challenge Clear Reward : {0}", reward.GetValue());
         }
     }
 

@@ -27,6 +27,12 @@ public class TestManager : MonoBehaviour
         UpdateUI();
     }
 
+    void Start() 
+    {
+        debugCanvas.SetActive(true);
+        debugGroup.SetActive(false);
+    }
+
     void UpdateUI()
     {
         autoPlayText.text = string.Format("자동 플레이 {0}", isAutoPlay ? "ON" : "OFF");

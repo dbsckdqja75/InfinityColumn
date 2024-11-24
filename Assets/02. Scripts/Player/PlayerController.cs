@@ -29,12 +29,13 @@ public class PlayerController : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody>();
 
-        inputController.AddTouchEvent(OnTouch);
+        inputController.AddTouchEvent(OnMoveInput);
     }
 
-    void OnTouch(Vector3 iPosition)
+    void OnMoveInput(Vector3 iPosition)
     {
         float halfScreenWidth = (Screen.width / 2f);
+        
         Move(iPosition.x < halfScreenWidth);
     }
 
