@@ -235,6 +235,10 @@ MonoBehaviour:
     m_Key: FeverTime_Guide
     m_Metadata:
       m_Items: []
+  - m_Id: 26459121476743168
+    m_Key: ClickStart
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

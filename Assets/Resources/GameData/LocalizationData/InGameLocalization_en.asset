@@ -275,6 +275,10 @@ MonoBehaviour:
     m_Localized: Keep hitting back to back!
     m_Metadata:
       m_Items: []
+  - m_Id: 26459121476743168
+    m_Localized: CLICK TO START
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
