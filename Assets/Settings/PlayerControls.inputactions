@@ -311,6 +311,17 @@
                     "action": "MousePoint",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0e157789-380f-4dfa-aff0-e10e231cfeac",
+                    "path": "<Touchscreen>/touch*/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "MousePoint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -449,6 +460,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PC",
+                    "action": "MousePoint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "002f3110-30a3-4c56-b66b-d2d60490b331",
+                    "path": "<Touchscreen>/touch*/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
                     "action": "MousePoint",
                     "isComposite": false,
                     "isPartOfComposite": false
