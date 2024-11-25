@@ -3,9 +3,9 @@ using UnityEngine;
 [RequireComponent(typeof(LocalizeText))]
 public class LocalizePlatform : MonoBehaviour
 {
-    #if UNITY_EDITOR || UNITY_STANDALONE
     [SerializeField] string stringKeyDesktop;
 
+    #if UNITY_EDITOR || UNITY_STANDALONE
     LocalizeText localizeText;
 
     void Awake()
