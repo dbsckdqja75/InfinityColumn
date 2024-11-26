@@ -24702,7 +24702,7 @@ GameObject:
   - component: {fileID: 1160234427}
   - component: {fileID: 1160234426}
   m_Layer: 0
-  m_Name: Global Volume
+  m_Name: Extra Global Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24724,7 +24724,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 1c0cc8c25c20947f1a91375d50b4995c, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 09ed0f00d51e23543b0516829edb0934, type: 2}
 --- !u!4 &1160234427
 Transform:
   m_ObjectHideFlags: 0
@@ -35754,7 +35754,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraView: {fileID: 961739754}
-  renderPipelineAssets: []
+  backgroundManager: {fileID: 1133719006}
+  extraGlobalVolume: {fileID: 1160234425}
   graphicsQualityText: {fileID: 970295107}
   frameLimitText: {fileID: 583495938}
   cameraProjectionText: {fileID: 1857867527}
@@ -36729,7 +36730,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

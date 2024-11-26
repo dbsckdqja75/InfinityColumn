@@ -5,8 +5,10 @@ using UnityEngine.Rendering;
 public class SettingManager : MonoBehaviour
 {
     [SerializeField] CameraView cameraView;
-    [SerializeField] RenderPipelineAsset[] renderPipelineAssets;
+    [SerializeField] BackgroundManager backgroundManager;
+    [SerializeField] GameObject extraGlobalVolume;
 
+    [Space(10)]
     [SerializeField] LocalizeText graphicsQualityText;
     [SerializeField] TMP_Text frameLimitText;
     [SerializeField] TMP_Text cameraProjectionText;
@@ -59,6 +61,7 @@ public class SettingManager : MonoBehaviour
     {
         int graphicsQuality = PlayerPrefsManager.LoadData("GraphicsQualitySetting", 2);
         graphicsQuality = (int)Mathf.Repeat(graphicsQuality+1, 3);
+
         PlayerPrefsManager.SaveData("GraphicsQualitySetting", graphicsQuality);
 
         UpdateGraphicsQuality(graphicsQuality);
@@ -67,8 +70,9 @@ public class SettingManager : MonoBehaviour
     public void UpdateGraphicsQuality(int graphicsQuality)
     {
         QualitySettings.SetQualityLevel(graphicsQuality);
-        // TODO : 추후 렌더 파이프라인 세팅 시 관리
-        // QualitySettings.renderPipeline = renderPipelineAssets[quality];
+        extraGlobalVolume.SetActive(graphicsQuality > 0);
+        
+        backgroundManager.UpdatePresetQuality();
 
         switch(graphicsQuality)
         {
