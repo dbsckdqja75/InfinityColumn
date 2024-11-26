@@ -371,9 +371,9 @@ public class GameManager : MonoBehaviour
 
         disturbManager.ResetTrigger();
 
-        SoundManager.Instance.StopMusic();
-
         canvasManager.SetPanel("GameOver");
+
+        SoundManager.Instance.StopMusic();
     }
 
     void OnReward(int score)
@@ -415,9 +415,9 @@ public class GameManager : MonoBehaviour
 
             playerController.SetMoveLock(true);
         
-            SoundManager.Instance.PlayMusic("Infinity Pause");
-
             canvasManager.SetPanel("Pause");
+
+            SoundManager.Instance.PlayMusic("Infinity Pause");
         }
     }
 
@@ -429,9 +429,9 @@ public class GameManager : MonoBehaviour
 
             playerController.SetMoveLock(false);
 
-            SoundManager.Instance.PlayMusic("Infinity Music");
-
             canvasManager.SetPanel("Playing");
+
+            SoundManager.Instance.PlayMusic("Infinity Music");
         }
     }
 
@@ -522,9 +522,9 @@ public class GameManager : MonoBehaviour
             // TODO : 추후에 플랫폼별로 호출 처리
             gameState = GameState.EXTRA_MENU;
 
-            SoundManager.Instance.PlayMusic("Infinity Character");
-
             canvasManager.SetPanel("CharacterSelect");
+
+            SoundManager.Instance.PlayMusic("Infinity Character");
         }
     }
 

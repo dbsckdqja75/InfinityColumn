@@ -15,6 +15,8 @@ public class SoundManager : MonoSingleton<SoundManager>
 
     Dictionary<string, AudioClip> audioClipList = new Dictionary<string, AudioClip>();
 
+    string currentPlayingMusic;
+
     protected override void Init()
     {
         effectAudioSource.volume = effectVolume;
@@ -41,7 +43,13 @@ public class SoundManager : MonoSingleton<SoundManager>
     {
         if(audioClipList.ContainsKey(musicName))
         {
-            PlayMusic(audioClipList[musicName], playFade);
+            if(currentPlayingMusic != musicName)
+            {
+                currentPlayingMusic = musicName;
+
+                PlayMusic(audioClipList[musicName], playFade);
+            }
+
             return;
         }
 
@@ -102,20 +110,13 @@ public class SoundManager : MonoSingleton<SoundManager>
         {
             if(mainMusicSource.IsPlaying())
             {
-                if(!mainMusicSource.IsCurrentClip(clip.name))
-                {
-                    mainMusicSource.Stop();
-                    subMusicSource.Play(clip);
-                }
-                
+                mainMusicSource.Stop();
+                subMusicSource.Play(clip);
             }
             else
             {
-                if(!subMusicSource.IsCurrentClip(clip.name))
-                {
-                    subMusicSource.Stop();
-                    mainMusicSource.Play(clip);
-                }
+                subMusicSource.Stop();
+                mainMusicSource.Play(clip);
             }
         }
         else
