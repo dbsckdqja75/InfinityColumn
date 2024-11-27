@@ -25222,7 +25222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxFever: 100
   feverTime: 20
-  rewardUnit: 10
+  rewardUnit: 100
   healthfillSpeed: 10
   feverfillSpeed: 5
   healthWarning: 0.3

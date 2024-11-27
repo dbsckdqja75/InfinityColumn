@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] float feverTime = 20f;
 
     [Space(10)]
-    [SerializeField] int rewardUnit = 10;
+    [SerializeField] int rewardUnit = 100;
 
     [Space(10)]
     [SerializeField] float healthfillSpeed = 10f;
