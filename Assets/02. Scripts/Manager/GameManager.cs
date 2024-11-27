@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] ImageColor feverFillColor;
     [SerializeField] GameObject feverTimerObj;
     [SerializeField] TMP_Text hpTimerText;
+    [SerializeField] GameObject hpInfinityTextObj;
     [SerializeField] TMP_Text scoreText;
     [SerializeField] Animation scoreAnim;
     [SerializeField] LocalizeText gameModeText;
@@ -134,13 +135,16 @@ public class GameManager : MonoBehaviour
 
         warning_Effect.SetActive(hpFillAmount <= healthWarning);
 
-        if(warning_Effect.activeSelf)
+        if(!isFeverTime)
         {
-            hpFillColor.SetColorPreset(0);
-        }
-        else
-        {
-            hpFillColor.ResetColor();
+            if(warning_Effect.activeSelf)
+            {
+                hpFillColor.SetColorPreset(0);
+            }
+            else
+            {
+                hpFillColor.ResetColor();
+            }
         }
     }
 
@@ -542,6 +546,8 @@ public class GameManager : MonoBehaviour
         warning_Effect.SetActive(false);
         startTouchGuideObj.SetActive(true);
 
+        hpInfinityTextObj.SetActive(false);
+
         playerController.ResetPosition();
 
         backgroundManager.ResetBackground();
@@ -565,6 +571,10 @@ public class GameManager : MonoBehaviour
 
         playerController.Fever(false);
 
+        hpInfinityTextObj.SetActive(false);
+            
+        hpFillColor.ResetColor();
+
         fever_Effect.SetActive(false);
         feverFillColor.ResetColor();
 
@@ -581,6 +591,12 @@ public class GameManager : MonoBehaviour
         isFeverTime = true;
 
         playerController.Fever(true);
+
+        hpInfinityTextObj.SetActive(true);
+
+        feverFillImage.fillAmount = 1;
+            
+        hpFillColor.SetColorPreset(1);
 
         fever_Effect.SetActive(true);
         feverFillColor.SetColorPreset(0);
