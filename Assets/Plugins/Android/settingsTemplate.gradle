@@ -21,12 +21,6 @@ dependencyResolutionManagement {
         maven {
             url (unityProjectPath + "/Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository") // Assets/GooglePlayGames/com.google.play.games/Editor/GooglePlayGamesPluginDependencies.xml:11
         }
-        maven {
-            url "https://maven.google.com/" // Assets/LevelPlay/Editor/IronSourceSDKDependencies.xml:12, Assets/LevelPlay/Editor/ISAdMobAdapterDependencies.xml:8, Assets/LevelPlay/Editor/ISAppLovinAdapterDependencies.xml:15, Assets/LevelPlay/Editor/ISUnityAdsAdapterDependencies.xml:12
-        }
-        maven {
-            url "https://android-sdk.is.com/" // Assets/LevelPlay/Editor/ISAppLovinAdapterDependencies.xml:8
-        }
         mavenLocal()
 // Android Resolver Repos End
         flatDir {
