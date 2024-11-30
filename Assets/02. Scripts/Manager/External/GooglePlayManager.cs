@@ -1,10 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using System;
 using TMPro;
-
 
 #if UNITY_ANDROID
 using GooglePlayGames;
@@ -14,10 +12,6 @@ using GooglePlayGames.BasicApi.SavedGame;
 
 public class GooglePlayManager : MonoBehaviour
 {
-    [SerializeField] GameObject testObj;
-
-    [SerializeField] TMP_Text statsText;
-
     [SerializeField] GoogleSavedGameUpdater updater;
 
     #if UNITY_ANDROID
@@ -26,10 +20,12 @@ public class GooglePlayManager : MonoBehaviour
     {
         public int voxelPoint, cashPoint;
         public int infinityBestScore, oneMinBestScore, threeMinBestScore;
-        public string currentCharacterID;
+
         public List<CharacterID> ownedCharacterData = new List<CharacterID>();
         public List<ConsumeID> purchasedConsumeList = new List<ConsumeID>();
     }
+
+    bool isAuthorized = false;
 
     const string dataFileName = "ProjectIC_SavedGameData";
 
@@ -48,13 +44,11 @@ public class GooglePlayManager : MonoBehaviour
 
     void OnSignIn()
     {
-        statsText.text = "로그인 성공";
+        isAuthorized = true;
 
         bool isLoadedCloudData = PlayerPrefsManager.LoadData("LoadedCloudData", false);
         if(!isLoadedCloudData)
         {
-            statsText.text = "로그인 성공 + 데이터 초기 로드";
-
             LoadGameData();
         }
     }
@@ -91,8 +85,6 @@ public class GooglePlayManager : MonoBehaviour
             savedGameData.oneMinBestScore = PlayerPrefsManager.LoadData("OneTimeBestScore", 0);
             savedGameData.threeMinBestScore = PlayerPrefsManager.LoadData("ThreeTimeBestScore", 0);
 
-            savedGameData.currentCharacterID = PlayerPrefsManager.LoadData("CurrentCharacterData", "0");
-
             string phrase = PlayerPrefsManager.LoadData("PlayerCharacterData", "0");
             string[] splitData = phrase.Split(',');
 
@@ -118,22 +110,14 @@ public class GooglePlayManager : MonoBehaviour
 
             return;
         }
-
-        Debug.Log("[GPGS] 게임 데이터 저장 실패");
     }
 
     void OnSavedGameWritten(SavedGameRequestStatus status, ISavedGameMetadata gameData)
     {
         if (status == SavedGameRequestStatus.Success)
         {
-            statsText.text = "저장 성공";
-
-            Debug.Log("[GPGS] 게임 데이터 저장 성공");
-
             return;
         }
-
-        Debug.Log("[GPGS] 게임 데이터 저장 쓰기 실패");
     }
 
     void OnLoadGameData(SavedGameRequestStatus status, ISavedGameMetadata gameData)
@@ -143,11 +127,8 @@ public class GooglePlayManager : MonoBehaviour
         if (status == SavedGameRequestStatus.Success)
         {
             saveGameClient.ReadBinaryData(gameData, OnLoadedGameData);
-
             return;
         }
-
-        Debug.Log("[GPGS] 게임 데이터 불러오기 실패");
     }
 
     void OnLoadedGameData(SavedGameRequestStatus status, byte[] gameData)
@@ -162,8 +143,6 @@ public class GooglePlayManager : MonoBehaviour
             PlayerPrefsManager.SaveData("BestScore", savedGameData.infinityBestScore);
             PlayerPrefsManager.SaveData("OneTimeBestScore", savedGameData.oneMinBestScore);
             PlayerPrefsManager.SaveData("ThreeTimeBestScore", savedGameData.threeMinBestScore);
-
-            PlayerPrefsManager.SaveData("CurrentCharacterData", savedGameData.currentCharacterID);
 
             StringBuilder stringBuilder = new StringBuilder();
             foreach(CharacterID id in savedGameData.ownedCharacterData)
@@ -193,10 +172,6 @@ public class GooglePlayManager : MonoBehaviour
 
             PlayerPrefsManager.SaveData("LoadedCloudData", true);
 
-            statsText.text = "로드 성공";
-
-            Debug.Log("[GPGS] 게임 데이터 불러오기 성공");
-
             return;
         }
 
@@ -206,8 +181,6 @@ public class GooglePlayManager : MonoBehaviour
 
             SaveGameData();
         }
-
-        Debug.Log("[GPGS] 게임 데이터 불러오기 실패 (변환 불가)");
     }
 
     public void ShowAchievementUI()
@@ -220,34 +193,74 @@ public class GooglePlayManager : MonoBehaviour
 		PlayGamesPlatform.Instance.ShowLeaderboardUI();
 	}
 
+    void ReportLeaderboard(string boardID, int score)
+    {
+        PlayGamesPlatform.Instance.ReportScore(score, boardID, (bool success) => {});
+    }
+
+    public void ReportLeaderboard(GameType gameType, int score)
+    {
+        switch(gameType)
+        {
+            case GameType.INFINITY:
+            ReportLeaderboard(GPGSIds.leaderboard_top_score_infinity, score);
+            break;
+            case GameType.ONE_TIME_ATTACK:
+            ReportLeaderboard(GPGSIds.leaderboard_top_score_one_minute, score);
+            break;
+            case GameType.THREE_TIME_ATTACK:
+            ReportLeaderboard(GPGSIds.leaderboard_top_score_three_minute, score);
+            break;
+            default:
+            break;
+        }
+    }
+
+    public void ReportGameData()
+    {
+        if(isAuthorized)
+        {
+            SaveGameData();
+        }
+    }
+
+
+
+
     public void DebugLoad()
     {
-        LoadGameData();
+        if(isAuthorized)
+        {
+            LoadGameData();
+        }
     }
 
     public void DebugSave()
     {
-        SaveGameData();
+        if(isAuthorized)
+        {
+            SaveGameData();
+        }
     }
+
+
+
 
     internal void ProcessAuthentication(SignInStatus status)
     {
         if (status == SignInStatus.Success)
         {
             OnSignIn();
-
-            testObj.SetActive(true);
-
-            Debug.Log("[GPGS] 로그인 성공");
-        }
-        else
-        {
-            testObj.SetActive(false);
-
-            Debug.Log("[GPGS] 로그인 실패");
         }
     }
-    #else
+
+    public bool IsAuthorized()
+    {
+        return isAuthorized;
+    }
+    #endif
+
+    #if !UNITY_ANDROID
     void Awake() 
     {
         Destroy(this.gameObject);

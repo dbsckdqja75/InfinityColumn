@@ -139,4 +139,14 @@ public class CharacterManager : MonoBehaviour
     {
         return playerData.Contains(id);
     }
+
+    public List<CharacterID> GetOwnedCharacterData()
+    {
+        return playerData;
+    }
+
+    public void UpdateCharacterData()
+    {
+        LoadPlayerData();
+    }
 }

@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] DisturbManager disturbManager;
     [SerializeField] CanvasManager canvasManager;
     [SerializeField] DailyChallengeManager dailyChallengeManager;
+    [SerializeField] GooglePlayManager GPGS;
     [SerializeField] LeaderboardManager leaderboardManager;
 
     void Awake()
@@ -232,6 +233,11 @@ public class GameManager : MonoBehaviour
     public void UpdateGameModeText(string key)
     {
         gameModeText.SetLocaleString(key);
+    }
+
+    public void UpdateBestScoreData()
+    {
+        UpdateBestScore();
     }
 
     public void ChangeGameMode()
@@ -402,7 +408,12 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefsManager.SaveData(currentGame.GetBestScoreDataKey(), bestScore.GetValue());
         
-        leaderboardManager.UpdateRecord(gameType);
+        #if UNITY_ANDROID
+            GPGS.ReportLeaderboard(gameType, bestScore.GetValue());
+            GPGS.ReportGameData();
+        #else
+            leaderboardManager.UpdateRecord(gameType);
+        #endif
     }
 
     public void GameRestart()
@@ -506,9 +517,12 @@ public class GameManager : MonoBehaviour
 
     public void OpenLeaderboard()
     {
+        #if UNITY_ANDROID
+        GPGS.ReportLeaderboard(gameType, bestScore.GetValue());
+        GPGS.ShowLeaderboardUI();
+        #else
         if(IsGameState(GameState.LOBBY))
         {
-            // TODO : 추후에 플랫폼별로 호출 처리
             gameState = GameState.EXTRA_MENU;
 
             playerController.SetMoveLock(true);
@@ -517,6 +531,7 @@ public class GameManager : MonoBehaviour
 
             canvasManager.SetPanel("Leaderboard");
         }
+        #endif
     }
 
     public void OpenCharacterSelect()

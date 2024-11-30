@@ -95,4 +95,9 @@ public class CurrencyManager : MonoSingleton<CurrencyManager>
             CurrencyLabel.refresh?.Invoke();
         }
     }
+
+    public void UpdateCurrencyData()
+    {
+        LoadCurrencyData();
+    }
 }
