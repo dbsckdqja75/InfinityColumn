@@ -517,10 +517,7 @@ public class GameManager : MonoBehaviour
 
     public void OpenLeaderboard()
     {
-        #if UNITY_ANDROID
-        GPGS.ReportLeaderboard(gameType, bestScore.GetValue());
-        GPGS.ShowLeaderboardUI();
-        #else
+        #if UNITY_EDITOR || UNITY_STANDALONE
         if(IsGameState(GameState.LOBBY))
         {
             gameState = GameState.EXTRA_MENU;
@@ -531,6 +528,9 @@ public class GameManager : MonoBehaviour
 
             canvasManager.SetPanel("Leaderboard");
         }
+        #elif UNITY_ANDROID
+        GPGS.ReportLeaderboard(gameType, bestScore.GetValue());
+        GPGS.ShowLeaderboardUI();
         #endif
     }
 
