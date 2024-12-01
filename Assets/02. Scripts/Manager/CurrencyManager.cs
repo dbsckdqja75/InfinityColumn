@@ -84,7 +84,7 @@ public class CurrencyManager : MonoSingleton<CurrencyManager>
 
     public void RewardCurrency(CurrencyType currencyType, int amount)
     {
-        if(currency.ContainsKey(currencyType))
+        if(currency.ContainsKey(currencyType) && amount > 0)
         {
             int currencyData = GetCurrency(currencyType);
             currencyData += amount;
