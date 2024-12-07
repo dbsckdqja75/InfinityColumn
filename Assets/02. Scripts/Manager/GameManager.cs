@@ -313,12 +313,6 @@ public class GameManager : MonoBehaviour
                 GamePause();
                 return;
             }
-
-            if(IsGameState(GameState.PAUSE))
-            {
-                GameResume();
-                return;
-            }
         }
     }
 
