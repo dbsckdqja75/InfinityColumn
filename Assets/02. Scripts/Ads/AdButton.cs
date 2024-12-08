@@ -5,8 +5,6 @@ public class AdButton : MonoBehaviour
 {
     [SerializeField] AdvertID advertID;
 
-    [SerializeField] int defaultRewardAmount = -1;
-
     [SerializeField] Button adButton;
 
     void Awake()

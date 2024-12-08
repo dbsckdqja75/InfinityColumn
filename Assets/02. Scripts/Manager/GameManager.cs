@@ -509,6 +509,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void OpenShop()
+    {
+        if(IsGameState(GameState.LOBBY))
+        {
+            gameState = GameState.EXTRA_MENU;
+
+            canvasManager.SetPanel("Shop");
+        }
+    }
+
     public void OpenLeaderboard()
     {
         #if UNITY_EDITOR || UNITY_STANDALONE
