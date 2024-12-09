@@ -1,7 +1,6 @@
 using System;
 using com.unity3d.mediation;
 using UnityEngine;
-
 using TMPro;
 
 public class AdvertisementManager : MonoSingleton<AdvertisementManager>
@@ -155,7 +154,7 @@ public class AdvertisementManager : MonoSingleton<AdvertisementManager>
             }
         }
 
-        return -1;
+        return 0;
     }
 
     string GetPlacementName(AdvertID advertID)

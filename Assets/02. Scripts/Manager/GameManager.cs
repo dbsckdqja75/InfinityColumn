@@ -67,6 +67,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject rewardVpObj;
     [SerializeField] TMP_Text rewardVpText;
 
+    [SerializeField] ResultAd resultAd;
+
     [Space(10)]
     [Header("Effect UI")]
     [SerializeField] GameObject warning_Effect;
@@ -365,6 +367,8 @@ public class GameManager : MonoBehaviour
         lastPlayerHeight = playerController.GetPlayerHeight();
         playerController.SetMoveLock(true);
         playerController.Fall();
+
+        resultAd.RequestAd();
 
         OnReward(score.GetValue());
         UpdateResultScore();

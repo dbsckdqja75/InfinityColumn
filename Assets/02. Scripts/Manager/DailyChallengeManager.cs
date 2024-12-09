@@ -1,9 +1,8 @@
 using System;
 using System.Collections;
-using TMPro;
 using UnityEngine;
-using UnityEngine.Networking;
 using Random = UnityEngine.Random;
+using TMPro;
 
 public class DailyChallengeManager : MonoBehaviour
 {
@@ -27,7 +26,9 @@ public class DailyChallengeManager : MonoBehaviour
 
     void Start()
     {
-        WebTimeCheck().Start(this);
+        this.StopAllCoroutines();
+
+        DateCheck().Start(this);
     }
 
     void Init()
@@ -35,17 +36,14 @@ public class DailyChallengeManager : MonoBehaviour
         challengeButtonObj.SetActive(false);
     }
 
-    void UpdateDateTime(DateTime todayDateTime)
+    void UpdateDate()
     {
-        DateTime lastDateTime = PlayerPrefsManager.LoadData("LastChallengeDate", todayDateTime.AddDays(-1));
-        string lastDay = string.Format("{0:yyyy-MM-dd}", lastDateTime);
-        string today = string.Format("{0:yyyy-MM-dd}", todayDateTime);
-
-        if(today != lastDay)
+        DateTime lastDateTime = PlayerPrefsManager.LoadData("LastChallengeDate", DateManager.Instance.todayDateTime.AddDays(-1));
+        if(DateManager.Instance.IsDateEqual(lastDateTime) == false)
         {
             ResetChallenge();
 
-            PlayerPrefsManager.SaveData("LastChallengeDate", todayDateTime);
+            PlayerPrefsManager.SaveData("LastChallengeDate", DateManager.Instance.todayDateTime);
         }
 
         ActiveChallenge();
@@ -106,7 +104,7 @@ public class DailyChallengeManager : MonoBehaviour
                     }
                     break;
                 default:
-                    WebTimeCheck().Start(this);
+                    DateCheck().Start(this);
                     break;
             }
 
@@ -170,23 +168,29 @@ public class DailyChallengeManager : MonoBehaviour
         }
     }
 
-    IEnumerator WebTimeCheck()
+    IEnumerator DateCheck()
     {
-        UnityWebRequest request = new UnityWebRequest();
-        using (request = UnityWebRequest.Get("www.google.com"))
+        int tryCount = 3;
+
+        while(DateManager.Instance.IsSynced() == false)
         {
-            yield return request.SendWebRequest();
-
-            if (request.result.IsEquals(UnityWebRequest.Result.Success))
+            if(tryCount <= 0)
             {
-                string date = request.GetResponseHeader("date");
-                DateTime todayDateTime = DateTime.Parse(date).ToLocalTime();
+                yield break;
+            }
 
-                int bestScore = PlayerPrefsManager.LoadData("BestScore", 0);
-                if(bestScore >= 100)
-                {
-                    UpdateDateTime(todayDateTime);
-                }
+            yield return new WaitForSeconds(3f);
+            yield return new WaitForEndOfFrame();
+
+            tryCount--;
+        }
+
+        if(DateManager.Instance.IsSynced())
+        {
+            int bestScore = PlayerPrefsManager.LoadData("BestScore", 0);
+            if(bestScore >= 100)
+            {
+                UpdateDate();
             }
         }
 
