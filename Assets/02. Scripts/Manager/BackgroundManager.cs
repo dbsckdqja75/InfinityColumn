@@ -21,6 +21,9 @@ public class BackgroundManager : MonoBehaviour
 
     public void UpdatePresetQuality()
     {
+        #if UNITY_ANDROID || UNITY_IPHONE
+        currentPreset.ClearForLowQuality();
+        #else
         if(QualitySettings.GetQualityLevel() < 1)
         {
             currentPreset.ClearForLowQuality();
@@ -29,5 +32,6 @@ public class BackgroundManager : MonoBehaviour
         {
             currentPreset.RestoreForHighQuality();
         }
+        #endif
     }
 }
