@@ -10,9 +10,10 @@ using GooglePlayGames.BasicApi;
 using GooglePlayGames.BasicApi.SavedGame;
 #endif
 
+[RequireComponent(typeof(GoogleSavedGameUpdater))]
 public class GooglePlayManager : MonoBehaviour
 {
-    [SerializeField] GoogleSavedGameUpdater updater;
+    GoogleSavedGameUpdater updater;
 
     #if UNITY_ANDROID
     [Serializable]
@@ -28,6 +29,11 @@ public class GooglePlayManager : MonoBehaviour
     bool isAuthorized = false;
 
     const string dataFileName = "ProjectIC_SavedGameData";
+    
+    void Awake()
+    {
+        updater = this.GetComponent<GoogleSavedGameUpdater>();
+    }
 
     void Start()
     {

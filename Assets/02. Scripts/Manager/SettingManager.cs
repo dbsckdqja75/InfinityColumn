@@ -34,6 +34,10 @@ public class SettingManager : MonoBehaviour
         contactBox.SetActive(false);
         discordBox.SetActive(true);
         #endif
+
+        // TODO : 출시 이후에 준비되면 삭제
+        restorePurchaseBox.SetActive(false);
+        discordBox.SetActive(false);
     }
 
     public void LoadSettingData()
@@ -178,20 +182,5 @@ public class SettingManager : MonoBehaviour
     public void RestorePurchase()
     {
         // TODO : 추후 스토어 API 작업 시 적용
-    }
-
-    public void OpenPrivacyInfo()
-    {
-        // TODO : 추후 스토어 API 작업 시 적용
-    }
-
-    public void OpenContactInfo()
-    {
-        // TODO : 추후 스토어 API 작업 시 적용
-    }
-
-    public void OpenDiscord()
-    {
-        // TODO : 추후 스토어 API 작업 시 같이 적용
     }
 }

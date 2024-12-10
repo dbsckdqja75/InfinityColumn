@@ -4170,6 +4170,7 @@ GameObject:
   - component: {fileID: 171259588}
   - component: {fileID: 171259587}
   - component: {fileID: 171259586}
+  - component: {fileID: 171259590}
   - component: {fileID: 171259589}
   m_Layer: 5
   m_Name: Contact Button
@@ -4242,9 +4243,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1678921591}
-        m_TargetAssemblyTypeName: SettingManager, Assembly-CSharp
-        m_MethodName: OpenContactInfo
+      - m_Target: {fileID: 171259590}
+        m_TargetAssemblyTypeName: LocalizeURL, Assembly-CSharp
+        m_MethodName: OpenURL
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4305,6 +4306,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundType: 0
+--- !u!114 &171259590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171259584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 087ccd5c17e330f4c861e6570e72600b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  koreanURL: https://teamcampfire.tistory.com/3
+  englishURL: https://teamcampfire.tistory.com/3
 --- !u!1 &172450302
 GameObject:
   m_ObjectHideFlags: 0
@@ -43434,6 +43449,7 @@ GameObject:
   - component: {fileID: 1771143231}
   - component: {fileID: 1771143230}
   - component: {fileID: 1771143229}
+  - component: {fileID: 1771143233}
   - component: {fileID: 1771143232}
   m_Layer: 5
   m_Name: Privacy Button
@@ -43506,9 +43522,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1678921591}
-        m_TargetAssemblyTypeName: SettingManager, Assembly-CSharp
-        m_MethodName: OpenPrivacyInfo
+      - m_Target: {fileID: 1771143233}
+        m_TargetAssemblyTypeName: LocalizeURL, Assembly-CSharp
+        m_MethodName: OpenURL
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -43569,6 +43585,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundType: 0
+--- !u!114 &1771143233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771143227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 087ccd5c17e330f4c861e6570e72600b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  koreanURL: https://teamcampfire.tistory.com/1
+  englishURL: https://teamcampfire.tistory.com/1
 --- !u!1 &1776644052
 GameObject:
   m_ObjectHideFlags: 0
@@ -45649,7 +45679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b4f07e4dfb253d429478f8b558a961a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updater: {fileID: 1868579347}
 --- !u!114 &1868579347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47495,6 +47524,7 @@ GameObject:
   - component: {fileID: 1934860900}
   - component: {fileID: 1934860899}
   - component: {fileID: 1934860898}
+  - component: {fileID: 1934860902}
   - component: {fileID: 1934860901}
   m_Layer: 5
   m_Name: Discord Button
@@ -47567,9 +47597,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1678921591}
-        m_TargetAssemblyTypeName: SettingManager, Assembly-CSharp
-        m_MethodName: OpenDiscord
+      - m_Target: {fileID: 1934860902}
+        m_TargetAssemblyTypeName: LocalizeURL, Assembly-CSharp
+        m_MethodName: OpenURL
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -47630,6 +47660,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundType: 0
+--- !u!114 &1934860902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934860896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 087ccd5c17e330f4c861e6570e72600b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  koreanURL: 
+  englishURL: 
 --- !u!1 &1936204049
 GameObject:
   m_ObjectHideFlags: 0
