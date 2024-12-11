@@ -1,9 +1,9 @@
 public enum CharacterID
 {
-    BASIC = 0,
-    TEST_0 = 1,
-    TEST_1 = 2,
-    TEST_2 = 3,
-    TEST_3 = 4,
-    TEST_4 = 5,
+    BASIC_0 = 0,
+    BOT_RUNNER = 100,
+    BOT_MINT = 101,
+    BOT_RABBIT = 102,
+    EXTRA_KNIGHT = 200,
+    EXTRA_SANTA = 201,
 }

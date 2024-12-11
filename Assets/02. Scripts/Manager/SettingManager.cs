@@ -19,6 +19,9 @@ public class SettingManager : MonoBehaviour
     [SerializeField] GameObject contactBox;
     [SerializeField] GameObject discordBox;
 
+    [Space(10)]
+    [SerializeField] GameObject termsPanelObj;
+
     void Awake()
     {
         Init();
@@ -27,6 +30,10 @@ public class SettingManager : MonoBehaviour
     void Init()
     {
         LoadSettingData();
+
+        #if UNITY_ANDROID || UNITY_IPHONE
+        LoadTermsStatus();
+        #endif
 
         #if UNITY_STANDALONE || UNITY_EDITOR
         restorePurchaseBox.SetActive(false);
@@ -38,6 +45,23 @@ public class SettingManager : MonoBehaviour
         // TODO : 출시 이후에 준비되면 삭제
         restorePurchaseBox.SetActive(false);
         discordBox.SetActive(false);
+    }
+
+    void LoadTermsStatus()
+    {
+        bool isAcceptTerms = PlayerPrefsManager.LoadData("AcceptTerms", false);
+
+        if(isAcceptTerms == false)
+        {
+            termsPanelObj.SetActive(true);
+        }
+    }
+
+    public void AcceptTheTerms()
+    {
+        PlayerPrefsManager.SaveData("AcceptTerms", true);
+
+        termsPanelObj.SetActive(false);
     }
 
     public void LoadSettingData()

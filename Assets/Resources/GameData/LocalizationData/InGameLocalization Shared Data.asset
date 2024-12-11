@@ -239,6 +239,10 @@ MonoBehaviour:
     m_Key: ClickStart
     m_Metadata:
       m_Items: []
+  - m_Id: 32315962865790976
+    m_Key: CharacterName_Santa
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

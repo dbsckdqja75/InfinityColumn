@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ff9cb818c05de048812011ec2dc77f8, type: 3}
-  m_Name: 005_Santa_CharacterData
+  m_Name: 102_RabbitBot_CharacterData
   m_EditorClassIdentifier: 
-  id: 5
-  characterLocaleKey: CharacterName_None
-  price: 0
-  previewScale: 0.75
-  prefab: {fileID: 7696604531206290053, guid: 70a8ec9a6a5fe6c47863a4d402cd9884, type: 3}
+  id: 102
+  characterLocaleKey: CharacterName_RabbitBot
+  price: 200
+  previewScale: 0.9
+  prefab: {fileID: 6897575500541658178, guid: bebdf3b48f2bc564ab92784f5516093c, type: 3}

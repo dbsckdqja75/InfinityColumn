@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
 {
-    CharacterID currentCharacterID = CharacterID.BASIC;
+    CharacterID currentCharacterID = CharacterID.BASIC_0;
 
     [SerializeField] PlayerController playerController;
 

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ff9cb818c05de048812011ec2dc77f8, type: 3}
-  m_Name: 004_Knight_CharacterData
+  m_Name: 200_Knight_CharacterData
   m_EditorClassIdentifier: 
-  id: 4
+  id: 200
   characterLocaleKey: CharacterName_Knight
-  price: 0
+  price: 400
   previewScale: 1.1
   prefab: {fileID: 4551761117380815924, guid: a36ce59538e58a64cb5dfde9ceb3a87b, type: 3}

@@ -279,6 +279,10 @@ MonoBehaviour:
     m_Localized: CLICK TO START
     m_Metadata:
       m_Items: []
+  - m_Id: 32315962865790976
+    m_Localized: Santa
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

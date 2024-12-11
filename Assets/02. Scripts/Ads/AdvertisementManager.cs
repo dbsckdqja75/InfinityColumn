@@ -31,7 +31,10 @@ public class AdvertisementManager : MonoSingleton<AdvertisementManager>
     {
         // TODO : 추후에 약관동의를 통해 여부 반영
         IronSource.Agent.setConsent(true);
+        IronSource.Agent.setMetaData("is_deviceid_optout","true");
+        IronSource.Agent.setMetaData("is_child_directed","true");
         IronSource.Agent.setMetaData("do_not_sell","true");
+        IronSource.Agent.setMetaData("Google_Family_Self_Certified_SDKS","true");
 
         IronSourceConfig.Instance.setClientSideCallbacks (true);
 

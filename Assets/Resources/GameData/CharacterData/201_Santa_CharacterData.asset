@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ff9cb818c05de048812011ec2dc77f8, type: 3}
-  m_Name: 002_MintBot_CharacterData
+  m_Name: 201_Santa_CharacterData
   m_EditorClassIdentifier: 
-  id: 2
-  characterLocaleKey: CharacterName_MintBot
-  price: 5
-  previewScale: 0.9
-  prefab: {fileID: 7373869055244383864, guid: ada45ff3a41ce1549bcfbd3ce0dc21f8, type: 3}
+  id: 201
+  characterLocaleKey: CharacterName_Santa
+  price: 250
+  previewScale: 0.75
+  prefab: {fileID: 7696604531206290053, guid: 70a8ec9a6a5fe6c47863a4d402cd9884, type: 3}

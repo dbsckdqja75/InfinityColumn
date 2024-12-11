@@ -28,7 +28,7 @@ public class GooglePlayManager : MonoBehaviour
 
     bool isAuthorized = false;
 
-    const string dataFileName = "ProjectIC_SavedGameData";
+    const string dataFileName = "InfinityColumn_SavedGameData";
     
     void Awake()
     {
