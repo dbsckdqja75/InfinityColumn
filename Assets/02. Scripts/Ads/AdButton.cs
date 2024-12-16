@@ -19,13 +19,20 @@ public class AdButton : MonoBehaviour
     void Awake()
     {
         adButton.onClick.AddListener(() => { 
-            AdvertisementManager.Instance.ShowAd(advertID, (amount) => 
-            {
-                CurrencyManager.Instance.RewardCurrency(CurrencyType.VOXEL_POINT, amount);
+            string title = LocalizationManager.Instance.GetString("WatchRewardedAd");
+            string localeString = LocalizationManager.Instance.GetString("WatchRewardedAd_Context");
+            string context = string.Format(localeString, AdvertisementManager.Instance.GetRewardAmount(advertID).ToString());
+            ConfirmPopup.Instance.ConfirmFormat(title, context, () => { 
+                AdvertisementManager.Instance.ShowAd(advertID, (amount) => 
+                {
+                    CurrencyManager.Instance.RewardCurrency(CurrencyType.VOXEL_POINT, amount);
 
-                watchedEvent?.Invoke();
+                    watchedEvent?.Invoke();
 
-                Debug.LogFormat("[Mediation] OnReward ({0} : {1})", advertID, amount);
+                    rewardText.text = "WATCHED";
+
+                    Debug.LogFormat("[Mediation] OnReward ({0} : {1})", advertID, amount);
+                });
             });
         });
     }
@@ -36,6 +43,11 @@ public class AdButton : MonoBehaviour
         {
             rewardText.text = string.Format(rewardFormat, AdvertisementManager.Instance.GetRewardAmount(advertID));
         }
+    }
+
+    public void OnWatched()
+    {
+        adButton.interactable = false;
     }
 
     public void SetInteractable(bool isOn)

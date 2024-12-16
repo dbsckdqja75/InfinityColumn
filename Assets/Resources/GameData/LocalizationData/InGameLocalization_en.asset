@@ -283,6 +283,18 @@ MonoBehaviour:
     m_Localized: Santa
     m_Metadata:
       m_Items: []
+  - m_Id: 34444300656881664
+    m_Localized: Watch Ad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34445210325921792
+    m_Localized: Would you like to watch the ad and get {0} VP?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34447970266034176
+    m_Localized: Rewarded AD
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

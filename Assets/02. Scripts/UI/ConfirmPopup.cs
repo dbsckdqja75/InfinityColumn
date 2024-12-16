@@ -28,6 +28,20 @@ public class ConfirmPopup : MonoSingleton<ConfirmPopup>
         confirmPopup.SetActive(true);
     }
 
+    public void ConfirmFormat(string title, string context, Action callback)
+    {
+        titleText.text = title;
+        confirmText.text = context;
+
+        yesText.text = LocalizationManager.Instance.GetString("Yes");
+        noText.text = LocalizationManager.Instance.GetString("No");
+
+        confirmAction = callback;
+        cancelAction = null;
+
+        confirmPopup.SetActive(true);
+    }
+
     public void Confirm(string title, string context, string yes, string no, Action callback)
     {
         titleText.text = title;

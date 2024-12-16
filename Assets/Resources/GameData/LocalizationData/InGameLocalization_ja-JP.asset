@@ -249,6 +249,19 @@ MonoBehaviour:
     m_Localized: "\u30B5\u30F3\u30BF"
     m_Metadata:
       m_Items: []
+  - m_Id: 34445210325921792
+    m_Localized: "\u5E83\u544A\u3092\u8996\u8074\u3057\u3066\u88DC\u511F\u3092\u53D7\u3051\u307E\u3059\u304B?\n({0}
+      VP)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34444300656881664
+    m_Localized: "\u5E83\u544A\u8996\u8074"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34447970266034176
+    m_Localized: Rewarded AD
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

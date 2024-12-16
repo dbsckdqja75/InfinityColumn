@@ -243,6 +243,18 @@ MonoBehaviour:
     m_Key: CharacterName_Santa
     m_Metadata:
       m_Items: []
+  - m_Id: 34444300656881664
+    m_Key: WatchRewardedAd
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34445210325921792
+    m_Key: WatchRewardedAd_Context
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34447970266034176
+    m_Key: RewardedAd_Labal
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
