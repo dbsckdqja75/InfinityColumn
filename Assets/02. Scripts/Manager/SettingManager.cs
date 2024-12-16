@@ -49,7 +49,7 @@ public class SettingManager : MonoBehaviour
 
     void LoadTermsStatus()
     {
-        bool isAcceptTerms = PlayerPrefsManager.LoadData("AcceptTerms", false);
+        bool isAcceptTerms = PlayerPrefsManager.LoadData("AcceptTerms", false, false);
 
         if(isAcceptTerms == false)
         {
@@ -59,7 +59,7 @@ public class SettingManager : MonoBehaviour
 
     public void AcceptTheTerms()
     {
-        PlayerPrefsManager.SaveData("AcceptTerms", true);
+        PlayerPrefsManager.SaveData("AcceptTerms", true, false);
 
         termsPanelObj.SetActive(false);
     }
