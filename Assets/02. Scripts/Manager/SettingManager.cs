@@ -66,7 +66,7 @@ public class SettingManager : MonoBehaviour
 
     public void LoadSettingData()
     {
-        int graphicsQuality = PlayerPrefsManager.LoadData("GraphicsQualitySetting", 2);
+        int graphicsQuality = PlayerPrefsManager.LoadData("GraphicsQualitySetting", 1);
         UpdateGraphicsQuality(graphicsQuality);
 
         int frameLimit = PlayerPrefsManager.LoadData("FrameLimitSetting", 60);
@@ -87,7 +87,7 @@ public class SettingManager : MonoBehaviour
 
     public void SwitchGraphicsQuality()
     {
-        int graphicsQuality = PlayerPrefsManager.LoadData("GraphicsQualitySetting", 2);
+        int graphicsQuality = PlayerPrefsManager.LoadData("GraphicsQualitySetting", 1);
         graphicsQuality = (int)Mathf.Repeat(graphicsQuality+1, 3);
 
         PlayerPrefsManager.SaveData("GraphicsQualitySetting", graphicsQuality);
