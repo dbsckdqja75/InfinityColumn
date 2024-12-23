@@ -255,6 +255,10 @@ MonoBehaviour:
     m_Key: RewardedAd_Labal
     m_Metadata:
       m_Items: []
+  - m_Id: 37007914991398912
+    m_Key: CharacterName_Monkey
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

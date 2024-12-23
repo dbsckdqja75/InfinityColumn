@@ -6,4 +6,5 @@ public enum CharacterID
     BOT_RABBIT = 102,
     EXTRA_KNIGHT = 200,
     EXTRA_SANTA = 201,
+    EXTRA_MONKEY = 202,
 }
