@@ -15,6 +15,8 @@ public struct ColorSet
 
 public class SkyBoxManager : MonoBehaviour
 {
+    bool fixedHeight = false;
+
     [SerializeField] Material skyboxMaterialOri;
 
     [SerializeField] float starsFadeMinHeight = 30000;
@@ -84,13 +86,28 @@ public class SkyBoxManager : MonoBehaviour
         }
     }
 
+    public void FixHeight(float height)
+    {
+        if(fixedHeight == false)
+        {
+            fixedHeight = true;
+
+            UpdateHeight(height);
+        }
+    }
+
     public void UpdateHeight(float height)
     {
-        curHeight = height;
+        if(fixedHeight == false)
+        {
+            curHeight = height;
+        }
     }
 
     public void ResetHeight()
     {
+        fixedHeight = false;
+
         curHeight = 0;
     }
 
@@ -118,13 +135,13 @@ public class SkyBoxManager : MonoBehaviour
         // NOTE : Target의 Position Y값을 현재 높이로 두어 갱신
         float targetHeight = colorList[curIndex].targetHeight;
         
-        if (curHeight < prevHeight) // NOTE : 이전의 갱신 높이보다 낮은 경우
+        if (curHeight < prevHeight) // NOTE : 이전 높이보다 낮은 경우
         {
             curIndex = Mathf.Clamp(--curIndex, 0, colorList.Count-1);
 
             prevHeight = colorList[curIndex].targetHeight;
         }
-        else if (curHeight < targetHeight) // NOTE : 다음 갱신 높이보다 낮은 상태일 경우
+        else if (curHeight < targetHeight) // NOTE : 다음 높이보다 낮은 경우
         {
             float t = (curHeight - prevHeight) / (targetHeight - prevHeight);
             

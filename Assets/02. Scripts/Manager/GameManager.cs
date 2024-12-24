@@ -210,9 +210,15 @@ public class GameManager : MonoBehaviour
     void UpdateFall()
     {
         float t = (playerController.GetPlayerHeight() / lastPlayerHeight);
+        if(t <= 0.1f)
+        {
+            skyBoxManager.FixHeight(0);
+            
+            return;
+        }
 
         int fallScore = (int)Mathf.Lerp(0, score.GetValue(), t);
-        
+
         skyBoxManager.UpdateHeight(fallScore);
     }
 
