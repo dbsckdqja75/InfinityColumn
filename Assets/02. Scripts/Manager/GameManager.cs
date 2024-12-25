@@ -120,6 +120,16 @@ public class GameManager : MonoBehaviour
         spawnManager.Init();
         playerController.Init();
 
+        #if UNITY_ANDROID || UNITY_IOS
+        if(Touchscreen.current != null)
+        {
+            playerInput.SwitchCurrentControlScheme("Mobile", Touchscreen.current);
+        }
+
+        playerInput.user.actions.Enable();
+        playerInput.user.ActivateControlScheme("Mobile");
+        #endif
+
         ReturnLobby();
 
         playerController.SetMoveLock(true);

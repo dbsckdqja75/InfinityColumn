@@ -288,11 +288,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 34445210325921792
-    m_Localized: Would you like to watch the ad and get {0} VP?
+    m_Localized: Would you like to watch the AD  and get {0} VP?
     m_Metadata:
       m_Items: []
   - m_Id: 34447970266034176
-    m_Localized: Rewarded AD
+    m_Localized: REWARDED AD
     m_Metadata:
       m_Items: []
   - m_Id: 37007914991398912

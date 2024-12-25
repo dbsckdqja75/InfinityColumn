@@ -351,7 +351,7 @@
                     "name": "Esc",
                     "type": "Button",
                     "id": "f558a550-5022-4e6a-b162-03c72a3aa8d2",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -560,7 +560,7 @@
                     "name": "Esc",
                     "type": "Button",
                     "id": "df8fccf8-7178-4674-919d-7b38bf94f986",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -770,7 +770,7 @@
                     "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -781,7 +781,7 @@
                     "path": "<Gamepad>/rightStick/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -792,7 +792,7 @@
                     "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -803,7 +803,7 @@
                     "path": "<Gamepad>/rightStick/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -814,7 +814,7 @@
                     "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -825,7 +825,7 @@
                     "path": "<Gamepad>/rightStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -836,7 +836,7 @@
                     "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -847,7 +847,7 @@
                     "path": "<Gamepad>/rightStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -858,7 +858,7 @@
                     "path": "<Gamepad>/dpad",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -880,7 +880,7 @@
                     "path": "<Joystick>/stick/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -891,7 +891,7 @@
                     "path": "<Joystick>/stick/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -902,7 +902,7 @@
                     "path": "<Joystick>/stick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -913,7 +913,7 @@
                     "path": "<Joystick>/stick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -1023,7 +1023,7 @@
                     "path": "*/{Submit}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1034,7 +1034,7 @@
                     "path": "*/{Cancel}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC;Mobile",
+                    "groups": "PC",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false

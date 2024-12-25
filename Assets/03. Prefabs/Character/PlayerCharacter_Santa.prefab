@@ -5089,6 +5089,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3005319948345119425, guid: e1107e42fb06f2a4584f6c8b37237a7c,
+        type: 3}
+      propertyPath: feverEyeColor.b
+      value: 0.4288454
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005319948345119425, guid: e1107e42fb06f2a4584f6c8b37237a7c,
+        type: 3}
+      propertyPath: feverEyeColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005319948345119425, guid: e1107e42fb06f2a4584f6c8b37237a7c,
+        type: 3}
+      propertyPath: feverEyeColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5787974578148277635, guid: e1107e42fb06f2a4584f6c8b37237a7c,
         type: 3}
       propertyPath: m_Name
