@@ -7,11 +7,10 @@ public class InfinityLogic : GameLogic
     const float maxDamage = 30;
     float damage = 12.5f;
 
-    public override void OnChangeGameMode(GameManager manager)
+    public override void OnChangeGameMode(PlayUI playUI)
     {
-        manager.ExposeFeverUI();
-        manager.HideHealthTimeUI();
-        manager.UpdateGameModeText("GameMode_Infinity");
+        playUI.ShowFeverGauge();
+        playUI.HideHealthTimer();
     }
 
     public override void OnGameReset()
@@ -42,5 +41,10 @@ public class InfinityLogic : GameLogic
     public override string GetBestScoreDataKey()
     {
         return "BestScore";
+    }
+
+    public override string GetGameModeStringKey()
+    {
+        return "GameMode_Infinity";
     }
 }

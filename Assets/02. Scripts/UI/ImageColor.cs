@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,8 +17,6 @@ public class ImageColor : MonoBehaviour
 
     Image image;
 
-    Color originColor;
-
     void Awake()
     {
         Init();
@@ -27,7 +26,11 @@ public class ImageColor : MonoBehaviour
     {
         image = this.GetComponent<Image>();
 
-        originColor = image.color;
+        if(colorPreset.Length <= 0)
+        {
+            colorPreset = new Color[1];
+            colorPreset[0] = image.color;
+        }
     }
 
     public void SetColorPreset(int presetIdx)
@@ -42,7 +45,7 @@ public class ImageColor : MonoBehaviour
     {
         if(image)
         {
-            image.color = originColor;
+            image.color = colorPreset[0];
         }
     }
 
@@ -61,7 +64,7 @@ public class ImageColor : MonoBehaviour
         {
             SetColorPreset(0);
         }
-        else if(image.color != originColor)
+        else if(image.color != colorPreset[0])
         {
             ResetColor();
         }

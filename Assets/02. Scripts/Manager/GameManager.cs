@@ -13,12 +13,12 @@ public class GameManager : MonoBehaviour
     GameLogic currentGame = new InfinityLogic();
 
     float health = 100f;
-    float hpFillAmount = 1f;
+    float healthFillAmount = 1f;
 
     bool isFeverTime = false;
     float fever = 0f;
     SecureValue<int> feverCharge = new SecureValue<int>(0);
-    float feverFillAmount = 0f;
+    float feverTimeFillAmount = 0f;
 
     SecureValue<int> score = new SecureValue<int>(0);
     SecureValue<int> bestScore = new SecureValue<int>(0);
@@ -38,23 +38,10 @@ public class GameManager : MonoBehaviour
     [Space(10)]
     [SerializeField] int rewardUnit = 100;
 
-    [Space(10)]
-    [SerializeField] float healthfillSpeed = 10f;
-    [SerializeField] float feverfillSpeed = 5f;
 
-    [Space(10)]
-    [SerializeField] float healthWarning = 0.3f;
 
-    [Header("InGame UI")]
-    [SerializeField] Image hpFillImage;
-    [SerializeField] Image feverFillImage;
-    [SerializeField] ImageColor hpFillColor;
-    [SerializeField] ImageColor feverFillColor;
-    [SerializeField] GameObject feverTimerObj;
-    [SerializeField] TMP_Text hpTimerText;
-    [SerializeField] GameObject hpInfinityTextObj;
-    [SerializeField] TMP_Text scoreText;
-    [SerializeField] Animation scoreAnim;
+    [SerializeField] PlayUI playUI;
+
     [SerializeField] LocalizeText gameModeText;
 
     [SerializeField] GameObject startTouchGuideObj;
@@ -69,10 +56,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] ResultAd resultAd;
 
-    [Space(10)]
-    [Header("Effect UI")]
-    [SerializeField] GameObject warning_Effect;
-    [SerializeField] GameObject fever_Effect;
 
     [Space(10)]
     [SerializeField] CameraView cameraView;
@@ -96,9 +79,9 @@ public class GameManager : MonoBehaviour
     {
         if(IsGameState(GameState.PLAYING))
         {
-            UpdateUI();
             UpdateFeverTime();
             UpdateHealthTime();
+            UpdateUI();
 
             #if UNITY_EDITOR
             if(debug_infinityHealth)
@@ -120,7 +103,7 @@ public class GameManager : MonoBehaviour
         spawnManager.Init();
         playerController.Init();
 
-        #if UNITY_ANDROID || UNITY_IOS
+        #if (UNITY_ANDROID || UNITY_IOS) && (!UNITY_EDITOR && !UNITY_STANDALONE)
         if(Touchscreen.current != null)
         {
             playerInput.SwitchCurrentControlScheme("Mobile", Touchscreen.current);
@@ -140,25 +123,8 @@ public class GameManager : MonoBehaviour
 
     void UpdateUI()
     {
-        hpFillAmount = (health / currentGame.GetMaxHealth());
-        hpFillImage.fillAmount = Mathf.Lerp(hpFillImage.fillAmount, hpFillAmount, healthfillSpeed * Time.deltaTime);
-
-        feverFillAmount = (fever / maxFever);
-        feverFillImage.fillAmount = Mathf.Lerp(feverFillImage.fillAmount, feverFillAmount, feverfillSpeed * Time.deltaTime);
-
-        warning_Effect.SetActive(hpFillAmount <= healthWarning);
-
-        if(!isFeverTime)
-        {
-            if(warning_Effect.activeSelf)
-            {
-                hpFillColor.SetColorPreset(0);
-            }
-            else
-            {
-                hpFillColor.ResetColor();
-            }
-        }
+        playUI.UpdateHealth(health / currentGame.GetMaxHealth());
+        playUI.UpdateFever(fever / maxFever);
     }
 
     void UpdateFeverTime()
@@ -166,7 +132,6 @@ public class GameManager : MonoBehaviour
         if(isFeverTime)
         {
             health = currentGame.GetMaxHealth();
-            hpFillAmount = 1f;
 
             if(fever > 0)
             {
@@ -191,10 +156,10 @@ public class GameManager : MonoBehaviour
         if(score.GetValue() > 0)
         {
             health -= (currentGame.GetTimePerDamage() * Time.deltaTime);
-            health = Mathf.Clamp(health, 0, currentGame.GetMaxHealth());
+            health = Mathf.Clamp(health, 0f, (float)currentGame.GetMaxHealth());
         }
 
-        hpTimerText.text = ((int)health).ToString();
+        playUI.UpdateHealthTimer((int)health);
     }
 
     void UpdateBestScore()
@@ -234,23 +199,12 @@ public class GameManager : MonoBehaviour
 
     void ResetUI()
     {
-        hpFillAmount = 1;
-        feverFillAmount = 0;
-
-        hpFillImage.fillAmount = hpFillAmount;
-        feverFillImage.fillAmount = feverFillAmount;
-
-        scoreText.text = score.GetValue().ToString();
+        playUI.ResetUI();
 
         rewardBoxObj.SetActive(false);
         rewardVpObj.SetActive(false);
 
         CurrencyLabel.refresh?.Invoke();
-    }
-
-    public void UpdateGameModeText(string key)
-    {
-        gameModeText.SetLocaleString(key);
     }
 
     public void UpdateBestScoreData()
@@ -274,7 +228,9 @@ public class GameManager : MonoBehaviour
             break;
         }
 
-        currentGame.OnChangeGameMode(this);
+        currentGame.OnChangeGameMode(playUI);
+
+        gameModeText.SetLocaleString(currentGame.GetGameModeStringKey());
 
         UpdateBestScore();
 
@@ -578,14 +534,10 @@ public class GameManager : MonoBehaviour
         currentGame.OnGameReset();
 
         health = currentGame.GetMaxHealth();
-        hpFillAmount = 1;
 
         ResetFeverTime();
 
-        warning_Effect.SetActive(false);
-        startTouchGuideObj.SetActive(true);
-
-        hpInfinityTextObj.SetActive(false);
+        playUI.ResetUI();
 
         playerController.ResetPosition();
 
@@ -606,16 +558,10 @@ public class GameManager : MonoBehaviour
 
         fever = 0;
         feverCharge.SetValue(0);
-        feverFillAmount = 0f;
 
         playerController.Fever(false);
 
-        hpInfinityTextObj.SetActive(false);
-            
-        hpFillColor.ResetColor();
-
-        fever_Effect.SetActive(false);
-        feverFillColor.ResetColor();
+        playUI.OnResetFeverTime();
 
         if(IsGameState(GameState.PLAYING))
         {
@@ -631,14 +577,7 @@ public class GameManager : MonoBehaviour
 
         playerController.Fever(true);
 
-        hpInfinityTextObj.SetActive(true);
-
-        feverFillImage.fillAmount = 1;
-            
-        hpFillColor.SetColorPreset(1);
-
-        fever_Effect.SetActive(true);
-        feverFillColor.SetColorPreset(0);
+        playUI.OnFeverTime();
 
         spawnManager.FeverClearColumn(10, 3f);
 
@@ -685,10 +624,8 @@ public class GameManager : MonoBehaviour
         #else
         score.SetValue(score.GetValue() + 1);
         #endif
-        scoreText.text = score.GetValue().ToString();
 
-        scoreAnim.Stop();
-        scoreAnim.Play();
+        playUI.UpdateScore(score.GetValue());
     }
 
     void RewardHealth()
@@ -721,37 +658,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ExposeFeverUI()
-    {
-        feverTimerObj.SetActive(true);
-    }
-
-    public void ExposeHealthTimeUI()
-    {
-        hpTimerText.gameObject.SetActive(true);
-    }
-
-    void HideTouchGuide()
-    {
-        startTouchGuideObj.SetActive(false);
-    }
-
-    public void HideFeverUI()
-    {
-        feverTimerObj.SetActive(false);
-    }
-
-    public void HideHealthTimeUI()
-    {
-        hpTimerText.gameObject.SetActive(false);
-    }
-
     public void OnPlayerMove()
     {
         if(!IsGameState(GameState.PLAYING))
             return;
 
-        HideTouchGuide();
+        playUI.HideStartGuide();
 
         CheckBranch();
 

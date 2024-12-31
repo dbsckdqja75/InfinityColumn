@@ -4,11 +4,10 @@ public class ThreeTimeLogic : GameLogic
 {
     const int gameTime = 180;
 
-    public override void OnChangeGameMode(GameManager manager)
+    public override void OnChangeGameMode(PlayUI playUI)
     {
-        manager.HideFeverUI();
-        manager.ExposeHealthTimeUI();
-        manager.UpdateGameModeText("GameMode_ThreeTimeAttack");
+        playUI.ShowHealthTimer();
+        playUI.HideFeverGauge();
     }
 
     public override void OnGameReset()
@@ -29,5 +28,10 @@ public class ThreeTimeLogic : GameLogic
     public override string GetBestScoreDataKey()
     {
         return "ThreeTimeBestScore";
+    }
+
+    public override string GetGameModeStringKey()
+    {
+        return "GameMode_ThreeTimeAttack";
     }
 }

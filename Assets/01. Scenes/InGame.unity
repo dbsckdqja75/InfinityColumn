@@ -8876,6 +8876,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198634378383955756, guid: 64b10ade785cbf345ae1f6146cd2a37c,
         type: 3}
+      propertyPath: simulationSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198634378383955756, guid: 64b10ade785cbf345ae1f6146cd2a37c,
+        type: 3}
       propertyPath: ShapeModule.m_Scale.x
       value: 10
       objectReference: {fileID: 0}
@@ -8883,6 +8888,26 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.maxNumParticles
       value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 198634378383955756, guid: 64b10ade785cbf345ae1f6146cd2a37c,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198634378383955756, guid: 64b10ade785cbf345ae1f6146cd2a37c,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 198634378383955756, guid: 64b10ade785cbf345ae1f6146cd2a37c,
+        type: 3}
+      propertyPath: VelocityModule.speedModifier.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198634378383955756, guid: 64b10ade785cbf345ae1f6146cd2a37c,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 199538284615940432, guid: 64b10ade785cbf345ae1f6146cd2a37c,
         type: 3}
@@ -12782,7 +12807,7 @@ GameObject:
   - component: {fileID: 564962634}
   - component: {fileID: 564962633}
   m_Layer: 5
-  m_Name: Timer Text
+  m_Name: Health Timer Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22211,7 +22236,7 @@ GameObject:
   - component: {fileID: 923005161}
   - component: {fileID: 923005163}
   m_Layer: 5
-  m_Name: Timer Box
+  m_Name: Health Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22457,6 +22482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPreview: 0
   colorPreset:
+  - {r: 1, g: 0.7058824, b: 0.15686275, a: 1}
   - {r: 1, g: 0.5013487, b: 0, a: 1}
 --- !u!1 &927871765
 GameObject:
@@ -29338,18 +29364,7 @@ MonoBehaviour:
   maxFever: 100
   feverTime: 20
   rewardUnit: 100
-  healthfillSpeed: 10
-  feverfillSpeed: 5
-  healthWarning: 0.3
-  hpFillImage: {fileID: 1822503901}
-  feverFillImage: {fileID: 926163792}
-  hpFillColor: {fileID: 1822503903}
-  feverFillColor: {fileID: 926163794}
-  feverTimerObj: {fileID: 878181526}
-  hpTimerText: {fileID: 564962633}
-  hpInfinityTextObj: {fileID: 1817896005}
-  scoreText: {fileID: 887281146}
-  scoreAnim: {fileID: 887281148}
+  playUI: {fileID: 1323029969}
   gameModeText: {fileID: 1893450096}
   startTouchGuideObj: {fileID: 1151574192}
   resultScoreText: {fileID: 491832918}
@@ -29358,8 +29373,6 @@ MonoBehaviour:
   rewardVpObj: {fileID: 949068983}
   rewardVpText: {fileID: 1682031213}
   resultAd: {fileID: 40018967}
-  warning_Effect: {fileID: 173319}
-  fever_Effect: {fileID: 94174891}
   cameraView: {fileID: 961739754}
   playerController: {fileID: 1592018358}
   playerInput: {fileID: 1592018360}
@@ -33096,6 +33109,7 @@ GameObject:
   - component: {fileID: 1323029966}
   - component: {fileID: 1323029967}
   - component: {fileID: 1323029968}
+  - component: {fileID: 1323029969}
   m_Layer: 5
   m_Name: Playing Panel
   m_TagString: Untagged
@@ -33148,6 +33162,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onResizeSafeArea: 1
+--- !u!114 &1323029969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323029965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753315d103393db4e91db86a2b05f54c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthFillSpeed: 15
+  feverFillSpeed: 10
+  healthAlertAmount: 0.4
+  healthBarImage: {fileID: 1822503901}
+  healthBarColor: {fileID: 1822503903}
+  healthTimerText: {fileID: 564962633}
+  infinityTextObj: {fileID: 1817896005}
+  feverBarImage: {fileID: 926163792}
+  feverBarColor: {fileID: 926163794}
+  feverGaugeObj: {fileID: 878181526}
+  scoreText: {fileID: 887281146}
+  scoreTextAnim: {fileID: 887281148}
+  warningEffectObj: {fileID: 173319}
+  feverEffectObj: {fileID: 94174891}
+  startGuideObj: {fileID: 1151574192}
 --- !u!1 &1328857704
 GameObject:
   m_ObjectHideFlags: 0
@@ -44462,7 +44503,7 @@ GameObject:
   - component: {fileID: 1817896008}
   - component: {fileID: 1817896007}
   m_Layer: 5
-  m_Name: Infinity Text
+  m_Name: Health Infinity Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44599,7 +44640,7 @@ GameObject:
   - component: {fileID: 1822503901}
   - component: {fileID: 1822503903}
   m_Layer: 5
-  m_Name: Timer Fill
+  m_Name: Health Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44676,6 +44717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPreview: 0
   colorPreset:
+  - {r: 1, g: 0.3137255, b: 0.3137255, a: 1}
   - {r: 0.8207547, g: 0.15098791, b: 0.15098791, a: 1}
   - {r: 0.7411765, g: 0, b: 1, a: 1}
 --- !u!1 &1833272442
@@ -44782,7 +44824,7 @@ GameObject:
   - component: {fileID: 1836957726}
   - component: {fileID: 1836957728}
   m_Layer: 5
-  m_Name: Timer Background
+  m_Name: Health Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56254,6 +56296,7 @@ SceneRoots:
   - {fileID: 172450306}
   - {fileID: 27272285}
   - {fileID: 1301334101}
+  - {fileID: 2112517989}
   - {fileID: 1530983085}
   - {fileID: 1936204051}
   - {fileID: 1466600287}
@@ -56276,7 +56319,6 @@ SceneRoots:
   - {fileID: 1592018357}
   - {fileID: 5300185607440406254}
   - {fileID: 94644163}
-  - {fileID: 2112517989}
   - {fileID: 1037631527}
   - {fileID: 1013858954}
   - {fileID: 1657458840}

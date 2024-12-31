@@ -4,11 +4,10 @@ public class OneTimeLogic : GameLogic
 {
     const int gameTime = 60;
 
-    public override void OnChangeGameMode(GameManager manager)
+    public override void OnChangeGameMode(PlayUI playUI)
     {
-        manager.HideFeverUI();
-        manager.ExposeHealthTimeUI();
-        manager.UpdateGameModeText("GameMode_OneTimeAttack");
+        playUI.ShowHealthTimer();
+        playUI.HideFeverGauge();
     }
 
     public override void OnGameReset()
@@ -29,5 +28,10 @@ public class OneTimeLogic : GameLogic
     public override string GetBestScoreDataKey()
     {
         return "OneTimeBestScore";
+    }
+
+    public override string GetGameModeStringKey()
+    {
+        return "GameMode_OneTimeAttack";
     }
 }
