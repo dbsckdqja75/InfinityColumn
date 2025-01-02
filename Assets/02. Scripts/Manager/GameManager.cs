@@ -1,7 +1,4 @@
-using System;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
@@ -13,12 +10,10 @@ public class GameManager : MonoBehaviour
     GameLogic currentGame = new InfinityLogic();
 
     float health = 100f;
-    float healthFillAmount = 1f;
 
     bool isFeverTime = false;
     float fever = 0f;
     SecureValue<int> feverCharge = new SecureValue<int>(0);
-    float feverTimeFillAmount = 0f;
 
     SecureValue<int> score = new SecureValue<int>(0);
     SecureValue<int> bestScore = new SecureValue<int>(0);
@@ -38,24 +33,11 @@ public class GameManager : MonoBehaviour
     [Space(10)]
     [SerializeField] int rewardUnit = 100;
 
-
-
+    [Header("InGame UI")]
     [SerializeField] PlayUI playUI;
+    [SerializeField] ResultUI resultUI;
 
     [SerializeField] LocalizeText gameModeText;
-
-    [SerializeField] GameObject startTouchGuideObj;
-
-    [Space(10)]
-    [Header("GameOver UI")]
-    [SerializeField] TMP_Text resultScoreText;
-    [SerializeField] TMP_Text resultBestScoreText;
-    [SerializeField] GameObject rewardBoxObj;
-    [SerializeField] GameObject rewardVpObj;
-    [SerializeField] TMP_Text rewardVpText;
-
-    [SerializeField] ResultAd resultAd;
-
 
     [Space(10)]
     [SerializeField] CameraView cameraView;
@@ -67,8 +49,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] DisturbManager disturbManager;
     [SerializeField] CanvasManager canvasManager;
     [SerializeField] DailyChallengeManager dailyChallengeManager;
-    [SerializeField] GooglePlayManager GPGS;
     [SerializeField] LeaderboardManager leaderboardManager;
+    [SerializeField] GooglePlayManager GPGS;
 
     void Awake()
     {
@@ -169,8 +151,6 @@ public class GameManager : MonoBehaviour
 
     void UpdateResultScore()
     {
-        resultScoreText.text = String.Format("{0:N0}", score.GetValue().ToString());
-
         if(bestScore.GetValue() < score.GetValue())
         {
             // TODO : 갱신 표시 효과 추가 (신기록 달성)
@@ -179,7 +159,7 @@ public class GameManager : MonoBehaviour
             SaveGameData();
         }
 
-        resultBestScoreText.text = String.Format("{0:N0}", bestScore.GetValue().ToString());
+        resultUI.ReportScore(score.GetValue(), bestScore.GetValue());
     }
 
     void UpdateFall()
@@ -200,9 +180,7 @@ public class GameManager : MonoBehaviour
     void ResetUI()
     {
         playUI.ResetUI();
-
-        rewardBoxObj.SetActive(false);
-        rewardVpObj.SetActive(false);
+        resultUI.ResetUI();
 
         CurrencyLabel.refresh?.Invoke();
     }
@@ -237,83 +215,6 @@ public class GameManager : MonoBehaviour
         ReturnLobby();
     }
 
-    public void OnSpace(InputAction.CallbackContext context)
-    {
-        if(context.phase.IsEquals(InputActionPhase.Performed))
-        {
-            if(IsGameState(GameState.LOBBY))
-            {
-                GameStart();
-            }
-        }
-    }
-
-    public void OnLobbyEsc(InputAction.CallbackContext context)
-    {
-        if(context.phase.IsEquals(InputActionPhase.Performed))
-        {
-            if(IsGameState(GameState.LOBBY))
-            {
-                OpenSetting();
-                return;
-            }
-
-            if(IsGameState(GameState.EXTRA_MENU))
-            {
-                CloseExtraMenu();
-                return;
-            }
-        }
-    }
-
-    public void OnPlayingSpace(InputAction.CallbackContext context)
-    {
-        if(context.phase.IsEquals(InputActionPhase.Performed))
-        {
-            if(IsGameState(GameState.PAUSE))
-            {
-                ReturnLobby();
-                return;
-            }
-        }
-    }
-
-    public void OnPlayingEsc(InputAction.CallbackContext context)
-    {
-        if(context.phase.IsEquals(InputActionPhase.Performed))
-        {
-            if(IsGameState(GameState.PLAYING))
-            {
-                GamePause();
-                return;
-            }
-        }
-    }
-
-    public void OnResultSpace(InputAction.CallbackContext context)
-    {
-        if(context.phase.IsEquals(InputActionPhase.Performed))
-        {
-            if(rewardBoxObj.activeSelf)
-            {
-                GameRestart();
-                return;
-            }
-        }
-    }
-
-    public void OnResultEsc(InputAction.CallbackContext context)
-    {
-        if(context.phase.IsEquals(InputActionPhase.Performed))
-        {
-            if(rewardBoxObj.activeSelf)
-            {
-                ReturnLobby();
-                return;
-            }
-        }
-    }
-
     public void GameStart()
     {
         if(IsGameState(GameState.LOBBY))
@@ -340,7 +241,7 @@ public class GameManager : MonoBehaviour
         playerController.SetMoveLock(true);
         playerController.Fall();
 
-        resultAd.RequestAd();
+        resultUI.OnResult();
 
         OnReward(score.GetValue());
         UpdateResultScore();
@@ -362,8 +263,7 @@ public class GameManager : MonoBehaviour
         {
             int reward = (score / rewardUnit);
 
-            rewardVpText.text = string.Format("+VP {0}", reward);
-            rewardVpObj.SetActive(true);
+            resultUI.ReportReward(reward);
 
             CurrencyManager.Instance.RewardCurrency(CurrencyType.VOXEL_POINT, reward);
         }
@@ -694,6 +594,83 @@ public class GameManager : MonoBehaviour
     bool IsGameState(GameState targetState)
     {
         return gameState.IsEquals(targetState);
+    }
+
+    public void OnSpace(InputAction.CallbackContext context)
+    {
+        if(context.phase.IsEquals(InputActionPhase.Performed))
+        {
+            if(IsGameState(GameState.LOBBY))
+            {
+                GameStart();
+            }
+        }
+    }
+
+    public void OnLobbyEsc(InputAction.CallbackContext context)
+    {
+        if(context.phase.IsEquals(InputActionPhase.Performed))
+        {
+            if(IsGameState(GameState.LOBBY))
+            {
+                OpenSetting();
+                return;
+            }
+
+            if(IsGameState(GameState.EXTRA_MENU))
+            {
+                CloseExtraMenu();
+                return;
+            }
+        }
+    }
+
+    public void OnPlayingSpace(InputAction.CallbackContext context)
+    {
+        if(context.phase.IsEquals(InputActionPhase.Performed))
+        {
+            if(IsGameState(GameState.PAUSE))
+            {
+                ReturnLobby();
+                return;
+            }
+        }
+    }
+
+    public void OnPlayingEsc(InputAction.CallbackContext context)
+    {
+        if(context.phase.IsEquals(InputActionPhase.Performed))
+        {
+            if(IsGameState(GameState.PLAYING))
+            {
+                GamePause();
+                return;
+            }
+        }
+    }
+
+    public void OnResultSpace(InputAction.CallbackContext context)
+    {
+        if(context.phase.IsEquals(InputActionPhase.Performed))
+        {
+            if(resultUI.IsShowed())
+            {
+                GameRestart();
+                return;
+            }
+        }
+    }
+
+    public void OnResultEsc(InputAction.CallbackContext context)
+    {
+        if(context.phase.IsEquals(InputActionPhase.Performed))
+        {
+            if(resultUI.IsShowed())
+            {
+                ReturnLobby();
+                return;
+            }
+        }
     }
 
     #if UNITY_EDITOR

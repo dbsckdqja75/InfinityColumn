@@ -13080,6 +13080,7 @@ GameObject:
   - component: {fileID: 571917517}
   - component: {fileID: 571917518}
   - component: {fileID: 571917519}
+  - component: {fileID: 571917520}
   m_Layer: 5
   m_Name: GameOver Panel
   m_TagString: Untagged
@@ -13146,6 +13147,23 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!114 &571917520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571917514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04c8425deff8d7a489bfe85fcfcd8122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resultScoreText: {fileID: 491832918}
+  resultBestScoreText: {fileID: 2082412583}
+  rewardVpText: {fileID: 1682031213}
+  rewardBoxObj: {fileID: 949068983}
+  resultAd: {fileID: 40018967}
 --- !u!1 &583495936
 GameObject:
   m_ObjectHideFlags: 0
@@ -29365,14 +29383,8 @@ MonoBehaviour:
   feverTime: 20
   rewardUnit: 100
   playUI: {fileID: 1323029969}
+  resultUI: {fileID: 571917520}
   gameModeText: {fileID: 1893450096}
-  startTouchGuideObj: {fileID: 1151574192}
-  resultScoreText: {fileID: 491832918}
-  resultBestScoreText: {fileID: 2082412583}
-  rewardBoxObj: {fileID: 195838766}
-  rewardVpObj: {fileID: 949068983}
-  rewardVpText: {fileID: 1682031213}
-  resultAd: {fileID: 40018967}
   cameraView: {fileID: 961739754}
   playerController: {fileID: 1592018358}
   playerInput: {fileID: 1592018360}
@@ -29382,8 +29394,8 @@ MonoBehaviour:
   disturbManager: {fileID: 331279807}
   canvasManager: {fileID: 2112517990}
   dailyChallengeManager: {fileID: 36890016}
-  GPGS: {fileID: 1868579346}
   leaderboardManager: {fileID: 1513803120}
+  GPGS: {fileID: 1868579346}
 --- !u!114 &1192330418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56296,7 +56308,6 @@ SceneRoots:
   - {fileID: 172450306}
   - {fileID: 27272285}
   - {fileID: 1301334101}
-  - {fileID: 2112517989}
   - {fileID: 1530983085}
   - {fileID: 1936204051}
   - {fileID: 1466600287}
@@ -56321,4 +56332,5 @@ SceneRoots:
   - {fileID: 94644163}
   - {fileID: 1037631527}
   - {fileID: 1013858954}
+  - {fileID: 2112517989}
   - {fileID: 1657458840}
