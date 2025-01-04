@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
         spawnManager.Init();
         playerController.Init();
 
-        #if (UNITY_ANDROID || UNITY_IOS) && (!UNITY_EDITOR && !UNITY_STANDALONE)
+        #if (UNITY_ANDROID || UNITY_IOS)
         if(Touchscreen.current != null)
         {
             playerInput.SwitchCurrentControlScheme("Mobile", Touchscreen.current);
@@ -93,6 +93,10 @@ public class GameManager : MonoBehaviour
 
         playerInput.user.actions.Enable();
         playerInput.user.ActivateControlScheme("Mobile");
+        #endif
+
+        #if (UNITY_EDITOR || UNITY_STANDALONE)
+        playerInput.user.ActivateControlScheme("PC");
         #endif
 
         ReturnLobby();
