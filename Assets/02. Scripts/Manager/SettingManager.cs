@@ -20,6 +20,9 @@ public class SettingManager : MonoBehaviour
     [SerializeField] GameObject discordBox;
 
     [Space(10)]
+    [SerializeField] GameObject snowEffectObj;
+
+    [Space(10)]
     [SerializeField] GameObject termsPanelObj;
 
     void Awake()
@@ -99,6 +102,7 @@ public class SettingManager : MonoBehaviour
     {
         QualitySettings.SetQualityLevel(graphicsQuality);
         extraGlobalVolume.SetActive(graphicsQuality > 0);
+        snowEffectObj.SetActive(graphicsQuality > 0);
         
         backgroundManager.UpdatePresetQuality();
 
