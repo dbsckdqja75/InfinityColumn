@@ -38731,7 +38731,7 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2430303a-434e-4353-86b9-18fbbc0ab6d2
     m_ActionName: 'LobbyActions/MousePoint[/Mouse/position]'
-  m_NeverAutoSwitchControlSchemes: 1
+  m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: PC
   m_DefaultActionMap: LobbyActions
   m_SplitScreenIndex: -1
@@ -51669,11 +51669,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 0.8867924, b: 0.6917503, a: 1}
-    m_HighlightedColor: {r: 0, g: 0.8862745, b: 0.6901961, a: 1}
-    m_PressedColor: {r: 0.16862746, g: 0.3882353, b: 0.3025865, a: 1}
-    m_SelectedColor: {r: 0, g: 0.8862745, b: 0.6901961, a: 1}
-    m_DisabledColor: {r: 0, g: 0.8862745, b: 0.6901961, a: 1}
+    m_NormalColor: {r: 0.8862745, g: 0.2807823, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.8862745, g: 0.28235295, b: 0, a: 1}
+    m_PressedColor: {r: 0.3882353, g: 0.19922303, b: 0.16862746, a: 1}
+    m_SelectedColor: {r: 0.8862745, g: 0.28235295, b: 0, a: 1}
+    m_DisabledColor: {r: 0.8862745, g: 0.28235295, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:

@@ -1023,7 +1023,7 @@
                     "path": "*/{Submit}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC",
+                    "groups": "PC;Mobile",
                     "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1034,7 +1034,7 @@
                     "path": "*/{Cancel}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "PC",
+                    "groups": "PC;Mobile",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
