@@ -11,7 +11,6 @@ public class DailyChallengeManager : MonoBehaviour
     [SerializeField] GameObject rewardObj;
     [SerializeField] GameObject clearObj;
     [SerializeField] GameObject challengeButtonObj;
-    [SerializeField] Animation challengeAnim;
 
     bool isClear;
     ChallengeType currentChallenge = ChallengeType.NONE;
@@ -59,8 +58,6 @@ public class DailyChallengeManager : MonoBehaviour
             rewardObj.SetActive(true);
         }
 
-        challengeAnim.playAutomatically = !isClear;
-
         challengeText.SetLocaleString(GetChallengeContext());
         challengeText.SetStringFormatValue(goal.GetValue().ToString());
     }
@@ -71,8 +68,6 @@ public class DailyChallengeManager : MonoBehaviour
         currentChallenge = (ChallengeType)((int)PlayerPrefsManager.LoadData("DailyChallengeType", 0));
         goal.SetValue(PlayerPrefsManager.LoadData("DailyChallengeGoal", 0));
         reward.SetValue(PlayerPrefsManager.LoadData("DailyChallengeReward", 0));
-
-        challengeAnim.playAutomatically = !isClear;
 
         challengeButtonObj.SetActive(true);
 
