@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using TMPro;
+using UnityEngine.UI;
 
 public class DailyChallengeManager : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class DailyChallengeManager : MonoBehaviour
     [SerializeField] TMP_Text rewardText;
     [SerializeField] GameObject rewardObj;
     [SerializeField] GameObject clearObj;
-    [SerializeField] GameObject challengeButtonObj;
+    [SerializeField] Button challengeButton;
 
     bool isClear;
     ChallengeType currentChallenge = ChallengeType.NONE;
@@ -32,7 +33,7 @@ public class DailyChallengeManager : MonoBehaviour
 
     void Init()
     {
-        challengeButtonObj.SetActive(false);
+        challengeButton.interactable = false;
     }
 
     void UpdateDate()
@@ -69,7 +70,7 @@ public class DailyChallengeManager : MonoBehaviour
         goal.SetValue(PlayerPrefsManager.LoadData("DailyChallengeGoal", 0));
         reward.SetValue(PlayerPrefsManager.LoadData("DailyChallengeReward", 0));
 
-        challengeButtonObj.SetActive(true);
+        challengeButton.interactable = true;
 
         Debug.LogFormat("[DailyChallenge] Type : {0} / Goal : {1} / Reward : {2} / isClear : {3}", currentChallenge.ToString(), goal.GetValue(), reward.GetValue(), isClear);
     }
@@ -165,7 +166,7 @@ public class DailyChallengeManager : MonoBehaviour
 
     IEnumerator DateCheck()
     {
-        int tryCount = 3;
+        int tryCount = 10;
 
         while(DateManager.Instance.IsSynced() == false)
         {
@@ -174,7 +175,7 @@ public class DailyChallengeManager : MonoBehaviour
                 yield break;
             }
 
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(1f);
             yield return new WaitForEndOfFrame();
 
             tryCount--;
