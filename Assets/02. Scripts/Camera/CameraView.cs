@@ -20,8 +20,8 @@ public class CameraView : MonoBehaviour
     [SerializeField] float followSpeed = 10f;
     [SerializeField] float orthographicClipFar = 80;
     [SerializeField] float orthographicOffsetZ = -70;
-    [SerializeField] float orthographicClampY = 0.3f;
     [SerializeField] float perspectiveClipFar = 300;
+    [SerializeField] float perspectiveClampY = -0.3f;
 
     [SerializeField] List<CameraViewData> cameraViewData = new List<CameraViewData>();
 
@@ -57,16 +57,19 @@ public class CameraView : MonoBehaviour
             {
                 targetPos.SetX(0);
             }
-
-            if(targetPos.y > orthographicClampY)
-            {
-                targetPos.SetY(orthographicClampY);
-            }
         }
 
         extraPos.z = isPerspectiveView ? 0 : orthographicOffsetZ;
 
         resultPos.Set(targetPos + offsetPos + extraPos);
+
+        if(isPerspectiveView)
+        {
+            if(resultPos.y < perspectiveClampY)
+            {
+                resultPos.SetY(perspectiveClampY);
+            }
+        }
 
         if (isLerp)
         {
