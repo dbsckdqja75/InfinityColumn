@@ -1,5 +1,5 @@
-using TMPro;
 using UnityEngine;
+using TMPro;
 
 public class TestManager : MonoBehaviour
 {
@@ -69,7 +69,7 @@ public class TestManager : MonoBehaviour
             break;
         }
 
-        gameManager.DebugSetRewardScore(rewardScore);
+        // gameManager.DebugSetRewardScore(rewardScore);
 
         UpdateUI();
     }
@@ -78,7 +78,7 @@ public class TestManager : MonoBehaviour
     {
         isInfinityHealth = !isInfinityHealth;
 
-        gameManager.DebugSetInfinityHealth(isInfinityHealth);
+        // gameManager.DebugSetInfinityHealth(isInfinityHealth);
 
         UpdateUI();
     }
@@ -109,7 +109,7 @@ public class TestManager : MonoBehaviour
 
     public void ForceFeverTime()
     {
-        gameManager.DebugForceFeverTime();
+        // gameManager.DebugForceFeverTime();
     }
 
     public void ToggleBranchClear()

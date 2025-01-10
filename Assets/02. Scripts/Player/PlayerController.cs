@@ -4,32 +4,61 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    bool moveLock = false;
+    bool isControlLock = false;
 
     [SerializeField] Vector3 startPos;
 
     [SerializeField] float movePosX;
     [SerializeField] float movePosY;
 
-    [SerializeField] InputController inputController;
     [SerializeField] FakeShadow fakeShadow;
 
-    [Header("GameOver Effect")]
+    [Header("GameOver Physics Effect")]
     [SerializeField] Vector3 explosionOffset = new Vector3(0.5f, 0.25f, 0);
     [SerializeField] float explosionRadius = 0.5f;
     [SerializeField] float explosionPower = 200;
+
+    [Space(10)]
+    [SerializeField] InputController inputController;
 
     PlayerCharacter playerCharacter;
 
     Rigidbody rb;
 
-    [HideInInspector] public UnityEvent onMoveEvent;
+    UnityEvent onMoveEvent = new UnityEvent();
 
     public void Init()
     {
         rb = this.GetComponent<Rigidbody>();
 
         inputController.AddTouchEvent(OnMoveInput);
+    }
+
+    void Move(bool isLeft)
+    {
+        if(isControlLock == false)
+        {
+            Vector2 nowPos = transform.position;
+            Vector3 movePos = new Vector3(0, nowPos.y + movePosY, 0);
+            movePos.x = (isLeft ? -movePosX : movePosX);
+
+            if(nowPos.y >= GameManager.PLAYABLE_HEIGHT_LIMIT)
+            {
+                movePos.y = nowPos.y;
+            }
+
+            transform.position = movePos;
+
+            if(playerCharacter != null)
+            {
+                playerCharacter.UpdatePosition(isLeft);
+                playerCharacter.MoveMotion(isLeft);
+            }
+
+            SoundManager.Instance.PlaySound("Hit1");
+
+            onMoveEvent?.Invoke();
+        }
     }
 
     void OnMoveInput(Vector3 iPosition)
@@ -39,7 +68,7 @@ public class PlayerController : MonoBehaviour
         Move(iPosition.x < halfScreenWidth);
     }
 
-    public void LeftMove(InputAction.CallbackContext context)
+    public void MoveLeft(InputAction.CallbackContext context)
     {
         if(context.phase.IsEquals(InputActionPhase.Performed))
         {
@@ -47,7 +76,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void RightMove(InputAction.CallbackContext context)
+    public void MoveRight(InputAction.CallbackContext context)
     {
         if(context.phase.IsEquals(InputActionPhase.Performed))
         {
@@ -55,36 +84,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Move(bool isLeft)
+    public void SetPlayerCharacter(PlayerCharacter newPlayerCharacter)
     {
-        if(moveLock)
-            return;
-
-        Vector2 nowPos = transform.position;
-        Vector3 movePos = new Vector3(0, nowPos.y + movePosY, 0);
-        movePos.x = (isLeft ? -movePosX : movePosX);
-
-        if(nowPos.y >= GameManager.HEIGHT_LIMIT)
-        {
-            movePos.y = nowPos.y;
-        }
-
-        transform.position = movePos;
-
-        if(playerCharacter)
-        {
-            playerCharacter.UpdatePosition(isLeft);
-            playerCharacter.MoveMotion(isLeft);
-        }
-
-        SoundManager.Instance.PlaySound("Hit1");
-
-        onMoveEvent?.Invoke();
-    }
-
-    public void SetPlayerCharacter(PlayerCharacter _playerCharacter)
-    {
-        playerCharacter = _playerCharacter;
+        playerCharacter = newPlayerCharacter;
 
         fakeShadow.SetTarget(playerCharacter.transform);
     }
@@ -98,7 +100,7 @@ public class PlayerController : MonoBehaviour
         transform.position = startPos;
         transform.rotation = Quaternion.identity;
 
-        if(playerCharacter)
+        if(playerCharacter != null)
         {
             playerCharacter.ResetPosition();
             playerCharacter.ResetMotion();
@@ -106,7 +108,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void Fall()
+    public void OnFever(bool isFever)
+    {
+        if(playerCharacter != null)
+        {
+            if(isFever)
+            {
+                playerCharacter.FeverEyeMotion();
+            }
+            else
+            {
+                playerCharacter.ResetEyeMotion();
+            }
+        }
+    }
+
+    public void OnFall()
     {
         rb.isKinematic = false;
 
@@ -115,25 +132,13 @@ public class PlayerController : MonoBehaviour
 
         rb.AddExplosionForce(explosionPower, transform.position + offset, explosionRadius);
 
-        if(playerCharacter)
+        if(playerCharacter != null)
         {
             playerCharacter.FallMotion();
             playerCharacter.HeadTrackDisable();
         }
 
         SoundManager.Instance.PlaySound("BuzzError1");
-    }
-
-    public void Fever(bool isFever)
-    {
-        if(isFever)
-        {
-            playerCharacter?.FeverEyeMotion();
-        }
-        else
-        {
-            playerCharacter?.ResetEyeMotion();
-        }
     }
 
     public int GetDirectionType()
@@ -146,9 +151,9 @@ public class PlayerController : MonoBehaviour
         return transform.position.y;
     }
 
-    public void SetMoveLock(bool isLock)
+    public void SetControlLock(bool isLock)
     {
-        moveLock = isLock;
+        isControlLock = isLock;
     }
 
     public void AddMoveEvent(UnityAction action)

@@ -5,7 +5,7 @@ public class GoogleSavedGameUpdater : MonoBehaviour
     [SerializeField] GameManager gameManager;
     [SerializeField] CurrencyManager currencyManager;
     [SerializeField] CharacterManager characterManager;
-    [SerializeField] PurchaseManager purchaseManager;
+    // [SerializeField] PurchaseManager purchaseManager;
 
     public void OnLoadedGameData()
     {

@@ -10,7 +10,7 @@ public class InputController : MonoBehaviour
 {
     bool isPointerObject;
 
-    [HideInInspector] public UnityEvent<Vector3> onTouchEvent = new UnityEvent<Vector3>();
+    UnityEvent<Vector3> onTouchEvent = new UnityEvent<Vector3>();
 
     Vector2 inputPosition;
 

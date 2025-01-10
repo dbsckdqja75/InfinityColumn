@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
-    public static readonly int HEIGHT_LIMIT = 1000;
+    public static readonly int PLAYABLE_HEIGHT_LIMIT = 1000;
 
     GameState gameState = GameState.LOADING;
     GameType gameType = GameType.INFINITY;
@@ -11,27 +11,24 @@ public class GameManager : MonoBehaviour
 
     float health = 100f;
 
-    bool isFeverTime = false;
-    float fever = 0f;
-    SecureValue<int> feverCharge = new SecureValue<int>(0);
-
     SecureValue<int> score = new SecureValue<int>(0);
     SecureValue<int> bestScore = new SecureValue<int>(0);
 
+    bool isFeverTime = false;
+    float feverTimer = 0f;
+    SecureValue<int> feverCharge = new SecureValue<int>(0);
+
     float lastPlayerHeight;
 
-    #if UNITY_EDITOR
-    bool debug_infinityHealth = false;
-
-    int debug_rewardScore = 1;
-    #endif
-
     [Header("InGame Config")]
-    [SerializeField] int maxFever = 100;
-    [SerializeField] float feverTime = 20f;
+    const float regainHealth = 4;
+    const int reChargeFever = 1;
+    const float regainFeverTime = 1;
+    const int rewardStep = 100;
 
-    [Space(10)]
-    [SerializeField] int rewardUnit = 100;
+    [SerializeField] int maxFever = 100;
+    [SerializeField] float feverDuration = 5f;
+    float feverTimeRate = 0f;
 
     [Header("InGame UI")]
     [SerializeField] PlayUI playUI;
@@ -61,60 +58,33 @@ public class GameManager : MonoBehaviour
     {
         if(IsGameState(GameState.PLAYING))
         {
-            UpdateFeverTime();
             UpdateHealthTime();
-            UpdateUI();
+            playUI.UpdateHealth(health / currentGame.GetMaxHealth());
 
-            #if UNITY_EDITOR
-            if(debug_infinityHealth)
-            {
-                health = 100f;
-            }
-            #endif
+            UpdateFeverTime();
+            playUI.UpdateFever(feverTimer / maxFever);
         }
 
         if(IsGameState(GameState.GAME_OVER))
         {
-            UpdateFall();
+            UpdatePlayerHeight();
         }
     }
 
     void Init()
     {
+        feverTimeRate = maxFever * (1 / feverDuration);
+
         cameraView.Init();
         spawnManager.Init();
         playerController.Init();
 
         ReturnLobby();
 
-        playerController.SetMoveLock(true);
+        playerController.SetControlLock(true);
         playerController.AddMoveEvent(() => { OnPlayerMove(); });
 
         LoadGameData();
-    }
-
-    void UpdateUI()
-    {
-        playUI.UpdateHealth(health / currentGame.GetMaxHealth());
-        playUI.UpdateFever(fever / maxFever);
-    }
-
-    void UpdateFeverTime()
-    {
-        if(isFeverTime)
-        {
-            health = currentGame.GetMaxHealth();
-
-            if(fever > 0)
-            {
-                fever -= (feverTime * Time.deltaTime);
-                fever = Mathf.Clamp(fever, 0, maxFever);
-            }
-            else
-            {
-                ResetFeverTime();
-            }
-        }
     }
 
     void UpdateHealthTime()
@@ -132,6 +102,24 @@ public class GameManager : MonoBehaviour
         }
 
         playUI.UpdateHealthTimer((int)health);
+    }
+
+    void UpdateFeverTime()
+    {
+        if(isFeverTime)
+        {
+            health = currentGame.GetMaxHealth();
+
+            if(feverTimer > 0f)
+            {
+                feverTimer = Mathf.Clamp(feverTimer, 0f, maxFever);
+                feverTimer -= (feverTimeRate * Time.deltaTime);
+            }
+            else
+            {
+                ResetFeverTime();
+            }
+        }
     }
 
     void UpdateBestScore()
@@ -152,7 +140,7 @@ public class GameManager : MonoBehaviour
         resultUI.ReportScore(score.GetValue(), bestScore.GetValue());
     }
 
-    void UpdateFall()
+    void UpdatePlayerHeight()
     {
         float t = (playerController.GetPlayerHeight() / lastPlayerHeight);
         if(t <= 0.1f)
@@ -215,7 +203,7 @@ public class GameManager : MonoBehaviour
 
             cameraView.SetCameraPreset("Playing");
 
-            playerController.SetMoveLock(false);
+            playerController.SetControlLock(false);
 
             canvasManager.SetPanel("Playing");
         }
@@ -228,8 +216,8 @@ public class GameManager : MonoBehaviour
         cameraView.SetCameraPreset("GameOver");
 
         lastPlayerHeight = playerController.GetPlayerHeight();
-        playerController.SetMoveLock(true);
-        playerController.Fall();
+        playerController.SetControlLock(true);
+        playerController.OnFall();
 
         resultUI.OnResult();
 
@@ -249,9 +237,9 @@ public class GameManager : MonoBehaviour
 
     void OnReward(int score)
     {
-        if(score >= rewardUnit)
+        if(score >= rewardStep)
         {
-            int reward = (score / rewardUnit);
+            int reward = (score / rewardStep);
 
             resultUI.ReportReward(reward);
 
@@ -288,7 +276,7 @@ public class GameManager : MonoBehaviour
         {
             gameState = GameState.PAUSE;
 
-            playerController.SetMoveLock(true);
+            playerController.SetControlLock(true);
         
             canvasManager.SetPanel("Pause");
 
@@ -302,7 +290,7 @@ public class GameManager : MonoBehaviour
         {
             gameState = GameState.PLAYING;
 
-            playerController.SetMoveLock(false);
+            playerController.SetControlLock(false);
 
             canvasManager.SetPanel("Playing");
 
@@ -334,89 +322,6 @@ public class GameManager : MonoBehaviour
         canvasManager.SetPanel("Lobby");
     }
 
-    public void CloseChallenge()
-    {
-        gameState = GameState.LOBBY;
-
-        canvasManager.SetPanel("Lobby");
-    }
-
-    public void OpenChallegne()
-    {
-        if(IsGameState(GameState.LOBBY))
-        {
-            gameState = GameState.EXTRA_MENU;
-
-            dailyChallengeManager.UpdateUI();
-
-            canvasManager.SetPanel("Challenge");
-        }
-    }
-
-    public void CloseExtraMenu()
-    {
-        if(!canvasManager.ClosePanel())
-        {
-            canvasManager.SetPanel("Lobby");
-        }
-
-        gameState = GameState.LOBBY;
-
-        SoundManager.Instance.PlayMusic("Infinity Music");
-    }
-
-    public void OpenSetting()
-    {
-        if(IsGameState(GameState.LOBBY))
-        {
-            gameState = GameState.EXTRA_MENU;
-
-            canvasManager.SetPanel("Setting");
-        }
-    }
-
-    public void OpenShop()
-    {
-        if(IsGameState(GameState.LOBBY))
-        {
-            gameState = GameState.EXTRA_MENU;
-
-            canvasManager.SetPanel("Shop");
-        }
-    }
-
-    public void OpenLeaderboard()
-    {
-        #if UNITY_EDITOR || UNITY_STANDALONE
-        if(IsGameState(GameState.LOBBY))
-        {
-            gameState = GameState.EXTRA_MENU;
-
-            playerController.SetMoveLock(true);
-
-            leaderboardManager.OnLeaderboard();
-
-            canvasManager.SetPanel("Leaderboard");
-        }
-        #elif UNITY_ANDROID
-        GPGS.ReportLeaderboard(gameType, bestScore.GetValue());
-        GPGS.ShowLeaderboardUI();
-        #endif
-    }
-
-    public void OpenCharacterSelect()
-    {
-        if(IsGameState(GameState.LOBBY))
-        {
-            // TODO : 추후에 플랫폼별로 호출 처리
-            gameState = GameState.EXTRA_MENU;
-
-            canvasManager.SetPanel("CharacterSelect");
-
-            SoundManager.Instance.PlayMusic("Infinity Character");
-        }
-    }
-
     void GameReset()
     {
         score.SetValue(0);
@@ -446,10 +351,10 @@ public class GameManager : MonoBehaviour
     {
         isFeverTime = false;
 
-        fever = 0;
+        feverTimer = 0;
         feverCharge.SetValue(0);
 
-        playerController.Fever(false);
+        playerController.OnFever(false);
 
         playUI.OnResetFeverTime();
 
@@ -465,7 +370,7 @@ public class GameManager : MonoBehaviour
     {
         isFeverTime = true;
 
-        playerController.Fever(true);
+        playerController.OnFever(true);
 
         playUI.OnFeverTime();
 
@@ -484,14 +389,14 @@ public class GameManager : MonoBehaviour
             // NOTE : 피버 타임 중에는 충전되지 않음
             if(!isFeverTime)
             {
-                feverCharge.SetValue(feverCharge.GetValue() + 1);
+                feverCharge.SetValue(feverCharge.GetValue() + reChargeFever);
 
                 if(feverCharge.GetValue() >= 2)
                 {
-                    fever = Mathf.Clamp(fever + 1, 0, maxFever);
+                    feverTimer = Mathf.Clamp(feverTimer + regainFeverTime, 0, maxFever);
                     feverCharge.SetValue(0);
 
-                    if(fever >= maxFever)
+                    if(feverTimer >= maxFever)
                     {
                         OnFeverTime();
                     }
@@ -500,30 +405,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void RewardScore()
+    void RewardScore(int reward = 1)
     {
-        #if UNITY_EDITOR
-        if(score.GetValue() > 1000)
-        {
-            score.SetValue(score.GetValue() + debug_rewardScore);
-        }
-        else
-        {
-            score.SetValue(score.GetValue() + 1);
-        }
-        #else
-        score.SetValue(score.GetValue() + 1);
-        #endif
+        score.SetValue(score.GetValue() + reward);
 
         playUI.UpdateScore(score.GetValue());
     }
 
-    void RewardHealth()
+    void RegainHealth()
     {
         // NOTE : 무한 모드에서만 체력 회복
         if(gameType.IsEquals(GameType.INFINITY))
         {
-            health = Mathf.Clamp(health + 4, 0, currentGame.GetMaxHealth());
+            health = Mathf.Clamp(health + regainHealth, 0, currentGame.GetMaxHealth());
 
             // NOTE : 최대 점수 목표값 300,000점 (healthTime Min 12.5f / Max 30)
             ((InfinityLogic)currentGame).AddTimePerDamage();
@@ -537,7 +431,7 @@ public class GameManager : MonoBehaviour
         {
             if(isFeverTime)
             {
-                spawnManager.SpawnEffect(column, 3f);
+                spawnManager.SpawnEffect(column, 3);
             }
             else
             {
@@ -550,33 +444,34 @@ public class GameManager : MonoBehaviour
 
     public void OnPlayerMove()
     {
-        if(!IsGameState(GameState.PLAYING))
-            return;
-
-        playUI.HideStartGuide();
-
-        CheckBranch();
-
-        spawnManager.NextColumn();
-
         if(IsGameState(GameState.PLAYING))
         {
-            RewardHealth();
-            RewardScore();
-            ChargeFever();
+            playUI.HideStartGuide();
 
-            if(!isFeverTime && gameType.IsEquals(GameType.INFINITY))
+            CheckBranch();
+
+            spawnManager.NextColumn();
+
+            // NOTE : 다음 기둥 가지에 걸리면 게임 오버라 진행되지 않음
+            if(IsGameState(GameState.PLAYING))
             {
-                disturbManager.UpdateTrigger(score.GetValue());
-            }
-            
-            spawnManager.UpdateColumnMode(score.GetValue() >= HEIGHT_LIMIT);
+                RegainHealth();
+                RewardScore();
+                ChargeFever();
 
-            skyBoxManager.UpdateHeight(score.GetValue());
+                if(!isFeverTime && gameType.IsEquals(GameType.INFINITY))
+                {
+                    disturbManager.UpdateTrigger(score.GetValue());
+                }
+                
+                spawnManager.UpdateColumnMode(score.GetValue() >= PLAYABLE_HEIGHT_LIMIT);
 
-            if(score.GetValue() > HEIGHT_LIMIT)
-            {
-                cameraView.SetFakeView();
+                skyBoxManager.UpdateHeight(score.GetValue());
+
+                if(score.GetValue() > PLAYABLE_HEIGHT_LIMIT)
+                {
+                    cameraView.SetFakeView();
+                }
             }
         }
     }
@@ -584,6 +479,89 @@ public class GameManager : MonoBehaviour
     bool IsGameState(GameState targetState)
     {
         return gameState.IsEquals(targetState);
+    }
+
+    public void CloseChallenge()
+    {
+        gameState = GameState.LOBBY;
+
+        canvasManager.SetPanel("Lobby");
+    }
+
+    public void CloseExtraMenu()
+    {
+        if(!canvasManager.ClosePanel())
+        {
+            canvasManager.SetPanel("Lobby");
+        }
+
+        gameState = GameState.LOBBY;
+
+        SoundManager.Instance.PlayMusic("Infinity Music");
+    }
+
+    public void OpenChallegne()
+    {
+        if(IsGameState(GameState.LOBBY))
+        {
+            gameState = GameState.EXTRA_MENU;
+
+            dailyChallengeManager.UpdateUI();
+
+            canvasManager.SetPanel("Challenge");
+        }
+    }
+
+    public void OpenSetting()
+    {
+        if(IsGameState(GameState.LOBBY))
+        {
+            gameState = GameState.EXTRA_MENU;
+
+            canvasManager.SetPanel("Setting");
+        }
+    }
+
+    public void OpenShop()
+    {
+        if(IsGameState(GameState.LOBBY))
+        {
+            gameState = GameState.EXTRA_MENU;
+
+            canvasManager.SetPanel("Shop");
+        }
+    }
+
+    public void OpenLeaderboard()
+    {
+        #if UNITY_EDITOR || UNITY_STANDALONE
+        if(IsGameState(GameState.LOBBY))
+        {
+            gameState = GameState.EXTRA_MENU;
+
+            playerController.SetControlLock(true);
+
+            leaderboardManager.OnLeaderboard();
+
+            canvasManager.SetPanel("Leaderboard");
+        }
+        #elif UNITY_ANDROID
+        GPGS.ReportLeaderboard(gameType, bestScore.GetValue());
+        GPGS.ShowLeaderboardUI();
+        #endif
+    }
+
+    public void OpenCharacterSelect()
+    {
+        if(IsGameState(GameState.LOBBY))
+        {
+            // TODO : 추후에 플랫폼별로 호출 처리
+            gameState = GameState.EXTRA_MENU;
+
+            canvasManager.SetPanel("CharacterSelect");
+
+            SoundManager.Instance.PlayMusic("Infinity Character");
+        }
     }
 
     public void OnSpace(InputAction.CallbackContext context)
@@ -662,27 +640,4 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
-    #if UNITY_EDITOR
-    public void DebugForceFeverTime()
-    {
-        if(IsGameState(GameState.PLAYING))
-        {
-            fever = maxFever;
-            feverCharge.SetValue(0);
-
-            OnFeverTime();
-        }
-    }
-    
-    public void DebugSetInfinityHealth(bool isOn)
-    {
-        debug_infinityHealth = isOn;
-    }
-
-    public void DebugSetRewardScore(int reward)
-    {
-        debug_rewardScore = reward;
-    }
-    #endif
 }
