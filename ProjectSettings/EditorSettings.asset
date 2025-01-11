@@ -19,8 +19,8 @@ EditorSettings:
   m_EtcTextureBestCompressor: 4
   m_ProjectGenerationIncludedExtensions: txt;xml;fnt;cd;asmdef;asmref;rsp
   m_ProjectGenerationRootNamespace: 
-  m_EnableTextureStreamingInEditMode: 1
-  m_EnableTextureStreamingInPlayMode: 1
+  m_EnableTextureStreamingInEditMode: 0
+  m_EnableTextureStreamingInPlayMode: 0
   m_EnableEditorAsyncCPUTextureLoading: 0
   m_AsyncShaderCompilation: 1
   m_PrefabModeAllowAutoSave: 1

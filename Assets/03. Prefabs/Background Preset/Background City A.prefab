@@ -11,13 +11,12 @@ GameObject:
   - component: {fileID: 6831869979951224573}
   - component: {fileID: 6657232597418394073}
   - component: {fileID: 4559397715862099771}
-  - component: {fileID: 2231688125470363145}
   m_Layer: 0
   m_Name: Road Line (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6831869979951224573
 Transform:
@@ -86,28 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2231688125470363145
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 324903821122833041}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &644816158635903150
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +100,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6471705409125176447
 Transform:
@@ -269,13 +246,12 @@ GameObject:
   - component: {fileID: 7594244545524283242}
   - component: {fileID: 3483464367566938762}
   - component: {fileID: 1174227788994184183}
-  - component: {fileID: 7367495679973502646}
   m_Layer: 0
   m_Name: Road Line (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7594244545524283242
 Transform:
@@ -344,28 +320,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7367495679973502646
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748845293744340327}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &825720086608444878
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,13 +331,12 @@ GameObject:
   - component: {fileID: 7270827459028278044}
   - component: {fileID: 665300270368120566}
   - component: {fileID: 8188009422498579363}
-  - component: {fileID: 4612404053048090388}
   m_Layer: 0
   m_Name: Road Line (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7270827459028278044
 Transform:
@@ -452,28 +405,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4612404053048090388
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 825720086608444878}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &842197677763055812
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,13 +416,12 @@ GameObject:
   - component: {fileID: 6505243928693907007}
   - component: {fileID: 6917580284255415}
   - component: {fileID: 5407826418479364801}
-  - component: {fileID: 878048956801611785}
   m_Layer: 0
   m_Name: Road Line (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6505243928693907007
 Transform:
@@ -560,28 +490,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &878048956801611785
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 842197677763055812}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &857793776761062785
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,13 +501,12 @@ GameObject:
   - component: {fileID: 5675801782115524078}
   - component: {fileID: 2208486258862202517}
   - component: {fileID: 5441593711466193173}
-  - component: {fileID: 8758673415441715714}
   m_Layer: 0
   m_Name: Road Crosswalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5675801782115524078
 Transform:
@@ -668,28 +575,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8758673415441715714
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857793776761062785}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1908124126262990068
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,7 +590,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8646557299436583781
 Transform:
@@ -839,13 +724,12 @@ GameObject:
   - component: {fileID: 7545787642888104930}
   - component: {fileID: 2211354955918442008}
   - component: {fileID: 1400324326746547642}
-  - component: {fileID: 5638652706493104812}
   m_Layer: 0
   m_Name: Road Crosswalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7545787642888104930
 Transform:
@@ -914,28 +798,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5638652706493104812
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3206244716990553765}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &4000942602716271221
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,13 +809,12 @@ GameObject:
   - component: {fileID: 8666374697039509334}
   - component: {fileID: 6762707741275862504}
   - component: {fileID: 8048649632544441621}
-  - component: {fileID: 8043063293461855261}
   m_Layer: 0
   m_Name: Road Crosswalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8666374697039509334
 Transform:
@@ -1022,28 +883,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8043063293461855261
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4000942602716271221}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &4218430463616808888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,13 +894,12 @@ GameObject:
   - component: {fileID: 6558510962548638335}
   - component: {fileID: 4562625473346449108}
   - component: {fileID: 5375866187547717254}
-  - component: {fileID: 1634329021794664857}
   m_Layer: 0
   m_Name: Road Crosswalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6558510962548638335
 Transform:
@@ -1130,28 +968,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1634329021794664857
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4218430463616808888}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &4518872560701838212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,13 +979,12 @@ GameObject:
   - component: {fileID: 4585419795847889145}
   - component: {fileID: 8151830458843847567}
   - component: {fileID: 1902955704699468445}
-  - component: {fileID: 7513697162731256294}
   m_Layer: 0
   m_Name: Road Line (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4585419795847889145
 Transform:
@@ -1238,28 +1053,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7513697162731256294
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4518872560701838212}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &4615648606546685512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,7 +1068,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2737037459019718391
 Transform:
@@ -1409,13 +1202,12 @@ GameObject:
   - component: {fileID: 6484299629482386744}
   - component: {fileID: 3653296387423235586}
   - component: {fileID: 7509441511020612127}
-  - component: {fileID: 6269061950912638525}
   m_Layer: 0
   m_Name: Road Line (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6484299629482386744
 Transform:
@@ -1484,28 +1276,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6269061950912638525
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4720444939110746070}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &5179680103822098774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1521,7 +1291,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &9071034633474023373
 Transform:
@@ -1659,7 +1429,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3294189472600545530
 Transform:
@@ -1797,7 +1567,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1016351485206965678
 Transform:
@@ -1931,13 +1701,12 @@ GameObject:
   - component: {fileID: 1358157920047994172}
   - component: {fileID: 3433323762908030309}
   - component: {fileID: 5486458290792029682}
-  - component: {fileID: 4210624542840348627}
   m_Layer: 0
   m_Name: Road Crosswalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1358157920047994172
 Transform:
@@ -2006,28 +1775,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4210624542840348627
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7777190075229932078}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &7854553162194758767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,13 +1786,12 @@ GameObject:
   - component: {fileID: 3023079722360887418}
   - component: {fileID: 8734735310381789536}
   - component: {fileID: 9094199883483235112}
-  - component: {fileID: 6552754888372318421}
   m_Layer: 0
   m_Name: Road Line (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3023079722360887418
 Transform:
@@ -2114,28 +1860,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6552754888372318421
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7854553162194758767}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &8019414991885415309
 GameObject:
   m_ObjectHideFlags: 0
@@ -2147,13 +1871,12 @@ GameObject:
   - component: {fileID: 1198697849812635024}
   - component: {fileID: 5841272889876006602}
   - component: {fileID: 3494900107378609516}
-  - component: {fileID: 5940413127466156374}
   m_Layer: 0
   m_Name: Road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1198697849812635024
 Transform:
@@ -2222,28 +1945,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5940413127466156374
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8019414991885415309}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &337861991861944275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2261,6 +1962,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203875199955626445, guid: 8fcf38bf13103a44c8c12a214c9b6545,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3453281255607135363, guid: 8fcf38bf13103a44c8c12a214c9b6545,
         type: 3}
@@ -2397,6 +2103,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Office C
       objectReference: {fileID: 0}
+    - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8225511070333824806, guid: 6677fbdfc54a8c74f92c20d0a5329040,
         type: 3}
       propertyPath: m_CastShadows
@@ -2481,6 +2192,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4280204922259308319, guid: 505e05c30d3868544907154192a614d2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5944815557585892226, guid: 505e05c30d3868544907154192a614d2,
         type: 3}
       propertyPath: m_CastShadows
@@ -2525,6 +2241,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5152199903520086243, guid: 008efc360451fe542863a4e109877b6b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6269483380850002963, guid: 008efc360451fe542863a4e109877b6b,
         type: 3}
@@ -2661,6 +2382,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sign Construct Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 3556691791481634283, guid: c1a467cfe1c36a541a5422651c82eb27,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2739,6 +2465,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall C2 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2825,6 +2556,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall C2 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2910,6 +2646,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower B
       objectReference: {fileID: 0}
+    - target: {fileID: 7033768548760670648, guid: 33962a32a47f7a14583fcc195200453f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2938,6 +2679,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4417017447518084330, guid: 08b5ed704a5b2d641bb83867c84777e5,
         type: 3}
@@ -3029,6 +2775,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall C1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5208033988344535616, guid: 9fd0a1aeab3bbaf44896f2a31b907170,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6660201517089916286, guid: 9fd0a1aeab3bbaf44896f2a31b907170,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3112,6 +2863,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5152199903520086243, guid: 008efc360451fe542863a4e109877b6b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6269483380850002963, guid: 008efc360451fe542863a4e109877b6b,
         type: 3}
@@ -3248,6 +3004,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall C2 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3333,6 +3094,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall C2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3361,6 +3127,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sidewalk (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859053829652043100, guid: a99a6a93cee23bc43bc6881cde8f0393,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8777182165326727584, guid: a99a6a93cee23bc43bc6881cde8f0393,
         type: 3}
@@ -3440,6 +3211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3036313961268568216, guid: f2867f23314bac94482b27168e8ca157,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7029772910281724529, guid: f2867f23314bac94482b27168e8ca157,
         type: 3}
@@ -3530,6 +3306,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 554593398693511934, guid: 465cafd6095945f4193718da74f0360f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3378572427960400055, guid: 465cafd6095945f4193718da74f0360f,
         type: 3}
@@ -3671,6 +3452,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apt A
       objectReference: {fileID: 0}
+    - target: {fileID: 9187989279769523940, guid: 365a7d80dc3db294a90c1f28670414cc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3749,6 +3535,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall C2 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3835,6 +3626,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall C2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3869,6 +3665,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Concrete Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 3658163424827772735, guid: 7ed37c05392b6b0458f6b2905d982073,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6860989508447150500, guid: 7ed37c05392b6b0458f6b2905d982073,
         type: 3}
@@ -3999,6 +3800,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall C2 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4033,6 +3839,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sidewalk (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859053829652043100, guid: a99a6a93cee23bc43bc6881cde8f0393,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8777182165326727584, guid: a99a6a93cee23bc43bc6881cde8f0393,
         type: 3}
@@ -4112,6 +3923,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2383830035825663463, guid: 1293f39c83972784aae6ee9e54acb6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2701521921650804514, guid: 1293f39c83972784aae6ee9e54acb6e3,
         type: 3}
@@ -4253,6 +4069,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: House C (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4298334560114920516, guid: dc9bff762875ead43b30804ff50efa04,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4332,6 +4153,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall C2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4361,6 +4187,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tower A
+      objectReference: {fileID: 0}
+    - target: {fileID: 653491131355966005, guid: 1f908e4669be532418d1805bfa3868a3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5918664195716119172, guid: 1f908e4669be532418d1805bfa3868a3,
         type: 3}
@@ -4446,6 +4277,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalk (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6859053829652043100, guid: a99a6a93cee23bc43bc6881cde8f0393,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8777182165326727584, guid: a99a6a93cee23bc43bc6881cde8f0393,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4524,6 +4360,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sidewalk (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859053829652043100, guid: a99a6a93cee23bc43bc6881cde8f0393,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8777182165326727584, guid: a99a6a93cee23bc43bc6881cde8f0393,
         type: 3}
@@ -4654,6 +4495,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall C2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4682,6 +4528,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sign Construct
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195931891971169927, guid: 573c2b4ccc2fff44198ce964097400c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8493514572859714517, guid: 573c2b4ccc2fff44198ce964097400c7,
         type: 3}
@@ -4756,6 +4607,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Road Cone Orange (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1525070798439219661, guid: afffab040f947ef49a55ff21847f43d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4686389228194244791, guid: afffab040f947ef49a55ff21847f43d0,
         type: 3}
@@ -4886,6 +4742,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall C2 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4919,6 +4780,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3658163424827772735, guid: 7ed37c05392b6b0458f6b2905d982073,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6860989508447150500, guid: 7ed37c05392b6b0458f6b2905d982073,
         type: 3}
@@ -5055,6 +4921,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Office A
       objectReference: {fileID: 0}
+    - target: {fileID: 5141613853379603134, guid: 2a0ee928f388cbb41a3ac31fdf13a033,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5133,6 +5004,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall C2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5213,6 +5089,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall C2 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5236,6 +5117,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Traffic Light Pole YL
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140128497126885324, guid: 8d967a1f9c2973e49b65d2fa12bd7052,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4126717687713882602, guid: 8d967a1f9c2973e49b65d2fa12bd7052,
         type: 3}
@@ -5292,6 +5178,11 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8489245599342932115, guid: 8d967a1f9c2973e49b65d2fa12bd7052,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5320,6 +5211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall C1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208033988344535616, guid: 9fd0a1aeab3bbaf44896f2a31b907170,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6660201517089916286, guid: 9fd0a1aeab3bbaf44896f2a31b907170,
         type: 3}
@@ -5406,6 +5302,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalk
       objectReference: {fileID: 0}
+    - target: {fileID: 6859053829652043100, guid: a99a6a93cee23bc43bc6881cde8f0393,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8777182165326727584, guid: a99a6a93cee23bc43bc6881cde8f0393,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5484,6 +5385,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall C1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208033988344535616, guid: 9fd0a1aeab3bbaf44896f2a31b907170,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6660201517089916286, guid: 9fd0a1aeab3bbaf44896f2a31b907170,
         type: 3}
@@ -5614,6 +5520,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1166632812082888225, guid: 12912aaaea8f80843920d0d429ef88fc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6598672857002414469, guid: 12912aaaea8f80843920d0d429ef88fc,
         type: 3}
       propertyPath: m_CastShadows
@@ -5704,6 +5615,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall C2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5778,6 +5694,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Office B
       objectReference: {fileID: 0}
+    - target: {fileID: 4280204922259308319, guid: 505e05c30d3868544907154192a614d2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5944815557585892226, guid: 505e05c30d3868544907154192a614d2,
         type: 3}
       propertyPath: m_CastShadows
@@ -5811,6 +5732,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sidewalk (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859053829652043100, guid: a99a6a93cee23bc43bc6881cde8f0393,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8777182165326727584, guid: a99a6a93cee23bc43bc6881cde8f0393,
         type: 3}
@@ -5936,6 +5862,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Utility Pole (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6975215172545020215, guid: ff56d6712ccde4841a7dde27fd3e9d9b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7200619230796117543, guid: ff56d6712ccde4841a7dde27fd3e9d9b,
         type: 3}
       propertyPath: m_CastShadows
@@ -6014,6 +5945,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Utility Pole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975215172545020215, guid: ff56d6712ccde4841a7dde27fd3e9d9b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7200619230796117543, guid: ff56d6712ccde4841a7dde27fd3e9d9b,
         type: 3}
@@ -6098,6 +6034,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall C2 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6184,6 +6125,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall C2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6207,6 +6153,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tower C
+      objectReference: {fileID: 0}
+    - target: {fileID: 2383830035825663463, guid: 1293f39c83972784aae6ee9e54acb6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2701521921650804514, guid: 1293f39c83972784aae6ee9e54acb6e3,
         type: 3}
@@ -6342,6 +6293,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall C2
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6365,6 +6321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Road Cone Orange
+      objectReference: {fileID: 0}
+    - target: {fileID: 1525070798439219661, guid: afffab040f947ef49a55ff21847f43d0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4686389228194244791, guid: afffab040f947ef49a55ff21847f43d0,
         type: 3}
@@ -6490,6 +6451,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road Cone Red
       objectReference: {fileID: 0}
+    - target: {fileID: 7042574514114829560, guid: c5d5d0121e9043846a63606b415316ac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6569,6 +6535,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall C2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6647,6 +6618,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: House C (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298334560114920516, guid: dc9bff762875ead43b30804ff50efa04,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6732,6 +6708,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9187989279769523940, guid: 365a7d80dc3db294a90c1f28670414cc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6816,6 +6797,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8225511070333824806, guid: 6677fbdfc54a8c74f92c20d0a5329040,
         type: 3}
@@ -6907,6 +6893,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall C2 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6991,6 +6982,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall C2 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7082,6 +7078,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4298334560114920516, guid: dc9bff762875ead43b30804ff50efa04,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7167,6 +7168,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8225511070333824806, guid: 6677fbdfc54a8c74f92c20d0a5329040,
         type: 3}
       propertyPath: m_CastShadows
@@ -7211,6 +7217,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3658163424827772735, guid: 7ed37c05392b6b0458f6b2905d982073,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6860989508447150500, guid: 7ed37c05392b6b0458f6b2905d982073,
         type: 3}

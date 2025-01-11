@@ -11,13 +11,12 @@ GameObject:
   - component: {fileID: 5026064690859787457}
   - component: {fileID: 3186729917265183282}
   - component: {fileID: 967853572228034066}
-  - component: {fileID: 5740009582200042904}
   m_Layer: 0
   m_Name: Road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5026064690859787457
 Transform:
@@ -86,28 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5740009582200042904
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010169894914099501}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1359932428154260952
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +100,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6409345963037537675
 Transform:
@@ -261,7 +238,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1805147566063174892
 Transform:
@@ -395,13 +372,12 @@ GameObject:
   - component: {fileID: 6926774123943396907}
   - component: {fileID: 8070215218181170779}
   - component: {fileID: 5343276464440661011}
-  - component: {fileID: 8761358278613805240}
   m_Layer: 0
   m_Name: Road Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6926774123943396907
 Transform:
@@ -470,28 +446,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8761358278613805240
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1889684878123289858}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1938939065717015134
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,13 +457,12 @@ GameObject:
   - component: {fileID: 1637355825192150121}
   - component: {fileID: 8230787669415735277}
   - component: {fileID: 514782717031174470}
-  - component: {fileID: 7363381221314558170}
   m_Layer: 0
   m_Name: Road Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1637355825192150121
 Transform:
@@ -578,28 +531,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7363381221314558170
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1938939065717015134}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &3085442888810454288
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,13 +542,12 @@ GameObject:
   - component: {fileID: 4962589222699273931}
   - component: {fileID: 5680538876437341461}
   - component: {fileID: 6337650086392159567}
-  - component: {fileID: 4229433985411222787}
   m_Layer: 0
   m_Name: Road Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4962589222699273931
 Transform:
@@ -686,28 +616,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4229433985411222787
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3085442888810454288}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &3782905391562172525
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,7 +631,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8218038576422509156
 Transform:
@@ -857,13 +765,12 @@ GameObject:
   - component: {fileID: 2128173006727598323}
   - component: {fileID: 2809299001916240727}
   - component: {fileID: 1049386807934150612}
-  - component: {fileID: 3300646308126115761}
   m_Layer: 0
   m_Name: Road Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2128173006727598323
 Transform:
@@ -932,28 +839,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3300646308126115761
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4138027942520582415}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &4699240551873181446
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,13 +850,12 @@ GameObject:
   - component: {fileID: 1575347383543217244}
   - component: {fileID: 3481967635596281046}
   - component: {fileID: 3756101208551296290}
-  - component: {fileID: 2815911105259776315}
   m_Layer: 0
   m_Name: Road Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1575347383543217244
 Transform:
@@ -1040,28 +924,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2815911105259776315
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4699240551873181446}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &5513025206936295918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,7 +939,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2198283225493816062
 Transform:
@@ -1172,13 +1034,12 @@ GameObject:
   - component: {fileID: 4120225772294797105}
   - component: {fileID: 7821282333293048958}
   - component: {fileID: 999646735304177693}
-  - component: {fileID: 8370471392162488862}
   m_Layer: 0
   m_Name: Road Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4120225772294797105
 Transform:
@@ -1247,28 +1108,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8370471392162488862
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6090308396678343234}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &7189245223289038884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,13 +1119,12 @@ GameObject:
   - component: {fileID: 3643554722880717192}
   - component: {fileID: 1742674305190142501}
   - component: {fileID: 2172005689881091367}
-  - component: {fileID: 3097344175431285613}
   m_Layer: 0
   m_Name: Road Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3643554722880717192
 Transform:
@@ -1355,28 +1193,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3097344175431285613
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7189245223289038884}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &7696024417433015332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,13 +1204,12 @@ GameObject:
   - component: {fileID: 8088725974229290652}
   - component: {fileID: 8037729250331613963}
   - component: {fileID: 2960226174446248149}
-  - component: {fileID: 4581757014007988032}
   m_Layer: 0
   m_Name: Road Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8088725974229290652
 Transform:
@@ -1463,28 +1278,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4581757014007988032
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7696024417433015332}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &8206547337792371440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,7 +1293,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1857997161987579933
 Transform:
@@ -1638,7 +1431,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2229003021189975887
 Transform:
@@ -1774,6 +1567,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Simple Tree B (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 554593398693511934, guid: 465cafd6095945f4193718da74f0360f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3378572427960400055, guid: 465cafd6095945f4193718da74f0360f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1858,6 +1656,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tower A
+      objectReference: {fileID: 0}
+    - target: {fileID: 653491131355966005, guid: 1f908e4669be532418d1805bfa3868a3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5918664195716119172, guid: 1f908e4669be532418d1805bfa3868a3,
         type: 3}
@@ -1993,6 +1796,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apt A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9187989279769523940, guid: 365a7d80dc3db294a90c1f28670414cc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2078,6 +1886,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: House C
       objectReference: {fileID: 0}
+    - target: {fileID: 4298334560114920516, guid: dc9bff762875ead43b30804ff50efa04,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2107,6 +1920,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tower C (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2383830035825663463, guid: 1293f39c83972784aae6ee9e54acb6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2701521921650804514, guid: 1293f39c83972784aae6ee9e54acb6e3,
         type: 3}
@@ -2237,6 +2055,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Office B
       objectReference: {fileID: 0}
+    - target: {fileID: 4280204922259308319, guid: 505e05c30d3868544907154192a614d2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5944815557585892226, guid: 505e05c30d3868544907154192a614d2,
         type: 3}
       propertyPath: m_CastShadows
@@ -2315,6 +2138,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Utility Pole (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975215172545020215, guid: ff56d6712ccde4841a7dde27fd3e9d9b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7200619230796117543, guid: ff56d6712ccde4841a7dde27fd3e9d9b,
         type: 3}
@@ -2400,6 +2228,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apt A
       objectReference: {fileID: 0}
+    - target: {fileID: 9187989279769523940, guid: 365a7d80dc3db294a90c1f28670414cc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2428,6 +2261,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sidewalk (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859053829652043100, guid: a99a6a93cee23bc43bc6881cde8f0393,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8777182165326727584, guid: a99a6a93cee23bc43bc6881cde8f0393,
         type: 3}
@@ -2502,6 +2340,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Simple Tree B
+      objectReference: {fileID: 0}
+    - target: {fileID: 554593398693511934, guid: 465cafd6095945f4193718da74f0360f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3378572427960400055, guid: 465cafd6095945f4193718da74f0360f,
         type: 3}
@@ -2637,6 +2480,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Office A
       objectReference: {fileID: 0}
+    - target: {fileID: 5141613853379603134, guid: 2a0ee928f388cbb41a3ac31fdf13a033,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2660,6 +2508,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Simple Tree A
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4417017447518084330, guid: 08b5ed704a5b2d641bb83867c84777e5,
         type: 3}
@@ -2739,6 +2592,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Simple Tree B (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 554593398693511934, guid: 465cafd6095945f4193718da74f0360f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3378572427960400055, guid: 465cafd6095945f4193718da74f0360f,
         type: 3}
@@ -2830,6 +2688,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalk
       objectReference: {fileID: 0}
+    - target: {fileID: 6859053829652043100, guid: a99a6a93cee23bc43bc6881cde8f0393,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8777182165326727584, guid: a99a6a93cee23bc43bc6881cde8f0393,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2908,6 +2771,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sidewalk (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859053829652043100, guid: a99a6a93cee23bc43bc6881cde8f0393,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8777182165326727584, guid: a99a6a93cee23bc43bc6881cde8f0393,
         type: 3}
@@ -2988,6 +2856,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalk (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6859053829652043100, guid: a99a6a93cee23bc43bc6881cde8f0393,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8777182165326727584, guid: a99a6a93cee23bc43bc6881cde8f0393,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3061,6 +2934,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Simple Tree B (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 554593398693511934, guid: 465cafd6095945f4193718da74f0360f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3378572427960400055, guid: 465cafd6095945f4193718da74f0360f,
         type: 3}
@@ -3197,6 +3075,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Office B (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4280204922259308319, guid: 505e05c30d3868544907154192a614d2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5944815557585892226, guid: 505e05c30d3868544907154192a614d2,
         type: 3}
       propertyPath: m_CastShadows
@@ -3231,6 +3114,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: House E
+      objectReference: {fileID: 0}
+    - target: {fileID: 3036313961268568216, guid: f2867f23314bac94482b27168e8ca157,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7029772910281724529, guid: f2867f23314bac94482b27168e8ca157,
         type: 3}
@@ -3361,6 +3249,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Utility Pole
       objectReference: {fileID: 0}
+    - target: {fileID: 6975215172545020215, guid: ff56d6712ccde4841a7dde27fd3e9d9b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7200619230796117543, guid: ff56d6712ccde4841a7dde27fd3e9d9b,
         type: 3}
       propertyPath: m_CastShadows
@@ -3394,6 +3287,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tower D
+      objectReference: {fileID: 0}
+    - target: {fileID: 5152199903520086243, guid: 008efc360451fe542863a4e109877b6b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6269483380850002963, guid: 008efc360451fe542863a4e109877b6b,
         type: 3}
@@ -3525,6 +3423,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: House D
       objectReference: {fileID: 0}
+    - target: {fileID: 1166632812082888225, guid: 12912aaaea8f80843920d0d429ef88fc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6598672857002414469, guid: 12912aaaea8f80843920d0d429ef88fc,
         type: 3}
       propertyPath: m_CastShadows
@@ -3604,6 +3507,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Office C
       objectReference: {fileID: 0}
+    - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8225511070333824806, guid: 6677fbdfc54a8c74f92c20d0a5329040,
         type: 3}
       propertyPath: m_CastShadows
@@ -3643,6 +3551,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sidewalk (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859053829652043100, guid: a99a6a93cee23bc43bc6881cde8f0393,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8777182165326727584, guid: a99a6a93cee23bc43bc6881cde8f0393,
         type: 3}
@@ -3773,6 +3686,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower B
       objectReference: {fileID: 0}
+    - target: {fileID: 7033768548760670648, guid: 33962a32a47f7a14583fcc195200453f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3847,6 +3765,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Office C (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8225511070333824806, guid: 6677fbdfc54a8c74f92c20d0a5329040,
         type: 3}
       propertyPath: m_CastShadows
@@ -3880,6 +3803,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tower D (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5152199903520086243, guid: 008efc360451fe542863a4e109877b6b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6269483380850002963, guid: 008efc360451fe542863a4e109877b6b,
         type: 3}
@@ -3966,6 +3894,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sidewalk (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6859053829652043100, guid: a99a6a93cee23bc43bc6881cde8f0393,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8777182165326727584, guid: a99a6a93cee23bc43bc6881cde8f0393,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4039,6 +3972,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tower C
+      objectReference: {fileID: 0}
+    - target: {fileID: 2383830035825663463, guid: 1293f39c83972784aae6ee9e54acb6e3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2701521921650804514, guid: 1293f39c83972784aae6ee9e54acb6e3,
         type: 3}
@@ -4124,6 +4062,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: House A
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203875199955626445, guid: 8fcf38bf13103a44c8c12a214c9b6545,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3453281255607135363, guid: 8fcf38bf13103a44c8c12a214c9b6545,
         type: 3}

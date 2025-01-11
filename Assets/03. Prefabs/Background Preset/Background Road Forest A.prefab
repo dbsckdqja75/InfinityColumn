@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7634461082167972007
 Transform:
@@ -87,13 +87,12 @@ GameObject:
   - component: {fileID: 2716451528268301820}
   - component: {fileID: 4762406812203818392}
   - component: {fileID: 6808455940452749452}
-  - component: {fileID: 2217260657545525071}
   m_Layer: 0
   m_Name: Road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2716451528268301820
 Transform:
@@ -162,28 +161,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2217260657545525071
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3068639130224129292}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &109579892444230984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -266,6 +243,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ForestTree A (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3710656689100052918, guid: 9b604261635531048a0fbc65facea9b2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -367,6 +349,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ForestTree A (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3710656689100052918, guid: 9b604261635531048a0fbc65facea9b2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -467,6 +454,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone B
       objectReference: {fileID: 0}
+    - target: {fileID: 5841712907967960588, guid: 2ad5c64a059d38643ada5ede49405f05,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -560,6 +552,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ForestTree D (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984420347177375265, guid: 922dbf5f274b50141aa91c08ca8e3de2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -661,6 +658,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone C (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6274781368850599350, guid: 34b5e2dcf83092e4791f159bf0bcc895,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -755,6 +757,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone C
       objectReference: {fileID: 0}
+    - target: {fileID: 6274781368850599350, guid: 34b5e2dcf83092e4791f159bf0bcc895,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -833,6 +840,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ForestTree B
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598037174195611332, guid: 2538568507902c442bb162a73d9c5b59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -927,6 +939,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ForestTree A (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3710656689100052918, guid: 9b604261635531048a0fbc65facea9b2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1028,6 +1045,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ForestTree A (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3710656689100052918, guid: 9b604261635531048a0fbc65facea9b2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1128,6 +1150,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone B (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5841712907967960588, guid: 2ad5c64a059d38643ada5ede49405f05,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1151,6 +1178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Stone A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480257234171810879, guid: 3e45e662c7389d74eae11368acec5a86,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2827002006597672877, guid: 3e45e662c7389d74eae11368acec5a86,
         type: 3}
@@ -1241,6 +1273,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7634461082167972007}
     m_Modifications:
+    - target: {fileID: 145936790282562205, guid: 09d2eeacd064d2b44ac5841c3e735121,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 716871705821498107, guid: 09d2eeacd064d2b44ac5841c3e735121,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 776665192478171486, guid: 09d2eeacd064d2b44ac5841c3e735121,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1291,10 +1333,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 882526199972564185, guid: 09d2eeacd064d2b44ac5841c3e735121,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782846643250876194, guid: 09d2eeacd064d2b44ac5841c3e735121,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556469576690134196, guid: 09d2eeacd064d2b44ac5841c3e735121,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7307903025561523588, guid: 09d2eeacd064d2b44ac5841c3e735121,
         type: 3}
       propertyPath: m_Name
       value: Campfire
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307903025561523588, guid: 09d2eeacd064d2b44ac5841c3e735121,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1369,6 +1431,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Camping Tent Orange
+      objectReference: {fileID: 0}
+    - target: {fileID: 7415455856960275186, guid: f791fb5e70129994dbe2007aae3cddbc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8096127770393310803, guid: f791fb5e70129994dbe2007aae3cddbc,
         type: 3}
@@ -1469,6 +1536,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ForestTree B (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8598037174195611332, guid: 2538568507902c442bb162a73d9c5b59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1553,6 +1625,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ForestTree D
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984420347177375265, guid: 922dbf5f274b50141aa91c08ca8e3de2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1647,6 +1724,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ForestTree A (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3710656689100052918, guid: 9b604261635531048a0fbc65facea9b2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1748,6 +1830,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ForestTree B (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8598037174195611332, guid: 2538568507902c442bb162a73d9c5b59,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1832,6 +1919,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ForestTree A
+      objectReference: {fileID: 0}
+    - target: {fileID: 3710656689100052918, guid: 9b604261635531048a0fbc65facea9b2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1927,6 +2019,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ForestTree D (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3984420347177375265, guid: 922dbf5f274b50141aa91c08ca8e3de2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2006,6 +2103,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ForestTree C
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928107585848133065, guid: 05dcb507daaa7ca419e9e4c4910002c6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5217883342560364173, guid: 05dcb507daaa7ca419e9e4c4910002c6,
         type: 3}
@@ -2090,6 +2192,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BBQ Grill Jungle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999986851834990944, guid: ee3cda2986b974f43bbc0b142cc71c0c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

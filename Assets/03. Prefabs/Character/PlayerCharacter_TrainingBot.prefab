@@ -3465,6 +3465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ddbb781362b85b4bb571495638e4fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeSpeed: 4
 --- !u!1 &3148019524939186043
 GameObject:
   m_ObjectHideFlags: 0
@@ -4304,7 +4305,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7571523762458078038}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -5187,7 +5188,7 @@ Material:
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0.2
+    - _Smoothness: 0
     - _SmoothnessTextureChannel: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
