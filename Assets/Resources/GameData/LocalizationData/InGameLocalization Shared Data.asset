@@ -259,6 +259,10 @@ MonoBehaviour:
     m_Key: CharacterName_Monkey
     m_Metadata:
       m_Items: []
+  - m_Id: 43913560198262784
+    m_Key: UpdateAvailable
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

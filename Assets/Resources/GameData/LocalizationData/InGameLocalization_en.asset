@@ -299,6 +299,10 @@ MonoBehaviour:
     m_Localized: Monkey
     m_Metadata:
       m_Items: []
+  - m_Id: 43913560198262784
+    m_Localized: NEW UPDATE AVAILABLE
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

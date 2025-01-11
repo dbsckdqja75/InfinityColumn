@@ -4,6 +4,9 @@ using UnityEngine.Networking;
 
 public class UpdateValidator : MonoBehaviour
 {
+    [SerializeField] string androidURL, iosURL, desktopURL;
+
+    [Space(10)]
     [SerializeField] GameObject updateButtonObj;
 
     const string serverAddress = "http://bu1ld.asuscomm.com:8772/";
@@ -13,8 +16,34 @@ public class UpdateValidator : MonoBehaviour
         UpdateLatestVersionInfo(serverAddress + "RequestVersion").Start(this);
     }
 
-    public void OpenURL(string url)
+    void ValidateVersion(string version)
     {
+        string[] latestVersionInfo = version.Split('.');
+        string[] currentVersionInfo = Application.version.Split('.');
+
+        int latestPatch = int.Parse(latestVersionInfo[latestVersionInfo.Length-1]);
+        int currentPatch = int.Parse(currentVersionInfo[currentVersionInfo.Length-1]);
+
+        if(currentPatch != latestPatch && currentPatch < latestPatch)
+        {
+            updateButtonObj.SetActive(true);
+        }
+
+        Debug.LogFormat("[UpdateValidator] 현재 버전 : {0} | 최신 버전 : {1}", Application.version, version);
+    }
+
+    public void OpenUpdatePage()
+    {
+        string url = "https://teamcampfire.tistory.com/";
+
+        #if UNITY_EDITOR || UNITY_STANDALONE
+        url = desktopURL;
+        #elif UNITY_ANDROID
+        url = androidURL;
+        #elif UNITY_IOS
+        url = iosURL;
+        #endif
+
         Application.OpenURL(url);
     }
 
@@ -30,12 +59,7 @@ public class UpdateValidator : MonoBehaviour
 
             if(request.result.IsEquals(UnityWebRequest.Result.Success))
             {
-                if(request.downloadHandler.text != Application.version)
-                {
-                    updateButtonObj.SetActive(true);
-                }
-
-                Debug.LogFormat("[UpdateValidator] 현재 버전 : {0} | 최신 버전 : {1}", Application.version, request.downloadHandler.text);
+                ValidateVersion(request.downloadHandler.text);
             }
             else
             {

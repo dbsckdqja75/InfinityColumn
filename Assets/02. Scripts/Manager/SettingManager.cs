@@ -9,6 +9,10 @@ public class SettingManager : MonoBehaviour
     [SerializeField] GameObject extraGlobalVolume;
 
     [Space(10)]
+    [SerializeField] GameObject terrain;
+    [SerializeField] GameObject groundPlane, groundQuad;
+
+    [Space(10)]
     [SerializeField] LocalizeText graphicsQualityText;
     [SerializeField] TMP_Text frameLimitText;
     [SerializeField] TMP_Text cameraProjectionText;
@@ -73,7 +77,7 @@ public class SettingManager : MonoBehaviour
         UpdateFrameLimit(frameLimit);
 
         int cameraProjection = PlayerPrefsManager.LoadData("CameraProjectionSetting", 0);
-        UpdateCameraProjection(cameraProjection);
+        UpdateCameraProjection(cameraProjection == 0);
 
         int toggleMusic = PlayerPrefsManager.LoadData("ToggleMusicSetting", 1);
         UpdateToggleMusic(toggleMusic == 1);
@@ -137,14 +141,18 @@ public class SettingManager : MonoBehaviour
         int cameraProjection = PlayerPrefsManager.LoadData("CameraProjectionSetting", 0);
         cameraProjection = (cameraProjection == 0) ? 1 : 0;
         PlayerPrefsManager.SaveData("CameraProjectionSetting", cameraProjection);
-        UpdateCameraProjection(cameraProjection);
+        UpdateCameraProjection(cameraProjection == 0);
     }
 
-    public void UpdateCameraProjection(int cameraProjection)
+    public void UpdateCameraProjection(bool isPerspective)
     {
-        cameraView.SetCameraProjection(cameraProjection == 0);
+        cameraView.SetCameraProjection(isPerspective);
 
-        cameraProjectionText.text = (cameraProjection == 0) ? "3D" : "2D";
+        terrain.SetActive(isPerspective);
+        groundPlane.SetActive(isPerspective);
+        groundQuad.SetActive(!isPerspective);
+
+        cameraProjectionText.text = isPerspective ? "3D" : "2D";
     }
 
     public void ToggleMusic()
