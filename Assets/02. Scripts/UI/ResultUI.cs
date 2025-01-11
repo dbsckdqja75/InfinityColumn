@@ -6,7 +6,7 @@ public class ResultUI : MonoBehaviour
     [SerializeField] TMP_Text resultScoreText;
     [SerializeField] TMP_Text resultBestScoreText;
     [SerializeField] TMP_Text rewardVpText;
-    [SerializeField] GameObject rewardBoxObj;
+    [SerializeField] GameObject rewardBoxObj, rewardObj;
 
     [SerializeField] ResultAd resultAd;
 
@@ -19,7 +19,7 @@ public class ResultUI : MonoBehaviour
     public void ReportReward(int reward)
     {
         rewardVpText.text = string.Format("+VP {0}", reward);
-        rewardBoxObj.SetActive(true);
+        rewardObj.SetActive(true);
     }
 
     public void OnResult()
@@ -30,6 +30,7 @@ public class ResultUI : MonoBehaviour
     public void ResetUI()
     {
         rewardBoxObj.SetActive(false);
+        rewardObj.SetActive(false);
     }
 
     public bool IsShowed()

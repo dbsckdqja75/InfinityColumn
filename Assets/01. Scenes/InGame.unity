@@ -1362,6 +1362,7 @@ MonoBehaviour:
   rewardText: {fileID: 29813708}
   rewardObj: {fileID: 682705847}
   clearObj: {fileID: 2118089353}
+  challengeBoxObj: {fileID: 2038820009}
   challengeButton: {fileID: 2112167285}
 --- !u!4 &36890017
 Transform:
@@ -3903,7 +3904,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 274.8, y: 64}
+  m_SizeDelta: {x: 280, y: 64}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &142408552
 MonoBehaviour:
@@ -12583,7 +12584,8 @@ MonoBehaviour:
   resultScoreText: {fileID: 491832918}
   resultBestScoreText: {fileID: 2082412583}
   rewardVpText: {fileID: 1682031213}
-  rewardBoxObj: {fileID: 949068983}
+  rewardBoxObj: {fileID: 195838766}
+  rewardObj: {fileID: 949068983}
   resultAd: {fileID: 40018967}
 --- !u!1 &583495936
 GameObject:

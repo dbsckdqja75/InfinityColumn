@@ -1,9 +1,9 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 using TMPro;
-using UnityEngine.UI;
 
 public class DailyChallengeManager : MonoBehaviour
 {
@@ -11,6 +11,7 @@ public class DailyChallengeManager : MonoBehaviour
     [SerializeField] TMP_Text rewardText;
     [SerializeField] GameObject rewardObj;
     [SerializeField] GameObject clearObj;
+    [SerializeField] GameObject challengeBoxObj;
     [SerializeField] Button challengeButton;
 
     bool isClear;
@@ -33,6 +34,8 @@ public class DailyChallengeManager : MonoBehaviour
 
     void Init()
     {
+        challengeBoxObj.SetActive(false);
+
         challengeButton.interactable = false;
     }
 
@@ -186,6 +189,8 @@ public class DailyChallengeManager : MonoBehaviour
             int bestScore = PlayerPrefsManager.LoadData("BestScore", 0);
             if(bestScore >= 100)
             {
+                challengeBoxObj.SetActive(true);
+
                 UpdateDate();
             }
         }
