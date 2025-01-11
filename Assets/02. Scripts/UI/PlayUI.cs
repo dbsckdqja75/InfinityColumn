@@ -71,6 +71,7 @@ public class PlayUI : MonoBehaviour
         healthBarColor.SetColorPreset(2); // NOTE : FeverTime Color
         feverBarColor.SetColorPreset(1); // NOTE : FeverTime Color
 
+        scoreText.gameObject.SetActive(false);
         infinityTextObj.SetActive(true);
 
         feverEffectObj.SetActive(true);
@@ -83,6 +84,7 @@ public class PlayUI : MonoBehaviour
         feverBarColor.ResetColor();
 
         infinityTextObj.SetActive(false);
+        scoreText.gameObject.SetActive(true);
 
         feverEffectObj.SetActive(false);
     }
@@ -94,6 +96,7 @@ public class PlayUI : MonoBehaviour
         
         scoreText.text = "0";
 
+        infinityTextObj.SetActive(false);
         warningEffectObj.SetActive(false);
 
         startGuideObj.SetActive(true);
