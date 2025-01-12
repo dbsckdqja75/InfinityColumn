@@ -9,7 +9,7 @@ public class GameLoader : MonoBehaviour
 
     [SerializeField] Image loadingProgressImage;
 
-    void Start()
+    void Start() 
     {
         LoadScene().Start(this);
     }
@@ -21,15 +21,18 @@ public class GameLoader : MonoBehaviour
 
         yield return new WaitForSeconds(3f);
 
-        while(!asyncOperation.isDone)
+        float progress = 0;
+        while(!asyncOperation.isDone || asyncOperation.allowSceneActivation == false)
         {
+            loadingProgressImage.fillAmount = Mathf.Lerp(loadingProgressImage.fillAmount, progress, 0.5f * Time.deltaTime);
+
             if(asyncOperation.progress < 0.9f)
             {
-                loadingProgressImage.fillAmount = asyncOperation.progress;
+                progress = asyncOperation.progress;
             }
             else
             {
-                loadingProgressImage.fillAmount = 1;
+                progress = 1;
                 asyncOperation.allowSceneActivation = true;
             }
 
