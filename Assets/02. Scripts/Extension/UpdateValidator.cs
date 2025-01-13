@@ -13,7 +13,11 @@ public class UpdateValidator : MonoBehaviour
 
     void Start()
     {
+        #if UNITY_EDITOR
+        UpdateLatestVersionInfo(serverAddress + "RequestVersionDebug").Start(this);
+        #else
         UpdateLatestVersionInfo(serverAddress + "RequestVersion").Start(this);
+        #endif
     }
 
     void ValidateVersion(string version)
@@ -40,7 +44,7 @@ public class UpdateValidator : MonoBehaviour
         url = desktopURL;
         #elif UNITY_ANDROID
         url = androidURL;
-        #elif UNITY_IOS
+        #elif UNITY_IPHONE
         url = iosURL;
         #endif
 

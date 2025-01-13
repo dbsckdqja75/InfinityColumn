@@ -303,6 +303,14 @@ MonoBehaviour:
     m_Localized: NEW UPDATE AVAILABLE
     m_Metadata:
       m_Items: []
+  - m_Id: 44610038289969152
+    m_Localized: VL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44704252411555840
+    m_Localized: OPTIMIZATION ENABLED
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -11,9 +11,11 @@ public class SettingManager : MonoBehaviour
     [Space(10)]
     [SerializeField] GameObject terrain;
     [SerializeField] GameObject groundPlane, groundQuad;
+    [SerializeField] GameObject cloud;
 
     [Space(10)]
     [SerializeField] LocalizeText graphicsQualityText;
+    [SerializeField] GameObject optimizedTextObj;
     [SerializeField] TMP_Text frameLimitText;
     [SerializeField] TMP_Text cameraProjectionText;
     [SerializeField] ToggleButton musicToggleButton;
@@ -25,6 +27,12 @@ public class SettingManager : MonoBehaviour
 
     [Space(10)]
     [SerializeField] GameObject termsPanelObj;
+
+    #if UNITY_EDITOR || UNITY_STANDALONE
+    const int defaultGraphicsQuality = 2;
+    #else
+    const int defaultGraphicsQuality = 1;
+    #endif
 
     void Awake()
     {
@@ -70,8 +78,12 @@ public class SettingManager : MonoBehaviour
 
     public void LoadSettingData()
     {
-        int graphicsQuality = PlayerPrefsManager.LoadData("GraphicsQualitySetting", 1);
+        int graphicsQuality = PlayerPrefsManager.LoadData("GraphicsQualitySetting", defaultGraphicsQuality);
         UpdateGraphicsQuality(graphicsQuality);
+
+        #if UNITY_ANDROID || UNITY_IPHONE
+        ForceOptimizeGraphics();
+        #endif
 
         int frameLimit = PlayerPrefsManager.LoadData("FrameLimitSetting", 60);
         UpdateFrameLimit(frameLimit);
@@ -91,8 +103,8 @@ public class SettingManager : MonoBehaviour
 
     public void SwitchGraphicsQuality()
     {
-        int graphicsQuality = PlayerPrefsManager.LoadData("GraphicsQualitySetting", 1);
-        graphicsQuality = (int)Mathf.Repeat(graphicsQuality+1, 3);
+        int graphicsQuality = PlayerPrefsManager.LoadData("GraphicsQualitySetting", defaultGraphicsQuality);
+        graphicsQuality = (int)Mathf.Repeat(graphicsQuality+1, 4);
 
         PlayerPrefsManager.SaveData("GraphicsQualitySetting", graphicsQuality);
 
@@ -102,23 +114,38 @@ public class SettingManager : MonoBehaviour
     public void UpdateGraphicsQuality(int graphicsQuality)
     {
         QualitySettings.SetQualityLevel(graphicsQuality);
-        extraGlobalVolume.SetActive(graphicsQuality > 0);
+        extraGlobalVolume.SetActive(graphicsQuality > 1);
 
         backgroundManager.UpdatePresetQuality();
 
         switch(graphicsQuality)
         {
         case 0:
-            graphicsQualityText.SetLocaleString("GraphicsQuality_Low");
+            graphicsQualityText.SetLocaleString("GraphicsQuality_VeryLow");
             break;
         case 1:
-            graphicsQualityText.SetLocaleString("GraphicsQuality_Medium");
+            graphicsQualityText.SetLocaleString("GraphicsQuality_Low");
             break;
         case 2:
+            graphicsQualityText.SetLocaleString("GraphicsQuality_Medium");
+            break;
+        case 3:
             graphicsQualityText.SetLocaleString("GraphicsQuality_High");
             break;
         default:
             break;
+        }
+    }
+
+    void ForceOptimizeGraphics()
+    {
+        if(SystemInfo.graphicsMemorySize <= 1024 || SystemInfo.systemMemorySize <= 2048)
+        {
+            cloud.SetActive(false);
+
+            backgroundManager.EnableOptimization();
+
+            optimizedTextObj.SetActive(true);
         }
     }
 

@@ -183,7 +183,7 @@ GameObject:
   m_Layer: 0
   m_Name: Background City B
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
@@ -275,6 +275,11 @@ MonoBehaviour:
   - {fileID: 5901588572586300219}
   - {fileID: 3435528173092683409}
   - {fileID: 8719612753960974537}
+  extraUnnecessaryObjects:
+  - {fileID: 5275702864694485733}
+  - {fileID: 4760014301490328217}
+  - {fileID: 3987555610189718230}
+  - {fileID: 7704071873330554296}
 --- !u!1 &2536887322311620896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,6 +1225,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3036313961268568216, guid: f2867f23314bac94482b27168e8ca157,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 3036313961268568216, guid: f2867f23314bac94482b27168e8ca157,
+        type: 3}
       propertyPath: m_Name
       value: House E
       objectReference: {fileID: 0}
@@ -1360,6 +1371,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
+        type: 3}
       propertyPath: m_Name
       value: Street Lamp
       objectReference: {fileID: 0}
@@ -1381,6 +1398,12 @@ PrefabInstance:
 --- !u!4 &1451334388595958988 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2027488282843174232, guid: cacd86774125e8b4d896603fefd88994,
+    type: 3}
+  m_PrefabInstance: {fileID: 578493982299943316}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3987555610189718230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
     type: 3}
   m_PrefabInstance: {fileID: 578493982299943316}
   m_PrefabAsset: {fileID: 0}
@@ -1442,6 +1465,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
         type: 3}
       propertyPath: m_Name
@@ -1623,6 +1652,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4298334560114920516, guid: dc9bff762875ead43b30804ff50efa04,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 4298334560114920516, guid: dc9bff762875ead43b30804ff50efa04,
+        type: 3}
       propertyPath: m_Name
       value: House C
       objectReference: {fileID: 0}
@@ -1711,6 +1746,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5141613853379603134, guid: 2a0ee928f388cbb41a3ac31fdf13a033,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 5141613853379603134, guid: 2a0ee928f388cbb41a3ac31fdf13a033,
         type: 3}
       propertyPath: m_Name
@@ -1966,6 +2007,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
+        type: 3}
       propertyPath: m_Name
       value: Office C (1)
       objectReference: {fileID: 0}
@@ -1987,6 +2034,12 @@ PrefabInstance:
 --- !u!4 &1904234135365215654 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4199565269741895328, guid: 6677fbdfc54a8c74f92c20d0a5329040,
+    type: 3}
+  m_PrefabInstance: {fileID: 2317920627800251142}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4760014301490328217 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
     type: 3}
   m_PrefabInstance: {fileID: 2317920627800251142}
   m_PrefabAsset: {fileID: 0}
@@ -2050,6 +2103,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
+        type: 3}
       propertyPath: m_Name
       value: Office C
       objectReference: {fileID: 0}
@@ -2074,6 +2133,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3103842725651909498}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5275702864694485733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
+    type: 3}
+  m_PrefabInstance: {fileID: 3103842725651909498}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3681717700841557707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2087,6 +2152,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5152199903520086243, guid: 008efc360451fe542863a4e109877b6b,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 5152199903520086243, guid: 008efc360451fe542863a4e109877b6b,
         type: 3}
       propertyPath: m_Name
@@ -2172,6 +2243,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1756431911138342473}
     m_Modifications:
+    - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
         type: 3}
       propertyPath: m_Name
@@ -2487,6 +2564,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9187989279769523940, guid: 365a7d80dc3db294a90c1f28670414cc,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 9187989279769523940, guid: 365a7d80dc3db294a90c1f28670414cc,
+        type: 3}
       propertyPath: m_Name
       value: Apt A (1)
       objectReference: {fileID: 0}
@@ -2656,6 +2739,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
+        type: 3}
       propertyPath: m_Name
       value: Street Lamp (3)
       objectReference: {fileID: 0}
@@ -2744,6 +2833,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1166632812082888225, guid: 12912aaaea8f80843920d0d429ef88fc,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 1166632812082888225, guid: 12912aaaea8f80843920d0d429ef88fc,
         type: 3}
       propertyPath: m_Name
@@ -2870,6 +2965,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
+        type: 3}
       propertyPath: m_Name
       value: Simple Tree A (3)
       objectReference: {fileID: 0}
@@ -2958,6 +3059,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1756431911138342473}
     m_Modifications:
+    - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
         type: 3}
       propertyPath: m_Name
@@ -3100,6 +3207,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6125511394239306615, guid: bf2f080e823926f46bac31a50efb1269,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 6125511394239306615, guid: bf2f080e823926f46bac31a50efb1269,
+        type: 3}
       propertyPath: m_Name
       value: Simple Tree C
       objectReference: {fileID: 0}
@@ -3190,6 +3303,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
+        type: 3}
       propertyPath: m_Name
       value: Street Lamp (2)
       objectReference: {fileID: 0}
@@ -3211,6 +3330,12 @@ PrefabInstance:
 --- !u!4 &5303222557692486562 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2027488282843174232, guid: cacd86774125e8b4d896603fefd88994,
+    type: 3}
+  m_PrefabInstance: {fileID: 6177743555738154746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7704071873330554296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
     type: 3}
   m_PrefabInstance: {fileID: 6177743555738154746}
   m_PrefabAsset: {fileID: 0}
@@ -3392,6 +3517,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 554593398693511934, guid: 465cafd6095945f4193718da74f0360f,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 554593398693511934, guid: 465cafd6095945f4193718da74f0360f,
+        type: 3}
       propertyPath: m_Name
       value: Simple Tree B
       objectReference: {fileID: 0}
@@ -3532,6 +3663,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4280204922259308319, guid: 505e05c30d3868544907154192a614d2,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 4280204922259308319, guid: 505e05c30d3868544907154192a614d2,
+        type: 3}
       propertyPath: m_Name
       value: Office B (2)
       objectReference: {fileID: 0}
@@ -3570,6 +3707,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1756431911138342473}
     m_Modifications:
+    - target: {fileID: 2203875199955626445, guid: 8fcf38bf13103a44c8c12a214c9b6545,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 2203875199955626445, guid: 8fcf38bf13103a44c8c12a214c9b6545,
         type: 3}
       propertyPath: m_Name
@@ -3744,6 +3887,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1756431911138342473}
     m_Modifications:
+    - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
         type: 3}
       propertyPath: m_Name

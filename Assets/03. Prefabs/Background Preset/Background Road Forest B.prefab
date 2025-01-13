@@ -98,7 +98,7 @@ GameObject:
   m_Layer: 0
   m_Name: Background Road Forest B
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
@@ -165,6 +165,11 @@ MonoBehaviour:
   - {fileID: 1977817346061879881}
   - {fileID: 6571291949546567312}
   - {fileID: 1634540426911360640}
+  extraUnnecessaryObjects:
+  - {fileID: 957934453784930586}
+  - {fileID: 4379221873274928368}
+  - {fileID: 5917411760458088489}
+  - {fileID: 5286628919061283979}
 --- !u!1001 &1132929695504950598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -230,6 +235,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3710656689100052918, guid: 9b604261635531048a0fbc65facea9b2,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 3710656689100052918, guid: 9b604261635531048a0fbc65facea9b2,
+        type: 3}
       propertyPath: m_Name
       value: ForestTree A (2)
       objectReference: {fileID: 0}
@@ -246,6 +257,12 @@ PrefabInstance:
 --- !u!4 &2065070796913479215 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1373707274570165097, guid: 9b604261635531048a0fbc65facea9b2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1132929695504950598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4379221873274928368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3710656689100052918, guid: 9b604261635531048a0fbc65facea9b2,
     type: 3}
   m_PrefabInstance: {fileID: 1132929695504950598}
   m_PrefabAsset: {fileID: 0}
@@ -326,6 +343,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CastShadows
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3710656689100052918, guid: 9b604261635531048a0fbc65facea9b2,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3710656689100052918, guid: 9b604261635531048a0fbc65facea9b2,
         type: 3}
@@ -428,6 +450,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6274781368850599350, guid: 34b5e2dcf83092e4791f159bf0bcc895,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 6274781368850599350, guid: 34b5e2dcf83092e4791f159bf0bcc895,
+        type: 3}
       propertyPath: m_Name
       value: Stone C
       objectReference: {fileID: 0}
@@ -516,6 +544,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8598037174195611332, guid: 2538568507902c442bb162a73d9c5b59,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 8598037174195611332, guid: 2538568507902c442bb162a73d9c5b59,
         type: 3}
       propertyPath: m_Name
@@ -702,6 +736,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3928107585848133065, guid: 05dcb507daaa7ca419e9e4c4910002c6,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 3928107585848133065, guid: 05dcb507daaa7ca419e9e4c4910002c6,
+        type: 3}
       propertyPath: m_Name
       value: ForestTree C (2)
       objectReference: {fileID: 0}
@@ -810,6 +850,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3984420347177375265, guid: 922dbf5f274b50141aa91c08ca8e3de2,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 3984420347177375265, guid: 922dbf5f274b50141aa91c08ca8e3de2,
         type: 3}
       propertyPath: m_Name
@@ -941,6 +987,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3186019559717753103}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5286628919061283979 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7307903025561523588, guid: 09d2eeacd064d2b44ac5841c3e735121,
+    type: 3}
+  m_PrefabInstance: {fileID: 3186019559717753103}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3186612672880139368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1019,6 +1071,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3984420347177375265, guid: 922dbf5f274b50141aa91c08ca8e3de2,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 3984420347177375265, guid: 922dbf5f274b50141aa91c08ca8e3de2,
         type: 3}
       propertyPath: m_Name
@@ -1210,6 +1268,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6274781368850599350, guid: 34b5e2dcf83092e4791f159bf0bcc895,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 6274781368850599350, guid: 34b5e2dcf83092e4791f159bf0bcc895,
+        type: 3}
       propertyPath: m_Name
       value: Stone C (1)
       objectReference: {fileID: 0}
@@ -1313,6 +1377,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8598037174195611332, guid: 2538568507902c442bb162a73d9c5b59,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 8598037174195611332, guid: 2538568507902c442bb162a73d9c5b59,
         type: 3}
       propertyPath: m_Name
@@ -1420,6 +1490,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3710656689100052918, guid: 9b604261635531048a0fbc65facea9b2,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 3710656689100052918, guid: 9b604261635531048a0fbc65facea9b2,
+        type: 3}
       propertyPath: m_Name
       value: ForestTree A (1)
       objectReference: {fileID: 0}
@@ -1523,6 +1599,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3984420347177375265, guid: 922dbf5f274b50141aa91c08ca8e3de2,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 3984420347177375265, guid: 922dbf5f274b50141aa91c08ca8e3de2,
         type: 3}
       propertyPath: m_Name
@@ -1630,6 +1712,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5841712907967960588, guid: 2ad5c64a059d38643ada5ede49405f05,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 5841712907967960588, guid: 2ad5c64a059d38643ada5ede49405f05,
+        type: 3}
       propertyPath: m_Name
       value: Stone B (1)
       objectReference: {fileID: 0}
@@ -1643,6 +1731,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ad5c64a059d38643ada5ede49405f05, type: 3}
+--- !u!1 &957934453784930586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5841712907967960588, guid: 2ad5c64a059d38643ada5ede49405f05,
+    type: 3}
+  m_PrefabInstance: {fileID: 6654819137057718038}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6546156080844592066 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 468995563166805204, guid: 2ad5c64a059d38643ada5ede49405f05,
@@ -1803,6 +1897,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3928107585848133065, guid: 05dcb507daaa7ca419e9e4c4910002c6,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 3928107585848133065, guid: 05dcb507daaa7ca419e9e4c4910002c6,
+        type: 3}
       propertyPath: m_Name
       value: ForestTree C (1)
       objectReference: {fileID: 0}
@@ -1824,6 +1924,12 @@ PrefabInstance:
 --- !u!4 &5395670041312818095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3349810598820378191, guid: 05dcb507daaa7ca419e9e4c4910002c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 7250144134817383904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5917411760458088489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3928107585848133065, guid: 05dcb507daaa7ca419e9e4c4910002c6,
     type: 3}
   m_PrefabInstance: {fileID: 7250144134817383904}
   m_PrefabAsset: {fileID: 0}
@@ -1981,6 +2087,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3928107585848133065, guid: 05dcb507daaa7ca419e9e4c4910002c6,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 3928107585848133065, guid: 05dcb507daaa7ca419e9e4c4910002c6,
+        type: 3}
       propertyPath: m_Name
       value: ForestTree C
       objectReference: {fileID: 0}
@@ -2089,6 +2201,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3984420347177375265, guid: 922dbf5f274b50141aa91c08ca8e3de2,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 3984420347177375265, guid: 922dbf5f274b50141aa91c08ca8e3de2,
         type: 3}
       propertyPath: m_Name
@@ -2278,6 +2396,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3710656689100052918, guid: 9b604261635531048a0fbc65facea9b2,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 3710656689100052918, guid: 9b604261635531048a0fbc65facea9b2,
         type: 3}
       propertyPath: m_Name

@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 0
   m_Name: Background City C
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
@@ -109,6 +109,13 @@ MonoBehaviour:
   - {fileID: 5743041218858018248}
   - {fileID: 6036140876410076278}
   - {fileID: 2263460538904048601}
+  extraUnnecessaryObjects:
+  - {fileID: 3999492657213954078}
+  - {fileID: 6421637753274900589}
+  - {fileID: 1974770479448864198}
+  - {fileID: 2222060418747354442}
+  - {fileID: 6359477729036138386}
+  - {fileID: 8941161248996353018}
 --- !u!1 &772580884670678964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,6 +1320,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5152199903520086243, guid: 008efc360451fe542863a4e109877b6b,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 5152199903520086243, guid: 008efc360451fe542863a4e109877b6b,
+        type: 3}
       propertyPath: m_Name
       value: Tower D (1)
       objectReference: {fileID: 0}
@@ -1448,6 +1461,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4280204922259308319, guid: 505e05c30d3868544907154192a614d2,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 4280204922259308319, guid: 505e05c30d3868544907154192a614d2,
+        type: 3}
       propertyPath: m_Name
       value: Office B (2)
       objectReference: {fileID: 0}
@@ -1469,6 +1488,12 @@ PrefabInstance:
 --- !u!4 &1507896965794896928 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1732331832985893665, guid: 505e05c30d3868544907154192a614d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 929811708986369793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3999492657213954078 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4280204922259308319, guid: 505e05c30d3868544907154192a614d2,
     type: 3}
   m_PrefabInstance: {fileID: 929811708986369793}
   m_PrefabAsset: {fileID: 0}
@@ -1564,6 +1589,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 501445138979161594}
     m_Modifications:
+    - target: {fileID: 3036313961268568216, guid: f2867f23314bac94482b27168e8ca157,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 3036313961268568216, guid: f2867f23314bac94482b27168e8ca157,
         type: 3}
       propertyPath: m_Name
@@ -1711,6 +1742,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9187989279769523940, guid: 365a7d80dc3db294a90c1f28670414cc,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 9187989279769523940, guid: 365a7d80dc3db294a90c1f28670414cc,
+        type: 3}
       propertyPath: m_Name
       value: Apt A
       objectReference: {fileID: 0}
@@ -1744,6 +1781,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 501445138979161594}
     m_Modifications:
+    - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
         type: 3}
       propertyPath: m_Name
@@ -1886,6 +1929,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7441917185188336538, guid: b60ca773b76587140a93b7898a1106a1,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 7441917185188336538, guid: b60ca773b76587140a93b7898a1106a1,
+        type: 3}
       propertyPath: m_Name
       value: Phone Booth
       objectReference: {fileID: 0}
@@ -1902,6 +1951,12 @@ PrefabInstance:
 --- !u!4 &5459264361486369750 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5805516552001598390, guid: b60ca773b76587140a93b7898a1106a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1968744326102839392}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8941161248996353018 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7441917185188336538, guid: b60ca773b76587140a93b7898a1106a1,
     type: 3}
   m_PrefabInstance: {fileID: 1968744326102839392}
   m_PrefabAsset: {fileID: 0}
@@ -1963,6 +2018,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
         type: 3}
       propertyPath: m_Name
@@ -2139,6 +2200,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
+        type: 3}
       propertyPath: m_Name
       value: Street Lamp (1)
       objectReference: {fileID: 0}
@@ -2157,6 +2224,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cacd86774125e8b4d896603fefd88994, type: 3}
+--- !u!1 &2222060418747354442 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
+    type: 3}
+  m_PrefabInstance: {fileID: 2416117054280916488}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4441904316261796688 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2027488282843174232, guid: cacd86774125e8b4d896603fefd88994,
@@ -2223,6 +2296,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
+        type: 3}
       propertyPath: m_Name
       value: Street Lamp
       objectReference: {fileID: 0}
@@ -2241,6 +2320,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cacd86774125e8b4d896603fefd88994, type: 3}
+--- !u!1 &1974770479448864198 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4562601093884351298, guid: cacd86774125e8b4d896603fefd88994,
+    type: 3}
+  m_PrefabInstance: {fileID: 2609368470977193604}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4041209999275422684 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2027488282843174232, guid: cacd86774125e8b4d896603fefd88994,
@@ -2255,6 +2340,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 501445138979161594}
     m_Modifications:
+    - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
         type: 3}
       propertyPath: m_Name
@@ -2481,6 +2572,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
+        type: 3}
       propertyPath: m_Name
       value: Office C
       objectReference: {fileID: 0}
@@ -2653,6 +2750,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
         type: 3}
       propertyPath: m_Name
@@ -2913,6 +3016,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6125511394239306615, guid: bf2f080e823926f46bac31a50efb1269,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 6125511394239306615, guid: bf2f080e823926f46bac31a50efb1269,
+        type: 3}
       propertyPath: m_Name
       value: Simple Tree C
       objectReference: {fileID: 0}
@@ -2951,6 +3060,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 501445138979161594}
     m_Modifications:
+    - target: {fileID: 2203875199955626445, guid: 8fcf38bf13103a44c8c12a214c9b6545,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 2203875199955626445, guid: 8fcf38bf13103a44c8c12a214c9b6545,
         type: 3}
       propertyPath: m_Name
@@ -3021,6 +3136,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fcf38bf13103a44c8c12a214c9b6545, type: 3}
+--- !u!1 &6421637753274900589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2203875199955626445, guid: 8fcf38bf13103a44c8c12a214c9b6545,
+    type: 3}
+  m_PrefabInstance: {fileID: 5155356388692969888}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7522986458340107555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3453281255607135363, guid: 8fcf38bf13103a44c8c12a214c9b6545,
@@ -3035,6 +3156,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 501445138979161594}
     m_Modifications:
+    - target: {fileID: 554593398693511934, guid: 465cafd6095945f4193718da74f0360f,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 554593398693511934, guid: 465cafd6095945f4193718da74f0360f,
         type: 3}
       propertyPath: m_Name
@@ -3266,6 +3393,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5141613853379603134, guid: 2a0ee928f388cbb41a3ac31fdf13a033,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 5141613853379603134, guid: 2a0ee928f388cbb41a3ac31fdf13a033,
+        type: 3}
       propertyPath: m_Name
       value: Office A
       objectReference: {fileID: 0}
@@ -3299,6 +3432,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 501445138979161594}
     m_Modifications:
+    - target: {fileID: 260668022575870552, guid: 086942f2b22359545b5c5de17581af1d,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 260668022575870552, guid: 086942f2b22359545b5c5de17581af1d,
         type: 3}
       propertyPath: m_Name
@@ -3364,6 +3503,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 086942f2b22359545b5c5de17581af1d, type: 3}
+--- !u!1 &6359477729036138386 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 260668022575870552, guid: 086942f2b22359545b5c5de17581af1d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6620136848675358154}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8329355562335251443 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2902749881408843321, guid: 086942f2b22359545b5c5de17581af1d,
@@ -3517,6 +3662,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4298334560114920516, guid: dc9bff762875ead43b30804ff50efa04,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4298334560114920516, guid: dc9bff762875ead43b30804ff50efa04,
         type: 3}
       propertyPath: m_Name
@@ -3688,6 +3839,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4280204922259308319, guid: 505e05c30d3868544907154192a614d2,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 4280204922259308319, guid: 505e05c30d3868544907154192a614d2,
+        type: 3}
       propertyPath: m_Name
       value: Office B (1)
       objectReference: {fileID: 0}
@@ -3776,6 +3933,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1166632812082888225, guid: 12912aaaea8f80843920d0d429ef88fc,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 1166632812082888225, guid: 12912aaaea8f80843920d0d429ef88fc,
         type: 3}
       propertyPath: m_Name
@@ -3952,6 +4115,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
+        type: 3}
       propertyPath: m_Name
       value: Office C (2)
       objectReference: {fileID: 0}
@@ -3990,6 +4159,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 501445138979161594}
     m_Modifications:
+    - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
         type: 3}
       propertyPath: m_Name
@@ -4080,6 +4255,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 501445138979161594}
     m_Modifications:
+    - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
         type: 3}
       propertyPath: m_Name

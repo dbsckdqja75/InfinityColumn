@@ -3,20 +3,25 @@ using UnityEngine;
 public class BackgroundPreset : MonoBehaviour
 {
     [SerializeField] GameObject[] unnecessaryObjects;
+    [SerializeField] GameObject[] extraUnnecessaryObjects;
 
     public void ClearForLowQuality()
     {
         foreach(GameObject obj in unnecessaryObjects)
         {
-            obj.SetActive(false);
+            Destroy(obj);
         }
+
+        unnecessaryObjects = new GameObject[0];
     }
 
-    public void RestoreForHighQuality()
+    public void ClearForVeryLowQuality()
     {
-        foreach(GameObject obj in unnecessaryObjects)
+        foreach(GameObject obj in extraUnnecessaryObjects)
         {
-            obj.SetActive(true);
+            Destroy(obj);
         }
+
+        extraUnnecessaryObjects = new GameObject[0];
     }
 }

@@ -98,7 +98,7 @@ GameObject:
   m_Layer: 0
   m_Name: Background City A
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
@@ -235,6 +235,15 @@ MonoBehaviour:
   - {fileID: 6893316023074940269}
   - {fileID: 7959422223467736793}
   - {fileID: 747869819589785497}
+  extraUnnecessaryObjects:
+  - {fileID: 845337545022502732}
+  - {fileID: 9008324678857380730}
+  - {fileID: 3118013994176440882}
+  - {fileID: 73828033322656688}
+  - {fileID: 35215762894474051}
+  - {fileID: 4973722966910871351}
+  - {fileID: 830574206366032515}
+  - {fileID: 1937483380394697083}
 --- !u!1 &748845293744340327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1955,6 +1964,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2203875199955626445, guid: 8fcf38bf13103a44c8c12a214c9b6545,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 2203875199955626445, guid: 8fcf38bf13103a44c8c12a214c9b6545,
+        type: 3}
       propertyPath: m_Name
       value: House A
       objectReference: {fileID: 0}
@@ -2184,6 +2199,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4280204922259308319, guid: 505e05c30d3868544907154192a614d2,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 4280204922259308319, guid: 505e05c30d3868544907154192a614d2,
+        type: 3}
       propertyPath: m_Name
       value: Office B (1)
       objectReference: {fileID: 0}
@@ -2232,6 +2253,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5152199903520086243, guid: 008efc360451fe542863a4e109877b6b,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 5152199903520086243, guid: 008efc360451fe542863a4e109877b6b,
         type: 3}
       propertyPath: m_Name
@@ -2463,6 +2490,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
       propertyPath: m_Name
       value: Wall C2 (18)
       objectReference: {fileID: 0}
@@ -2551,6 +2584,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
         type: 3}
       propertyPath: m_Name
@@ -2670,6 +2709,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6471705409125176447}
     m_Modifications:
+    - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4045578984065347852, guid: 08b5ed704a5b2d641bb83867c84777e5,
         type: 3}
       propertyPath: m_Name
@@ -2856,6 +2901,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5152199903520086243, guid: 008efc360451fe542863a4e109877b6b,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 5152199903520086243, guid: 008efc360451fe542863a4e109877b6b,
+        type: 3}
       propertyPath: m_Name
       value: Tower D
       objectReference: {fileID: 0}
@@ -2999,6 +3050,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
         type: 3}
       propertyPath: m_Name
@@ -3204,6 +3261,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3036313961268568216, guid: f2867f23314bac94482b27168e8ca157,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 3036313961268568216, guid: f2867f23314bac94482b27168e8ca157,
+        type: 3}
       propertyPath: m_Name
       value: House E
       objectReference: {fileID: 0}
@@ -3297,6 +3360,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6471705409125176447}
     m_Modifications:
+    - target: {fileID: 554593398693511934, guid: 465cafd6095945f4193718da74f0360f,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 554593398693511934, guid: 465cafd6095945f4193718da74f0360f,
         type: 3}
       propertyPath: m_Name
@@ -3533,6 +3602,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
       propertyPath: m_Name
       value: Wall C2 (8)
       objectReference: {fileID: 0}
@@ -3623,6 +3698,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
       propertyPath: m_Name
       value: Wall C2 (9)
       objectReference: {fileID: 0}
@@ -3661,6 +3742,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3658163424827772735, guid: 7ed37c05392b6b0458f6b2905d982073,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 3658163424827772735, guid: 7ed37c05392b6b0458f6b2905d982073,
         type: 3}
       propertyPath: m_Name
@@ -3726,6 +3813,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ed37c05392b6b0458f6b2905d982073, type: 3}
+--- !u!1 &1937483380394697083 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3658163424827772735, guid: 7ed37c05392b6b0458f6b2905d982073,
+    type: 3}
+  m_PrefabInstance: {fileID: 2893345737188945476}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8579386998817886176 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6860989508447150500, guid: 7ed37c05392b6b0458f6b2905d982073,
@@ -3795,6 +3888,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
         type: 3}
       propertyPath: m_Name
@@ -3914,6 +4013,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6471705409125176447}
     m_Modifications:
+    - target: {fileID: 2383830035825663463, guid: 1293f39c83972784aae6ee9e54acb6e3,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 2383830035825663463, guid: 1293f39c83972784aae6ee9e54acb6e3,
         type: 3}
       propertyPath: m_Name
@@ -4066,6 +4171,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4298334560114920516, guid: dc9bff762875ead43b30804ff50efa04,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 4298334560114920516, guid: dc9bff762875ead43b30804ff50efa04,
+        type: 3}
       propertyPath: m_Name
       value: House C (1)
       objectReference: {fileID: 0}
@@ -4079,6 +4190,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc9bff762875ead43b30804ff50efa04, type: 3}
+--- !u!1 &830574206366032515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4298334560114920516, guid: dc9bff762875ead43b30804ff50efa04,
+    type: 3}
+  m_PrefabInstance: {fileID: 3467783074729946823}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2093352996999222206 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3255292332131532153, guid: dc9bff762875ead43b30804ff50efa04,
@@ -4148,6 +4265,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
         type: 3}
       propertyPath: m_Name
@@ -4605,6 +4728,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1525070798439219661, guid: afffab040f947ef49a55ff21847f43d0,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 1525070798439219661, guid: afffab040f947ef49a55ff21847f43d0,
+        type: 3}
       propertyPath: m_Name
       value: Road Cone Orange (1)
       objectReference: {fileID: 0}
@@ -4668,6 +4797,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afffab040f947ef49a55ff21847f43d0, type: 3}
+--- !u!1 &3118013994176440882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1525070798439219661, guid: afffab040f947ef49a55ff21847f43d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 4498896993352936447}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9180074191706374984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4686389228194244791, guid: afffab040f947ef49a55ff21847f43d0,
@@ -4771,6 +4906,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3658163424827772735, guid: 7ed37c05392b6b0458f6b2905d982073,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 3658163424827772735, guid: 7ed37c05392b6b0458f6b2905d982073,
         type: 3}
       propertyPath: m_Name
@@ -4918,6 +5059,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5141613853379603134, guid: 2a0ee928f388cbb41a3ac31fdf13a033,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 5141613853379603134, guid: 2a0ee928f388cbb41a3ac31fdf13a033,
+        type: 3}
       propertyPath: m_Name
       value: Office A
       objectReference: {fileID: 0}
@@ -4931,6 +5078,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a0ee928f388cbb41a3ac31fdf13a033, type: 3}
+--- !u!1 &35215762894474051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5141613853379603134, guid: 2a0ee928f388cbb41a3ac31fdf13a033,
+    type: 3}
+  m_PrefabInstance: {fileID: 5127262423974863357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5545841572437710790 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 851597614410675771, guid: 2a0ee928f388cbb41a3ac31fdf13a033,
@@ -5207,6 +5360,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5208033988344535616, guid: 9fd0a1aeab3bbaf44896f2a31b907170,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 5208033988344535616, guid: 9fd0a1aeab3bbaf44896f2a31b907170,
         type: 3}
       propertyPath: m_Name
@@ -5512,6 +5671,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1166632812082888225, guid: 12912aaaea8f80843920d0d429ef88fc,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 1166632812082888225, guid: 12912aaaea8f80843920d0d429ef88fc,
+        type: 3}
       propertyPath: m_Name
       value: House D
       objectReference: {fileID: 0}
@@ -5691,6 +5856,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4280204922259308319, guid: 505e05c30d3868544907154192a614d2,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280204922259308319, guid: 505e05c30d3868544907154192a614d2,
+        type: 3}
       propertyPath: m_Name
       value: Office B
       objectReference: {fileID: 0}
@@ -5859,6 +6029,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6975215172545020215, guid: ff56d6712ccde4841a7dde27fd3e9d9b,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 6975215172545020215, guid: ff56d6712ccde4841a7dde27fd3e9d9b,
+        type: 3}
       propertyPath: m_Name
       value: Utility Pole (1)
       objectReference: {fileID: 0}
@@ -5877,6 +6053,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff56d6712ccde4841a7dde27fd3e9d9b, type: 3}
+--- !u!1 &73828033322656688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6975215172545020215, guid: ff56d6712ccde4841a7dde27fd3e9d9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7046650221750624903}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3104177088052058058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5395026033200100685, guid: ff56d6712ccde4841a7dde27fd3e9d9b,
@@ -6032,6 +6214,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
       propertyPath: m_Name
       value: Wall C2 (17)
       objectReference: {fileID: 0}
@@ -6151,6 +6339,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2383830035825663463, guid: 1293f39c83972784aae6ee9e54acb6e3,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 2383830035825663463, guid: 1293f39c83972784aae6ee9e54acb6e3,
+        type: 3}
       propertyPath: m_Name
       value: Tower C
       objectReference: {fileID: 0}
@@ -6222,6 +6416,12 @@ PrefabInstance:
 --- !u!4 &4714879282013961714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2701521921650804514, guid: 1293f39c83972784aae6ee9e54acb6e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 7211149648544086736}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4973722966910871351 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2383830035825663463, guid: 1293f39c83972784aae6ee9e54acb6e3,
     type: 3}
   m_PrefabInstance: {fileID: 7211149648544086736}
   m_PrefabAsset: {fileID: 0}
@@ -6319,6 +6519,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1525070798439219661, guid: afffab040f947ef49a55ff21847f43d0,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 1525070798439219661, guid: afffab040f947ef49a55ff21847f43d0,
+        type: 3}
       propertyPath: m_Name
       value: Road Cone Orange
       objectReference: {fileID: 0}
@@ -6388,6 +6594,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7505772553074856631}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9008324678857380730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1525070798439219661, guid: afffab040f947ef49a55ff21847f43d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 7505772553074856631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7640214044667112372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6448,6 +6660,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7042574514114829560, guid: c5d5d0121e9043846a63606b415316ac,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 7042574514114829560, guid: c5d5d0121e9043846a63606b415316ac,
+        type: 3}
       propertyPath: m_Name
       value: Road Cone Red
       objectReference: {fileID: 0}
@@ -6461,6 +6679,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5d5d0121e9043846a63606b415316ac, type: 3}
+--- !u!1 &845337545022502732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7042574514114829560, guid: c5d5d0121e9043846a63606b415316ac,
+    type: 3}
+  m_PrefabInstance: {fileID: 7640214044667112372}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3138654236689584170 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4722520465103207326, guid: c5d5d0121e9043846a63606b415316ac,
@@ -6700,6 +6924,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9187989279769523940, guid: 365a7d80dc3db294a90c1f28670414cc,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 9187989279769523940, guid: 365a7d80dc3db294a90c1f28670414cc,
+        type: 3}
       propertyPath: m_Name
       value: Apt A (1)
       objectReference: {fileID: 0}
@@ -6788,6 +7018,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
         type: 3}
       propertyPath: m_Name
@@ -6890,6 +7126,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
       propertyPath: m_Name
       value: Wall C2 (11)
       objectReference: {fileID: 0}
@@ -6978,6 +7220,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 8771311411792095369, guid: cfe16f0c110ea44418bf0fe6c7cd0e19,
         type: 3}
       propertyPath: m_Name
@@ -7070,6 +7318,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4298334560114920516, guid: dc9bff762875ead43b30804ff50efa04,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 4298334560114920516, guid: dc9bff762875ead43b30804ff50efa04,
+        type: 3}
       propertyPath: m_Name
       value: House C
       objectReference: {fileID: 0}
@@ -7160,6 +7414,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 7071811735476873631, guid: 6677fbdfc54a8c74f92c20d0a5329040,
+        type: 3}
       propertyPath: m_Name
       value: Office C (2)
       objectReference: {fileID: 0}
@@ -7208,6 +7468,12 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3658163424827772735, guid: 7ed37c05392b6b0458f6b2905d982073,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 3658163424827772735, guid: 7ed37c05392b6b0458f6b2905d982073,
         type: 3}
       propertyPath: m_Name
