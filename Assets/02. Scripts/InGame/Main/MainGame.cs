@@ -110,6 +110,8 @@ public class MainGame : MonoBehaviour
         currentState = GameState.LOBBY;
 
         score.SetValue(0);
+
+        LoadGameRecord();
     }
 
 

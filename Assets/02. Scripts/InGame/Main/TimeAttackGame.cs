@@ -41,7 +41,7 @@ public class TimeAttackGame : MainGame
     {
         base.OnGameOver();
 
-        RewardVP(rewardVP, scoreRewardStep);
+        RewardVP(score.GetValue(), scoreRewardStep);
     }
 
     public override void OnGameReset()

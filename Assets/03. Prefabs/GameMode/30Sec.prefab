@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameType: 1
-  bestScoreDataKey: ThreeTimeBestScore
-  gameModeStringKey: GameMode_ThreeTimeAttack
+  bestScoreDataKey: SecondTimeBestScore
+  gameModeStringKey: GameMode_SecondTimeAttack
   gameTime: 30

@@ -43,7 +43,7 @@ public class LeaderboardManager : MonoBehaviour
     [SerializeField] GameObject firstGuideObj;
 
     const string serverAddress = "http://bu1ld.asuscomm.com:8772/";
-    const string connectKey = "FrpZlyJvESTaVtYvSMS";
+    const string connectKey = "";
 
     GameType currentGameType;
 
@@ -79,11 +79,10 @@ public class LeaderboardManager : MonoBehaviour
         switch(currentGameType)
         {
             case GameType.SECOND_ATTACK:
-            // GetLeaderboardRequest(serverAddress + "OneMinBestScoreTop10").Start(this);
+            GetLeaderboardRequest(serverAddress + "SecondBestScoreTop10").Start(this);
             break;
             case GameType.ONE_MIN_ATTACK:
             GetLeaderboardRequest(serverAddress + "OneMinBestScoreTop10").Start(this);
-            // GetLeaderboardRequest(serverAddress + "ThreeMinBestScoreTop10").Start(this);
             break;
             default:
             GetLeaderboardRequest(serverAddress + "InfinityBestScoreTop10").Start(this);
@@ -190,11 +189,10 @@ public class LeaderboardManager : MonoBehaviour
         switch(currentGameType)
         {
             case GameType.SECOND_ATTACK:
-            // currentGameTypeText.SetLocaleString("Leaderboard_OneTimeAttack");
+            currentGameTypeText.SetLocaleString("Leaderboard_SecondTimeAttack");
             break;
             case GameType.ONE_MIN_ATTACK:
             currentGameTypeText.SetLocaleString("Leaderboard_OneTimeAttack");
-            // currentGameTypeText.SetLocaleString("Leaderboard_ThreeTimeAttack");
             break;
             default:
             currentGameTypeText.SetLocaleString("Leaderboard_Infinity");
@@ -232,11 +230,10 @@ public class LeaderboardManager : MonoBehaviour
         switch(currentGameType)
         {
             case GameType.SECOND_ATTACK:
-            // GetPlayerRankRequest(serverAddress + "OneMinBestScoreRankWithScore").Start(this);
+            GetPlayerRankRequest(serverAddress + "SecondBestScoreRankWithScore").Start(this);
             break;
             case GameType.ONE_MIN_ATTACK:
             GetPlayerRankRequest(serverAddress + "OneMinBestScoreRankWithScore").Start(this);
-            // GetPlayerRankRequest(serverAddress + "ThreeMinBestScoreRankWithScore").Start(this);
             break;
             default:
             GetPlayerRankRequest(serverAddress + "InfinityBestScoreRankWithScore").Start(this);
@@ -251,11 +248,10 @@ public class LeaderboardManager : MonoBehaviour
             switch(targetGameType)
             {
                 case GameType.SECOND_ATTACK:
-                // UpdateRecord("OneTimeBestScore", "UpdateOneMinBestScore").Start(this);
+                UpdateRecord("SecondTimeBestScore", "UpdateSecondBestScore").Start(this);
                 break;
                 case GameType.ONE_MIN_ATTACK:
                 UpdateRecord("OneTimeBestScore", "UpdateOneMinBestScore").Start(this);
-                // UpdateRecord("ThreeTimeBestScore", "UpdateThreeMinBestScore").Start(this);
                 break;
                 default:
                 UpdateRecord("BestScore", "UpdateInfinityBestScore").Start(this);
@@ -267,8 +263,8 @@ public class LeaderboardManager : MonoBehaviour
     IEnumerator AllUpdateRecord()
     {
         yield return StartCoroutine(UpdateRecord("BestScore", "UpdateInfinityBestScore"));
+        yield return StartCoroutine(UpdateRecord("SecondTimeBestScore", "UpdateSecondBestScore"));
         yield return StartCoroutine(UpdateRecord("OneTimeBestScore", "UpdateOneMinBestScore"));
-        yield return StartCoroutine(UpdateRecord("ThreeTimeBestScore", "UpdateThreeMinBestScore"));
         yield break;
     }
 

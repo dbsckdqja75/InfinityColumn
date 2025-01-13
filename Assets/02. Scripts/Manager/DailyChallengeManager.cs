@@ -91,10 +91,10 @@ public class DailyChallengeManager : MonoBehaviour
                     }
                     break;
                 case ChallengeType.NEW_RECORD_SECOND_100:
-                    // if(gameType.IsEquals(GameType.SECOND_ATTACK) && record >= goal.GetValue())
-                    // {
-                    //     ClearChallenge();
-                    // }
+                    if(gameType.IsEquals(GameType.SECOND_ATTACK) && record >= goal.GetValue())
+                    {
+                        ClearChallenge();
+                    }
                     break;
                 case ChallengeType.NEW_RECORD_ONE_MIN_100:
                     if(gameType.IsEquals(GameType.ONE_MIN_ATTACK) && record >= goal.GetValue())
@@ -132,16 +132,15 @@ public class DailyChallengeManager : MonoBehaviour
         {
             case ChallengeType.NEW_RECORD_INFINITY_100:
                 goal.SetValue(PlayerPrefsManager.LoadData("BestScore", 0) + 100);
-                reward.SetValue(100);
+                reward.SetValue(10);
                 break;
             case ChallengeType.NEW_RECORD_SECOND_100:
-                // goal.SetValue(PlayerPrefsManager.LoadData("OneTimeBestScore", 0) + 100);
-                // reward.SetValue(100);
+                goal.SetValue(PlayerPrefsManager.LoadData("SecondTimeBestScore", 0) + 100);
+                reward.SetValue(10);
                 break;
             case ChallengeType.NEW_RECORD_ONE_MIN_100:
                 goal.SetValue(PlayerPrefsManager.LoadData("OneTimeBestScore", 0) + 100);
-                // goal.SetValue(PlayerPrefsManager.LoadData("ThreeTimeBestScore", 0) + 100);
-                reward.SetValue(100);
+                reward.SetValue(10);
                 break;
             default:
                 return;
@@ -159,10 +158,9 @@ public class DailyChallengeManager : MonoBehaviour
         {
             case ChallengeType.NEW_RECORD_INFINITY_100:
                 return "DailyChallenge_Infinity_100";
-            // case ChallengeType.NEW_RECORD_SECOND_100:
-                // return "DailyChallenge_OneMin_100";
+            case ChallengeType.NEW_RECORD_SECOND_100:
+                return "DailyChallenge_Second_100";
             case ChallengeType.NEW_RECORD_ONE_MIN_100:
-                // return "DailyChallenge_ThreeMin_100";
                 return "DailyChallenge_OneMin_100";
             default:
                 return "None";

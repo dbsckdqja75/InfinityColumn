@@ -31,11 +31,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14184761831424
-    m_Localized: ONE-MIN MODE
+    m_Localized: 1MIN MODE
     m_Metadata:
       m_Items: []
   - m_Id: 14246451654656
-    m_Localized: THREE-MIN MODE
+    m_Localized: 30SEC MODE
     m_Metadata:
       m_Items: []
   - m_Id: 18258739638272
@@ -151,11 +151,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1183083586957312
-    m_Localized: One-Min Mode Ranking
+    m_Localized: 1Min Mode Ranking
     m_Metadata:
       m_Items: []
   - m_Id: 1183087605100544
-    m_Localized: Three-Min Mode Ranking
+    m_Localized: 30Sec Mode Ranking
     m_Metadata:
       m_Items: []
   - m_Id: 1183443676344320
@@ -210,7 +210,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1459906497523712
-    m_Localized: 'One-Min Mode
+    m_Localized: '1Min Mode
 
       New record update
 
@@ -225,7 +225,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1460003671158784
-    m_Localized: 'Three-Min Mode
+    m_Localized: '30Sec Mode
 
       New record update
 

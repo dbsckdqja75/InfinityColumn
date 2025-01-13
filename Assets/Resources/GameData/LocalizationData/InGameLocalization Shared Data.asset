@@ -32,7 +32,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14246451654656
-    m_Key: GameMode_ThreeTimeAttack
+    m_Key: GameMode_SecondTimeAttack
     m_Metadata:
       m_Items: []
   - m_Id: 18258739638272
@@ -152,7 +152,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1183087605100544
-    m_Key: Leaderboard_ThreeTimeAttack
+    m_Key: Leaderboard_SecondTimeAttack
     m_Metadata:
       m_Items: []
   - m_Id: 1183443676344320
@@ -196,7 +196,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1460003671158784
-    m_Key: DailyChallenge_ThreeMin_100
+    m_Key: DailyChallenge_Second_100
     m_Metadata:
       m_Items: []
   - m_Id: 1460514315087872
