@@ -114,7 +114,7 @@ public class SettingManager : MonoBehaviour
     public void UpdateGraphicsQuality(int graphicsQuality)
     {
         QualitySettings.SetQualityLevel(graphicsQuality);
-        extraGlobalVolume.SetActive(graphicsQuality > 1);
+        extraGlobalVolume.SetActive(graphicsQuality >= 2); // NOTE : '중' 옵션부터 포스트 프로세싱 활성화
 
         backgroundManager.UpdatePresetQuality();
 

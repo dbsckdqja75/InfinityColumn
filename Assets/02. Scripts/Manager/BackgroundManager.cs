@@ -28,16 +28,16 @@ public class BackgroundManager : MonoBehaviour
     {
         if(isOptimize == false)
         {
-            #if UNITY_ANDROID || UNITY_IPHONE
-            currentPreset.ClearForLowQuality();
-            #else
-            if(QualitySettings.GetQualityLevel() < 2)
+            #if UNITY_EDITOR || UNITY_STANDALONE
+            if(QualitySettings.GetQualityLevel() <= 1) // NOTE : '하' 옵션부터 배경 간소화
             {
                 currentPreset.ClearForLowQuality();
             }
+            #else
+            currentPreset.ClearForLowQuality();
             #endif
 
-            if(QualitySettings.GetQualityLevel() < 1)
+            if(QualitySettings.GetQualityLevel() <= 0) // NOTE : '저' 옵션부터 추가 간소화
             {
                 currentPreset.ClearForVeryLowQuality();
             }
