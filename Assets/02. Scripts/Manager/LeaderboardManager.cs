@@ -42,8 +42,8 @@ public class LeaderboardManager : MonoBehaviour
     [SerializeField] GameObject loadingObj;
     [SerializeField] GameObject firstGuideObj;
 
-    const string serverAddress = "";
-    const string connectKey = "build2002";
+    const string serverAddress = "http://bu1ld.asuscomm.com:8772/";
+    const string connectKey = "FrpZlyJvESTaVtYvSMS";
 
     GameType currentGameType;
 
@@ -78,11 +78,12 @@ public class LeaderboardManager : MonoBehaviour
 
         switch(currentGameType)
         {
-            case GameType.ONE_TIME_ATTACK:
-            GetLeaderboardRequest(serverAddress + "OneMinBestScoreTop10").Start(this);
+            case GameType.SECOND_ATTACK:
+            // GetLeaderboardRequest(serverAddress + "OneMinBestScoreTop10").Start(this);
             break;
-            case GameType.THREE_TIME_ATTACK:
-            GetLeaderboardRequest(serverAddress + "ThreeMinBestScoreTop10").Start(this);
+            case GameType.ONE_MIN_ATTACK:
+            GetLeaderboardRequest(serverAddress + "OneMinBestScoreTop10").Start(this);
+            // GetLeaderboardRequest(serverAddress + "ThreeMinBestScoreTop10").Start(this);
             break;
             default:
             GetLeaderboardRequest(serverAddress + "InfinityBestScoreTop10").Start(this);
@@ -188,11 +189,12 @@ public class LeaderboardManager : MonoBehaviour
     {
         switch(currentGameType)
         {
-            case GameType.ONE_TIME_ATTACK:
-            currentGameTypeText.SetLocaleString("Leaderboard_OneTimeAttack");
+            case GameType.SECOND_ATTACK:
+            // currentGameTypeText.SetLocaleString("Leaderboard_OneTimeAttack");
             break;
-            case GameType.THREE_TIME_ATTACK:
-            currentGameTypeText.SetLocaleString("Leaderboard_ThreeTimeAttack");
+            case GameType.ONE_MIN_ATTACK:
+            currentGameTypeText.SetLocaleString("Leaderboard_OneTimeAttack");
+            // currentGameTypeText.SetLocaleString("Leaderboard_ThreeTimeAttack");
             break;
             default:
             currentGameTypeText.SetLocaleString("Leaderboard_Infinity");
@@ -229,11 +231,12 @@ public class LeaderboardManager : MonoBehaviour
 
         switch(currentGameType)
         {
-            case GameType.ONE_TIME_ATTACK:
-            GetPlayerRankRequest(serverAddress + "OneMinBestScoreRankWithScore").Start(this);
+            case GameType.SECOND_ATTACK:
+            // GetPlayerRankRequest(serverAddress + "OneMinBestScoreRankWithScore").Start(this);
             break;
-            case GameType.THREE_TIME_ATTACK:
-            GetPlayerRankRequest(serverAddress + "ThreeMinBestScoreRankWithScore").Start(this);
+            case GameType.ONE_MIN_ATTACK:
+            GetPlayerRankRequest(serverAddress + "OneMinBestScoreRankWithScore").Start(this);
+            // GetPlayerRankRequest(serverAddress + "ThreeMinBestScoreRankWithScore").Start(this);
             break;
             default:
             GetPlayerRankRequest(serverAddress + "InfinityBestScoreRankWithScore").Start(this);
@@ -247,11 +250,12 @@ public class LeaderboardManager : MonoBehaviour
         {
             switch(targetGameType)
             {
-                case GameType.ONE_TIME_ATTACK:
-                UpdateRecord("OneTimeBestScore", "UpdateOneMinBestScore").Start(this);
+                case GameType.SECOND_ATTACK:
+                // UpdateRecord("OneTimeBestScore", "UpdateOneMinBestScore").Start(this);
                 break;
-                case GameType.THREE_TIME_ATTACK:
-                UpdateRecord("ThreeTimeBestScore", "UpdateThreeMinBestScore").Start(this);
+                case GameType.ONE_MIN_ATTACK:
+                UpdateRecord("OneTimeBestScore", "UpdateOneMinBestScore").Start(this);
+                // UpdateRecord("ThreeTimeBestScore", "UpdateThreeMinBestScore").Start(this);
                 break;
                 default:
                 UpdateRecord("BestScore", "UpdateInfinityBestScore").Start(this);

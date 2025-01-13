@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
 
     public void Init()
     {
+        isControlLock = true;
+
         rb = this.GetComponent<Rigidbody>();
 
         inputController.AddTouchEvent(OnMoveInput);

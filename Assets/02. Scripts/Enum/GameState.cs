@@ -1,7 +1,7 @@
 public enum GameState
 {
-    LOADING,
     LOBBY,
+    READY,
     PLAYING,
     GAME_OVER,
     PAUSE,

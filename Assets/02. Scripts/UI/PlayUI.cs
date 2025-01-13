@@ -32,7 +32,7 @@ public class PlayUI : MonoBehaviour
 
     // NOTE : 게임 시작 가이드 (터치 또는 키보드 조작)
     [Header("Guide")]
-    [SerializeField] GameObject startGuideObj; // TOOD : PC 플랫폼에 따른 대응 필요
+    [SerializeField] GameObject startGuideObj; // TOOD : 플랫폼에 따른 대응 필요
 
     public void UpdateHealth(float healthAmount)
     {
@@ -91,6 +91,9 @@ public class PlayUI : MonoBehaviour
 
     public void ResetUI()
     {
+        healthBarColor.ResetColor();
+        feverBarColor.ResetColor();
+
         healthBarImage.fillAmount = 1;
         feverBarImage.fillAmount = 0;
         
