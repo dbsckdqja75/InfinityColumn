@@ -375,7 +375,7 @@ public class GameManager : MonoBehaviour
     {
         if(context.phase.IsEquals(InputActionPhase.Performed))
         {
-            if(currentGame.IsCurrentState(GameState.PLAYING))
+            if(currentGame.IsCurrentState(GameState.READY) || currentGame.IsCurrentState(GameState.PLAYING))
             {
                 GamePause();
                 return;

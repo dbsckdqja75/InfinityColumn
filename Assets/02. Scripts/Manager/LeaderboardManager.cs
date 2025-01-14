@@ -41,6 +41,7 @@ public class LeaderboardManager : MonoBehaviour
     [SerializeField] GameObject failLoadObj;
     [SerializeField] GameObject loadingObj;
     [SerializeField] GameObject firstGuideObj;
+    [SerializeField] GameObject maintenanceObj;
 
     const string serverAddress = "http://bu1ld.asuscomm.com:8772/";
     const string connectKey = "";
@@ -63,6 +64,8 @@ public class LeaderboardManager : MonoBehaviour
         UpdateGameTypeTitle();
 
         this.StopAllCoroutines();
+
+        CheckForMaintenance(serverAddress + "CheckForMaintenance").Start(this);
 
         UpdateLeaderboard();
     }
@@ -371,6 +374,43 @@ public class LeaderboardManager : MonoBehaviour
         #else
             Debug.Log("[LeaderboardManager] 에디터 리더보드 업데이트 방지");
         #endif
+
+        yield break;
+    }
+
+    IEnumerator CheckForMaintenance(string url)
+    {
+        WWWForm form = new WWWForm();
+        using (UnityWebRequest request = UnityWebRequest.Post(url, form))
+        {
+            request.timeout = 10;
+
+            yield return request.SendWebRequest();
+            yield return new WaitUntil(() => request.isDone);
+
+            if(request.result.IsEquals(UnityWebRequest.Result.Success))
+            {
+                if(bool.Parse(request.downloadHandler.text))
+                {
+                    HideLeaderboard();
+                    loadingObj.SetActive(false);
+                    firstGuideObj.SetActive(false);
+                    maintenanceObj.SetActive(true);
+
+                    this.StopAllCoroutines();
+                }
+                else
+                {
+                    maintenanceObj.SetActive(false);
+                }
+            }
+            else
+            {
+                Debug.LogWarningFormat("[LeaderboardManager] 서버 접근 실패 : {0}", request.error);
+            }
+
+            request.Dispose();
+        }
 
         yield break;
     }

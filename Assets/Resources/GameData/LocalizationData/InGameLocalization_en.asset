@@ -39,7 +39,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18258739638272
-    m_Localized: '!!! FEVER TIME !!!'
+    m_Localized: "FEVER \u2605 TIME"
     m_Metadata:
       m_Items: []
   - m_Id: 25854657736704
