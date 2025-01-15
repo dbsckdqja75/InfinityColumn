@@ -60,6 +60,8 @@ public class InfinityGame : MainGame
     {
         if(isFeverTime)
         {
+            health = maxHealth;
+
             if(feverTimer > 0f)
             {
                 feverTimer = Mathf.Clamp(feverTimer, 0f, maxFeverTime);
@@ -91,6 +93,20 @@ public class InfinityGame : MainGame
 
         isFeverTime = false;
         feverTimer = 0;
+    }
+
+    public override void OnGameResume()
+    {
+        base.OnGameResume();
+
+        if(isFeverTime)
+        {
+            SoundManager.Instance.PlayMusic("Infinity Fever Music", false);
+        }
+        else
+        {
+            SoundManager.Instance.PlayMusic("Infinity Music");
+        }
     }
 
     protected override void CheckBranch()

@@ -116,7 +116,7 @@ public class MainGame : MonoBehaviour
 
 
 
-    public void OnGameResume()
+    public virtual void OnGameResume()
     {
         if(IsCurrentState(GameState.PAUSE))
         {

@@ -57,15 +57,27 @@ public class MusicSource : MonoBehaviour
     public void Play(AudioClip musicClip)
     {
         musicFadeCoroutine?.Stop(this);
+
+        if(!audioSource.isPlaying || audioSource.clip.name != musicClip.name)
+        {
+            PlayForce(musicClip, false);
+        }
+
         musicFadeCoroutine = FadeInMusic(musicClip).Start(this);
     }
 
-    public void PlayForce(AudioClip musicClip)
+    public void PlayForce(AudioClip musicClip, bool onFullVolume = true)
     {
         musicFadeCoroutine?.Stop(this);
 
         audioSource.Stop();
         audioSource.clip = musicClip;
+
+        if(onFullVolume)
+        {
+            audioSource.volume = musicVolume;
+        }
+
         audioSource.Play();
 
         isPlaying = true;
@@ -103,6 +115,18 @@ public class MusicSource : MonoBehaviour
         }
     }
 
+    public string GetPlayingMusicName()
+    {
+        if(isPlaying)
+        {
+            return audioSource.clip.name;
+        }
+        else
+        {
+            return "";
+        }
+    }
+
     public bool IsPlaying()
     {
         return isPlaying;
@@ -110,8 +134,6 @@ public class MusicSource : MonoBehaviour
 
     IEnumerator FadeInMusic(AudioClip musicClip)
     {
-        PlayForce(musicClip);
-
         while(audioSource.volume < musicVolume && !isMute)
         {
             audioSource.volume += (musicVolume / fadeVolumeTimeSeconds) * Time.deltaTime;

@@ -53,6 +53,13 @@ public class TimeAttackGame : MainGame
         playUI.UpdateHealthTimer((int)gameTime);
     }
 
+    public override void OnGameResume()
+    {
+        base.OnGameResume();
+
+        SoundManager.Instance.PlayMusic("Infinity Music");
+    }
+
     protected override void CheckBranch()
     {
         Column column = spawnManager.GetNextColumn();

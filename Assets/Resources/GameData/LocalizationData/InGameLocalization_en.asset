@@ -175,7 +175,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1188529697763328
-    m_Localized: Enter nickname...
+    m_Localized: Enter nickname
     m_Metadata:
       m_Items: []
   - m_Id: 1402294838013952
@@ -309,6 +309,15 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 44704252411555840
     m_Localized: OPTIMIZATION ENABLED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45068849983303680
+    m_Localized: 'We are currently in maintenance of our ranking server!
+
+      
+
+      Please
+      try again later!'
     m_Metadata:
       m_Items: []
   references:

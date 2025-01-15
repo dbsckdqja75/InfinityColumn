@@ -15,8 +15,6 @@ public class SoundManager : MonoSingleton<SoundManager>
 
     Dictionary<string, AudioClip> audioClipList = new Dictionary<string, AudioClip>();
 
-    string currentPlayingMusic;
-
     protected override void Init()
     {
         effectAudioSource.volume = effectVolume;
@@ -43,11 +41,13 @@ public class SoundManager : MonoSingleton<SoundManager>
     {
         if(audioClipList.ContainsKey(musicName))
         {
-            if(currentPlayingMusic != musicName)
+            if(playFade)
             {
-                currentPlayingMusic = musicName;
-
-                PlayMusic(audioClipList[musicName], playFade);
+                PlayMusicFade(audioClipList[musicName]);
+            }
+            else
+            {
+                PlayMusic(audioClipList[musicName]);
             }
 
             return;
@@ -104,25 +104,36 @@ public class SoundManager : MonoSingleton<SoundManager>
         Debug.LogWarningFormat("[Sound] 해당되는 이름의 오디오 파일이 목록에 없습니다! ({0})", soundName);
     }
 
-    void PlayMusic(AudioClip clip, bool playFade = true)
+    void PlayMusic(AudioClip clip)
     {
-        if(playFade)
+        subMusicSource.StopForce();
+        mainMusicSource.PlayForce(clip);
+    }
+
+    void PlayMusicFade(AudioClip clip)
+    {
+        if(mainMusicSource.GetPlayingMusicName() == clip.name)
         {
-            if(mainMusicSource.IsPlaying())
-            {
-                mainMusicSource.Stop();
-                subMusicSource.Play(clip);
-            }
-            else
-            {
-                subMusicSource.Stop();
-                mainMusicSource.Play(clip);
-            }
+            subMusicSource.Stop();
+            mainMusicSource.Play(clip);
+            return;
+        }
+        else if(subMusicSource.GetPlayingMusicName() == clip.name)
+        {
+            mainMusicSource.Stop();
+            subMusicSource.Play(clip);
+            return;
+        }
+
+        if(mainMusicSource.IsPlaying())
+        {
+            mainMusicSource.Stop();
+            subMusicSource.Play(clip);
         }
         else
         {
-            mainMusicSource.PlayForce(clip);
-            subMusicSource.StopForce();
+            subMusicSource.Stop();
+            mainMusicSource.Play(clip);
         }
     }
 

@@ -128,8 +128,6 @@ public class GameManager : MonoBehaviour
         currentGame.OnGameResume();
 
         canvasManager.SetPanel("Playing");
-
-        SoundManager.Instance.PlayMusic("Infinity Music");
     }
 
     public void ReturnLobby()
@@ -144,16 +142,13 @@ public class GameManager : MonoBehaviour
             cameraView.RepositionView();
         }
 
-        if(!currentGame.IsCurrentState(GameState.LOBBY))
-        {
-            SoundManager.Instance.PlayMusic("Infinity Music");
-        }
-
         ResetUI();
 
         playerInput.SwitchCurrentActionMap("LobbyActions");
 
         canvasManager.SetPanel("Lobby");
+
+        SoundManager.Instance.PlayMusic("Infinity Music");
     }
 
     void ChangeGameMode(GameObject gameMode)
