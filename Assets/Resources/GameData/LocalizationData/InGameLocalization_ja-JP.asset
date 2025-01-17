@@ -43,11 +43,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 25854657736704
-    m_Localized: "\u70B9\u6570"
+    m_Localized: SCORE
     m_Metadata:
       m_Items: []
   - m_Id: 26936586842112
-    m_Localized: "\u6700\u9AD8\u8A18\u9332"
+    m_Localized: BEST SCORE
     m_Metadata:
       m_Items: []
   - m_Id: 27245702852608

@@ -19,12 +19,12 @@ public class GameLoader : MonoBehaviour
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(targetSceneIdx);
         asyncOperation.allowSceneActivation = false;
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
 
         float progress = 0;
         while(!asyncOperation.isDone || asyncOperation.allowSceneActivation == false)
         {
-            loadingProgressImage.fillAmount = Mathf.Lerp(loadingProgressImage.fillAmount, progress, 0.5f * Time.deltaTime);
+            loadingProgressImage.fillAmount = Mathf.Lerp(loadingProgressImage.fillAmount, progress, Time.deltaTime);
 
             if(asyncOperation.progress < 0.9f)
             {
