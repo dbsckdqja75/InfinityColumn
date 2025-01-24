@@ -1,13 +1,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DisturbChickenParty : DisturbObject, IDisturbMultiple, IDisturbColumn
+public class DisturbChickenParty : DisturbObject
 {
     [SerializeField] int maxChickenCount = 3;
 
     [SerializeField] List<GameObject> chickenPrefab = new List<GameObject>();
 
     List<DisturbChicken> chickenList = new List<DisturbChicken>();
+
+    public override void Init(DisturbManager disturbManager)
+    {
+        SpawnManager spawnManager = disturbManager.GetSpawnManager();
+        SetTargetColumn(spawnManager.GetLastColumn(3));
+    }
 
     public void SetTargetColumn(Column[] columns)
     {

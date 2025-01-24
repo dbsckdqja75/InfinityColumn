@@ -1,9 +1,16 @@
 using UnityEngine;
 
-public class DisturbChicken : DisturbObject, IDisturbBranch
+public class DisturbChicken : DisturbObject
 {
     [SerializeField] GameObject effectPrefab;
     [SerializeField] Vector3 offset;
+
+    public override void Init(DisturbManager disturbManager)
+    {
+        SpawnManager spawnManager = disturbManager.GetSpawnManager();
+        GameObject branch = spawnManager.GetLastColumnBranch();
+        SetTargetBranch(branch);
+    }
 
     void OnDisable() 
     {
@@ -19,7 +26,7 @@ public class DisturbChicken : DisturbObject, IDisturbBranch
 
     public void SetTargetBranch(GameObject branch)
     {
-        if(branch)
+        if(branch != null)
         {
             transform.SetParent(branch.transform);
             transform.position = branch.transform.position;

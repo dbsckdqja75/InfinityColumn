@@ -9,26 +9,35 @@ public class InfinityGame : MainGame
 
     float currentDamage = 12.5f;
 
+    // NOTE : 기본 설정
     const int maxHealth = 100;
-    const float minDamage = 12.5f, maxDamage = 30;
-    const float damageStep = 0.00006f; // TODO : 밸런스 조정
+    const float regainHealth = 4;
+    const float minDamage = 20, maxDamage = 30;
+    const float damageStep = 0.0001f;
 
-    const float regainHealth = 4; // TODO : 밸런스 조정
+    // NOTE : 방해 이벤트 관련 설정
+    const int disturbMinScoreStep = 50;
+    const int disturbMaxScoreStep = 60;
+
+    // NOTE : 점수 보상 설정 (VP)
     const int rewardVP = 1; // NOTE : 기준당 보상 (VP)
     const int scoreRewardStep = 100; // NOTE : 1VP 보상 기준 (점수)
 
+    // NOTE : 피버타임 설정
+    const float maxFeverTime = 100;
+    const float regainFeverTime = 1;
+    const float feverDuration = 5f;
+
     const int feverChargeStep = 2;
     const int feverChargeAmount = 1;
-    const float regainFeverTime = 1;
-
-    const float maxFeverTime = 100;
-    const float feverDuration = 5f;
 
     public override void Init(GameManager gameManager)
     {
         base.Init(gameManager);
 
         feverTimeRate = maxFeverTime * (1 / feverDuration);
+
+        disturbManager.ChangeScoreStep(disturbMinScoreStep, disturbMaxScoreStep);
 
         playUI.ShowFeverGauge();
         playUI.HideHealthTimer();
@@ -127,8 +136,6 @@ public class InfinityGame : MainGame
         }
     }
 
-
-
     void RegainHealth()
     {
         health = Mathf.Clamp(health + regainHealth, 0, maxHealth);
@@ -166,7 +173,7 @@ public class InfinityGame : MainGame
 
         playerController.OnFever(true);
 
-        spawnManager.FeverClearColumn(10, 3f);
+        spawnManager.FeverColumn(10, 3f);
 
         playUI.OnFeverTime();
 
@@ -204,10 +211,13 @@ public class InfinityGame : MainGame
             ChargeFever();
             AddDamage();
 
-            if(!isFeverTime)
-            {
-                disturbManager.UpdateTrigger(score.GetValue());
-            }
+            // if(!isFeverTime)
+            // {
+            //     disturbManager.UpdateTrigger(score.GetValue());
+            // }
+
+            // TODO : 피버타임이 아닐때도 이벤트 발생 (테스트 필요)
+            disturbManager.UpdateTrigger(score.GetValue());
             
             spawnManager.UpdateColumnMode(score.GetValue() >= GameManager.PLAYABLE_HEIGHT_LIMIT);
 

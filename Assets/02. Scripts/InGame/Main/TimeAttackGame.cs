@@ -2,14 +2,22 @@ using UnityEngine;
 
 public class TimeAttackGame : MainGame
 {
+    // NOTE : 체력 대신 게임 시간으로 진행
     [SerializeField] float gameTime = 60;
 
+    // NOTE : 방해 이벤트 관련 설정
+    const int disturbMinScoreStep = 20;
+    const int disturbMaxScoreStep = 30;
+
+    // NOTE : 점수 보상 설정 (VP)
     const int rewardVP = 1; // NOTE : 기준당 보상 (VP)
     const int scoreRewardStep = 100; // NOTE : 1VP 보상 기준 (점수)
 
     public override void Init(GameManager gameManager)
     {
         base.Init(gameManager);
+
+        disturbManager.ChangeScoreStep(disturbMinScoreStep, disturbMaxScoreStep);
 
         playUI.ShowHealthTimer();
         playUI.HideFeverGauge();
@@ -32,6 +40,8 @@ public class TimeAttackGame : MainGame
             health -= Time.deltaTime;
             health = Mathf.Clamp(health, 0f, gameTime);
         }
+
+        disturbManager.ChangeScoreStep(disturbMinScoreStep, disturbMaxScoreStep);
 
         playUI.UpdateHealth(health / gameTime);
         playUI.UpdateHealthTimer((int)health);
@@ -70,8 +80,6 @@ public class TimeAttackGame : MainGame
             gameManager.GameOver();
         }
     }
-
-
 
     public override void OnPlayerMoved()
     {

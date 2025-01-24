@@ -122,19 +122,11 @@ public class PlayerCharacter : MonoBehaviour
         }
     }
 
-    public void HeadTrackEnable()
+    public void EnableHeadTracking(bool isOn)
     {
         if(headTracker)
         {
-            headTracker.SetActive(true);
-        }
-    }
-
-    public void HeadTrackDisable()
-    {
-        if(headTracker)
-        {
-            headTracker.SetActive(false);
+            headTracker.SetActive(isOn);
         }
     }
 

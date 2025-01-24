@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
         {
             playerCharacter.ResetPosition();
             playerCharacter.ResetMotion();
-            playerCharacter.HeadTrackEnable();
+            playerCharacter.EnableHeadTracking(true);
         }
     }
 
@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour
         if(playerCharacter != null)
         {
             playerCharacter.FallMotion();
-            playerCharacter.HeadTrackDisable();
+            playerCharacter.EnableHeadTracking(false);
         }
 
         SoundManager.Instance.PlaySound("BuzzError1");

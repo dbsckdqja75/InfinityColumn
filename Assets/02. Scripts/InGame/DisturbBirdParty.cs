@@ -5,7 +5,7 @@ using UnityEngine;
 public class DisturbBirdParty : DisturbObject
 {
     [SerializeField] bool canCrossPoint;
-    [SerializeField] float flyDistance = 8f;
+    [SerializeField] float flyDistance = 8f; // NOTE : PC 해상도 기준 카메라 시점 고려
     [SerializeField] float maxDelayTime = 1f;
 
     [Space(10)]
@@ -27,22 +27,23 @@ public class DisturbBirdParty : DisturbObject
             {
                 GameObject prefab = birdPrefab[Random.Range(0, birdPrefab.Count)];
 
-                float pointX = RandomExtensions.RandomBool() ? flyDistance : -flyDistance;
+                float startPosX = RandomExtensions.RandomBool() ? flyDistance : -flyDistance;
 
-                Vector3 startPos = new Vector3(pointX, point.y, point.z);
-                Vector3 endPos = new Vector3(-pointX, point.y, point.z);
+                Vector3 startPos = new Vector3(startPosX, point.y, point.z);
+                Vector3 endPos = new Vector3(-startPosX, point.y, point.z);
 
+                // NOTE : 단방향이 아닌 양방향으로 서로 엇갈릴 수 있도록 함
                 if(canCrossPoint)
                 {
-                    Vector3 randPoint = points[Random.Range(0, points.Length)];
-                    randPoint.z = RandomExtensions.RandomBool() ? randPoint.z : point.z;
+                    Vector3 randomPoint = points[Random.Range(0, points.Length)];
+                    randomPoint.z = RandomExtensions.RandomBool() ? randomPoint.z : point.z;
 
-                    endPos = new Vector3(endPos.x, randPoint.y, randPoint.z);
+                    // NOTE : XY축의 사선으로도 엇갈릴 수 있도록 함
+                    endPos = new Vector3(endPos.x, randomPoint.y, randomPoint.z);
                 }
 
                 DisturbBird bird = Instantiate(prefab, startPos, Quaternion.identity, this.transform).GetComponent<DisturbBird>();
-                bird.SetStartPoint(startPos);
-                bird.SetEndPoint(endPos);
+                bird.SetWayPoint(startPos, endPos);
 
                 birdList.Add(bird);
             }

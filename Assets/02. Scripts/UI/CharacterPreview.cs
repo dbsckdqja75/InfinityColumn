@@ -211,7 +211,7 @@ public class CharacterPreview : MonoBehaviour
     public void ResetCharacterHeadTrack(int pivotIdx)
     {
         previewCharacter[pivotIdx].SetHeadTrackTarget(previewCamera.transform);
-        previewCharacter[pivotIdx].HeadTrackEnable();
+        previewCharacter[pivotIdx].EnableHeadTracking(true);
     }
 
     public void NextCharacter()

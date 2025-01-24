@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class DisturbBird : DisturbObject, IDisturbFlyable
+public class DisturbBird : DisturbObject
 {
     [SerializeField] float minSlope, maxSlope;
 
@@ -11,13 +11,9 @@ public class DisturbBird : DisturbObject, IDisturbFlyable
 
     Vector3 startPos, endPos, currentPos;
 
-    public void SetStartPoint(Vector3 startPoint)
+    public void SetWayPoint(Vector3 startPoint, Vector3 endPoint)
     {
         startPos = startPoint;
-    }
-
-    public void SetEndPoint(Vector3 endPoint)
-    {
         endPos = endPoint;
     }
 

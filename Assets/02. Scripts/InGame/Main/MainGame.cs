@@ -78,8 +78,6 @@ public class MainGame : MonoBehaviour
         }
     }
 
-
-
     public virtual void OnGameReady()
     {
         currentState = GameState.READY;
@@ -92,6 +90,8 @@ public class MainGame : MonoBehaviour
     public void OnGameStart()
     {
         currentState = GameState.PLAYING;
+
+        disturbManager.ResetTrigger();
     }
 
     public virtual void OnGameOver()
@@ -113,8 +113,6 @@ public class MainGame : MonoBehaviour
 
         LoadGameRecord();
     }
-
-
 
     public virtual void OnGameResume()
     {
