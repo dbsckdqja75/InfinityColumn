@@ -223,7 +223,7 @@ public class SpawnManager : MonoBehaviour
     }
 
     #if UNITY_EDITOR
-    public void DebugSetBranchClear(bool isOn)
+    public void DebugBranchClear(bool isOn)
     {
         debug_branchClear = isOn;
     }

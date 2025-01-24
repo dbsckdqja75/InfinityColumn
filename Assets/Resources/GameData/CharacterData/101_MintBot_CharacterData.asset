@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 101
   characterLocaleKey: CharacterName_MintBot
-  price: 100
+  price: 30
   previewScale: 0.9
   prefab: {fileID: 7373869055244383864, guid: ada45ff3a41ce1549bcfbd3ce0dc21f8, type: 3}

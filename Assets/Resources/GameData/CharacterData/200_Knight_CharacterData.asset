@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 200
   characterLocaleKey: CharacterName_Knight
-  price: 400
+  price: 100
   previewScale: 1.1
   prefab: {fileID: 4551761117380815924, guid: a36ce59538e58a64cb5dfde9ceb3a87b, type: 3}

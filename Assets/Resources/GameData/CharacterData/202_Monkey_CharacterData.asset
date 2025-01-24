@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 202
   characterLocaleKey: CharacterName_Monkey
-  price: 200
+  price: 40
   previewScale: 1.1
   prefab: {fileID: 8630302573822353879, guid: 30f74416814e340468750d4f95d5ada0, type: 3}

@@ -130,6 +130,16 @@ public class PlayerCharacter : MonoBehaviour
         }
     }
 
+    public void HeadTrackEnable()
+    {
+        EnableHeadTracking(true);
+    }
+
+    public void HeadTrackDisable()
+    {
+        EnableHeadTracking(false);
+    }
+
     public void EventMotion(int motionIdx)
     {
         if(animator.GetInteger("MoveDirection") < 0 && !animator.GetBool("isFall"))

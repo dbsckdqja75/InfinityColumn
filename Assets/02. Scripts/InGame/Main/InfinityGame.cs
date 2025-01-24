@@ -229,4 +229,11 @@ public class InfinityGame : MainGame
             }
         }
     }
+
+    #if UNITY_EDITOR
+    public void DebugFeverTime()
+    {
+        OnFeverTime();
+    }
+    #endif
 }

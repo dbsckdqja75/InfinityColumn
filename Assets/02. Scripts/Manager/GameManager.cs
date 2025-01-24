@@ -401,4 +401,14 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    #if UNITY_EDITOR
+    public void DebugForceFeverTime()
+    {
+        if(currentGame is InfinityGame)
+        {
+            ((InfinityGame)currentGame).DebugFeverTime();
+        }
+    }
+    #endif
 }

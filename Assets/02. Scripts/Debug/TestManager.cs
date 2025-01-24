@@ -17,7 +17,7 @@ public class TestManager : MonoBehaviour
 
     [SerializeField] DisturbData testDisturbData;
 
-    bool isAutoPlay, isInfinityHealth, isDebugDisturb, isBranchClear;
+    bool isAutoPlay, isDebugDisturb, isBranchClear;
     int rewardScore = 1;
 
     DisturbData originalDisturbData;
@@ -36,8 +36,6 @@ public class TestManager : MonoBehaviour
     void UpdateUI()
     {
         autoPlayText.text = string.Format("자동 플레이 {0}", isAutoPlay ? "ON" : "OFF");
-        rewardScoreText.text = string.Format("점수 증가 ({0})", rewardScore.ToString());
-        infinityHealthText.text = string.Format("무한 체력 {0}", isInfinityHealth ? "ON" : "OFF");
         debugDisturbText.text = string.Format("방해 이벤트 디버그 {0}", isDebugDisturb ? "ON" : "OFF");
         branchClearText.text = string.Format("기둥 가지 클리어 {0}", isBranchClear ? "ON" : "OFF");
     }
@@ -47,38 +45,6 @@ public class TestManager : MonoBehaviour
         isAutoPlay = !isAutoPlay;
 
         autoPlayer.SetAutoPlay(isAutoPlay);
-
-        UpdateUI();
-    }
-
-    public void ToggleRewardScore()
-    {
-        switch(rewardScore)
-        {
-            case 1:
-            rewardScore = 10;
-            break;
-            case 10:
-            rewardScore = 100;
-            break;
-            case 100:
-            rewardScore = 1000;
-            break;
-            case 1000:
-            rewardScore = 1;
-            break;
-        }
-
-        // gameManager.DebugSetRewardScore(rewardScore);
-
-        UpdateUI();
-    }
-
-    public void ToggleInfinityHealth()
-    {
-        isInfinityHealth = !isInfinityHealth;
-
-        // gameManager.DebugSetInfinityHealth(isInfinityHealth);
 
         UpdateUI();
     }
@@ -109,14 +75,19 @@ public class TestManager : MonoBehaviour
 
     public void ForceFeverTime()
     {
-        // gameManager.DebugForceFeverTime();
+        gameManager.DebugForceFeverTime();
+    }
+    
+    public void ForceRewardVP()
+    {
+        CurrencyManager.Instance.RewardCurrency(CurrencyType.VOXEL_POINT, 10);
     }
 
     public void ToggleBranchClear()
     {
         isBranchClear = !isBranchClear;
 
-        spawnManager.DebugSetBranchClear(isBranchClear);
+        spawnManager.DebugBranchClear(isBranchClear);
 
         UpdateUI();
     }

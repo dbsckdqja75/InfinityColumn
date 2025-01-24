@@ -275,6 +275,10 @@ MonoBehaviour:
     m_Key: Leaderboard_MaintenanceContext
     m_Metadata:
       m_Items: []
+  - m_Id: 48613096065904640
+    m_Key: CharacterName_Snowman
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

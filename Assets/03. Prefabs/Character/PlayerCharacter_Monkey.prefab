@@ -2952,6 +2952,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6745061051087854262}
     m_Modifications:
+    - target: {fileID: 1500042766802277715, guid: 6dd1a0e16144c7449a9059ce4785029d,
+        type: 3}
+      propertyPath: headTrf
+      value: 
+      objectReference: {fileID: 6745061051087854262}
+    - target: {fileID: 2361222042130952819, guid: 6dd1a0e16144c7449a9059ce4785029d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361222042130952819, guid: 6dd1a0e16144c7449a9059ce4785029d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 2829458803111887582, guid: 6dd1a0e16144c7449a9059ce4785029d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2975,17 +2990,17 @@ PrefabInstance:
     - target: {fileID: 2829458803111887582, guid: 6dd1a0e16144c7449a9059ce4785029d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000014901159
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2829458803111887582, guid: 6dd1a0e16144c7449a9059ce4785029d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2829458803111887582, guid: 6dd1a0e16144c7449a9059ce4785029d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2829458803111887582, guid: 6dd1a0e16144c7449a9059ce4785029d,
         type: 3}
@@ -3006,6 +3021,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FaceH
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397439829943287089, guid: 6dd1a0e16144c7449a9059ce4785029d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397439829943287089, guid: 6dd1a0e16144c7449a9059ce4785029d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

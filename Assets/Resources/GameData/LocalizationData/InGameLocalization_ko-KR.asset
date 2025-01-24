@@ -285,6 +285,10 @@ MonoBehaviour:
       \uB2E4\uC2DC \uC2DC\uB3C4\uD574\uC8FC\uC138\uC694!"
     m_Metadata:
       m_Items: []
+  - m_Id: 48613096065904640
+    m_Localized: "\uB208\uC0AC\uB78C"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
