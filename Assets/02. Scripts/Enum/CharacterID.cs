@@ -9,4 +9,7 @@ public enum CharacterID
     EXTRA_MONKEY = 202,
     EXTRA_SNOWMAN = 203,
     EXTRA_PENGUIN = 204,
+    EXTRA_BEAR = 205,
+    EXTRA_POLARBEAR = 206,
+    EXTRA_BLACKBEAR = 207,
 }

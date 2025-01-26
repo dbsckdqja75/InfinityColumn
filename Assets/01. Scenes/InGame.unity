@@ -37420,6 +37420,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 268adc2d37a2e694ead2bbcb1c9d90eb, type: 2}
   - {fileID: 11400000, guid: c5a33e5b87e66fc4ebf4e40c4ef97343, type: 2}
   - {fileID: 11400000, guid: f96d662ca11dac94bb00cc2c40e2d459, type: 2}
+  - {fileID: 11400000, guid: cdf01a349d53db941b70f7f66af0aadd, type: 2}
+  - {fileID: 11400000, guid: 7ab826e9e4824dc4b8eddbf6153d11bf, type: 2}
+  - {fileID: 11400000, guid: 156b6b09ae0fc8a43930f5004a876036, type: 2}
   playerData: 
 --- !u!4 &1571317376
 Transform:
