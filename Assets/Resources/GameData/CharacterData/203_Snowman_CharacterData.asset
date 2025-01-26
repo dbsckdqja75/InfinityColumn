@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 203
   characterLocaleKey: CharacterName_Snowman
   price: 40
-  previewScale: 0.9
+  previewScale: 0.85
   prefab: {fileID: 2139032905123718162, guid: 7d731a9d8cd825d44a44751c8f6d747e, type: 3}

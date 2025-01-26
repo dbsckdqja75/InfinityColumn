@@ -279,6 +279,10 @@ MonoBehaviour:
     m_Key: CharacterName_Snowman
     m_Metadata:
       m_Items: []
+  - m_Id: 48641310133891072
+    m_Key: CharacterName_Penguin
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

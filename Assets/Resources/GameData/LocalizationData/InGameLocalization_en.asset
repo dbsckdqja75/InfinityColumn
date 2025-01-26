@@ -324,6 +324,10 @@ MonoBehaviour:
     m_Localized: Snowman
     m_Metadata:
       m_Items: []
+  - m_Id: 48641310133891072
+    m_Localized: Penguin
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

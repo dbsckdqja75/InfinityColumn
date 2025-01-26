@@ -8,4 +8,5 @@ public enum CharacterID
     EXTRA_SANTA = 201,
     EXTRA_MONKEY = 202,
     EXTRA_SNOWMAN = 203,
+    EXTRA_PENGUIN = 204,
 }
