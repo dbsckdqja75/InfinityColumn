@@ -12,7 +12,7 @@ public class InfinityGame : MainGame
     // NOTE : 기본 설정
     const int maxHealth = 100;
     const float regainHealth = 4;
-    const float minDamage = 20, maxDamage = 30;
+    const float minDamage = 20, maxDamage = 32;
     const float damageStep = 0.0001f;
 
     // NOTE : 방해 이벤트 관련 설정
@@ -233,7 +233,10 @@ public class InfinityGame : MainGame
     #if UNITY_EDITOR
     public void DebugFeverTime()
     {
-        OnFeverTime();
+        if(IsCurrentState(GameState.PLAYING))
+        {
+            OnFeverTime();
+        }
     }
     #endif
 }

@@ -17,4 +17,9 @@ public class DisturbData : ScriptableObject
 
         return null;
     }
+
+    public GameObject GetRandomDisturbPrefab()
+    {
+        return dataList[Random.Range(0, dataList.Count)].prefab;;
+    }
 }

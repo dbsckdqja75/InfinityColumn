@@ -106,6 +106,7 @@ public class PlayerController : MonoBehaviour
         {
             playerCharacter.ResetPosition();
             playerCharacter.ResetMotion();
+            playerCharacter.ResetEyeMotion();
             playerCharacter.EnableHeadTracking(true);
         }
     }

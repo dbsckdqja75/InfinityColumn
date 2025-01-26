@@ -47,13 +47,11 @@ public class DisturbManager : MonoBehaviour
         }
     }
 
-    public void UpdateTrigger(int currentScore)
+    public void UpdateTrigger(int currentScore, bool forceRandom = false)
     {
-        // TODO : 피버타임일때도 이벤트 발생해야할듯
-
         if(targetScore.GetValue() <= currentScore && currentDisturb == null)
         {
-            GameObject disturbPrefab = disturbData.GetRandomDisturbPrefab(currentScore);
+            GameObject disturbPrefab = forceRandom ? disturbData.GetRandomDisturbPrefab() : disturbData.GetRandomDisturbPrefab(currentScore);
             if(disturbPrefab != null)
             {
                 DisturbObject disturb = Instantiate(disturbPrefab, Vector3.zero, Quaternion.identity).GetComponent<DisturbObject>();

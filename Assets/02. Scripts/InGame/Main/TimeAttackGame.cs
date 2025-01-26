@@ -6,8 +6,8 @@ public class TimeAttackGame : MainGame
     [SerializeField] float gameTime = 60;
 
     // NOTE : 방해 이벤트 관련 설정
-    const int disturbMinScoreStep = 20;
-    const int disturbMaxScoreStep = 30;
+    const int disturbMinScoreStep = 10;
+    const int disturbMaxScoreStep = 15;
 
     // NOTE : 점수 보상 설정 (VP)
     const int rewardVP = 1; // NOTE : 기준당 보상 (VP)
@@ -90,7 +90,7 @@ public class TimeAttackGame : MainGame
         {
             EarnScore();
 
-            disturbManager.UpdateTrigger(score.GetValue());
+            disturbManager.UpdateTrigger(score.GetValue(), true);
             
             spawnManager.UpdateColumnMode(score.GetValue() >= GameManager.PLAYABLE_HEIGHT_LIMIT);
 
