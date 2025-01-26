@@ -75,7 +75,7 @@ public class MusicSource : MonoBehaviour
 
         if(onFullVolume)
         {
-            audioSource.volume = musicVolume;
+            audioSource.volume = (isMute ? 0 : musicVolume);
         }
 
         audioSource.Play();

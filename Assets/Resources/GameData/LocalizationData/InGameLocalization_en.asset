@@ -328,6 +328,18 @@ MonoBehaviour:
     m_Localized: Penguin
     m_Metadata:
       m_Items: []
+  - m_Id: 49362105487372288
+    m_Localized: Bear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49362271040745472
+    m_Localized: Polar Bear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49362277101514752
+    m_Localized: Black Bear
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

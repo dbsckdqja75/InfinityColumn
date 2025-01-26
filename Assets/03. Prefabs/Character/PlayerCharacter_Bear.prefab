@@ -2563,7 +2563,6 @@ GameObject:
   - component: {fileID: 6161960223898184956}
   - component: {fileID: 5400972315351244750}
   - component: {fileID: 4756076505698291858}
-  - component: {fileID: 9005440354507400372}
   m_Layer: 6
   m_Name: PlayerCharacter_Bear
   m_TagString: Untagged
@@ -3006,42 +3005,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &9005440354507400372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8766178407382406495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 246455474a0d74a4291b3cedc896ebdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bonePaths:
-  - 
-  - Root
-  - Root/Head
-  - Root/Head/FaceH
-  - Root/Head/FaceH/L Eye
-  - Root/Head/FaceH/R Eye
-  - Root/Head/FaceH/L Eye X
-  - Root/Head/FaceH/R Eye X
-  - Root/L Hand
-  - Root/R Hand
-  - Root/L Foot
-  - Root/R Foot
-  showBones: 010000000200000008000000090000000a0000000b000000
-  foldoutBones: 03000000020000000100000000000000
-  mirrorBones: ffffffffffffffffffffffffffffffff0500000004000000070000000600000009000000080000000b0000000a000000
-  mirrorBlendShape: []
-  animatorIkData: []
-  originalIkData: []
-  selectionData: []
-  lastSelectAnimationClip: {fileID: 7400000, guid: 509521589eb52504cbc7550bdaa2af3b,
-    type: 2}
-  handPoseList: []
-  blendShapeList: []
 --- !u!1 &8835920617777582542
 GameObject:
   m_ObjectHideFlags: 0
@@ -3925,6 +3888,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ClearCoatMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -3980,7 +3947,9 @@ Material:
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
+    - _BlendOp: 0
     - _BumpScale: 1
+    - _ClearCoat: 0
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2

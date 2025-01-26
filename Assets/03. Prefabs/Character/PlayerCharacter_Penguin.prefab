@@ -826,7 +826,6 @@ GameObject:
   - component: {fileID: 8133490042383073066}
   - component: {fileID: 884325230019085318}
   - component: {fileID: 1068554911947815384}
-  - component: {fileID: 5713528960600482186}
   m_Layer: 6
   m_Name: PlayerCharacter_Penguin
   m_TagString: Untagged
@@ -1269,44 +1268,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5713528960600482186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9147862353936965510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 246455474a0d74a4291b3cedc896ebdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bonePaths:
-  - 
-  - Root
-  - Root/Head
-  - Root/Head/FaceG
-  - Root/Head/FaceG/L Eye
-  - Root/Head/FaceG/L Eye/Pupill
-  - Root/Head/FaceG/R Eye
-  - Root/Head/FaceG/R Eye/Pupill
-  - Root/Head/FaceG/L Eye X
-  - Root/Head/FaceG/R Eye X
-  - Root/L Hand
-  - Root/R Hand
-  - Root/L Foot
-  - Root/R Foot
-  showBones: 01000000020000000a0000000b0000000c0000000d000000
-  foldoutBones: 060000000400000003000000000000000100000002000000
-  mirrorBones: ffffffffffffffffffffffffffffffff0600000007000000040000000500000009000000080000000b0000000a0000000d0000000c000000
-  mirrorBlendShape: []
-  animatorIkData: []
-  originalIkData: []
-  selectionData: []
-  lastSelectAnimationClip: {fileID: 7400000, guid: c833a6892f912564db83a3826106865b,
-    type: 2}
-  handPoseList: []
-  blendShapeList: []
 --- !u!1001 &8132998028643150348
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4389,7 +4389,6 @@ GameObject:
   - component: {fileID: 2192295863942910029}
   - component: {fileID: 2270778683296021571}
   - component: {fileID: 1710954197279088389}
-  - component: {fileID: 551242696959827356}
   m_Layer: 6
   m_Name: PlayerCharacter_Santa
   m_TagString: Untagged
@@ -4832,46 +4831,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &551242696959827356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7696604531206290053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 246455474a0d74a4291b3cedc896ebdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bonePaths:
-  - 
-  - Root
-  - Root/Head
-  - Root/Head/FaceB Lively
-  - Root/Head/FaceB Lively/L Mask
-  - Root/Head/FaceB Lively/R Mask
-  - Root/Head/FaceB Lively/L Eye
-  - Root/Head/FaceB Lively/L Eye/Iris
-  - Root/Head/FaceB Lively/R Eye
-  - Root/Head/FaceB Lively/R Eye/Iris
-  - Root/Head/FaceB Lively/L Eye X
-  - Root/Head/FaceB Lively/R Eye X
-  - Root/L Hand
-  - Root/R Hand
-  - Root/L Foot
-  - Root/R Foot
-  showBones: 01000000020000000c0000000d0000000e0000000f000000
-  foldoutBones: 080000000600000003000000020000000100000000000000
-  mirrorBones: ffffffffffffffffffffffffffffffff0500000004000000080000000900000006000000070000000b0000000a0000000d0000000c0000000f0000000e000000
-  mirrorBlendShape: []
-  animatorIkData: []
-  originalIkData: []
-  selectionData: []
-  lastSelectAnimationClip: {fileID: 7400000, guid: 56bf9fe1174184d4eb1e5f2e63e377a7,
-    type: 2}
-  handPoseList: []
-  blendShapeList: []
 --- !u!1 &7870847623837669390
 GameObject:
   m_ObjectHideFlags: 0
@@ -5140,7 +5099,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Character_Santa_0
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: 4800000, guid: 8d2bb70cbf9db8d4da26e15b26e74248, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -5232,14 +5191,18 @@ Material:
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
+    - _GlossinessSource: 0
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _Shininess: 0
     - _Smoothness: 0
+    - _SmoothnessSource: 0
     - _SmoothnessTextureChannel: 0
+    - _SpecSource: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
