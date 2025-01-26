@@ -4482,6 +4482,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 1
     messageOptions: 0
+  - time: 0.5
+    functionName: FaceMotion
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 1
+    messageOptions: 0
   - time: 2
     functionName: FaceMotion
     data: 
