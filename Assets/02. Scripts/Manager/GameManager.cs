@@ -88,6 +88,8 @@ public class GameManager : MonoBehaviour
             playerInput.SwitchCurrentActionMap("PlayerActions");
 
             canvasManager.SetPanel("Playing");
+
+            SoundManager.Instance.PlaySound("Hit2");
         }
     }
 
@@ -300,19 +302,19 @@ public class GameManager : MonoBehaviour
 
     public void OpenLeaderboard()
     {
-        // #if UNITY_EDITOR || UNITY_STANDALONE
-        // if(currentGame.OnExtraMenuOpen())
-        // {
-        //     playerController.SetControlLock(true);
+        #if UNITY_EDITOR || UNITY_STANDALONE
+        if(currentGame.OnExtraMenuOpen())
+        {
+            playerController.SetControlLock(true);
 
-        //     leaderboardManager.OnLeaderboard();
+            leaderboardManager.OnLeaderboard();
 
-        //     canvasManager.SetPanel("Leaderboard");
-        // }
-        // #elif UNITY_ANDROID
-        // GPGS.ReportLeaderboard(gameType, bestScore.GetValue());
-        // GPGS.ShowLeaderboardUI();
-        // #endif
+            canvasManager.SetPanel("Leaderboard");
+        }
+        #elif UNITY_ANDROID
+        GPGS.ReportLeaderboard(currentGame.GetGameType(), currentGame.GetBestScore());
+        GPGS.ShowLeaderboardUI();
+        #endif
     }
 
     public void OpenCharacterSelect()

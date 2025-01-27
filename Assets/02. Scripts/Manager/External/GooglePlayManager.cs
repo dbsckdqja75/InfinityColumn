@@ -212,13 +212,12 @@ public class GooglePlayManager : MonoBehaviour
             case GameType.INFINITY:
             ReportLeaderboard(GPGSIds.leaderboard_top_score_infinity, score);
             break;
-            // TODO : 공개 테스트 단계에서 마무리
-            // case GameType.ONE_TIME_ATTACK:
-            // ReportLeaderboard(GPGSIds.leaderboard_top_score_one_minute, score);
-            // break;
-            // case GameType.THREE_TIME_ATTACK:
-            // ReportLeaderboard(GPGSIds.leaderboard_top_score_three_minute, score);
-            // break;
+            case GameType.SECOND_ATTACK:
+            ReportLeaderboard(GPGSIds.leaderboard_top_score_30sec, score);
+            break;
+            case GameType.ONE_MIN_ATTACK:
+            ReportLeaderboard(GPGSIds.leaderboard_top_score_1min, score);
+            break;
             default:
             break;
         }
