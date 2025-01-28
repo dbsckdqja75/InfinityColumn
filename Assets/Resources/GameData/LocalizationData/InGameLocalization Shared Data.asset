@@ -295,6 +295,22 @@ MonoBehaviour:
     m_Key: CharacterName_BlackBear
     m_Metadata:
       m_Items: []
+  - m_Id: 49714338460643328
+    m_Key: Terms_Context
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49714351387488256
+    m_Key: Terms_PolicyPrivacy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49714362326233088
+    m_Key: Terms_TermsOfService
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49714373810237440
+    m_Key: Terms_Accept
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

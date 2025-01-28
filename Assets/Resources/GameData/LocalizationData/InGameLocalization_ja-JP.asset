@@ -302,6 +302,25 @@ MonoBehaviour:
     m_Localized: "\u3057\u308D\u304F\u307E"
     m_Metadata:
       m_Items: []
+  - m_Id: 49714338460643328
+    m_Localized: 'Please agree to the terms of service to
+
+      enjoy the game for
+      free!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49714373810237440
+    m_Localized: I ACCEPT THE TERMS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49714362326233088
+    m_Localized: Terms of Service
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49714351387488256
+    m_Localized: Policy Privacy
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

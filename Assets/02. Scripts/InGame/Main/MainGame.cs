@@ -187,10 +187,13 @@ public class MainGame : MonoBehaviour
     {
         if(bestScore.GetValue() < score.GetValue())
         {
-            // TODO : 갱신 표시 효과 추가 (NEW)
-            bestScore.SetValue(score.GetValue());
+            if(score.GetValue() < 999999) // NOTE : 최대 점수 임시 제한 (조작 방지)
+            {
+                // TODO : 갱신 표시 효과 추가 (NEW)
+                bestScore.SetValue(score.GetValue());
 
-            SaveGameRecord();
+                SaveGameRecord();
+            }
         }
 
         resultUI.ReportScore(score.GetValue(), bestScore.GetValue());
