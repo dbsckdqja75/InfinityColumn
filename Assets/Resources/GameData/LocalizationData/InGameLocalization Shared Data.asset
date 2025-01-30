@@ -315,6 +315,14 @@ MonoBehaviour:
     m_Key: CharacterName_RetroBot
     m_Metadata:
       m_Items: []
+  - m_Id: 50854587584786432
+    m_Key: CharacterName_HazmatSuit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50854603355369472
+    m_Key: CharacterName_Astronaut
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
