@@ -321,6 +321,10 @@ MonoBehaviour:
     m_Localized: Policy Privacy
     m_Metadata:
       m_Items: []
+  - m_Id: 50821899154927616
+    m_Localized: "\u30EC\u30C8\u30ED\u30DC\u30C3\u30C8"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

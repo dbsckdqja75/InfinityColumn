@@ -311,6 +311,10 @@ MonoBehaviour:
     m_Key: Terms_Accept
     m_Metadata:
       m_Items: []
+  - m_Id: 50821899154927616
+    m_Key: CharacterName_RetroBot
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

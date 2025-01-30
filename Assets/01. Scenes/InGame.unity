@@ -37443,6 +37443,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cdf01a349d53db941b70f7f66af0aadd, type: 2}
   - {fileID: 11400000, guid: 7ab826e9e4824dc4b8eddbf6153d11bf, type: 2}
   - {fileID: 11400000, guid: 156b6b09ae0fc8a43930f5004a876036, type: 2}
+  - {fileID: 11400000, guid: 53c4f18e9c13a894e8ce67cee9cda171, type: 2}
   playerData: 
 --- !u!4 &1571317376
 Transform:

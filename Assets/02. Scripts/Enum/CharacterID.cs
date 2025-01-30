@@ -12,4 +12,5 @@ public enum CharacterID
     EXTRA_BEAR = 205,
     EXTRA_POLARBEAR = 206,
     EXTRA_BLACKBEAR = 207,
+    BOT_RETRO = 103,
 }

@@ -42,8 +42,8 @@ public static class CoroutineExtensions
         while (progress < 1f)
         {
             action.Invoke();
-            
-            progress = Mathf.Lerp(progress, 1.1f, speed * Time.smoothDeltaTime);
+
+            progress += speed * Time.smoothDeltaTime;
 
             yield return null;
         }
@@ -57,7 +57,7 @@ public static class CoroutineExtensions
         {
             action.Invoke(progress);
 
-            progress = Mathf.Lerp(progress, 1.1f, speed * Time.smoothDeltaTime);
+            progress += speed * Time.smoothDeltaTime;
 
             yield return null;
         }
