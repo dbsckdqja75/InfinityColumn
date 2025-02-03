@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataList:
   - startScore: 10
+    endScore: 1000
+    prefab: {fileID: 560479900516499630, guid: f11116f4f31be3b4fa4eac1e58b1cdf4, type: 3}
+  - startScore: 10
     endScore: 300
     prefab: {fileID: 3481372182876595578, guid: 0257f55269e01bd48be463730668bcd5,
       type: 3}

@@ -14,7 +14,7 @@ public static class TransformExtensions
             Vector3 B0 = Vector3.Lerp(M0, M1, t);
             Vector3 B1 = Vector3.Lerp(M1, M2, t);
 
-            trf.position = Vector3.Lerp(B0, B1, t);
+            trf.localPosition = Vector3.Lerp(B0, B1, t);
         }
 
         public static void LerpScale(this Transform trf, Vector3 startScale, Vector3 endScale, float t)

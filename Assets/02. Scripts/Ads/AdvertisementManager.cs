@@ -30,7 +30,7 @@ public class AdvertisementManager : MonoSingleton<AdvertisementManager>
     protected override void Init()
     {
         // TODO : 추후에 약관동의를 통해 여부 반영
-        IronSource.Agent.setConsent(true);
+        IronSource.Agent.setConsent(false);
         IronSource.Agent.setMetaData("is_deviceid_optout","true");
         IronSource.Agent.setMetaData("is_child_directed","true");
         IronSource.Agent.setMetaData("do_not_sell","true");
