@@ -1384,7 +1384,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.2924528, g: 0.1448469, b: 0.1448469, a: 1}
+        key0: {r: 0.6759078, g: 0.7830189, b: 0.7672673, a: 1}
         key1: {r: 0.5377358, g: 0.33228016, b: 0.33228016, a: 0}
         key2: {r: 0.16470589, g: 0.13333334, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -4933,7 +4933,7 @@ GameObject:
   - component: {fileID: 6604908780423266699}
   - component: {fileID: 1393719345441763794}
   m_Layer: 0
-  m_Name: CokeImpact
+  m_Name: IonImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11200,8 +11200,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.2924528, g: 0.1448469, b: 0.1448469, a: 1}
-        key1: {r: 0.29411766, g: 0.14509805, b: 0.14509805, a: 0}
+        key0: {r: 0.6759078, g: 0.7830189, b: 0.7672673, a: 1}
+        key1: {r: 0.5377358, g: 0.33228016, b: 0.33228016, a: 0}
         key2: {r: 0.16470589, g: 0.13333334, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}

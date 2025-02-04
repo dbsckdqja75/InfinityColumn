@@ -1,11 +1,8 @@
 using System.Collections;
 using UnityEngine;
 
-public class DisturbCoke : DisturbObject
+public class DisturbDrink : DisturbObject
 {
-    // bool isDrop = false;
-
-    [SerializeField] GameObject effectPrefab;
     [SerializeField] float dropDistance = 3.5f;
     [SerializeField] float dropSpeed = 0.7f;
     [SerializeField] Vector3 offset;
@@ -35,13 +32,6 @@ public class DisturbCoke : DisturbObject
 
     void OnDisable()
     {
-        // if(transform.parent == null && isDrop == false)
-        // {
-        //     Instantiate(effectPrefab, transform.position, Quaternion.identity);
-            
-        //     SoundManager.Instance.PlaySound("Coke", transform.position);
-        // }
-
         Deactivate();
     }
 
