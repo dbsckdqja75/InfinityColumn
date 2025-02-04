@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22d3d8a9ff1e1b4198824abf6bba440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropDistance: 3.5
+  dropDistance: 4.5
   dropSpeed: 0.7
   offset: {x: 0.34, y: 0.125, z: 0}
 --- !u!43 &4503308361586011421

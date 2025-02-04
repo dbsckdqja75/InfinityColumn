@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class DisturbDrink : DisturbObject
 {
-    [SerializeField] float dropDistance = 3.5f;
+    [SerializeField] float dropDistance = 4.5f;
     [SerializeField] float dropSpeed = 0.7f;
     [SerializeField] Vector3 offset;
 

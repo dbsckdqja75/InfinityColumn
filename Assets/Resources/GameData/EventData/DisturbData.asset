@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataList:
   - startScore: 10
-    endScore: 300
+    endScore: 600
     prefab: {fileID: 5569524978045836295, guid: a549f6b5743f5344f872d5b649c6e549,
       type: 3}
   - startScore: 10
-    endScore: 300
+    endScore: 2000
     prefab: {fileID: 2726278348084348032, guid: ced9a5aaad22697479e1ba701cf77832,
       type: 3}
   - startScore: 10
-    endScore: 300
+    endScore: 2000
     prefab: {fileID: 8685857693146822063, guid: 6ab7d04966639f2448f2949284050f8e,
       type: 3}
   - startScore: 10
-    endScore: 300
+    endScore: 2000
     prefab: {fileID: 8995335859252655954, guid: 35c3d60dfc148014f9965ff4d2c42f2d,
       type: 3}
   - startScore: 10
@@ -100,17 +100,25 @@ MonoBehaviour:
     prefab: {fileID: 7763392112259956260, guid: b9d8d14264c81f44d94a48fb9a08896e,
       type: 3}
   - startScore: 300
-    endScore: 12000
+    endScore: 300000
+    prefab: {fileID: 4926392768920856540, guid: 31fb9d7b1c471cc4c9eb3b163cb157b0,
+      type: 3}
+  - startScore: 300
+    endScore: 300000
+    prefab: {fileID: 4926392768920856540, guid: 196245d7a5b9b1e4c8b6f01eb734101b,
+      type: 3}
+  - startScore: 300
+    endScore: 300000
     prefab: {fileID: 2156000990581846445, guid: c251ea303d326594da66d45f11f9ce69,
       type: 3}
   - startScore: 300
     endScore: 12000
     prefab: {fileID: 735218465518474288, guid: 60541af3b7f98ab43820bd62cb85a23e, type: 3}
   - startScore: 300
-    endScore: 12000
+    endScore: 300000
     prefab: {fileID: 1451304405441889475, guid: 8e06481a1cd71b544bbb02e5d8449a9e,
       type: 3}
   - startScore: 300
-    endScore: 12000
+    endScore: 300000
     prefab: {fileID: 4452009412100054569, guid: 7e8af3251ccac134d9b5c5e6f055ef11,
       type: 3}

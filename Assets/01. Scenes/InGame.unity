@@ -18624,6 +18624,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fca13f3155262a74583c50bc2b3103f6, type: 3}
   - {fileID: 8300000, guid: da65697134ab0f446b1776ab7f23e1a6, type: 3}
   - {fileID: 8300000, guid: e6a7c366c33f21146a24cf067a98dff6, type: 3}
+  - {fileID: 8300000, guid: 2b23e41215c3a2c4b97c25bc74a4d687, type: 3}
 --- !u!1 &812087976
 GameObject:
   m_ObjectHideFlags: 0
@@ -23040,7 +23041,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 300
   field of view: 70
   orthographic: 0
@@ -23096,7 +23097,7 @@ MonoBehaviour:
   targetTrf: {fileID: 1592018357}
   followSpeed: 12.5
   orthographicClipFar: 160
-  orthographicOffsetZ: -70
+  orthographicOffsetZ: -6
   perspectiveClipFar: 300
   perspectiveClampY: -0.3
   cameraViewData:

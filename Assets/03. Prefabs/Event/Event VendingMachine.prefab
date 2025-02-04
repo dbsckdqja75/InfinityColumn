@@ -5101,8 +5101,8 @@ MonoBehaviour:
   maxSpeed: 0.4
   startY: -20
   endY: 30
-  minOffset: {x: 10, y: 0, z: 10}
-  maxOffset: {x: 15, y: 0, z: 24}
+  minOffset: {x: 10, y: 0, z: 14}
+  maxOffset: {x: 15, y: 0, z: 28}
 --- !u!1 &2632412091897467957
 GameObject:
   m_ObjectHideFlags: 0
