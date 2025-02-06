@@ -99,17 +99,29 @@ MonoBehaviour:
     endScore: 3000
     prefab: {fileID: 7763392112259956260, guid: b9d8d14264c81f44d94a48fb9a08896e,
       type: 3}
-  - startScore: 300
+  - startScore: 400
     endScore: 300000
     prefab: {fileID: 4926392768920856540, guid: 31fb9d7b1c471cc4c9eb3b163cb157b0,
       type: 3}
-  - startScore: 300
+  - startScore: 400
     endScore: 300000
     prefab: {fileID: 4926392768920856540, guid: 196245d7a5b9b1e4c8b6f01eb734101b,
       type: 3}
   - startScore: 300
     endScore: 300000
     prefab: {fileID: 2156000990581846445, guid: c251ea303d326594da66d45f11f9ce69,
+      type: 3}
+  - startScore: 600
+    endScore: 12000
+    prefab: {fileID: 8859194018295560147, guid: b02f8c2ea085e85418584982df171833,
+      type: 3}
+  - startScore: 600
+    endScore: 12000
+    prefab: {fileID: 5992649916685681118, guid: 9cfa49f14de765541a89f8feef53ce62,
+      type: 3}
+  - startScore: 600
+    endScore: 12000
+    prefab: {fileID: 8589055624433664406, guid: 43ed7247142c7fe498324282ec7319d1,
       type: 3}
   - startScore: 300
     endScore: 12000
@@ -121,4 +133,8 @@ MonoBehaviour:
   - startScore: 300
     endScore: 300000
     prefab: {fileID: 4452009412100054569, guid: 7e8af3251ccac134d9b5c5e6f055ef11,
+      type: 3}
+  - startScore: 3000
+    endScore: 1000000
+    prefab: {fileID: 5684062868301896446, guid: fbc38bfc6dc1462419f2217b648a7d79,
       type: 3}

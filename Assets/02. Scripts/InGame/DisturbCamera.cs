@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DisturbCamera : DisturbObject
 {
-    Transform cameraTrf;
+    Transform cameraTrf; // NOTE : 방해 이벤트 모델 트랜스폼
 
     Animation anim;
 
@@ -12,24 +12,22 @@ public class DisturbCamera : DisturbObject
 
     void Awake()
     {
-        cameraTrf = transform.GetChild(0).transform;
-
         anim = this.GetComponent<Animation>();
+
+        cameraTrf = transform.GetChild(0).transform;
     }
 
     public override void Init(DisturbManager disturbManager)
     {
+        transform.SetParent(Camera.main.transform);
+        transform.localPosition = Vector3.zero;
+
         pivotTrf = Camera.main.transform;
         playerTrf = disturbManager.GetPlayerTransform();
     }
 
     void Update()
     {
-        if(pivotTrf != null)
-        {
-            transform.position = pivotTrf.position;
-        }
-
         if(playerTrf != null)
         {
             lookAtPos = playerTrf.position;
