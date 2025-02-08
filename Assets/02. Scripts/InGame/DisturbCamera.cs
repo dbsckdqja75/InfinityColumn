@@ -40,7 +40,7 @@ public class DisturbCamera : DisturbObject
 
     public override bool OnTrigger()
     {
-        SoundManager.Instance.PlaySound("Camera");
+        SoundManager.Instance.PlaySound("Camera", 1f);
 
         Destroy(this.gameObject, anim.clip.length);
 

@@ -93,6 +93,17 @@ public class SoundManager : MonoSingleton<SoundManager>
         Debug.LogWarningFormat("[Sound] 해당되는 이름의 오디오 파일이 목록에 없습니다! ({0})", soundName);
     }
 
+    public void PlaySound(string soundName, float volume)
+    {
+        if(audioClipList.ContainsKey(soundName))
+        {
+            PlaySound(audioClipList[soundName], false, volume);
+            return;
+        }
+
+        Debug.LogWarningFormat("[Sound] 해당되는 이름의 오디오 파일이 목록에 없습니다! ({0})", soundName);
+    }
+
     public void PlaySound(string soundName, Vector3 playPoint)
     {
         if(audioClipList.ContainsKey(soundName))

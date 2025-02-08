@@ -33,7 +33,11 @@ public class TimeAttackGame : MainGame
 
     protected override void UpdateHealth()
     {
-        base.UpdateHealth();
+        if(health <= 0)
+        {
+            gameManager.GameOver(true);
+            return;
+        }
 
         if(health > 0)
         {

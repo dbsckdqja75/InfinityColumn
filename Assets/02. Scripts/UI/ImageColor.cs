@@ -11,6 +11,7 @@ public class ImageColor : MonoBehaviour
 
     #if UNITY_EDITOR
     [SerializeField] bool isPreview = false;
+    [SerializeField] int previewColorIdx = 0;
     #endif
 
     [SerializeField] Color[] colorPreset;
@@ -62,7 +63,7 @@ public class ImageColor : MonoBehaviour
         
         if(isPreview)
         {
-            SetColorPreset(0);
+            SetColorPreset(previewColorIdx);
         }
         else if(image.color != colorPreset[0])
         {

@@ -93,13 +93,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GameOver()
+    public void GameOver(bool isTimeOver = false)
     {
         currentGame.OnGameOver();
 
         lastPlayerHeight = playerController.GetPlayerHeight();
         playerController.SetControlLock(true);
-        playerController.OnFall();
+
+        if(isTimeOver == true)
+        {
+            SoundManager.Instance.PlaySound("RefereeWhistle");
+        }
+        else
+        {
+            playerController.OnFall();
+        }
 
         dailyChallengeManager.UpdateChallenge(currentGame.GetGameType(), currentGame.GetBestScore());
 

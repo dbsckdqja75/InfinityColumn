@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 203844588}
-  m_IndirectSpecularColor: {r: 0.3120812, g: 0.5032364, b: 0.87643135, a: 1}
+  m_IndirectSpecularColor: {r: 0.31208104, g: 0.5032364, b: 0.8764306, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2166,7 +2166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -240}
+  m_AnchoredPosition: {x: 0, y: -300}
   m_SizeDelta: {x: -40, y: 140}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &78096294
@@ -11713,15 +11713,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38
+  m_fontSize: 54
   m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
-  m_fontSizeMax: 38
+  m_fontSizeMin: 30
+  m_fontSizeMax: 54
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -18625,6 +18625,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: da65697134ab0f446b1776ab7f23e1a6, type: 3}
   - {fileID: 8300000, guid: e6a7c366c33f21146a24cf067a98dff6, type: 3}
   - {fileID: 8300000, guid: 2b23e41215c3a2c4b97c25bc74a4d687, type: 3}
+  - {fileID: 8300000, guid: e7290b48781ec7c4f812c81547d1e425, type: 3}
+  - {fileID: 8300000, guid: 15a64f2fd7b8b734f8616acde7323e4e, type: 3}
 --- !u!1 &812087976
 GameObject:
   m_ObjectHideFlags: 0
@@ -20305,8 +20307,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -80}
-  m_SizeDelta: {x: 390, y: 28}
+  m_AnchoredPosition: {x: 0, y: -125}
+  m_SizeDelta: {x: 410, y: 42}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &878181529
 MonoBehaviour:
@@ -20337,7 +20339,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 12
+  m_PixelsPerUnitMultiplier: 24
 --- !u!222 &878181530
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20742,7 +20744,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -260}
+  m_AnchoredPosition: {x: 0, y: -300}
   m_SizeDelta: {x: -40, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &887281146
@@ -21620,8 +21622,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -15}
-  m_SizeDelta: {x: 400, y: 60}
+  m_AnchoredPosition: {x: 0, y: -40}
+  m_SizeDelta: {x: 420, y: 80}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &923005161
 MonoBehaviour:
@@ -21840,9 +21842,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPreview: 0
+  previewColorIdx: 0
   colorPreset:
   - {r: 1, g: 0.7058824, b: 0.15686275, a: 1}
   - {r: 1, g: 0.5013487, b: 0, a: 1}
+  - {r: 0.7254902, g: 0.38039216, b: 0.06666667, a: 1}
 --- !u!1 &927871765
 GameObject:
   m_ObjectHideFlags: 0
@@ -33090,7 +33094,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -240}
+  m_AnchoredPosition: {x: 0, y: -300}
   m_SizeDelta: {x: -40, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1378987801
@@ -34346,8 +34350,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -43506,6 +43510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPreview: 0
+  previewColorIdx: 0
   colorPreset:
   - {r: 1, g: 0.3137255, b: 0.3137255, a: 1}
   - {r: 0.8207547, g: 0.15098791, b: 0.15098791, a: 1}

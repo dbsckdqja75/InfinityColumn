@@ -54,6 +54,11 @@ public class PlayUI : MonoBehaviour
     public void UpdateFever(float feverAmount)
     {
         feverBarImage.fillAmount = Mathf.Lerp(feverBarImage.fillAmount, feverAmount, feverFillSpeed * Time.deltaTime);
+
+        if(feverEffectObj.activeSelf)
+        {
+            feverBarColor.SetColorPreset(feverBarImage.fillAmount <= healthAlertAmount ? 2 : 1);
+        }
     }
 
     public void UpdateScore(int score)

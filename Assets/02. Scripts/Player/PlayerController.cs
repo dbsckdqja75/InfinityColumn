@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
                 playerCharacter.MoveMotion(isLeft);
             }
 
-            SoundManager.Instance.PlaySound("Hit1");
+            SoundManager.Instance.PlaySound("Hit1", 0.4f);
 
             onMoveEvent?.Invoke();
         }

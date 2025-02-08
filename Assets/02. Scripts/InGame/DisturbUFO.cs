@@ -33,8 +33,7 @@ public class DisturbUFO : DisturbObject
 
     public override bool OnTrigger()
     {
-        // TODO : UFO 사운드 추가
-        // SoundManager.Instance.PlaySound("Camera");
+        SoundManager.Instance.PlaySound("UFO");
 
         Destroy(this.gameObject, anim.clip.length);
 
