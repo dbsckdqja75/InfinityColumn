@@ -13,11 +13,11 @@ public class TestManager : MonoBehaviour
     [SerializeField] DisturbManager disturbManager;
     [SerializeField] AutoPlayer autoPlayer;
 
-    [SerializeField] TMP_Text autoPlayText, rewardScoreText, infinityHealthText, debugDisturbText, branchClearText;
+    [SerializeField] TMP_Text autoPlayText, infinityHealthText, debugDisturbText, branchClearText;
 
     [SerializeField] DisturbData testDisturbData;
 
-    bool isAutoPlay, isDebugDisturb, isBranchClear;
+    bool isAutoPlay, isInfinityHealth, isDebugDisturb, isBranchClear;
     int rewardScore = 1;
 
     DisturbData originalDisturbData;
@@ -27,10 +27,20 @@ public class TestManager : MonoBehaviour
         UpdateUI();
     }
 
+    void Update()
+    {
+        if(isInfinityHealth)
+        {
+            gameManager.DebugHealthMax();
+        }
+    }
+
     void Start() 
     {
         debugCanvas.SetActive(true);
         debugGroup.SetActive(false);
+
+        Application.targetFrameRate = 60;
     }
 
     void UpdateUI()
@@ -38,6 +48,7 @@ public class TestManager : MonoBehaviour
         autoPlayText.text = string.Format("자동 플레이 {0}", isAutoPlay ? "ON" : "OFF");
         debugDisturbText.text = string.Format("방해 이벤트 디버그 {0}", isDebugDisturb ? "ON" : "OFF");
         branchClearText.text = string.Format("기둥 가지 클리어 {0}", isBranchClear ? "ON" : "OFF");
+        infinityHealthText.text = string.Format("무한 체력 {0}", isInfinityHealth ? "ON" : "OFF");
     }
 
     public void ToggleAutoPlay()
@@ -91,6 +102,14 @@ public class TestManager : MonoBehaviour
 
         UpdateUI();
     }
+
+    public void ToggleInfinityHealth()
+    {
+        isInfinityHealth = !isInfinityHealth;
+
+        UpdateUI();
+    }
+
 
     public void ToggleDebugMenu()
     {

@@ -211,12 +211,6 @@ public class InfinityGame : MainGame
             ChargeFever();
             AddDamage();
 
-            // if(!isFeverTime)
-            // {
-            //     disturbManager.UpdateTrigger(score.GetValue());
-            // }
-
-            // TODO : 피버타임이 아닐때도 이벤트 발생 (테스트 필요)
             disturbManager.UpdateTrigger(score.GetValue());
             
             spawnManager.UpdateColumnMode(score.GetValue() >= GameManager.PLAYABLE_HEIGHT_LIMIT);
@@ -236,6 +230,14 @@ public class InfinityGame : MainGame
         if(IsCurrentState(GameState.PLAYING))
         {
             OnFeverTime();
+        }
+    }
+
+    public void DebugInfinityHealth()
+    {
+        if(IsCurrentState(GameState.PLAYING))
+        {
+            health = maxHealth;
         }
     }
     #endif

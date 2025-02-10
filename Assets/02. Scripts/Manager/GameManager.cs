@@ -420,5 +420,13 @@ public class GameManager : MonoBehaviour
             ((InfinityGame)currentGame).DebugFeverTime();
         }
     }
+
+    public void DebugHealthMax()
+    {
+        if(currentGame is InfinityGame)
+        {
+            ((InfinityGame)currentGame).DebugInfinityHealth();
+        }
+    }
     #endif
 }

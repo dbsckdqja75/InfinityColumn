@@ -9,6 +9,7 @@ public class ResultUI : MonoBehaviour
     [SerializeField] TMP_Text resultBestScoreText;
     [SerializeField] TMP_Text rewardVpText;
     [SerializeField] GameObject rewardBoxObj, rewardObj;
+    [SerializeField] GameObject newRecordBoxObj, newRecordObj;
 
     [Space(10)]
     [SerializeField] Animation[] animList;
@@ -28,9 +29,14 @@ public class ResultUI : MonoBehaviour
         rewardObj.SetActive(true);
     }
 
-    public void OnResult()
+    public void OnResult(bool isNewRecord)
     {
-        resultAd.RequestAd();
+        if(isNewRecord)
+        {
+            newRecordObj.SetActive(true);
+        }
+
+        // resultAd.RequestAd();
     }
 
     public void ResetUI()
@@ -39,6 +45,9 @@ public class ResultUI : MonoBehaviour
 
         rewardBoxObj.SetActive(false);
         rewardObj.SetActive(false);
+        
+        newRecordObj.SetActive(false);
+        newRecordBoxObj.SetActive(false);
     }
 
     public void ResultSkip()

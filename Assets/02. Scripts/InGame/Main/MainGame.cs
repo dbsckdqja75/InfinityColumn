@@ -185,11 +185,13 @@ public class MainGame : MonoBehaviour
 
     protected void OnResultScore()
     {
+        bool isNewRecord = false;
         if(bestScore.GetValue() < score.GetValue())
         {
             if(score.GetValue() < 999999) // NOTE : 최대 점수 임시 제한 (조작 방지)
             {
-                // TODO : 갱신 표시 효과 추가 (NEW)
+                isNewRecord = true;
+
                 bestScore.SetValue(score.GetValue());
 
                 SaveGameRecord();
@@ -197,7 +199,7 @@ public class MainGame : MonoBehaviour
         }
 
         resultUI.ReportScore(score.GetValue(), bestScore.GetValue());
-        resultUI.OnResult();
+        resultUI.OnResult(isNewRecord);
     }
 
     public virtual void OnPlayerMoved()

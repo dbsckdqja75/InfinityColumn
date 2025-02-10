@@ -15,6 +15,7 @@ public class PlayUI : MonoBehaviour
     [SerializeField] Image healthBarImage;
     [SerializeField] ImageColor healthBarColor; // NOTE : Normal Color (0) | Warning Color (1) | FeverTime Color (2)
     [SerializeField] TMP_Text healthTimerText;
+    [SerializeField] Animator healthTimerAnimator;
     [SerializeField] GameObject infinityTextObj; 
 
     [Header("Fever")]
@@ -49,6 +50,7 @@ public class PlayUI : MonoBehaviour
     public void UpdateHealthTimer(int health)
     {
         healthTimerText.text = health.ToString();
+        healthTimerAnimator.SetBool("isAlert", warningEffectObj.activeSelf);
     }
 
     public void UpdateFever(float feverAmount)

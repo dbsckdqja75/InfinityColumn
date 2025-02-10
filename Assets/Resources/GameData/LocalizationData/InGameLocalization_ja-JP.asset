@@ -333,6 +333,10 @@ MonoBehaviour:
     m_Localized: "\u5B87\u5B99\u98DB\u884C\u58EB"
     m_Metadata:
       m_Items: []
+  - m_Id: 54668426247974912
+    m_Localized: NEW RECORD!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

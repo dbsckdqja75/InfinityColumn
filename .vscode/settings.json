@@ -57,6 +57,6 @@
         "Temp/": true
     },
     "dotnet.defaultSolution": "InfinityColumn.sln",
-    "todo-tree.tree.scanMode": "workspace",
+    "todo-tree.tree.scanMode": "workspace only",
     "todo-tree.tree.disableCompactFolders": true
 }

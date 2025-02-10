@@ -323,6 +323,10 @@ MonoBehaviour:
     m_Key: CharacterName_Astronaut
     m_Metadata:
       m_Items: []
+  - m_Id: 54668426247974912
+    m_Key: NewRecord
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
