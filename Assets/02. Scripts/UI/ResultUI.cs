@@ -3,11 +3,17 @@ using TMPro;
 
 public class ResultUI : MonoBehaviour
 {
+    bool canSkipResult = false;
+
     [SerializeField] TMP_Text resultScoreText;
     [SerializeField] TMP_Text resultBestScoreText;
     [SerializeField] TMP_Text rewardVpText;
     [SerializeField] GameObject rewardBoxObj, rewardObj;
 
+    [Space(10)]
+    [SerializeField] Animation[] animList;
+
+    [Space(10)]
     [SerializeField] ResultAd resultAd;
 
     public void ReportScore(int score, int bestScore)
@@ -29,8 +35,28 @@ public class ResultUI : MonoBehaviour
 
     public void ResetUI()
     {
+        canSkipResult = false;
+
         rewardBoxObj.SetActive(false);
         rewardObj.SetActive(false);
+    }
+
+    public void ResultSkip()
+    {
+        if(canSkipResult)
+        {
+            foreach(Animation anim in animList)
+            {
+                AnimationState animState = anim[anim.clip.name];
+                animState.time = anim.clip.length;
+
+                anim.Sample();
+            }
+
+            return;
+        }
+
+        canSkipResult = true;
     }
 
     public bool IsShowed()
