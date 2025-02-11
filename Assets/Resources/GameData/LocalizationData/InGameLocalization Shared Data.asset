@@ -327,6 +327,10 @@ MonoBehaviour:
     m_Key: NewRecord
     m_Metadata:
       m_Items: []
+  - m_Id: 55033603116019712
+    m_Key: DailyChallenge_Complete
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

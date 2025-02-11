@@ -28,8 +28,7 @@ public class GooglePlayManager : MonoBehaviour
 
     bool isAuthorized = false;
 
-    // TODO : 정식 출시 이후에 변경
-    const string dataFileName = "IC_Test_SavedGameData";
+    const string dataFileName = "IC_Production_SavedGameData";
     
     void Awake()
     {

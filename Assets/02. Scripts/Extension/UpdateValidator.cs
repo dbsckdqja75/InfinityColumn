@@ -30,7 +30,9 @@ public class UpdateValidator : MonoBehaviour
 
         if(currentPatch != latestPatch && currentPatch < latestPatch)
         {
+            #if !UNITY_STANDALONE && !UNITY_EDITOR
             updateButtonObj.SetActive(true);
+            #endif
         }
 
         Debug.LogFormat("[UpdateValidator] 현재 버전 : {0} | 최신 버전 : {1}", Application.version, version);

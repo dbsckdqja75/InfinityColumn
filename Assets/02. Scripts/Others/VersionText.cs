@@ -7,6 +7,6 @@ public class VersionText : MonoBehaviour
 
     void Awake()
     {
-        versionText.text = string.Format("공개 테스트 버전 ({0})", Application.version);
+        versionText.text = string.Format("VER.{0}", Application.version);
     }
 }
