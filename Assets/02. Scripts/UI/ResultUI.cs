@@ -36,7 +36,9 @@ public class ResultUI : MonoBehaviour
             newRecordObj.SetActive(true);
         }
 
-        // resultAd.RequestAd();
+        #if UNITY_ANDROID || UNITY_IPHONE
+        resultAd.RequestAd();
+        #endif
     }
 
     public void ResetUI()

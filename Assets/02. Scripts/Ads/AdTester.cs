@@ -21,16 +21,16 @@ public class AdTester : MonoBehaviour
         }
     }
 
-    public void TestRequest()
-    {
-        if(AdvertisementManager.Instance != null)
-        {
-            AdvertisementManager.Instance.Test((amount) => 
-            {
-                CurrencyManager.Instance.RewardCurrency(CurrencyType.VOXEL_POINT, amount);
+    // public void TestRequest()
+    // {
+    //     if(AdvertisementManager.Instance != null)
+    //     {
+    //         AdvertisementManager.Instance.Test((amount) => 
+    //         {
+    //             CurrencyManager.Instance.RewardCurrency(CurrencyType.VOXEL_POINT, amount);
 
-                Debug.LogFormat("[Mediation] OnReward ({0} : {1})", AdvertID.LOBBY_REWARDED, amount);
-            });
-        }
-    }
+    //             Debug.LogFormat("[Mediation] OnReward ({0} : {1})", AdvertID.LOBBY_REWARDED, amount);
+    //         });
+    //     }
+    // }
 }

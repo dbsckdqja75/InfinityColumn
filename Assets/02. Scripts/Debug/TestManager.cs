@@ -18,7 +18,6 @@ public class TestManager : MonoBehaviour
     [SerializeField] DisturbData testDisturbData;
 
     bool isAutoPlay, isInfinityHealth, isDebugDisturb, isBranchClear;
-    int rewardScore = 1;
 
     DisturbData originalDisturbData;
 

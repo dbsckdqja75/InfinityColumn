@@ -17,9 +17,9 @@ public class AdvertisementManager : MonoSingleton<AdvertisementManager>
     #endif
 
     #if UNITY_ANDROID
-    string[] adPlacements = { "GameResult_Rewarded_Android ", "GameResult_Rewarded_Android", "Daily_Rewarded_Android" };
+    string[] adPlacements = { "GameResult_Rewarded_Android", "Daily_Rewarded_Android" };
     #elif UNITY_IPHONE
-    string[] adPlacements = { "GameResult_Rewarded_iOS ", "GameResult_Rewarded_iOS", "Daily_Rewarded_iOS" };
+    string[] adPlacements = { "GameResult_Rewarded_iOS", "Daily_Rewarded_iOS" };
     #else
     string[] adPlacements = { "unexpected_platform ", "unexpected_platform", "unexpected_platform" };
     #endif
@@ -27,6 +27,12 @@ public class AdvertisementManager : MonoSingleton<AdvertisementManager>
     [SerializeField] RewardedAd rewardedAd;
     [SerializeField] InterstitialAd interstitialAd;
 
+    #if UNITY_STANDALONE && !UNITY_EDITOR
+    protected override void Init()
+    {
+        Destroy(this.gameObject);
+    }
+    #else
     protected override void Init()
     {
         // TODO : 추후에 약관동의를 통해 여부 반영
@@ -35,8 +41,6 @@ public class AdvertisementManager : MonoSingleton<AdvertisementManager>
         IronSource.Agent.setMetaData("is_child_directed","true");
         IronSource.Agent.setMetaData("do_not_sell","true");
         IronSource.Agent.setMetaData("Google_Family_Self_Certified_SDKS","true");
-
-        IronSourceConfig.Instance.setClientSideCallbacks (true);
 
         string userID = SystemInfo.deviceUniqueIdentifier;
         Debug.LogFormat("[Mediation] IronSource Local UserID : {0}", userID);
@@ -55,6 +59,7 @@ public class AdvertisementManager : MonoSingleton<AdvertisementManager>
 		LevelPlay.OnInitSuccess += OnInitializationCompleted;
 		LevelPlay.OnInitFailed += (error => Debug.LogFormat("[Mediation] Initialization error : {0}", error));
     }
+    #endif
 
 	void OnInitializationCompleted(LevelPlayConfiguration configuration)
 	{
@@ -121,15 +126,6 @@ public class AdvertisementManager : MonoSingleton<AdvertisementManager>
             adButton.SetInteractable(IsReadyAd());
         }
         #endif
-    }
-
-    // TODO : Test Code
-    public void Test(Action<int> rewardCallback)
-    {
-        if(interstitialAd.IsAdReady())
-        {
-            interstitialAd.ShowInterstitialAd("GameResult_Rewarded_Android", rewardCallback);
-        }
     }
 
     void PrepareAd()
