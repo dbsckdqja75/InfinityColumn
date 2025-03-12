@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ResultAd : MonoBehaviour
 {
+    #if UNITY_ANDROID || UNITY_IPHONE
     [SerializeField] int exposureCount = 3;
     [SerializeField] AdButton targetAdButton;
 
@@ -27,4 +28,5 @@ public class ResultAd : MonoBehaviour
             targetAdButton.SetInteractable(false);
         }
     }
+    #endif
 }
