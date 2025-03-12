@@ -15,6 +15,9 @@ public class TestManager : MonoBehaviour
 
     [SerializeField] TMP_Text autoPlayText, infinityHealthText, debugDisturbText, branchClearText;
 
+    [Space(10)]
+    [SerializeField] string captureFileDir;
+
     [SerializeField] DisturbData testDisturbData;
 
     bool isAutoPlay, isInfinityHealth, isDebugDisturb, isBranchClear;
@@ -32,6 +35,11 @@ public class TestManager : MonoBehaviour
         {
             gameManager.DebugHealthMax();
         }
+
+        if(Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            Capture();
+        }
     }
 
     void Start() 
@@ -48,6 +56,17 @@ public class TestManager : MonoBehaviour
         debugDisturbText.text = string.Format("방해 이벤트 디버그 {0}", isDebugDisturb ? "ON" : "OFF");
         branchClearText.text = string.Format("기둥 가지 클리어 {0}", isBranchClear ? "ON" : "OFF");
         infinityHealthText.text = string.Format("무한 체력 {0}", isInfinityHealth ? "ON" : "OFF");
+    }
+
+    void Capture()
+    {
+        string date = System.DateTime.UtcNow.Ticks.ToString();
+        date = date.Replace("/","-");
+        date = date.Replace(" ","_");
+
+        ScreenCapture.CaptureScreenshot(captureFileDir + date + ".png");
+
+        Debug.LogFormat("[Capture] {0}", captureFileDir + date + ".png");
     }
 
     public void ToggleAutoPlay()

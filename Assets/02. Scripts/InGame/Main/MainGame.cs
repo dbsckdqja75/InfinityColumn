@@ -231,6 +231,8 @@ public class MainGame : MonoBehaviour
         #if UNITY_ANDROID
             GPGS.ReportLeaderboard(gameType, bestScore.GetValue());
             GPGS.ReportGameData();
+        #elif UNITY_IPHONE
+            // TODO : GameCenter 리더보드에 반영 처리
         #else
             leaderboardManager.UpdateRecord(gameType);
         #endif
