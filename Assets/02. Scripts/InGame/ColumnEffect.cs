@@ -25,7 +25,7 @@ public class ColumnEffect : MonoBehaviour
     {
         this.StopAllCoroutines();
 
-        rb.velocity = Vector3.zero;
+        rb.linearVelocity = Vector3.zero;
         transform.position = targetColumn.currentBranch.transform.position;
         transform.rotation = targetColumn.currentBranch.transform.rotation;
 

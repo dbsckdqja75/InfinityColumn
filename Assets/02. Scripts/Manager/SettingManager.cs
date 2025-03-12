@@ -54,9 +54,8 @@ public class SettingManager : MonoBehaviour
         discordBox.SetActive(true);
         #endif
 
-        // TODO : 출시 이후에 준비되면 삭제
+        // TODO : 인앱 결제 도입 시 삭제
         restorePurchaseBox.SetActive(false);
-        discordBox.SetActive(false);
     }
 
     void LoadTermsStatus()
