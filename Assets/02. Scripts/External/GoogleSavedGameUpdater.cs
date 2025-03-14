@@ -14,7 +14,7 @@ public class GoogleSavedGameUpdater : MonoBehaviour
     }
 
     #if !UNITY_ANDROID
-    void Awake()
+    void OnEnable()
     {
         Destroy(this.gameObject);
     }

@@ -1,7 +1,8 @@
 using System;
-using com.unity3d.mediation;
+using Unity.Services.LevelPlay;
 using UnityEngine;
 using TMPro;
+using LevelPlayAdFormat = com.unity3d.mediation.LevelPlayAdFormat;
 
 public class AdvertisementManager : MonoSingleton<AdvertisementManager>
 {
@@ -27,7 +28,7 @@ public class AdvertisementManager : MonoSingleton<AdvertisementManager>
     [SerializeField] RewardedAd rewardedAd;
     [SerializeField] InterstitialAd interstitialAd;
 
-    #if UNITY_STANDALONE && !UNITY_EDITOR
+    #if (UNITY_STANDALONE || UNITY_WEBGL) && !UNITY_EDITOR
     protected override void Init()
     {
         Destroy(this.gameObject);
@@ -80,7 +81,6 @@ public class AdvertisementManager : MonoSingleton<AdvertisementManager>
         return false;
     }
 
-    // TODO : 버튼의 액션으로만 적용
     public void ShowAd(AdvertID advertID, Action<int> rewardCallback)
     {
         #if UNITY_EDITOR
@@ -112,12 +112,6 @@ public class AdvertisementManager : MonoSingleton<AdvertisementManager>
         #else
         if(isInitialized)
         {
-            // TODO : DEBUG TEXT
-            if(GameObject.Find("DEBUG_ADS"))
-            {
-                GameObject.Find("DEBUG_ADS").GetComponent<TMP_Text>().text = string.Format("IsReadyAd\n({0} / {1})", rewardedAd.IsAdReady(), interstitialAd.IsAdReady());
-            }
-
             if(IsReadyAd() == false)
             {
                 PrepareAd();

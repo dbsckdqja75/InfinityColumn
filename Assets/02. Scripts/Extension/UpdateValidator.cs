@@ -57,7 +57,7 @@ public class UpdateValidator : MonoBehaviour
         Application.OpenURL(url);
     }
 
-    IEnumerator UpdateLatestVersionInfo(string url) // NOTE : 플레이어 순위와 기록 가져오기
+    IEnumerator UpdateLatestVersionInfo(string url)
     {
         WWWForm form = new WWWForm();
         using (UnityWebRequest request = UnityWebRequest.Post(url, form))
