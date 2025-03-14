@@ -47,10 +47,14 @@ public class PlayUI : MonoBehaviour
         }
     }
 
-    public void UpdateHealthTimer(int health)
+    public void UpdateHealthTimer(int health, bool isLobby = false)
     {
         healthTimerText.text = health.ToString();
-        healthTimerAnimator.SetBool("isAlert", warningEffectObj.activeSelf);
+
+        if(isLobby == false)
+        {
+            healthTimerAnimator.SetBool("isAlert", warningEffectObj.activeSelf);
+        }
     }
 
     public void UpdateFever(float feverAmount)

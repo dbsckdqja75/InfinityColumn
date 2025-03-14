@@ -209,6 +209,18 @@ public class GameManager : MonoBehaviour
         CurrencyLabel.refresh?.Invoke();
     }
 
+    public void OnSaveRecord()
+    {
+        #if UNITY_ANDROID
+            GPGS.ReportLeaderboard(currentGame.GetGameType(), currentGame.GetBestScore());
+            GPGS.ReportGameData();
+        #elif UNITY_IPHONE
+            // TODO : GameCenter 리더보드에 반영 처리
+        #else
+            leaderboardManager.UpdateRecord(currentGame.GetGameType());
+        #endif
+    }
+
     void OnPlayerMoved()
     {
         currentGame.OnPlayerMoved();
@@ -248,20 +260,6 @@ public class GameManager : MonoBehaviour
     {
         return disturbManager;
     }
-
-    #if UNITY_EDITOR || UNITY_STANDALONE
-    public LeaderboardManager GetLeaderboardManager()
-    {
-        return leaderboardManager;
-    }
-    #endif
-
-    #if UNITY_EDITOR || UNITY_ANDROID
-    public GooglePlayManager GetGooglePlayManager()
-    {
-        return GPGS;
-    }
-    #endif
 
     public void CloseChallenge()
     {
@@ -310,18 +308,18 @@ public class GameManager : MonoBehaviour
 
     public void OpenLeaderboard()
     {
-        #if UNITY_EDITOR || UNITY_STANDALONE
-        if(currentGame.OnExtraMenuOpen())
-        {
-            playerController.SetControlLock(true);
+        #if UNITY_ANDROID
+            GPGS.AllReportLeaderboard();
+            GPGS.ShowLeaderboardUI();
+        #elif UNITY_EDITOR || UNITY_STANDALONE
+            if(currentGame.OnExtraMenuOpen())
+            {
+                playerController.SetControlLock(true);
 
-            leaderboardManager.OnLeaderboard();
+                leaderboardManager.OnLeaderboard();
 
-            canvasManager.SetPanel("Leaderboard");
-        }
-        #elif UNITY_ANDROID
-        GPGS.ReportLeaderboard(currentGame.GetGameType(), currentGame.GetBestScore());
-        GPGS.ShowLeaderboardUI();
+                canvasManager.SetPanel("Leaderboard");
+            }
         #endif
     }
 

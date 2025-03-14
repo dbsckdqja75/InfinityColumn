@@ -28,14 +28,6 @@ public class MainGame : MonoBehaviour
     protected SkyBoxManager skyBoxManager;
     protected DisturbManager disturbManager;
 
-    #if UNITY_EDITOR || UNITY_STANDALONE
-    protected LeaderboardManager leaderboardManager;
-    #endif
-
-    #if UNITY_EDITOR || UNITY_ANDROID
-    protected GooglePlayManager GPGS;
-    #endif
-
     void Awake()
     {
         currentState = GameState.LOBBY;
@@ -51,14 +43,6 @@ public class MainGame : MonoBehaviour
         spawnManager = gameManager.GetSpawnManager();
         skyBoxManager = gameManager.GetSkyBoxManager();
         disturbManager = gameManager.GetDisturbManager();
-
-        #if UNITY_EDITOR || UNITY_STANDALONE
-        leaderboardManager = gameManager.GetLeaderboardManager();
-        #endif
-
-        #if UNITY_EDITOR || UNITY_ANDROID
-        GPGS = gameManager.GetGooglePlayManager();
-        #endif
     }
 
     public virtual void UpdateLogic()
@@ -228,14 +212,7 @@ public class MainGame : MonoBehaviour
     {
         PlayerPrefsManager.SaveData(bestScoreDataKey, bestScore.GetValue());
 
-        #if UNITY_ANDROID
-            GPGS.ReportLeaderboard(gameType, bestScore.GetValue());
-            GPGS.ReportGameData();
-        #elif UNITY_IPHONE
-            // TODO : GameCenter 리더보드에 반영 처리
-        #else
-            leaderboardManager.UpdateRecord(gameType);
-        #endif
+        gameManager.OnSaveRecord();
     }
 
     public GameType GetGameType()
@@ -253,7 +230,7 @@ public class MainGame : MonoBehaviour
         return bestScore.GetValue();
     }
 
-    public virtual string GetGameModeStringKey()
+    public string GetGameModeStringKey()
     {
         return gameModeStringKey;
     }

@@ -20,7 +20,7 @@ public class GooglePlayManager : MonoBehaviour
     class GoogleSavedData
     {
         public int voxelPoint, cashPoint;
-        public int infinityBestScore, oneMinBestScore, threeMinBestScore;
+        public int infinityBestScore, secondTimeBestScore, oneMinBestScore;
 
         public List<CharacterID> ownedCharacterData = new List<CharacterID>();
         public List<ConsumeID> purchasedConsumeList = new List<ConsumeID>();
@@ -28,7 +28,7 @@ public class GooglePlayManager : MonoBehaviour
 
     bool isAuthorized = false;
 
-    const string dataFileName = "IC_Production_SavedGameData";
+    const string dataFileName = "Production_SavedGameData";
     
     void Awake()
     {
@@ -88,8 +88,8 @@ public class GooglePlayManager : MonoBehaviour
             savedGameData.cashPoint = PlayerPrefsManager.LoadData(CurrencyType.CASH_POINT.ToString(), 0);
             
             savedGameData.infinityBestScore = PlayerPrefsManager.LoadData("BestScore", 0);
+            savedGameData.secondTimeBestScore = PlayerPrefsManager.LoadData("SecondTimeBestScore", 0);
             savedGameData.oneMinBestScore = PlayerPrefsManager.LoadData("OneTimeBestScore", 0);
-            savedGameData.threeMinBestScore = PlayerPrefsManager.LoadData("ThreeTimeBestScore", 0);
 
             string phrase = PlayerPrefsManager.LoadData("PlayerCharacterData", "0");
             string[] splitData = phrase.Split(',');
@@ -147,8 +147,8 @@ public class GooglePlayManager : MonoBehaviour
             PlayerPrefsManager.SaveData(CurrencyType.CASH_POINT.ToString(), savedGameData.cashPoint);
 
             PlayerPrefsManager.SaveData("BestScore", savedGameData.infinityBestScore);
+            PlayerPrefsManager.SaveData("SecondTimeBestScore", savedGameData.secondTimeBestScore);
             PlayerPrefsManager.SaveData("OneTimeBestScore", savedGameData.oneMinBestScore);
-            PlayerPrefsManager.SaveData("ThreeTimeBestScore", savedGameData.threeMinBestScore);
 
             StringBuilder stringBuilder = new StringBuilder();
             foreach(CharacterID id in savedGameData.ownedCharacterData)
@@ -204,6 +204,13 @@ public class GooglePlayManager : MonoBehaviour
         PlayGamesPlatform.Instance.ReportScore(score, boardID, (bool success) => {});
     }
 
+    public void AllReportLeaderboard()
+    {
+        ReportLeaderboard(GameType.INFINITY, PlayerPrefsManager.LoadData("BestScore", 0));
+        ReportLeaderboard(GameType.SECOND_ATTACK, PlayerPrefsManager.LoadData("SecondTimeBestScore", 0));
+        ReportLeaderboard(GameType.ONE_MIN_ATTACK, PlayerPrefsManager.LoadData("OneTimeBestScore", 0));
+    }
+
     public void ReportLeaderboard(GameType gameType, int score)
     {
         switch(gameType)
@@ -230,28 +237,6 @@ public class GooglePlayManager : MonoBehaviour
         }
     }
 
-
-
-
-    public void DebugLoad()
-    {
-        if(isAuthorized)
-        {
-            LoadGameData();
-        }
-    }
-
-    public void DebugSave()
-    {
-        if(isAuthorized)
-        {
-            SaveGameData();
-        }
-    }
-
-
-
-
     internal void ProcessAuthentication(SignInStatus status)
     {
         if (status == SignInStatus.Success)
@@ -267,7 +252,7 @@ public class GooglePlayManager : MonoBehaviour
     #endif
 
     #if !UNITY_ANDROID
-    void Awake() 
+    void OnEnable() 
     {
         Destroy(this.gameObject);
     }

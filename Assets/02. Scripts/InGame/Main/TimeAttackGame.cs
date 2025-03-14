@@ -64,7 +64,7 @@ public class TimeAttackGame : MainGame
 
         health = (gameTime+1);
 
-        playUI.UpdateHealthTimer((int)gameTime);
+        playUI.UpdateHealthTimer((int)gameTime, true);
     }
 
     public override void OnGameResume()
