@@ -44,7 +44,7 @@ public class LeaderboardManager : MonoBehaviour
     [SerializeField] GameObject maintenanceObj;
 
     const string serverAddress = "http://bu1ld.asuscomm.com:8772/";
-    const string connectKey = "";
+    const string serverAddress = "";
 
     GameType currentGameType;
 

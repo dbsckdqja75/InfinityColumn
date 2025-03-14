@@ -31309,7 +31309,7 @@ Transform:
   m_Children:
   - {fileID: 1868579345}
   - {fileID: 1360268874}
-  m_Father: {fileID: 1530983085}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1303713967
 GameObject:
@@ -33252,8 +33252,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   androidURL: https://play.google.com/store/apps/details?id=com.TeamCampfire.InfinityColumn
-  iosURL: https://teamcampfire.tistory.com/
-  desktopURL: https://teamcampfire.tistory.com/
+  iosURL: https://apps.apple.com/app/infinity-column/id6743107597
+  desktopURL: https://teamcampfire.tistory.com
   updateButtonObj: {fileID: 2014189976}
 --- !u!1 &1361615072
 GameObject:
@@ -37418,7 +37418,6 @@ Transform:
   - {fileID: 1278082218}
   - {fileID: 938701096}
   - {fileID: 888450712}
-  - {fileID: 1301334101}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1534216529
@@ -53526,6 +53525,7 @@ SceneRoots:
   - {fileID: 1172002769}
   - {fileID: 172450306}
   - {fileID: 27272285}
+  - {fileID: 1301334101}
   - {fileID: 1530983085}
   - {fileID: 1936204051}
   - {fileID: 1466600287}

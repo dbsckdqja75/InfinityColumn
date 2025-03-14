@@ -9,14 +9,18 @@ public class UpdateValidator : MonoBehaviour
     [Space(10)]
     [SerializeField] GameObject updateButtonObj;
 
-    const string serverAddress = "http://bu1ld.asuscomm.com:8772/";
+    const string serverAddress = "";
 
     void Start()
     {
         #if UNITY_EDITOR
         UpdateLatestVersionInfo(serverAddress + "RequestVersionDebug").Start(this);
+        #elif UNITY_ANDROID
+        UpdateLatestVersionInfo(serverAddress + "RequestAndroidVersion").Start(this); // NOTE : Android 버전
+        #elif UNITY_IPHONE
+        UpdateLatestVersionInfo(serverAddress + "RequestiOSVersion").Start(this); // NOTE : iOS 버전
         #else
-        UpdateLatestVersionInfo(serverAddress + "RequestVersion").Start(this);
+        UpdateLatestVersionInfo(serverAddress + "RequestVersion").Start(this); // NOTE : PC 버전
         #endif
     }
 
