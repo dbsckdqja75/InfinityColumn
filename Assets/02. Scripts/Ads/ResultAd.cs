@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ResultAd : MonoBehaviour
 {
-    #if UNITY_ANDROID || UNITY_IPHONE
+    #if UNITY_ANDROID || UNITY_IPHONE || UNITY_EDITOR
     [SerializeField] int exposureCount = 3;
     [SerializeField] AdButton targetAdButton;
 

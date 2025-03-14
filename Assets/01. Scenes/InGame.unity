@@ -10777,6 +10777,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bbfdccbdccc6974db7e1db811f9475e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exposureCount: 3
+  targetAdButton: {fileID: 521954931}
 --- !u!114 &521954931
 MonoBehaviour:
   m_ObjectHideFlags: 0

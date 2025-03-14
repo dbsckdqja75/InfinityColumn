@@ -36,8 +36,7 @@ public class ResultUI : MonoBehaviour
             newRecordObj.SetActive(true);
         }
 
-        // TODO : iOS 정식 출시 이후에 노출되도록 수정
-        #if UNITY_ANDROID // || UNITY_IPHONE
+        #if UNITY_ANDROID || UNITY_IPHONE || UNITY_EDITOR
         resultAd.RequestAd();
         #endif
     }
