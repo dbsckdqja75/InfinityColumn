@@ -2,6 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 
+#if UNITY_ANDROID
+using Google.Play.AppUpdate;
+using Google.Play.Common;
+#endif
+
 public class UpdateValidator : MonoBehaviour
 {
     [SerializeField] string androidURL, iosURL, desktopURL;
@@ -16,7 +21,8 @@ public class UpdateValidator : MonoBehaviour
         #if UNITY_EDITOR
         UpdateLatestVersionInfo(serverAddress + "RequestVersionDebug").Start(this);
         #elif UNITY_ANDROID
-        UpdateLatestVersionInfo(serverAddress + "RequestAndroidVersion").Start(this); // NOTE : Android 버전
+        CheckForGoogleUpdate().Start(this);
+        // UpdateLatestVersionInfo(serverAddress + "RequestAndroidVersion").Start(this); // NOTE : Android 버전
         #elif UNITY_IPHONE
         UpdateLatestVersionInfo(serverAddress + "RequestiOSVersion").Start(this); // NOTE : iOS 버전
         #else
@@ -81,4 +87,70 @@ public class UpdateValidator : MonoBehaviour
 
         yield break;
     }
+
+    #if UNITY_ANDROID
+    IEnumerator CheckForGoogleUpdate()
+    {
+        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForEndOfFrame();
+    
+        AppUpdateManager appUpdateManager = new AppUpdateManager();
+        PlayAsyncOperation<AppUpdateInfo, AppUpdateErrorCode> appUpdateInfoOperation = appUpdateManager.GetAppUpdateInfo();
+
+        yield return appUpdateInfoOperation; // NOTE : 업데이트 정보 확인
+
+        if (appUpdateInfoOperation.IsSuccessful) // 확인 완료
+        {
+            var appUpdateInfoResult = appUpdateInfoOperation.GetResult();
+
+            // NOTE : 업데이트 가능 상태
+            if(appUpdateInfoResult.UpdateAvailability == UpdateAvailability.UpdateAvailable)
+            {
+                updateButtonObj.SetActive(true);
+
+                var appUpdateOptions = AppUpdateOptions.FlexibleAppUpdateOptions();
+                var startUpdateRequest = appUpdateManager.StartUpdate(appUpdateInfoResult, appUpdateOptions);
+                yield return startUpdateRequest;
+
+                while(!startUpdateRequest.IsDone)
+                {
+                    if(startUpdateRequest.Status == AppUpdateStatus.Canceled || startUpdateRequest.Status == AppUpdateStatus.Failed)
+                    {
+                        Debug.Log("다운로드 실패 또는 취소");
+                    }
+                    else if(startUpdateRequest.Status == AppUpdateStatus.Downloading)
+                    {
+                        Debug.Log("다운로드 진행 중");
+ 
+                    }
+                    else if(startUpdateRequest.Status == AppUpdateStatus.Downloaded)
+                    {
+                        updateButtonObj.SetActive(false);
+
+                        Debug.Log("다운로드 완료");
+                    }
+ 
+                    yield return new WaitForEndOfFrame();
+                    yield return null;
+                }
+
+                var result = appUpdateManager.CompleteUpdate();
+ 
+                while(!result.IsDone)
+                {
+                    yield return new WaitForEndOfFrame();
+                }
+
+                yield return (int)startUpdateRequest.Status;
+            }
+            else if(appUpdateInfoResult.UpdateAvailability == UpdateAvailability.UpdateNotAvailable)
+            {
+                Debug.Log("업데이트 없음");
+            }
+        }
+
+        yield return new WaitForEndOfFrame();
+        yield break;
+    }
+    #endif
 }

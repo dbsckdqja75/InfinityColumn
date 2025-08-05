@@ -49,7 +49,7 @@ public class AdvertisementManager : MonoSingleton<AdvertisementManager>
         string advertiserId= IronSource.Agent.getAdvertiserId();
         Debug.LogFormat("[Mediation] IronSource.Agent.getAdvertiserId : {0}", advertiserId);
 
-        IronSource.Agent.validateIntegration ();
+        IronSource.Agent.validateIntegration();
         Debug.Log("[Mediation] IronSource.Agent.validateIntegration");
 
         Debug.LogFormat("[Mediation] IronSource Unity Version : {0}", IronSource.unityVersion());

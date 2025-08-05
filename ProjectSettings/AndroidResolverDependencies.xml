@@ -1,13 +1,16 @@
 <dependencies>
   <packages>
-    <package>com.google.android.gms:play-services-ads:23.6.0</package>
+    <package>com.google.android.gms:play-services-ads:24.4.0</package>
     <package>com.google.android.gms:play-services-ads-identifier:18.1.0</package>
+    <package>com.google.android.play:app-update:2.1.0</package>
+    <package>com.google.android.play:core-common:2.0.4</package>
+    <package>com.google.android.play:review:2.0.2</package>
     <package>com.google.games:gpgs-plugin-support:2.0.0</package>
-    <package>com.unity3d.ads:unity-ads:4.14.0</package>
-    <package>com.unity3d.ads-mediation:admob-adapter:4.3.49</package>
+    <package>com.unity3d.ads:unity-ads:4.16.0</package>
+    <package>com.unity3d.ads-mediation:admob-adapter:4.3.52</package>
     <package>com.unity3d.ads-mediation:adquality-sdk:7.21.3</package>
-    <package>com.unity3d.ads-mediation:mediation-sdk:8.7.0</package>
-    <package>com.unity3d.ads-mediation:unityads-adapter:4.3.51</package>
+    <package>com.unity3d.ads-mediation:mediation-sdk:8.10.0</package>
+    <package>com.unity3d.ads-mediation:unityads-adapter:4.3.58</package>
   </packages>
   <files>
     <file>Assets/GeneratedLocalRepo/GooglePlayGames/com.google.play.games/Editor/m2repository/com/google/games/gpgs-plugin-support/2.0.0/gpgs-plugin-support-2.0.0.aar</file>

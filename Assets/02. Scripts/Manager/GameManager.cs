@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] CanvasManager canvasManager;
     [SerializeField] DailyChallengeManager dailyChallengeManager;
     [SerializeField] LeaderboardManager leaderboardManager;
+    [SerializeField] AppReviewRequester reviewRequester;
     [SerializeField] GooglePlayManager GPGS;
 
     void Awake()
@@ -122,6 +123,8 @@ public class GameManager : MonoBehaviour
     {
         ReturnLobby();
         GameReady();
+
+        reviewRequester.RequestReview();
     }
 
     public void GamePause()
@@ -175,6 +178,7 @@ public class GameManager : MonoBehaviour
 
         ReturnLobby();
     }
+
     public void ToggleGameMode()
     {
         currentModeIdx = (int)Mathf.Repeat(currentModeIdx+1, gameModeList.Length);

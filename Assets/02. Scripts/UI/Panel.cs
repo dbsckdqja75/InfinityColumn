@@ -2,7 +2,7 @@
 
 public class Panel : MonoBehaviour
 {
-    [SerializeField] bool onResizeSafeArea;
+    [SerializeField] protected bool onResizeSafeArea;
 
     Vector2 minAnchor, maxAnchor;
 
@@ -10,14 +10,12 @@ public class Panel : MonoBehaviour
     {
         if(onResizeSafeArea)
         {
-            ResizeSafeArea();
+            ResizeSafeArea(this.GetComponent<RectTransform>());
         }
     }
 
-    void ResizeSafeArea()
+    protected void ResizeSafeArea(RectTransform panelRect)
     {
-        RectTransform panelRect = this.GetComponent<RectTransform>();
-
         minAnchor = Screen.safeArea.min;
         maxAnchor = Screen.safeArea.max;
 

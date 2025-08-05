@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class PanelWithAnimation : Panel
 {
+    [SerializeField] RectTransform resizeTargetPanel;
     [SerializeField] UnityEvent startEvent;
     [SerializeField] UnityEvent endEvent;
 
@@ -15,6 +16,14 @@ public class PanelWithAnimation : Panel
     void Awake()
     {
         animator = this.GetComponent<Animator>();
+    }
+
+    void Start()
+    {
+        if(onResizeSafeArea && resizeTargetPanel != null)
+        {
+            ResizeSafeArea(resizeTargetPanel);
+        }
     }
 
     void OnEnable() 

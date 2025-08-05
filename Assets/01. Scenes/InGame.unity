@@ -3964,7 +3964,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -0.54992676, y: 0}
+  m_SizeDelta: {x: 0, y: -415.2307}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &167630187
 MonoBehaviour:
@@ -8788,7 +8788,7 @@ RectTransform:
   - {fileID: 150770076}
   - {fileID: 138359115}
   - {fileID: 545406243}
-  - {fileID: 1124911707}
+  - {fileID: 2051659252}
   - {fileID: 661125908}
   - {fileID: 385324107}
   m_Father: {fileID: 2112517989}
@@ -8818,7 +8818,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c6ab8597270d44ab30054627d4273c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onResizeSafeArea: 0
+  onResizeSafeArea: 1
+  resizeTargetPanel: {fileID: 2051659252}
   startEvent:
     m_PersistentCalls:
       m_Calls:
@@ -9469,7 +9470,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463267985}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14940,13 +14941,10 @@ RectTransform:
   - {fileID: 167630185}
   - {fileID: 293188329}
   - {fileID: 1986087408}
-  - {fileID: 1996785729}
+  - {fileID: 1213937036}
   - {fileID: 463267986}
-  - {fileID: 1628322611}
-  - {fileID: 766446809}
   - {fileID: 1077476243}
   - {fileID: 785069924}
-  - {fileID: 819963793}
   m_Father: {fileID: 2112517989}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -14974,7 +14972,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c6ab8597270d44ab30054627d4273c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onResizeSafeArea: 0
+  onResizeSafeArea: 1
+  resizeTargetPanel: {fileID: 1213937036}
   startEvent:
     m_PersistentCalls:
       m_Calls:
@@ -15740,8 +15739,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 380, y: 78}
-  m_SizeDelta: {x: 230, y: 30}
+  m_AnchoredPosition: {x: 280, y: 78}
+  m_SizeDelta: {x: 430, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!111 &686085856
 Animation:
@@ -17795,7 +17794,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 970861138}
-  m_Father: {fileID: 662206163}
+  m_Father: {fileID: 1213937036}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -19664,12 +19663,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819963792}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 662206163}
+  m_Father: {fileID: 1213937036}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -28005,7 +28004,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 95618040}
-  m_Father: {fileID: 425103328}
+  m_Father: {fileID: 2051659252}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -29290,6 +29289,7 @@ MonoBehaviour:
   canvasManager: {fileID: 2112517990}
   dailyChallengeManager: {fileID: 36890016}
   leaderboardManager: {fileID: 1513803120}
+  reviewRequester: {fileID: 1211889407}
   GPGS: {fileID: 1868579346}
 --- !u!114 &1192330418
 MonoBehaviour:
@@ -29401,6 +29401,99 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211171861}
+  m_CullTransparentMesh: 1
+--- !u!1 &1211889405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1211889406}
+  - component: {fileID: 1211889407}
+  m_Layer: 0
+  m_Name: AppReviewRequester
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1211889406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211889405}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1301334101}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1211889407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211889405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e475f7800be91f48a591deb37058de1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exposureCount: 8
+--- !u!1 &1213937035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1213937036}
+  - component: {fileID: 1213937038}
+  m_Layer: 5
+  m_Name: Notch Safe Group
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1213937036
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213937035}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1996785729}
+  - {fileID: 1628322611}
+  - {fileID: 766446809}
+  - {fileID: 819963793}
+  m_Father: {fileID: 662206163}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1213937038
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213937035}
   m_CullTransparentMesh: 1
 --- !u!1 &1214431821
 GameObject:
@@ -30791,6 +30884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onResizeSafeArea: 0
+  resizeTargetPanel: {fileID: 0}
   startEvent:
     m_PersistentCalls:
       m_Calls:
@@ -31311,6 +31405,7 @@ Transform:
   m_Children:
   - {fileID: 1868579345}
   - {fileID: 1360268874}
+  - {fileID: 1211889406}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1303713967
@@ -39676,7 +39771,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 939326970}
-  m_Father: {fileID: 662206163}
+  m_Father: {fileID: 1213937036}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -48215,7 +48310,7 @@ GameObject:
   - component: {fileID: 1986087408}
   - component: {fileID: 1986087409}
   m_Layer: 5
-  m_Name: Safe Area Group
+  m_Name: Touch Safe Area Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48362,7 +48457,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1038365880}
-  m_Father: {fileID: 662206163}
+  m_Father: {fileID: 1213937036}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -49260,6 +49355,51 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038820009}
+  m_CullTransparentMesh: 1
+--- !u!1 &2051659251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2051659252}
+  - component: {fileID: 2051659253}
+  m_Layer: 5
+  m_Name: Notch Safe Group
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2051659252
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051659251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1124911707}
+  m_Father: {fileID: 425103328}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2051659253
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051659251}
   m_CullTransparentMesh: 1
 --- !u!1 &2053459961
 GameObject:

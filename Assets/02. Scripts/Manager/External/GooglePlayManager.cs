@@ -1,8 +1,7 @@
-using System.Collections.Generic;
-using System.Text;
-using UnityEngine;
 using System;
-using TMPro;
+using System.Text;
+using System.Collections.Generic;
+using UnityEngine;
 
 #if UNITY_ANDROID
 using GooglePlayGames;
@@ -29,7 +28,7 @@ public class GooglePlayManager : MonoBehaviour
     bool isAuthorized = false;
 
     const string dataFileName = "Production_SavedGameData";
-    
+
     void Awake()
     {
         updater = this.GetComponent<GoogleSavedGameUpdater>();
@@ -48,6 +47,11 @@ public class GooglePlayManager : MonoBehaviour
         PlayGamesPlatform.Instance.Authenticate(ProcessAuthentication);
     }
 
+    public void ManuallySignIn()
+    {
+        PlayGamesPlatform.Instance.ManuallyAuthenticate(ProcessAuthentication);
+    }
+
     void OnSignIn()
     {
         isAuthorized = true;
@@ -61,18 +65,25 @@ public class GooglePlayManager : MonoBehaviour
 
     void SaveGameData()
     {
-        ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
+        if(isAuthorized)
+        {
+            ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
 
-        savedGameClient.OpenWithAutomaticConflictResolution(dataFileName, DataSource.ReadCacheOrNetwork,
-                                                            ConflictResolutionStrategy.UseLastKnownGood, OnSavedGameData);
+            savedGameClient.OpenWithAutomaticConflictResolution(dataFileName, DataSource.ReadCacheOrNetwork,
+                                                                ConflictResolutionStrategy.UseLastKnownGood, OnSavedGameData);
+
+        }
     }
 
     void LoadGameData()
     {
-        ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
+        if(isAuthorized)
+        {
+            ISavedGameClient savedGameClient = PlayGamesPlatform.Instance.SavedGame;
 
-        savedGameClient.OpenWithAutomaticConflictResolution(dataFileName, DataSource.ReadCacheOrNetwork,
-                                                            ConflictResolutionStrategy.UseLastKnownGood, OnLoadGameData);
+            savedGameClient.OpenWithAutomaticConflictResolution(dataFileName, DataSource.ReadCacheOrNetwork,
+                                                                ConflictResolutionStrategy.UseLastKnownGood, OnLoadGameData);
+        }
     }
 
     void OnSavedGameData(SavedGameRequestStatus status, ISavedGameMetadata gameData)
@@ -191,17 +202,30 @@ public class GooglePlayManager : MonoBehaviour
 
     public void ShowAchievementUI()
 	{
+        if(isAuthorized == false)
+        {
+            ManuallySignIn();
+        }
+
 		PlayGamesPlatform.Instance.ShowAchievementsUI();
 	}
 
     public void ShowLeaderboardUI()
 	{
-		PlayGamesPlatform.Instance.ShowLeaderboardUI();
+        if(isAuthorized == false)
+        {
+            ManuallySignIn();
+        }
+
+        PlayGamesPlatform.Instance.ShowLeaderboardUI();
 	}
 
     void ReportLeaderboard(string boardID, int score)
     {
-        PlayGamesPlatform.Instance.ReportScore(score, boardID, (bool success) => {});
+        if(isAuthorized)
+        {
+            PlayGamesPlatform.Instance.ReportScore(score, boardID, (bool success) => {});
+        }
     }
 
     public void AllReportLeaderboard()
