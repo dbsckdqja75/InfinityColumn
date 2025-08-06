@@ -29,6 +29,8 @@ public class GooglePlayManager : MonoBehaviour
 
     const string dataFileName = "Production_SavedGameData";
 
+    Action onSignEvent = null;
+
     void Awake()
     {
         updater = this.GetComponent<GoogleSavedGameUpdater>();
@@ -61,6 +63,9 @@ public class GooglePlayManager : MonoBehaviour
         {
             LoadGameData();
         }
+
+        onSignEvent?.Invoke();
+        onSignEvent = null;
     }
 
     void SaveGameData()
@@ -202,22 +207,28 @@ public class GooglePlayManager : MonoBehaviour
 
     public void ShowAchievementUI()
 	{
-        if(isAuthorized == false)
+        if(isAuthorized)
         {
+            PlayGamesPlatform.Instance.ShowAchievementsUI();
+        }
+        else
+        {
+            onSignEvent = () => PlayGamesPlatform.Instance.ShowAchievementsUI();
             ManuallySignIn();
         }
-
-		PlayGamesPlatform.Instance.ShowAchievementsUI();
 	}
 
     public void ShowLeaderboardUI()
 	{
-        if(isAuthorized == false)
+        if(isAuthorized)
         {
+            PlayGamesPlatform.Instance.ShowLeaderboardUI();
+        }
+        else
+        {
+            onSignEvent = () => PlayGamesPlatform.Instance.ShowLeaderboardUI();
             ManuallySignIn();
         }
-
-        PlayGamesPlatform.Instance.ShowLeaderboardUI();
 	}
 
     void ReportLeaderboard(string boardID, int score)
@@ -266,6 +277,10 @@ public class GooglePlayManager : MonoBehaviour
         if (status == SignInStatus.Success)
         {
             OnSignIn();
+        }
+        else
+        {
+            onSignEvent = null;
         }
     }
 

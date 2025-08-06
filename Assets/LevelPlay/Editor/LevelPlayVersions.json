@@ -300,6 +300,17 @@
       "dependencyXmlFileName": "ISAPSAdapterDependencies.xml",
       "SKAdNetworkIdXmlURL": "https://s3.amazonaws.com/ssa.public/Unity/SKAdNetwork-IDs/All/skadnetworks.aps.plist.xml",
       "versions": {
+        "4.3.21.0": {
+          "ironSourceSdkVersion": "[8.9.0, 9.0[",
+          "android": {
+            "adapterVersion": "4.3.17",
+            "adNetworkVersion": "11.0.0+"
+          },
+          "ios": {
+            "adapterVersion": "4.3.21.0",
+            "adNetworkVersion": "5.3.0"
+          }
+        },
         "4.3.20.1": {
           "ironSourceSdkVersion": "[8.9.0, 9.0[",
           "android": {
@@ -415,6 +426,17 @@
           },
           "ios": {
             "adapterVersion": "4.3.56.0",
+            "adNetworkVersion": "13.3.1"
+          }
+        },
+        "4.3.60.2": {
+          "ironSourceSdkVersion": "[8.9.0, 9.0[",
+          "android": {
+            "adapterVersion": "4.3.54",
+            "adNetworkVersion": "13.3.1"
+          },
+          "ios": {
+            "adapterVersion": "4.3.55.2",
             "adNetworkVersion": "13.3.1"
           }
         },

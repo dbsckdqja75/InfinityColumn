@@ -37,28 +37,28 @@ public class AdvertisementManager : MonoSingleton<AdvertisementManager>
     protected override void Init()
     {
         // TODO : 추후에 약관동의를 통해 여부 반영
-        IronSource.Agent.setConsent(false);
-        IronSource.Agent.setMetaData("is_deviceid_optout","true");
-        IronSource.Agent.setMetaData("is_child_directed","true");
-        IronSource.Agent.setMetaData("do_not_sell","true");
-        IronSource.Agent.setMetaData("Google_Family_Self_Certified_SDKS","true");
+        LevelPlay.SetConsent(true);
+        LevelPlay.SetMetaData("is_deviceid_optout","true");
+        LevelPlay.SetMetaData("is_child_directed","true");
+        LevelPlay.SetMetaData("do_not_sell","false");
+        LevelPlay.SetMetaData("Google_Family_Self_Certified_SDKS","true");
+
+        // NOTE : AD TEST
+        // LevelPlay.SetMetaData("is_test_suite", "enable");
 
         string userID = SystemInfo.deviceUniqueIdentifier;
         Debug.LogFormat("[Mediation] IronSource Local UserID : {0}", userID);
 
-        string advertiserId= IronSource.Agent.getAdvertiserId();
-        Debug.LogFormat("[Mediation] IronSource.Agent.getAdvertiserId : {0}", advertiserId);
-
-        IronSource.Agent.validateIntegration();
+        LevelPlay.ValidateIntegration();
         Debug.Log("[Mediation] IronSource.Agent.validateIntegration");
 
-        Debug.LogFormat("[Mediation] IronSource Unity Version : {0}", IronSource.unityVersion());
+        Debug.LogFormat("[Mediation] IronSource Unity Version : {0}", LevelPlay.UnityVersion);
 
-        Debug.Log("[Mediation] LevelPlay Init");
-		LevelPlay.Init(appKey, userID , new [] { LevelPlayAdFormat.INTERSTITIAL, LevelPlayAdFormat.REWARDED });
-		
 		LevelPlay.OnInitSuccess += OnInitializationCompleted;
 		LevelPlay.OnInitFailed += (error => Debug.LogFormat("[Mediation] Initialization error : {0}", error));
+        LevelPlay.Init(appKey, userID , new [] { LevelPlayAdFormat.INTERSTITIAL, LevelPlayAdFormat.REWARDED });
+
+        Debug.Log("[Mediation] LevelPlay Init");
     }
     #endif
 
@@ -67,6 +67,9 @@ public class AdvertisementManager : MonoSingleton<AdvertisementManager>
         isInitialized = true;
 
         interstitialAd.LoadInterstitialAd();
+
+        // NOTE : AD TEST
+        // LevelPlay.LaunchTestSuite();
 
 		Debug.Log("[Mediation] Initialization completed");
 	}
