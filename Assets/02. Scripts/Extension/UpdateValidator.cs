@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -16,17 +17,20 @@ public class UpdateValidator : MonoBehaviour
 
     const string serverAddress = "";
 
+    #if UNITY_IPHONE
+    const string iTunesAddress = "https://itunes.apple.com/lookup?bundleId=com.TeamCampfire.InfinityColumn";
+    #endif
+
     void Start()
     {
         #if UNITY_EDITOR
         UpdateLatestVersionInfo(serverAddress + "RequestVersionDebug").Start(this);
         #elif UNITY_ANDROID
-        CheckForGoogleUpdate().Start(this);
-        // UpdateLatestVersionInfo(serverAddress + "RequestAndroidVersion").Start(this); // NOTE : Android 버전
+        CheckForGoogleUpdate().Start(this); // NOTE : GooglePlay AppUpdate
         #elif UNITY_IPHONE
-        UpdateLatestVersionInfo(serverAddress + "RequestiOSVersion").Start(this); // NOTE : iOS 버전
+        CheckForIosUpdate().Start(this); // NOTE : iTunes LookUp WebRequest
         #else
-        UpdateLatestVersionInfo(serverAddress + "RequestVersion").Start(this); // NOTE : PC 버전
+        UpdateLatestVersionInfo(serverAddress + "RequestVersion").Start(this); // NOTE : Node.js WebRequest
         #endif
     }
 
@@ -35,12 +39,12 @@ public class UpdateValidator : MonoBehaviour
         string[] latestVersionInfo = version.Split('.');
         string[] currentVersionInfo = Application.version.Split('.');
 
-        int latestPatch = int.Parse(latestVersionInfo[latestVersionInfo.Length-1]);
-        int currentPatch = int.Parse(currentVersionInfo[currentVersionInfo.Length-1]);
+        int latestPatch = int.Parse(latestVersionInfo[latestVersionInfo.Length - 1]);
+        int currentPatch = int.Parse(currentVersionInfo[currentVersionInfo.Length - 1]);
 
-        if(currentPatch != latestPatch && currentPatch < latestPatch)
+        if (currentPatch != latestPatch && currentPatch < latestPatch)
         {
-            #if !UNITY_STANDALONE && !UNITY_EDITOR
+            #if !UNITY_EDITOR
             updateButtonObj.SetActive(true);
             #endif
         }
@@ -73,7 +77,7 @@ public class UpdateValidator : MonoBehaviour
             yield return request.SendWebRequest();
             yield return new WaitUntil(() => request.isDone);
 
-            if(request.result.IsEquals(UnityWebRequest.Result.Success))
+            if (request.result.IsEquals(UnityWebRequest.Result.Success))
             {
                 ValidateVersion(request.downloadHandler.text);
             }
@@ -87,6 +91,32 @@ public class UpdateValidator : MonoBehaviour
 
         yield break;
     }
+
+    #if UNITY_IPHONE
+    IEnumerator CheckForIosUpdate()
+    {
+        using (UnityWebRequest request = UnityWebRequest.Get(iTunesAddress))
+        {
+            yield return request.SendWebRequest();
+            yield return new WaitUntil(() => request.isDone);
+
+            if (request.result.IsEquals(UnityWebRequest.Result.Success))
+            {
+                string resultText = request.downloadHandler.text.Trim();
+
+                Match match = Regex.Match(resultText, "\"version\":\"([\\d.]+)\"");
+                if (match.Success)
+                {
+                    ValidateVersion(match.Groups[1].Value);
+                }
+            }
+            else
+            {
+                Debug.LogWarningFormat("[UpdateValidator] 서버 접근 실패 : {0}", request.error);
+            }
+        }
+    }
+    #endif
 
     #if UNITY_ANDROID
     IEnumerator CheckForGoogleUpdate()

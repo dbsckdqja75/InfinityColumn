@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] LeaderboardManager leaderboardManager;
     [SerializeField] AppReviewRequester reviewRequester;
     [SerializeField] GooglePlayManager GPGS;
+    [SerializeField] AppleGameCenterManager GameCenter;
 
     void Awake()
     {
@@ -219,7 +220,7 @@ public class GameManager : MonoBehaviour
             GPGS.ReportLeaderboard(currentGame.GetGameType(), currentGame.GetBestScore());
             GPGS.ReportGameData();
         #elif UNITY_IPHONE
-            // TODO : GameCenter 리더보드에 반영 처리
+            GameCenter.ReportLeaderboard(currentGame.GetGameType(), currentGame.GetBestScore());
         #else
             leaderboardManager.UpdateRecord(currentGame.GetGameType());
         #endif
@@ -315,6 +316,9 @@ public class GameManager : MonoBehaviour
         #if UNITY_ANDROID
             GPGS.AllReportLeaderboard();
             GPGS.ShowLeaderboardUI();
+        #elif UNITY_IPHONE
+            GameCenter.AllReportLeaderboard();
+            GameCenter.ShowLeaderboardUI();
         #elif UNITY_EDITOR || UNITY_STANDALONE
             if(currentGame.OnExtraMenuOpen())
             {
