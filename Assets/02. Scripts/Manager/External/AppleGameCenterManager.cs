@@ -17,10 +17,10 @@ public class AppleGameCenterManager : MonoBehaviour
 {
     [SerializeField] Button leaderboardBtn;
 
+#if UNITY_IPHONE
     private readonly bool IsAccessPointAvailable = Availability.IsTypeAvailable<GKAccessPoint>();
     private readonly bool IsLoadLeaderboardsAvailable = Availability.IsMethodAvailable<GKLeaderboard>(nameof(GKLeaderboard.LoadLeaderboards));
 
-#if UNITY_IPHONE
     string signature;
     string playerID;
     string salt;
