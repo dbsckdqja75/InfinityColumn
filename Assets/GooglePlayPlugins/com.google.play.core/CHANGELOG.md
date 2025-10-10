@@ -1,5 +1,8 @@
 # Changelog for com.google.play.core
 
+## [1.8.6] - 2025-02-03
+- Bump External Dependency Manager to latest version.
+
 ## [1.8.5] - 2024-09-18
 - Removed unused dependency on Google Play Android App Bundle.
 
